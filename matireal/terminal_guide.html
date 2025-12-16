@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>מדריך שורת הפקודה (Terminal) | מדריך מקצועי חינמי | LearningHub</title>
+    <meta name="description" content="למדו איך לשלוט במחשב דרך שורת הפקודה (CMD/PowerShell/Bash) ✅ מדריך מעשי ✅ דוגמאות מעשיות ✅ תרגילים ומטלות">
+    <meta name="keywords" content="Terminal, CMD, PowerShell, Bash, שורת פקודה, שרת, לינוקס, ווינדוז, מדריך, לימוד, קורס חינמי, הדרכה מקצועית, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="מדריך שורת הפקודה (Terminal) | מדריך מקצועי חינמי">
+    <meta property="og:description" content="שליטה מלאה במחשב דרך שורת הפקודה - פקודות חובה למהנדסים">
+    <meta property="og:image" content="/images/terminal-guide.jpg">
+    <meta property="og:url" content="/terminal_guide.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="כלים וטכנולוגיה">
+    <meta property="article:tag" content="Terminal, CMD, PowerShell, Bash">
+    <meta property="article:published_time" content="2025-01-01">
+    <meta property="article:modified_time" content="2025-01-15">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="מדריך שורת הפקודה (Terminal) | מדריך מקצועי חינמי">
+    <meta name="twitter:description" content="שליטה מלאה במחשב דרך שורת הפקודה - פקודות חובה למהנדסים">
+    <meta name="twitter:image" content="/images/terminal-guide.jpg">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="msapplication-TileColor" content="#1a1a2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/terminal_guide.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="/terminal_guide.html">
+    <link rel="alternate" hreflang="x-default" href="/terminal_guide.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "מדריך שורת הפקודה (Terminal)",
+        "description": "מדריך מקצועי לשליטה במחשב דרך שורת הפקודה",
+        "image": "/images/terminal-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "/terminal_guide.html"
+        },
+        "articleSection": "כלים וטכנולוגיה",
+        "keywords": "Terminal, CMD, PowerShell, Bash, שורת פקודה",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "שורת פקודה, Terminal, CMD, PowerShell",
+        "about": {
+            "@type": "Thing",
+            "name": "Terminal/Command Line"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "מדריך שורת הפקודה (Terminal)",
+        "description": "מדריך מקצועי לשליטה במחשב דרך שורת הפקודה",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online"
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל",
+        "sameAs": [
+            "https://www.linkedin.com/company/edumanage",
+            "https://github.com/edumanage"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "Hebrew"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #2ecc71;
+            /* Matrix Green for Terminal */
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --code-bg: #000000;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            text-align: right;
+            padding-top: 80px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #000000 0%, #2d3436 100%);
+            color: #2ecc71;
+            /* Green text for that retro look */
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .header-content h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content h1::before {
+            content: '> ';
+            color: #fff;
+        }
+
+        .header-content h1::after {
+            content: '_';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+
+        /* Tabs */
+        .tab-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #dfe6e9;
+            padding-bottom: 0.5rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #636e72;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+            font-family: 'Heebo', sans-serif;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -0.6rem;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        /* Content Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .card.active {
+            display: block;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            border-right: 4px solid var(--accent);
+            padding-right: 1rem;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: var(--code-bg);
+            color: #2ecc71;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+            border: 1px solid #333;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #dfe6e9;
+            padding: 0.8rem;
+            text-align: right;
+        }
+
+        th {
+            background-color: #f1f2f6;
+            color: var(--primary);
+        }
+
+        .cmd-badge {
+            background: #dfe6e9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            color: #d63031;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem;" onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='white'">פורטל התלמידים</a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">הצטרף חינם</a>
+        </div>
+    </div>
+
+    <nav class="global-nav">
+        <div class="nav-links">
+            <a href="categories.html" class="nav-link">קטגוריות</a>
+            <a href="index.html" class="nav-link" style="font-weight:700">דף הבית</a>
+        </div>
+        <a href="index.html" class="nav-brand">📚 פורטל למידה</a>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="index.html">דף הבית</a>
+        <span>/</span>
+        <a href="categories.html">קטגוריות</a>
+        <span>/</span>
+        <span class="current">שורת הפקודה</span>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1>Terminal Guide</h1>
+            <p style="color: #ecf0f1; font-family: 'Heebo', sans-serif;">המדריך המלא לשורת הפקודה (CMD/PowerShell)
+                למהנדסים: ניהול קבצים, רשתות וסקריפטים.</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab('basics')">פקודות בסיס</button>
+            <button class="tab-btn" onclick="openTab('files')">ניהול קבצים</button>
+            <button class="tab-btn" onclick="openTab('network')">רשתות ו-IP</button>
+            <button class="tab-btn" onclick="openTab('tips')">טיפים למתקדמים</button>
+        </div>
+
+        <!-- Tab 1: Basics -->
+        <div id="basics" class="card active">
+            <h2>למה להשתמש בטרמינל?</h2>
+            <p>
+                למרות שנוח להשתמש בעכבר, מהנדסים משתמשים בשורת הפקודה כי היא:
+                1. <strong>מהירה יותר:</strong> ביצוע פעולות מורכבות בשניות.
+                2. <strong>ניתנת לאוטומציה:</strong> ניתן לכתוב סקריפטים שמבצעים משימות רוטיניות.
+                3. <strong>חיונית לפיתוח:</strong> הרצת Python, Git וחיבור לשרתים נעשים בעיקר מכאן.
+            </p>
+            <p>בווינדוס, ניתן לפתוח את הטרמינל ע"י חיפוש "CMD" או "PowerShell" בתפריט התחלה.</p>
+
+            <!-- טיזר 1 -->
+            <div style="background: #e8f5e9; border-right: 4px solid #28a745; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                <h4 style="color: #28a745; margin-bottom: 0.5rem;">💡 חומר למחשבה</h4>
+                <p><strong>האם ידעת ש...</strong> האקרים בסרטים תמיד משתמשים בטרמינל לא בגלל שזה נראה מגניב (אם כי זה כן), אלא כי זה באמת הכלי החזק והמהיר ביותר לשליטה במחשב!</p>
+            </div>
+        </div>
+
+        <!-- Tab 2: Files -->
+        <div id="files" class="card">
+            <h2>ניווט וניהול קבצים</h2>
+            <p>הפקודות החשובות ביותר שצריך להכיר (עובד ב-PowerShell ו-CMD):</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>פקודה</th>
+                        <th>הסבר</th>
+                        <th>דוגמה</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="cmd-badge">ls</span> או <span class="cmd-badge">dir</span></td>
+                        <td>הצגת רשימת הקבצים בתיקייה הנוכחית</td>
+                        <td><code>ls</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="cmd-badge">cd</span></td>
+                        <td>שינוי תיקייה (Change Directory)</td>
+                        <td><code>cd Project_Files</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="cmd-badge">cd ..</span></td>
+                        <td>חזרה לתיקייה הקודמת (אחת אחורה)</td>
+                        <td><code>cd ..</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="cmd-badge">mkdir</span></td>
+                        <td>יצירת תיקייה חדשה (Make Directory)</td>
+                        <td><code>mkdir New_Project</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="cmd-badge">rm</span> או <span class="cmd-badge">del</span></td>
+                        <td>מחיקת קובץ (זהירות! אין סל מחזור)</td>
+                        <td><code>del old_file.txt</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- טיזר 2 -->
+            <div style="background: #fff3cd; border-right: 4px solid #ffc107; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                <h4 style="color: #856404; margin-bottom: 0.5rem;">⚠️ רגע, עצור!</h4>
+                <p><strong>לפני שתמשיך...</strong> זכור שפקודת <code>rm</code> או <code>del</code> מוחקת קבצים לצמיתות! אין סל מחזור בטרמינל. תמיד בדוק פעמיים לפני מחיקה!</p>
+            </div>
+
+            <h3>תרגול מהיר</h3>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <pre># 1. צור תיקייה חדשה בשם 'Demo'
+mkdir Demo
+
+# 2. היכנס לתיקייה
+cd Demo
+
+# 3. צור קובץ טקסט חדש (PowerShell)
+echo "Hello World" > hello.txt
+
+# 4. הצג את תוכן התיקייה
+ls</pre>
+            </div>
+        </div>
+
+        <!-- Tab 3: Network -->
+        <div id="network" class="card">
+            <h2>בדיקות רשת</h2>
+            <p>פקודות לאבחון תקלות אינטרנט או חיבור לרכיבים תעשייתיים.</p>
+
+            <h3>בדיקת כתובת IP (ipconfig)</h3>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <pre>ipconfig</pre>
+            </div>
+            <p>פקודה זו תראה לך את כתובת ה-IP המקומית שלך (למשל 192.168.1.15).</p>
+
+            <h3>בדיקת חיבור (Ping)</h3>
+            <p>בדיקה האם יש תקשורת עם שרת או מכשיר אחר.</p>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <pre># בדיקת חיבור לגוגל
+ping google.com
+
+# בדיקת חיבור למכונה ברשת המקומית
+ping 192.168.1.50</pre>
+            </div>
+        </div>
+
+        <!-- Tab 4: Tips -->
+        <div id="tips" class="card">
+            <h2>טיפים למתקדמים (PowerShell)</h2>
+
+            <h3>השלמה אוטומטית (Tab)</h3>
+            <p>אל תקליד שמות ארוכים! התחל לכתוב את שם הקובץ ולחץ על <kbd>Tab</kbd> להשלמה אוטומטית.</p>
+
+            <h3>היסטוריית פקודות</h3>
+            <p>לחץ על <kbd>החץ למעלה ↑</kbd> כדי לחזור לפקודות קודמות שהרצת.</p>
+
+            <h3>ניקוי מסך</h3>
+            <p>המסך עמוס מדי? כתוב <span class="cmd-badge">cls</span> או <span class="cmd-badge">clear</span> כדי לנקות
+                אותו.</p>
+
+            <h3>התקנת תוכנות (winget)</h3>
+            <p>בווינדוס 10/11 ניתן להתקין תוכנות ישירות מהטרמינל!</p>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <pre># התקנת Chrome
+winget install Google.Chrome
+
+# התקנת VS Code
+winget install Microsoft.VisualStudioCode</pre>
+            </div>
+        </div>
+
+        <!-- טיזר 3 -->
+        <div style="background: #f3e5f5; border-right: 4px solid #6f42c1; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+            <h4 style="color: #6f42c1; margin-bottom: 0.5rem;">🤫 סוד קטן</h4>
+            <p><strong>ניסית פעם...?</strong> ללחוץ על החץ למעלה ↑ בטרמינל? זה מביא את הפקודה האחרונה שהרצת. אפשר לעבור על כל ההיסטוריה ולחסוך הרבה הקלדה!</p>
+        </div>
+
+        <!-- מסקנות ויישום מעשי -->
+        <div class="card" style="background: linear-gradient(135deg, #000000 0%, #2d3436 100%); color: #2ecc71; display: block;">
+            <h2 style="color: #2ecc71; border-right: 4px solid #2ecc71;">🎯 מסקנות ויישום מעשי</h2>
+            
+            <div style="background: rgba(46, 204, 113, 0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                <h3 style="color: #2ecc71; margin-bottom: 1rem;">✅ מה למדנו היום?</h3>
+                <ul style="margin-right: 1.5rem; line-height: 1.8; color: #ecf0f1;">
+                    <li><strong>הטרמינל זה לא מפחיד</strong> - רק כלי עבודה חזק</li>
+                    <li><strong>5 פקודות בסיסיות</strong> - ls, cd, mkdir, rm, ping פותרות רוב הצרכים</li>
+                    <li><strong>מהירות ויעילות</strong> - מה שלוקח דקות בעכבר, לוקח שניות בטרמינל</li>
+                    <li><strong>אוטומציה</strong> - אפשר לכתוב סקריפטים למשימות חוזרות</li>
+                    <li><strong>כלי מקצועי</strong> - חיוני לפיתוח, Git, ושרתים</li>
+                </ul>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div style="background: rgba(46, 204, 113, 0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: #2ecc71; margin-bottom: 1rem;">🚀 איך להמשיך להתפתח?</h3>
+                    <ol style="margin-right: 1.5rem; line-height: 1.6; color: #ecf0f1;">
+                        <li><strong>תרגול יומי</strong> - השתמש בטרמינל למשימה אחת ביום</li>
+                        <li><strong>למד קיצורי מקלדת</strong> - Tab, ↑↓, Ctrl+C</li>
+                        <li><strong>נסה PowerShell ISE</strong> - סביבה גרפית לסקריפטים</li>
+                        <li><strong>למד Batch/PowerShell</strong> - כתיבת סקריפטים</li>
+                        <li><strong>התקן Windows Terminal</strong> - טרמינל מודרני ויפה</li>
+                    </ol>
+                </div>
+
+                <div style="background: rgba(46, 204, 113, 0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: #2ecc71; margin-bottom: 1rem;">⚠️ טעויות נפוצות להימנע מהן</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.6; color: #ecf0f1;">
+                        <li><strong>מחיקה בלי בדיקה</strong> - תמיד וודא מה אתה מוחק</li>
+                        <li><strong>לא להשתמש ב-Tab</strong> - השלמה אוטומטית חוסכת זמן</li>
+                        <li><strong>פחד מלנסות</strong> - אי אפשר לשבור את המחשב</li>
+                        <li><strong>לא לזכור פקודות</strong> - כתוב רשימה או השתמש בהיסטוריה</li>
+                        <li><strong>להתעלם מהודעות שגיאה</strong> - תמיד קרא מה כתוב</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- משימות לשבוע הקרוב -->
+        <div class="card" style="display: block;">
+            <h2>📋 משימות לשבוע הקרוב</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                <div style="background: #e8f5e9; border: 2px solid #28a745; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #155724; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🎯</span> רמה בסיסית (מתחילים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>פתח CMD או PowerShell ונווט בין תיקיות עם cd</li>
+                        <li>צור תיקייה חדשה עם mkdir ומחק אותה עם rmdir</li>
+                        <li>השתמש ב-ls או dir לראות קבצים</li>
+                        <li>נסה ping google.com לבדוק חיבור אינטרנט</li>
+                        <li>השתמש ב-Tab להשלמה אוטומטית של שמות קבצים</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #004085; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>⚡</span> רמה מתקדמת (מנוסים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>התקן Windows Terminal מה-Microsoft Store</li>
+                        <li>למד פקודות מתקדמות: grep, find, tasklist</li>
+                        <li>כתוב סקריפט Batch פשוט לגיבוי קבצים</li>
+                        <li>נסה winget להתקנת תוכנות</li>
+                        <li>למד Git - <a href="github_guide.html" style="color: var(--accent);">עבור למדריך Git</a></li>
+                        <li>התחל עם Python - <a href="python_guide.html" style="color: var(--accent);">עבור למדריך Python</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- טיזר 4 -->
+            <div style="background: #e1f5fe; border-right: 4px solid #03a9f4; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+                <h4 style="color: #0277bd; margin-bottom: 0.5rem;">😎 בונוס</h4>
+                <p><strong>תרגיל קטן:</strong> נסה לכתוב <code>tree</code> בטרמינל (אם זה לא עובד, התקן עם <code>winget install tree</code>). זה מראה את מבנה התיקיות כמו עץ - מאוד יפה!</p>
+            </div>
+        </div>
+
+        <!-- קריאה לפעולה חזקה -->
+        <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; display: block; border: none;">
+            <h2 style="color: white; border-right: 4px solid white;">🚀 שלוט במחשב כמו מקצוען</h2>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">💻</div>
+                <p style="font-size: 1.2rem; margin: 1.5rem 0;">
+                    <strong>הטרמינל זה הכלי החזק ביותר של המהנדס</strong><br>
+                    למד אותו עכשיו ותרגיש כמו האקר מהסרטים!
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <a href="python_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</span>
+                    <strong>Python</strong>
+                    <span style="font-size: 0.9rem;">הרץ קוד מהטרמינל</span>
+                </a>
+
+                <a href="github_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🐙</span>
+                    <strong>Git</strong>
+                    <span style="font-size: 0.9rem;">ניהול גרסאות מהטרמינל</span>
+                </a>
+
+                <a href="web_scraping_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🕷️</span>
+                    <strong>Web Scraping</strong>
+                    <span style="font-size: 0.9rem;">אוטומציה מהטרמינל</span>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-size: 1rem; opacity: 0.9;">
+                    💡 <strong>זכור:</strong> כל מומחה טכנולוגיה בעולם יודע לעבוד עם הטרמינל - עכשיו גם אתה!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="global-footer">
+        <div class="footer-content">
+            <h4>פורטל חומרי למידה</h4>
+            <p class="footer-desc">מרכז ידע לסטודנטים: מדריכים, דוגמאות קוד, וכלים לשימוש ב-AI ומדעי הנתונים.</p>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">דף הבית</a>
+                <a href="categories.html" class="footer-link">קטגוריות</a>
+                <a href="#" class="footer-link">אודות</a>
+                <a href="#" class="footer-link">צור קשר</a>
+            </div>
+            <div class="copyright">
+                © 2025 נבנה ע"י יעקב בידני | כל הזכויות שמורות
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function copyCode(btn) {
+            const pre = btn.nextElementSibling;
+            navigator.clipboard.writeText(pre.innerText);
+            btn.innerText = 'Copied!';
+            setTimeout(() => btn.innerText = 'Copy', 2000);
+        }
+    </script>
+</body>
+
+</html>

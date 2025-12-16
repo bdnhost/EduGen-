@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>SQL Databases | מדריך מקצועי חינמי | LearningHub</title>
+    <meta name="description" content="למד SQL מאפס: שליפת נתונים, סינון וניהול מסדי נתונים רלציוניים ✅ דוגמאות מעשיות ✅ תרגילים ומטלות">
+    <meta name="keywords" content="SQL, Database, MySQL, PostgreSQL, נתונים, שליפה, סינון, ניהול מסד נתונים, מדריך, לימוד, קורס חינמי, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SQL Databases | מדריך מקצועי חינמי">
+    <meta property="og:description" content="שליטה ב-SQL ומסדי נתונים - המדריך המקצועי החינמי">
+    <meta property="og:image" content="/images/sql-guide.jpg">
+    <meta property="og:url" content="/sql_guide.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="תכנות ובסיסי נתונים">
+    <meta property="article:tag" content="SQL, Database, MySQL, PostgreSQL">
+    <meta property="article:published_time" content="2025-01-01">
+    <meta property="article:modified_time" content="2025-01-15">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SQL Databases | מדריך מקצועי חינמי">
+    <meta name="twitter:description" content="שליטה ב-SQL ומסדי נתונים - המדריך המקצועי החינמי">
+    <meta name="twitter:image" content="/images/sql-guide.jpg">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#0984e3">
+    <meta name="msapplication-TileColor" content="#0984e3">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/sql_guide.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="/sql_guide.html">
+    <link rel="alternate" hreflang="x-default" href="/sql_guide.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "SQL Databases - מדריך מקצועי",
+        "description": "מדריך מקצועי לשליטה ב-SQL ומסדי נתונים",
+        "image": "/images/sql-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "/sql_guide.html"
+        },
+        "articleSection": "תכנות ובסיסי נתונים",
+        "keywords": "SQL, Database, MySQL, PostgreSQL",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "SQL, Database Management, Queries",
+        "about": {
+            "@type": "Thing",
+            "name": "SQL Databases"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "SQL Databases",
+        "description": "מדריך מקצועי לשליטה ב-SQL ומסדי נתונים",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online"
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --sql-blue: #0984e3;
+            --sql-dark: #2d3436;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
+            color: white;
+        }
+
+        .code-block {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            margin: 1rem 0 2rem;
+            border-left: 4px solid var(--sql-blue);
+        }
+
+        .keyword {
+            color: #ff7675;
+            font-weight: bold;
+        }
+
+        .function {
+            color: #74b9ff;
+        }
+
+        .string {
+            color: #55efc4;
+        }
+
+        .concept-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border: 1px solid #dfe6e9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem;" onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='white'">פורטל התלמידים</a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">הצטרף חינם</a>
+        </div>
+    </div>
+
+    <nav class="global-nav">
+        <div class="nav-links">
+            <a href="categories.html" class="nav-link">קטגוריות</a>
+            <a href="index.html" class="nav-link">ראשי</a>
+        </div>
+        <a href="index.html" class="nav-brand">LearningHub v2</a>
+    </nav>
+
+    <header>
+        <div class="header-content" style="text-align: center; max-width: 1000px; margin: 0 auto;">
+            <h1>💾 SQL & Databases</h1>
+            <p class="subtitle" style="color: #fff; opacity: 0.95;">השפה האוניברסלית של הדאטה. שליפה, ניתוח וניהול מידע.
+            </p>
+        </div>
+    </header>
+
+    <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 2rem;">
+
+        <!-- Intro -->
+        <div class="concept-card">
+            <h2>מה זה SQL?</h2>
+            <p><strong>Structured Query Language</strong> היא השפה הסטנדרטית לתקשורת עם מסדי נתונים (Databases). כל
+                מערכת גדולה - מבנק ועד פייסבוק - שומרת את המידע שלה בבסיסי נתונים, ו-SQL היא הדרך לשלוף ולעדכן את המידע
+                הזה.</p>
+        </div>
+
+        <!-- Basics -->
+        <div class="concept-card">
+            <h2>1. שליפה בסיסית (SELECT)</h2>
+            <p>הפקודה הבסיסית ביותר. "תביא לי את העמודות האלו, מהטבלה הזאת".</p>
+
+            <div class="code-block">
+                <span class="keyword">SELECT</span> first_name, last_name, email<br>
+                <span class="keyword">FROM</span> users;
+            </div>
+
+            <h3>סינון נתונים (WHERE)</h3>
+            <p>אנחנו לא רוצים תמיד את כל הטבלה. בואו נסנן רק משתמשים פעילים.</p>
+            <div class="code-block">
+                <span class="keyword">SELECT</span> * <br>
+                <span class="keyword">FROM</span> orders<br>
+                <span class="keyword">WHERE</span> total_amount > 100 <br>
+                <span class="keyword">AND</span> status = <span class="string">'Shipped'</span>;
+            </div>
+        </div>
+
+        <!-- Aggregations -->
+        <div class="concept-card">
+            <h2>2. ניתוח וסיכום (GROUP BY)</h2>
+            <p>כמו Pivot Table באקסל. אנחנו רוצים לקבץ נתונים כדי לקבל סטטיסטיקות.</p>
+
+            <div class="code-block">
+                <span class="keyword">SELECT</span> category, <span class="function">COUNT</span>(*) as total_products,
+                <span class="function">SVG</span>(price) as avg_price<br>
+                <span class="keyword">FROM</span> products<br>
+                <span class="keyword">GROUP BY</span> category;
+            </div>
+            <p>שאילתה זו תחזיר לנו כמה מוצרים יש בכל קטגוריה ומה המחיר הממוצע שלהם.</p>
+        </div>
+
+        <!-- Joins -->
+        <div class="concept-card">
+            <h2>3. חיבור טבלאות (JOIN)</h2>
+            <p>הכוח האמיתי של SQL. חיבור מידע שנמצא בטבלאות נפרדות (למשל: לקוחות והזמנות).</p>
+
+            <div class="code-block">
+                <span class="keyword">SELECT</span> users.name, orders.order_date, orders.total<br>
+                <span class="keyword">FROM</span> users<br>
+                <span class="keyword">INNER JOIN</span> orders <span class="keyword">ON</span> users.id =
+                orders.user_id<br>
+                <span class="keyword">WHERE</span> orders.order_date >= <span class="string">'2025-01-01'</span>;
+            </div>
+        </div>
+
+        <!-- Window Functions (NEW) -->
+        <div class="concept-card" style="border-right: 4px solid #a29bfe;">
+            <h2>4. פונקציות חלון (Window Functions)</h2>
+            <p><strong>למתקדמים:</strong> ביצוע חישובים על קבוצת שורות מבלי "לקפל" אותן כמו ב-GROUP BY. שימושי מאוד
+                לדירוגים.</p>
+
+            <h3>RANK() - דירוג עובדים לפי משכורת</h3>
+            <div class="code-block">
+                <span class="keyword">SELECT</span> name, department, salary,<br>
+                <span class="function">RANK()</span> <span class="keyword">OVER</span> (<span class="keyword">PARTITION
+                    BY</span> department <span class="keyword">ORDER BY</span> salary <span class="keyword">DESC</span>)
+                as rank_in_dept<br>
+                <span class="keyword">FROM</span> employees;
+            </div>
+            <p>שאילתה זו תדרג את העובדים 1, 2, 3... בכל מחלקה בנפרד, לפי גובה המשכורת.</p>
+        </div>
+
+        <!-- Performance (NEW) -->
+        <div class="concept-card" style="border-right: 4px solid #fab1a0;">
+            <h2>💡 טיפים לביצועים (Performance)</h2>
+            <p>כשעובדים עם מיליוני רשומות, כל מילי-שנייה קובעת.</p>
+
+            <ul style="padding-right: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Indexes (אינדקסים):</strong> המהיר את השליפות ע"י יצירת "תוכן עניינים" לעמודות שאתה מסנן
+                    לפיהן הרבה (למשל תעודת זהות, אימייל).<br>
+                    <code style="background:#eee; padding:2px;">CREATE INDEX idx_email ON users(email);</code>
+                </li>
+                <li style="margin-bottom: 0.5rem;">
+                    <strong> SELECT * is Evil:</strong> אל תשתמש ב-SELECT *. זה שולף המון מידע מיותר ומכביד על הרשת.
+                    ציין רק את העמודות שאתה צריך.
+                </li>
+                <li>
+                    <strong>Limit:</strong> בודק שאילתה? תמיד הוסף <code
+                        style="background:#eee; padding:2px;">LIMIT 10</code> בסוף כדי לא לשלוף בטעות את כל ההיסטוריה.
+                </li>
+            </ul>
+        </div>
+
+        <!-- טיזר 1 -->
+        <div style="background: #e8f5e9; border-right: 4px solid #28a745; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+            <h4 style="color: #28a745; margin-bottom: 0.5rem;">💡 חומר למחשבה</h4>
+            <p><strong>האם ידעת ש...</strong> גוגל מבצעת מיליארדי שאילתות SQL ביום? כל חיפוש שלכם מפעיל מאות שאילתות במקביל על מסדי נתונים ענקיים!</p>
+        </div>
+
+        <!-- דוגמאות מעשיות -->
+        <div class="concept-card">
+            <h2>🎯 דוגמאות מהחיים האמיתיים</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                <div style="background: #e3f2fd; border: 2px solid #2196f3; border-radius: 12px; padding: 1.5rem;">
+                    <h3 style="color: #1976d2; margin-bottom: 1rem;">🏪 מערכת חנות</h3>
+                    <p><strong>השאלה:</strong> "מה המוצרים הכי נמכרים החודש?"</p>
+                    <div class="code-block" style="font-size: 0.9rem;">
+                        <span class="keyword">SELECT</span> product_name, <span class="function">SUM</span>(quantity) as total_sold<br>
+                        <span class="keyword">FROM</span> orders o<br>
+                        <span class="keyword">JOIN</span> products p <span class="keyword">ON</span> o.product_id = p.id<br>
+                        <span class="keyword">WHERE</span> order_date >= <span class="string">'2025-01-01'</span><br>
+                        <span class="keyword">GROUP BY</span> product_name<br>
+                        <span class="keyword">ORDER BY</span> total_sold <span class="keyword">DESC</span><br>
+                        <span class="keyword">LIMIT</span> 10;
+                    </div>
+                </div>
+
+                <div style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 12px; padding: 1.5rem;">
+                    <h3 style="color: #388e3c; margin-bottom: 1rem;">👥 ניתוח לקוחות</h3>
+                    <p><strong>השאלה:</strong> "מי הלקוחות הכי רווחיים?"</p>
+                    <div class="code-block" style="font-size: 0.9rem;">
+                        <span class="keyword">SELECT</span> c.customer_name, <span class="function">SUM</span>(o.total) as lifetime_value<br>
+                        <span class="keyword">FROM</span> customers c<br>
+                        <span class="keyword">JOIN</span> orders o <span class="keyword">ON</span> c.id = o.customer_id<br>
+                        <span class="keyword">GROUP BY</span> c.customer_name<br>
+                        <span class="keyword">HAVING</span> <span class="function">SUM</span>(o.total) > 1000<br>
+                        <span class="keyword">ORDER BY</span> lifetime_value <span class="keyword">DESC</span>;
+                    </div>
+                </div>
+
+                <div style="background: #fff3e0; border: 2px solid #ff9800; border-radius: 12px; padding: 1.5rem;">
+                    <h3 style="color: #f57c00; margin-bottom: 1rem;">📊 דוח מכירות</h3>
+                    <p><strong>השאלה:</strong> "מכירות לפי חודש השנה?"</p>
+                    <div class="code-block" style="font-size: 0.9rem;">
+                        <span class="keyword">SELECT</span> <br>
+                        &nbsp;&nbsp;<span class="function">EXTRACT</span>(<span class="keyword">MONTH FROM</span> order_date) as month,<br>
+                        &nbsp;&nbsp;<span class="function">SUM</span>(total) as monthly_sales<br>
+                        <span class="keyword">FROM</span> orders<br>
+                        <span class="keyword">WHERE</span> <span class="function">EXTRACT</span>(<span class="keyword">YEAR FROM</span> order_date) = 2025<br>
+                        <span class="keyword">GROUP BY</span> month<br>
+                        <span class="keyword">ORDER BY</span> month;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- טיזר 2 -->
+        <div style="background: #fff3cd; border-right: 4px solid #ffc107; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+            <h4 style="color: #856404; margin-bottom: 0.5rem;">⚠️ רגע, עצור!</h4>
+            <p><strong>לפני שתריץ DELETE או UPDATE...</strong> תמיד תריץ SELECT קודם כדי לראות מה אתה עומד לשנות! אין Ctrl+Z במסד נתונים!</p>
+        </div>
+
+        <!-- כלים מומלצים -->
+        <div class="concept-card">
+            <h2>🛠️ כלים מומלצים ללמידה</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #007bff;">
+                    <h3 style="color: #007bff; margin-bottom: 1rem;">💻 תוכנות חינמיות</h3>
+                    <ul style="margin-right: 1.5rem;">
+                        <li><strong>SQLite Browser</strong> - פשוט ומהיר</li>
+                        <li><strong>MySQL Workbench</strong> - מקצועי</li>
+                        <li><strong>pgAdmin</strong> - ל-PostgreSQL</li>
+                        <li><strong>DBeaver</strong> - תומך בהכל</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #28a745;">
+                    <h3 style="color: #28a745; margin-bottom: 1rem;">🌐 אתרי תרגול</h3>
+                    <ul style="margin-right: 1.5rem;">
+                        <li><strong>W3Schools SQL</strong> - בסיסי וברור</li>
+                        <li><strong>SQLBolt</strong> - תרגילים אינטראקטיביים</li>
+                        <li><strong>HackerRank SQL</strong> - אתגרים</li>
+                        <li><strong>LeetCode Database</strong> - למתקדמים</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #dc3545;">
+                    <h3 style="color: #dc3545; margin-bottom: 1rem;">📚 מסדי נתונים פופולריים</h3>
+                    <ul style="margin-right: 1.5rem;">
+                        <li><strong>MySQL</strong> - הכי נפוץ באתרים</li>
+                        <li><strong>PostgreSQL</strong> - חזק ומתקדם</li>
+                        <li><strong>SQLite</strong> - קל ללמידה</li>
+                        <li><strong>SQL Server</strong> - של מיקרוסופט</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- טיזר 3 -->
+        <div style="background: #f3e5f5; border-right: 4px solid #6f42c1; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+            <h4 style="color: #6f42c1; margin-bottom: 0.5rem;">🤫 סוד קטן</h4>
+            <p><strong>טעות נפוצה:</strong> אנשים חושבים שSQL זה רק לתכנתים. האמת? מנהלים, אנליסטים ואפילו משווקים משתמשים בו כדי לחלץ תובנות מהנתונים!</p>
+        </div>
+
+        <!-- מסקנות ויישום מעשי -->
+        <div style="background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem;">
+            <h2 style="color: white;">🎯 מסקנות ויישום מעשי</h2>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                <h3 style="color: white; margin-bottom: 1rem;">✅ מה למדנו היום?</h3>
+                <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><strong>SQL זה השפה של הדאטה</strong> - כל מערכת גדולה משתמשת בו</li>
+                    <li><strong>SELECT הבסיס</strong> - שליפה וסינון נתונים</li>
+                    <li><strong>JOIN מחבר טבלאות</strong> - הכוח האמיתי של SQL</li>
+                    <li><strong>GROUP BY לסיכומים</strong> - סטטיסטיקות ודוחות</li>
+                    <li><strong>ביצועים חשובים</strong> - אינדקסים וכתיבה חכמה</li>
+                </ul>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">📊 איך להמשיך להתפתח?</h3>
+                    <ol style="margin-right: 1.5rem; line-height: 1.6;">
+                        <li><strong>התחל עם SQLite</strong> - קל ללמידה</li>
+                        <li><strong>תרגל עם נתונים אמיתיים</strong> - הורד CSV ויבא</li>
+                        <li><strong>למד Window Functions</strong> - לניתוחים מתקדמים</li>
+                        <li><strong>שלב עם Python/Excel</strong> - אוטומציה</li>
+                        <li><strong>בנה פרויקט</strong> - מסד נתונים אישי</li>
+                    </ol>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">⚠️ טעויות נפוצות</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.6;">
+                        <li><strong>SELECT * תמיד</strong> - בזבוז משאבים</li>
+                        <li><strong>אין גיבויים</strong> - מתכונת לאסון</li>
+                        <li><strong>לא להשתמש באינדקסים</strong> - שאילתות איטיות</li>
+                        <li><strong>לא לבדוק לפני מחיקה</strong> - נתונים אבודים</li>
+                        <li><strong>לא ללמוד את הבסיס</strong> - קפיצה למתקדם</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- משימות לשבוע הקרוב -->
+        <div class="concept-card">
+            <h2>📋 משימות לשבוע הקרוב</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                <div style="background: #e8f5e9; border: 2px solid #28a745; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #155724; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🎯</span> רמה בסיסית (מתחילים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>התקן SQLite Browser (חינם)</li>
+                        <li>צור מסד נתונים פשוט עם 2-3 טבלאות</li>
+                        <li>תרגל SELECT, WHERE, ORDER BY</li>
+                        <li>נסה JOIN פשוט בין שתי טבלאות</li>
+                        <li>עשה 10 תרגילים ב-W3Schools</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #004085; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>⚡</span> רמה מתקדמת (מנוסים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>התקן MySQL או PostgreSQL</li>
+                        <li>למד Window Functions ו-CTEs</li>
+                        <li>בנה מסד נתונים מורכב עם 5+ טבלאות</li>
+                        <li>תרגל אופטימיזציה ואינדקסים</li>
+                        <li>שלב SQL עם Python (pandas + SQLAlchemy)</li>
+                        <li>פתור אתגרים ב-HackerRank</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- טיזר 4 -->
+            <div style="background: #e1f5fe; border-right: 4px solid #03a9f4; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+                <h4 style="color: #0277bd; margin-bottom: 0.5rem;">😎 בונוס</h4>
+                <p><strong>פרויקט מעשי:</strong> צור מסד נתונים לניהול הספרייה הביתית שלך - ספרים, מחברים, תאריכי השאלה. זה יעזור לך להבין איך SQL עובד בחיים האמיתיים!</p>
+            </div>
+        </div>
+
+        <!-- קריאה לפעולה חזקה -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; border: none;">
+            <h2 style="color: white;">💾 SQL הוא המפתח לעולם הדאטה</h2>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">📊</div>
+                <p style="font-size: 1.2rem; margin: 1.5rem 0;">
+                    <strong>בעידן הדאטה, מי שיודע SQL יודע לשאול את השאלות הנכונות</strong><br>
+                    וזה מה שמפריד בין החלטות טובות לגדולות!
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <a href="data_analysis_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📈</span>
+                    <strong>ניתוח נתונים</strong>
+                    <span style="font-size: 0.9rem;">הפוך נתונים לתובנות</span>
+                </a>
+
+                <a href="powerbi_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📊</span>
+                    <strong>Power BI</strong>
+                    <span style="font-size: 0.9rem;">ויזואליזציה מתקדמת</span>
+                </a>
+
+                <a href="python_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</span>
+                    <strong>Python + SQL</strong>
+                    <span style="font-size: 0.9rem;">אוטומציה מלאה</span>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-size: 1rem; opacity: 0.9;">
+                    💡 <strong>זכור:</strong> SQL זה לא רק שפת תכנות - זה דרך חשיבה על נתונים!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><span class="brand-icon">🎓</span> LearningHub</h3>
+                    <p class="footer-description">
+                        פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>למידה</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html" class="footer-link">כל הקטגוריות</a></li>
+                        <li><a href="python_guide.html" class="footer-link">Python</a></li>
+                        <li><a href="chatgpt_guide.html" class="footer-link">ChatGPT</a></li>
+                        <li><a href="data_analysis_guide.html" class="footer-link">ניתוח נתונים</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="sitemap.html" class="footer-link">מפת האתר</a></li>
+                        <li><a href="prompts.html" class="footer-link">ספריית פרומפטים</a></li>
+                        <li><a href="ai_ethics.html" class="footer-link">אתיקה ב-AI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>קשר</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">אודות</a></li>
+                        <li><a href="#" class="footer-link">צור קשר</a></li>
+                        <li><a href="#" class="footer-link">תמיכה</a></li>
+                        <li><a href="#" class="footer-link">עדכונים</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 פורטל הלמידה והחדשנות | נבנה ע"י יעקב בידני
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" title="LinkedIn">💼</a>
+                    <a href="#" class="social-link" title="GitHub">🐙</a>
+                    <a href="#" class="social-link" title="YouTube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="global.js"></script>
+
+</body>
+
+</html>

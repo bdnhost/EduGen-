@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[כותרת הדף] | LearningHub</title>
+    <meta name="description" content="[תיאור הדף]">
+    <meta property="og:title" content="[כותרת הדף] - LearningHub">
+    <meta property="og:description" content="[תיאור הדף]">
+    <meta property="og:type" content="article">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Page-specific styles (if needed) -->
+    <style>
+        /* Custom styles for this page */
+    </style>
+</head>
+
+<body>
+    <!-- Global Header -->
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links">
+                <a href="sitemap.html" class="nav-link">מפת האתר</a>
+                <a href="categories.html" class="nav-link [active if current page]">קטגוריות</a>
+                <a href="index.html" class="nav-link [active if current page]">ראשי</a>
+            </div>
+            <a href="index.html" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="index.html">דף הבית</a>
+        <span>/</span>
+        <a href="categories.html">קטגוריות</a>
+        <span>/</span>
+        <span class="current">[שם הדף הנוכחי]</span>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="header-content">
+            <h1>[אייקון] [כותרת הדף]</h1>
+            <p class="subtitle">[תת-כותרת או תיאור קצר]</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-container">
+        
+        <!-- Content Card Example -->
+        <div class="content-card">
+            <h2>כותרת ראשית</h2>
+            <p>תוכן הדף...</p>
+            
+            <!-- Info Box Example -->
+            <div class="info-box">
+                <strong>💡 טיפ:</strong> מידע חשוב או הדגשה
+            </div>
+            
+            <!-- Warning Box Example -->
+            <div class="warning-box">
+                <strong>⚠️ שים לב:</strong> אזהרה או הערה חשובה
+            </div>
+            
+            <!-- Highlight Box Example -->
+            <div class="highlight-box">
+                <strong>✅ מומלץ:</strong> המלצה או נקודה חיובית
+            </div>
+        </div>
+
+        <!-- Feature Cards Grid Example -->
+        <div class="content-card">
+            <h2>דוגמאות או תכונות</h2>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <span class="icon">🎯</span>
+                    <h3>כותרת</h3>
+                    <p>תיאור קצר של התכונה או הדוגמה</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="icon">⚡</span>
+                    <h3>כותרת</h3>
+                    <p>תיאור קצר של התכונה או הדוגמה</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="icon">🚀</span>
+                    <h3>כותרת</h3>
+                    <p>תיאור קצר של התכונה או הדוגמה</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Block Example -->
+        <div class="content-card">
+            <h2>דוגמת קוד</h2>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre># דוגמת קוד Python
+def hello_world():
+    print("שלום עולם!")
+    
+hello_world()</pre>
+            </div>
+        </div>
+
+        <!-- Checklist Example -->
+        <div class="content-card">
+            <h2>רשימת בדיקה</h2>
+            <div class="checklist">
+                <h3>משימות לביצוע:</h3>
+                <ul>
+                    <li>משימה ראשונה</li>
+                    <li>משימה שנייה</li>
+                    <li>משימה שלישית</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><span class="brand-icon">🎓</span> LearningHub</h3>
+                    <p class="footer-description">
+                        פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>למידה</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html" class="footer-link">כל הקטגוריות</a></li>
+                        <li><a href="python_guide.html" class="footer-link">Python</a></li>
+                        <li><a href="chatgpt_guide.html" class="footer-link">ChatGPT</a></li>
+                        <li><a href="data_analysis_guide.html" class="footer-link">ניתוח נתונים</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+
+                        <li><a href="sitemap.html" class="footer-link">מפת האתר</a></li>
+                        <li><a href="prompts.html" class="footer-link">ספריית פרומפטים</a></li>
+                        <li><a href="ai_ethics.html" class="footer-link">אתיקה ב-AI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>קשר</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">אודות</a></li>
+                        <li><a href="#" class="footer-link">צור קשר</a></li>
+                        <li><a href="#" class="footer-link">תמיכה</a></li>
+                        <li><a href="#" class="footer-link">עדכונים</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 פורטל הלמידה והחדשנות | נבנה ע"י יעקב בידני
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" title="LinkedIn">💼</a>
+                    <a href="#" class="social-link" title="GitHub">🐙</a>
+                    <a href="#" class="social-link" title="YouTube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="global.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Copy code function
+        function copyCode(btn) {
+            const pre = btn.nextElementSibling;
+            navigator.clipboard.writeText(pre.innerText);
+            btn.innerText = 'הועתק!';
+            setTimeout(() => btn.innerText = 'העתק', 2000);
+        }
+        
+        // Add any page-specific JavaScript here
+    </script>
+</body>
+
+</html>

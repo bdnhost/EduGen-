@@ -1,0 +1,7 @@
+id,title,objectives,duration_hours
+s1,"מפגש 1: הגדרת בעיה וסביבת פיתוח","הגדירו MVP;הקימו סביבת פיתוח;הבינו ארכיטקטורת IoT",5
+s2,"מפגש 2: חומרה וחיווט","חיבור חיישנים;הבנת ADC;הכנת BOM",5
+s3,"מפגש 3: קושחה מודולרית","מבנה מודולארי;power management;OTA",5
+s4,"מפגש 4: איסוף נתונים ו-visualization","pipeline real-time;smoothing;format for storage",5
+s5,"מפגש 5: פרוטוקולים ואבטחה","MQTT topics;TLS provisioning;threat model",5
+s6,"מפגש 6: פרויקט גמר והצגות","demo;peer review;deliverables",5

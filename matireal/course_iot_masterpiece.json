@@ -1,0 +1,90 @@
+{
+  "course": {
+    "name": "🚀 IoT ואוטומציה למהנדסים — Masterpiece",
+    "code": "IOT-MASTER-2025",
+    "description": "קורס מעמיק פרקטי+תאורטי ליצירת מוצרי IoT מאובטחים ומוכנים לפריסה.",
+    "start_date": "2025-12-15",
+    "total_sessions": 6,
+    "total_hours": 30,
+    "density": "medium"
+  },
+  "sessions": [
+    {
+      "id": "s1",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח",
+      "objectives": [
+        "הגדירו MVP ו- success criteria",
+        "הקימו סביבת פיתוח (PlatformIO/Arduino IDE)",
+        "הבינו ארכיטקטורת IoT בסיסית"
+      ],
+      "duration_hours": 5
+    },
+    {
+      "id": "s2",
+      "title": "מפגש 2: חומרה וחיווט",
+      "objectives": [
+        "חיבור חיישנים אנלוגיים ודיגיטליים",
+        "הבנת ADC וסינון אותות",
+        "הכנת BOM בסיסי ותיעוד חיבור"
+      ],
+      "duration_hours": 5
+    },
+    {
+      "id": "s3",
+      "title": "מפגש 3: קושחה מודולרית",
+      "objectives": [
+        "מבנה מודולארי של קוד",
+        "הטמעת power management",
+        "הטמעת logging ו-OTA"
+      ],
+      "duration_hours": 5
+    },
+    {
+      "id": "s4",
+      "title": "מפגש 4: איסוף נתונים ו-visualization",
+      "objectives": [
+        "בניית pipeline real-time",
+        "יישום smoothing ו-alerting",
+        "הסכמה על פורמט נתונים לשמירה"
+      ],
+      "duration_hours": 5
+    },
+    {
+      "id": "s5",
+      "title": "מפגש 5: פרוטוקולים ואבטחה",
+      "objectives": [
+        "עיצוב MQTT topics ותכנון QoS",
+        "הטמעת TLS/provisioning בסיסי",
+        "ביצוע threat model פשוט"
+      ],
+      "duration_hours": 5
+    },
+    {
+      "id": "s6",
+      "title": "מפגש 6: פרויקט גמר והצגות",
+      "objectives": [
+        "הצגת פרוטוטייפ עובד",
+        "peer review ושיפור מהיר",
+        "הגשת deliverables: repo, demo video, report"
+      ],
+      "duration_hours": 5
+    }
+  ],
+  "assignments": [
+    {
+      "id": "proj_final",
+      "title": "פרויקט גמר: יישום מעשי",
+      "description": "בנו פרוטוטייפ עובד המיישם את עקרונות המדריך והציגו demo קצר.",
+      "session_id": "s6",
+      "due_in_weeks": 6,
+      "weight": 80,
+      "rubric": {
+        "technical": 50,
+        "demo": 20,
+        "security": 15,
+        "docs": 10,
+        "presentation": 5
+      }
+    }
+  ]
+}

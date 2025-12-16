@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פורטל למידה וחדשנות | כלים לקריירה</title>
+    <meta name="description"
+        content="הפורטל הרשמי ללימודי כלים דיגיטליים, AI וחדשנות. קורסים ב-Python, כלי בינה מלאכותית, ואוטומציה לכל תחום עיסוק.">
+    <meta name="author" content="יעקב בידני">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="global.css">
+
+    <style>
+        /* Homepage specific styles */
+        .hero-section {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .stats-section {
+            background: var(--bg-body);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: var(--spacing-lg);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            display: block;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links">
+                <a href="sitemap.html" class="nav-link">מפת האתר</a>
+                <a href="categories.html" class="nav-link">קטגוריות</a>
+                <a href="index.html" class="nav-link active">ראשי</a>
+            </div>
+            <a href="index.html" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="icon-large">🎓🚀</div>
+            <h1 class="hero-title">פורטל הלמידה והחדשנות</h1>
+            <p class="hero-subtitle">כלים דיגיטליים, בינה מלאכותית ואוטומציה - לשיפור הפרודוקטיביות בכל תחום ולכל מקצוע</p>
+            <div class="hero-actions">
+                <a href="#core-modules" class="btn btn-primary">התחל ללמוד</a>
+                <a href="categories.html" class="btn btn-secondary">כל הנושאים</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="page-container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">26</span>
+                    <span class="stat-label">מדריכים מקצועיים</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">תחומי התמחות</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">תוכן בעברית</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">אפשרויות ללמידה</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="page-container">
+        <!-- Core Modules Grid -->
+        <div class="content-card">
+            <h2 id="core-modules">מסלולי הליבה שלנו</h2>
+            <div class="icon-medium">⭐</div>
+            <p>המדריכים הפופולריים ביותר - נבחרו במיוחד לכם:</p>
+            
+            <div class="grid-3">
+                <a href="python_guide.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">🐍</span>
+                    <h3>Python Automation</h3>
+                    <p>אוטומציה וייעול תהליכים. למדו איך לתת למחשב לעבוד בשבילכם בכל משימה.</p>
+                    <div style="background: var(--accent); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-top: 1rem; align-self: flex-start;">PRODUCTIVITY</div>
+                </a>
+
+                <a href="chatgpt_guide.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">🤖</span>
+                    <h3>AI & Prompt Engineering</h3>
+                    <p>שימוש ב-ChatGPT וכלי AI לכתיבה, יצירה ופתרון בעיות יומיות.</p>
+                    <div style="background: var(--success); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-top: 1rem; align-self: flex-start;">SMART TOOLS</div>
+                </a>
+
+                <a href="data_analysis_guide.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">📊</span>
+                    <h3>Data Analysis</h3>
+                    <p>הפקת תובנות עסקיות ומחקריות מנתונים באמצעות Pandas וכלים ויזואליים.</p>
+                    <div style="background: var(--warning); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-top: 1rem; align-self: flex-start;">DATA</div>
+                </a>
+
+                <a href="github_guide.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">🐙</span>
+                    <h3>Git & Version Control</h3>
+                    <p>ניהול גרסאות, עבודה בצוותים ופרוייקטים בקוד פתוח.</p>
+                    <div style="background: var(--error); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-top: 1rem; align-self: flex-start;">DEVOPS</div>
+                </a>
+
+                <a href="iot_guide.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">📡</span>
+                    <h3>IoT & Smart Tech</h3>
+                    <p>הבנת הטכנולוגיה החכמה סביבנו ואיך לנצל אותה לבית ולעסק.</p>
+                    <div style="background: var(--accent-dark); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-top: 1rem; align-self: flex-start;">TECH</div>
+                </a>
+
+                <a href="terminal_guide.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">💻</span>
+                    <h3>Terminal & CLIs</h3>
+                    <p>שליטה מלאה במערכת ההפעלה דרך שורת הפקודה.</p>
+                    <div style="background: var(--text-secondary); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-top: 1rem; align-self: flex-start;">SYSTEM</div>
+                </a>
+
+                <a href="short-video-marketing-strategy.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">🎬</span>
+                    <h3>שיווק בווידאו קצר</h3>
+                    <p>אסטרטגיות ויישום ל-Reels ו-TikTok כדי להגדיל חשיפה ומעורבות.</p>
+                    <div style="margin-top:0.6rem; color:#888; font-size:0.85rem;">עודכן: 2025-12-15</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Secondary Resources -->
+        <div class="content-card">
+            <h2>משאבים נוספים</h2>
+            <div class="icon-medium">🛠️</div>
+            <p>כלים וחומרים שיעזרו לכם בדרך:</p>
+            
+            <div class="grid-3">
+                <a href="prompts.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">💬</span>
+                    <h3>ספריית פרומפטים</h3>
+                    <p>מאגר תבניות מוכנות לעבודה יעילה עם ChatGPT ו-Midjourney.</p>
+                </a>
+
+                <a href="canva_guide.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">🎨</span>
+                    <h3>עיצוב ויזואלי</h3>
+                    <p>עקרונות עיצוב ומדריכים ליצירת מצגות ומסמכים מקצועיים.</p>
+                </a>
+
+
+
+                <a href="sitemap.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <span class="icon">🗺️</span>
+                    <h3>מפת האתר</h3>
+                    <p>עץ היררכי מלא של כל התכנים והמדריכים באתר.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Access -->
+        <div class="content-card">
+            <h2>גישה מהירה</h2>
+            <div class="icon-medium">⚡</div>
+            <div class="grid-2">
+                <div class="highlight-box">
+                    <h3>🎯 מתחילים?</h3>
+                    <p>מומלץ להתחיל עם <a href="ai_basics.html" style="color: var(--accent);">יסודות ה-AI</a> ואז לעבור ל<a href="chatgpt_guide.html" style="color: var(--accent);">מדריך ChatGPT</a>.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>🚀 מתקדמים?</h3>
+                    <p>קפצו ישר ל<a href="python_guide.html" style="color: var(--accent);">Python</a> או <a href="data_analysis_guide.html" style="color: var(--accent);">ניתוח נתונים</a> לכלים מתקדמים.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Learning Path -->
+        <div class="content-card">
+            <h2>מסלול למידה מותאם אישית</h2>
+            <div class="icon-medium">🎯</div>
+            <p>ענו על 3 שאלות קצרות ונמליץ לכם על המסלול המתאים:</p>
+            
+            <div class="interactive-demo">
+                <h3>🧭 מוצא את המסלול שלך</h3>
+                <button class="demo-button" onclick="startLearningPath()">התחל מבחן קצר</button>
+                <div id="learning-path-quiz" style="display: none; margin-top: 1rem; text-align: right;">
+                    <div class="step-indicator">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <strong>מה הרקע שלך?</strong><br>
+                            <div style="margin-top: 0.5rem;">
+                                <label style="display: block; margin: 0.3rem 0;"><input type="radio" name="background" value="beginner"> מתחיל לגמרי</label>
+                                <label style="display: block; margin: 0.3rem 0;"><input type="radio" name="background" value="some"> יש לי קצת ניסיון</label>
+                                <label style="display: block; margin: 0.3rem 0;"><input type="radio" name="background" value="advanced"> מתקדם, רוצה כלים חדשים</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="demo-button" onclick="showRecommendation()" style="margin-top: 1rem;">קבל המלצה</button>
+                </div>
+                <div id="recommendation" style="display: none; margin-top: 1rem; padding: 1rem; background: var(--accent); color: white; border-radius: 8px;">
+                    <!-- Recommendation will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><span class="brand-icon">🎓</span> LearningHub</h3>
+                    <p class="footer-description">
+                        פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>למידה</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html" class="footer-link">כל הקטגוריות</a></li>
+                        <li><a href="python_guide.html" class="footer-link">Python</a></li>
+                        <li><a href="chatgpt_guide.html" class="footer-link">ChatGPT</a></li>
+                        <li><a href="data_analysis_guide.html" class="footer-link">ניתוח נתונים</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+
+                        <li><a href="sitemap.html" class="footer-link">מפת האתר</a></li>
+                        <li><a href="prompts.html" class="footer-link">ספריית פרומפטים</a></li>
+                        <li><a href="ai_ethics.html" class="footer-link">אתיקה ב-AI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>קשר</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">אודות</a></li>
+                        <li><a href="#" class="footer-link">צור קשר</a></li>
+                        <li><a href="#" class="footer-link">תמיכה</a></li>
+                        <li><a href="#" class="footer-link">עדכונים</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 פורטל הלמידה והחדשנות | נבנה ע"י יעקב בידני
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" title="LinkedIn">💼</a>
+                    <a href="#" class="social-link" title="GitHub">🐙</a>
+                    <a href="#" class="social-link" title="YouTube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JS for Mobile Menu -->
+    <script src="global.js"></script>
+    <script>
+        function startLearningPath() {
+            const quizDiv = document.getElementById('learning-path-quiz');
+            const button = event.target;
+            const recommendationDiv = document.getElementById('recommendation');
+            
+            if (quizDiv.style.display === 'none') {
+                quizDiv.style.display = 'block';
+                button.textContent = 'הסתר מבחן';
+                recommendationDiv.style.display = 'none';
+            } else {
+                quizDiv.style.display = 'none';
+                button.textContent = 'התחל מבחן קצר';
+                recommendationDiv.style.display = 'none';
+            }
+        }
+        
+        function showRecommendation() {
+            const background = document.querySelector('input[name="background"]:checked');
+            const recommendationDiv = document.getElementById('recommendation');
+            
+            if (!background) {
+                alert('אנא בחר את הרקע שלך');
+                return;
+            }
+            
+            let recommendation = '';
+            
+            switch(background.value) {
+                case 'beginner':
+                    recommendation = `
+                        <h3>🌟 המסלול המומלץ לך:</h3>
+                        <div style="margin: 1rem 0;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">1</span>
+                                <a href="ai_basics.html" style="color: white; text-decoration: underline;">יסודות הבינה המלאכותית</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">2</span>
+                                <a href="chatgpt_guide.html" style="color: white; text-decoration: underline;">מדריך ChatGPT למתחילים</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">3</span>
+                                <a href="internet_basics.html" style="color: white; text-decoration: underline;">יסודות האינטרנט</a>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">זמן משוער: 2-3 שבועות</p>
+                    `;
+                    break;
+                case 'some':
+                    recommendation = `
+                        <h3>🚀 המסלול המומלץ לך:</h3>
+                        <div style="margin: 1rem 0;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">1</span>
+                                <a href="python_guide.html" style="color: white; text-decoration: underline;">Python לאוטומציה</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">2</span>
+                                <a href="github_guide.html" style="color: white; text-decoration: underline;">Git & GitHub</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">3</span>
+                                <a href="data_analysis_guide.html" style="color: white; text-decoration: underline;">ניתוח נתונים</a>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">זמן משוער: 4-6 שבועות</p>
+                    `;
+                    break;
+                case 'advanced':
+                    recommendation = `
+                        <h3>⚡ המסלול המומלץ לך:</h3>
+                        <div style="margin: 1rem 0;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">1</span>
+                                <a href="web_scraping_guide.html" style="color: white; text-decoration: underline;">Web Scraping מתקדם</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">2</span>
+                                <a href="iot_guide.html" style="color: white; text-decoration: underline;">IoT וטכנולוגיה חכמה</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
+                                <span style="background: white; color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 50%; font-weight: bold;">3</span>
+                                <a href="ai_ethics.html" style="color: white; text-decoration: underline;">אתיקה ב-AI</a>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">זמן משוער: 3-4 שבועות</p>
+                    `;
+                    break;
+            }
+            
+            recommendationDiv.innerHTML = recommendation;
+            recommendationDiv.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

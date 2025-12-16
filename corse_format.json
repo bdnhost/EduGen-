@@ -1,0 +1,249 @@
+{
+    "_DOCUMENTATION": {
+        "title": "מדריך למבנה קובץ ייבוא קורס",
+        "overview": "מערכת זו מאפשרת לייבא קורס שלם על כל מרכיביו באמצעות קובץ JSON יחיד. המבנה מאפשר הגדרת סילבוס, מטלות מורכבות, חומרי לימוד ומחווני הערכה.",
+        "key_concepts": {
+            "temp_id": "מזהה זמני (למשל 's1') המשמש לקישור ישויות פנימיות בתוך הקובץ. למשל, קישור מטלה למפגש ספציפי.",
+            "dates": "כל התאריכים חייבים להיות בפורמט ISO: 'YYYY-MM-DD'.",
+            "types": "יש להקפיד על שימוש בערכים המותרים (ENUMS) המפורטים למטה."
+        },
+        "entities_guide": {
+            "course": "אובייקט חובה המגדיר את פרטי הקורס הבסיסיים.",
+            "sessions": "מערך מפגשי הקורס. כל מפגש מקבל temp_id.",
+            "assignments": {
+                "description": "מערך מטלות. יש להבדיל בין סוגים שונים באמצעות שדה 'type'.",
+                "types": {
+                    "assignment": "מטלת בית רגילה להגשה.",
+                    "quiz": "בוחן עם שאלות אמריקאיות. דורש אובייקט 'content_data' עם שאלות.",
+                    "project": "פרויקט מורכב. יכול לכלול אבני דרך (milestones) ב-'content_data'."
+                },
+                "rubric": "ניתן להוסיף אובייקט 'rubric' לכל מטלה כדי להגדיר קריטריונים להערכה."
+            },
+            "materials": "חומרי לימוד (מצגות, קבצים, קישורים). ניתן לקשר למפגש או להגדיר כגלובליים.",
+            "announcements": "הודעות ללוח המודעות של הקורס."
+        }
+    },
+    "course": {
+        "name": "מבוא לפייתון ודאטה אנליסיס",
+        "code": "PY-PRO-2024",
+        "description": "קורס מקיף ללימוד יסודות התכנות בשפת פייתון, כולל עבודה עם דאטה, פנדס, וויזואליזציה. הקורס מיועד למתחילים ללא רקע קודם.",
+        "institution": "האקדמיה לקוד",
+        "semester": "סמסטר א",
+        "year": "2024",
+        "start_date": "2024-03-01",
+        "day_of_week": "שני",
+        "start_time": "18:00",
+        "end_time": "21:00",
+        "total_sessions": 3,
+        "total_hours": 12,
+        "weekly_hours": 4,
+        "room": "מעבדה 3",
+        "status": "active",
+        "attendance_threshold": 85,
+        "color": "from-blue-600 via-cyan-600 to-teal-600",
+        "allow_self_registration": true
+    },
+    "schedule": {
+        "recurrence_type": "weekly",
+        "days_of_week": [
+            "Monday"
+        ],
+        "start_time": "18:00",
+        "end_time": "21:00",
+        "start_date": "2024-03-01",
+        "location": "מעבדה 3"
+    },
+    "sessions": [
+        {
+            "temp_id": "s1",
+            "session_number": 1,
+            "title": "היכרות עם פייתון ומשתנים",
+            "description": "התקנת סביבת עבודה, הרצת פקודות ראשונות, סוגי משתנים (str, int, float, bool), קלט ופלט.",
+            "objectives": "1. הסטודנט ידע להתקין Python ו-VS Code.\n2. הסטודנט יבין את ההבדל בין סוגי משתנים.\n3. כתיבת תוכנית Hello World ראשונה.",
+            "date": "2024-03-01",
+            "start_time": "18:00",
+            "end_time": "21:00",
+            "duration_hours": 4,
+            "location": "מעבדה 3 / זום",
+            "video_conference_link": "https://zoom.us/j/123456789",
+            "teacher_notes": "לזכור לוודא שלכולם יש הרשאות התקנה על המחשבים."
+        },
+        {
+            "temp_id": "s2",
+            "session_number": 2,
+            "title": "לולאות, תנאים ומבני נתונים",
+            "description": "שימוש ב-if/else, לולאות for ו-while. מבוא לרשימות (Lists) ומילונים (Dictionaries).",
+            "objectives": "שליטה בזרימת התוכנית (Flow Control) ועבודה עם רשימות.",
+            "date": "2024-03-08",
+            "start_time": "18:00",
+            "end_time": "21:00",
+            "duration_hours": 4,
+            "location": "מעבדה 3",
+            "status": "planned"
+        },
+        {
+            "temp_id": "s3",
+            "session_number": 3,
+            "title": "פרויקט מסכם: ניתוח נתונים",
+            "description": "שימוש בספריית Pandas לטעינת קובץ CSV וביצוע חיתוכים בסיסיים. הצגת גרפים עם Matplotlib.",
+            "objectives": "יישום כל החומר הנלמד בפרויקט מעשי.",
+            "date": "2024-03-15",
+            "start_time": "18:00",
+            "end_time": "21:00",
+            "duration_hours": 4,
+            "location": "מעבדה 3"
+        }
+    ],
+    "assignments": [
+        {
+            "//_COMMENT": "דוגמה למטלה רגילה עם מחוון הערכה (Rubric)",
+            "title": "תרגיל 1: מחשבון שכר",
+            "description": "כתבו תוכנית המקבלת שעות עבודה ותעריף לשעה, ומחשבת שכר יומי כולל שעות נוספות.",
+            "type": "assignment",
+            "session_temp_id": "s1",
+            "due_date": "2024-03-07",
+            "max_score": 100,
+            "weight": 20,
+            "key_concepts": [
+                {
+                    "term": "Input",
+                    "definition": "קליטת מידע מהמשתמש"
+                },
+                {
+                    "term": "Casting",
+                    "definition": "המרת סוגי משתנים"
+                }
+            ],
+            "rubric": {
+                "name": "מחוון תרגיל 1",
+                "criteria": [
+                    {
+                        "title": "תקינות קלט",
+                        "description": "בדיקה שהקלט הוא מספר חיובי",
+                        "max_points": 30
+                    },
+                    {
+                        "title": "חישוב נכון",
+                        "description": "חישוב השכר הבסיסי ושעות הנוספות",
+                        "max_points": 50
+                    },
+                    {
+                        "title": "סגנון קוד",
+                        "description": "שמות משתנים ברורים והערות",
+                        "max_points": 20
+                    }
+                ]
+            }
+        },
+        {
+            "//_COMMENT": "דוגמה לבוחן אמריקאי",
+            "title": "בוחן אמצע: לולאות ותנאים",
+            "description": "בוחן קצר לבדיקת הבנה של לולאות ותנאים.",
+            "type": "quiz",
+            "session_temp_id": "s2",
+            "due_date": "2024-03-09",
+            "max_score": 100,
+            "weight": 30,
+            "content_data": {
+                "questions": [
+                    {
+                        "question": "מה הפלט של for i in range(3)?",
+                        "options": [
+                            "0,1,2",
+                            "1,2,3",
+                            "0,1,2,3"
+                        ],
+                        "correct": 0
+                    },
+                    {
+                        "question": "איזה טיפוס נתונים מחזירה הפונקציה input()?",
+                        "options": [
+                            "int",
+                            "str",
+                            "bool"
+                        ],
+                        "correct": 1
+                    }
+                ]
+            }
+        },
+        {
+            "//_COMMENT": "דוגמה לפרויקט עם אבני דרך",
+            "title": "פרויקט גמר: מנתח המניות",
+            "description": "בנו אפליקציה המנתחת נתוני מניות מקובץ CSV ומציגה את המניה הרווחית ביותר.",
+            "type": "project",
+            "session_temp_id": "s3",
+            "due_date": "2024-03-22",
+            "max_score": 100,
+            "weight": 50,
+            "content_data": {
+                "milestones": [
+                    {
+                        "title": "טעינת הנתונים",
+                        "deadline": "2024-03-18"
+                    },
+                    {
+                        "title": "חישוב סטטיסטי",
+                        "deadline": "2024-03-20"
+                    },
+                    {
+                        "title": "הגשה סופית",
+                        "deadline": "2024-03-22"
+                    }
+                ]
+            },
+            "resource_links": [
+                "https://pandas.pydata.org/docs/"
+            ],
+            "rubric": {
+                "criteria": [
+                    {
+                        "title": "פונקציונליות",
+                        "description": "התוכנית עובדת לפי הדרישות",
+                        "max_points": 40
+                    },
+                    {
+                        "title": "ממשק משתמש",
+                        "description": "פלט ברור וקריא",
+                        "max_points": 30
+                    },
+                    {
+                        "title": "שימוש ב-Pandas",
+                        "description": "שימוש נכון בספרייה ללא לולאות מיותרות",
+                        "max_points": 30
+                    }
+                ]
+            }
+        }
+    ],
+    "materials": [
+        {
+            "title": "מצגת שיעור 1 - יסודות",
+            "description": "קובץ PDF עם שקופיות השיעור",
+            "type": "presentation",
+            "file_url": "https://example.com/python-intro.pdf",
+            "session_temp_id": "s1"
+        },
+        {
+            "title": "מאגר הקוד של הקורס (GitHub)",
+            "description": "דוגמאות קוד מכל השיעורים",
+            "type": "link",
+            "file_url": "https://github.com/example/python-course",
+            "course_global": true
+        },
+        {
+            "title": "הקלטת זום - שיעור 2",
+            "type": "video",
+            "file_url": "https://youtube.com/watch?v=xyz",
+            "session_temp_id": "s2"
+        }
+    ],
+    "announcements": [
+        {
+            "title": "ברוכים הבאים לקורס הפייתון!",
+            "content": "מתרגשים להתחיל. נא להגיע עם מחשבים ניידים מותקנים.",
+            "priority": "high",
+            "session_temp_id": "s1"
+        }
+    ]
+}

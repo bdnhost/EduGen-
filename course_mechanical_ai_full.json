@@ -1,0 +1,1512 @@
+{
+  "_DOCUMENTATION": {
+    "title": "קורס AI יישומי להנדסאי מכונות - גרסה מועשרת",
+    "version": "2.0",
+    "created": "2024-12-16",
+    "enhanced": "2024-12-16",
+    "total_sessions": 10,
+    "hours_per_session": 3.5,
+    "total_hours": 35,
+    "start_date": "2025-12-02",
+    "enhancements": [
+      "קישורים למדריכים מ-bdnhost.net/Resources לכל מפגש",
+      "מטלת כיתה לכל מפגש",
+      "שיעורי בית לכל מפגש",
+      "בוחן (Quiz) לכל מפגש עם 5 שאלות",
+      "17 הודעות מורחבות עם טיפים וקישורים",
+      "35+ חומרי לימוד כולל מדריכים מקוונים"
+    ],
+    "resource_hub": "https://bdnhost.net/Resources/",
+    "last_updated": "2025-12-16",
+    "structure_fix": "העברת כל המטלות והבחנים למערך assignments לפי הפורמט הנכון"
+  },
+  "course": {
+    "name": "AI יישומי להנדסאי מכונות",
+    "code": "MECH-AI-2025",
+    "description": "קורס מקיף המשלב בינה מלאכותית עם הנדסת מכונות. התלמידים ילמדו להשתמש בכלי AI לאבחון תקלות, תחזוקה מונעת, אופטימיזציה של ייצור, וניהול איכות. הקורס כולל תרגול מעשי עם Python, OpenAI API, וכלי ניתוח נתונים מתקדמים.",
+    "institution": "מכללת גליל מערבי",
+    "semester": "חורף 2025",
+    "year": "2025",
+    "start_date": "2025-12-02",
+    "day_of_week": "שלישי",
+    "start_time": "17:00",
+    "end_time": "20:30",
+    "total_sessions": 10,
+    "total_hours": 35,
+    "weekly_hours": 3.5,
+    "room": "מעבדת תעשייה 4.0 - בניין C",
+    "status": "active",
+    "attendance_threshold": 80,
+    "color": "from-orange-600 via-red-600 to-yellow-600",
+    "allow_self_registration": true
+  },
+  "schedule": {
+    "recurrence_type": "weekly",
+    "days_of_week": [
+      "Tuesday"
+    ],
+    "start_time": "17:00",
+    "end_time": "20:30",
+    "start_date": "2025-12-02",
+    "location": "מעבדת תעשייה 4.0 - בניין C"
+  },
+  "sessions": [
+    {
+      "temp_id": "s1",
+      "session_number": 1,
+      "title": "מבוא ל-AI ויישומים תעשייתיים",
+      "description": "היכרות עם מושגי בינה מלאכותית בסיסיים, סקירת כלים (ChatGPT, Claude, Gemini), והבנת יישומי AI בתעשיית המכונות. דוגמאות מהעולם: Toyota, Siemens, Tesla. התקנת כלים ראשונים.",
+      "objectives": "1. הסטודנט יבין מהי בינה מלאכותית ואיך היא משפיעה על תעשיית המכונות.\n2. הסטודנט יכיר את הכלים המרכזיים: ChatGPT, Claude, Gemini.\n3. הסטודנט ייצור חשבונות ויבצע שאלות ראשונות.\n4. הסטודנט יזהה 5 יישומים פוטנציאליים ב-AI במקום עבודתו.",
+      "date": "2025-12-02",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "video_conference_link": "https://zoom.us/j/mech-ai-session1",
+      "teacher_notes": "להכין דמו של ChatGPT לאבחון תקלה במכונת CNC. להביא דוגמאות מהתעשייה.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך יסודות AI",
+          "url": "https://bdnhost.net/Resources/ai_basics.html"
+        },
+        {
+          "title": "מדריך ChatGPT",
+          "url": "https://bdnhost.net/Resources/chatgpt_guide.html"
+        },
+        {
+          "title": "מדריך AI למנהלים",
+          "url": "https://bdnhost.net/Resources/agentic-ai-for-managers.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s2",
+      "session_number": 2,
+      "title": "Prompt Engineering למהנדסי מכונות",
+      "description": "למידת טכניקות לכתיבת פרומפטים יעילים. יצירת בנק פרומפטים לשימוש יומיומי: אבחון תקלות, כתיבת נהלים, ניתוח נתונים. תרגול מעשי עם מקרים אמיתיים ממפעלים.",
+      "objectives": "1. שליטה בכתיבת פרומפטים ברורים ומדויקים.\n2. יצירת תבניות פרומפטים לשימוש חוזר.\n3. הבנת ההבדלים בין מודלים שונים.\n4. אבחון 3 תקלות אמיתיות בעזרת AI.",
+      "date": "2025-12-09",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "teacher_notes": "להכין 10 תקלות אמיתיות לתרגול. לוודא שלכולם יש גישה ל-ChatGPT Plus.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך הנדסת פרומפטים",
+          "url": "https://bdnhost.net/Resources/prompt-engineering-guide.html"
+        },
+        {
+          "title": "ספריית פרומפטים",
+          "url": "https://bdnhost.net/Resources/prompts.html"
+        },
+        {
+          "title": "מדריך LLMs",
+          "url": "https://bdnhost.net/Resources/understanding-llms-how-it-works.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s3",
+      "session_number": 3,
+      "title": "Python למהנדסי מכונות - יסודות",
+      "description": "מבוא לתכנות Python המותאם למהנדסי מכונות. משתנים, לולאות, תנאים, פונקציות. דגש על חישובים הנדסיים: חישוב כוחות, מומנטים, מהירויות. עבודה עם מספרים ומדידות.",
+      "objectives": "1. כתיבת סקריפטים Python בסיסיים.\n2. חישוב פרמטרים הנדסיים אוטומטית.\n3. קריאת נתונים מקובץ CSV.\n4. יצירת מחשבונים פשוטים למשימות יומיומיות.",
+      "date": "2025-12-16",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "teacher_notes": "לוודא שלכולם מותקן Python 3.8+ ו-VS Code. להכין dataset לדוגמה.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך Python",
+          "url": "https://bdnhost.net/Resources/python_guide.html"
+        },
+        {
+          "title": "מדריך Terminal",
+          "url": "https://bdnhost.net/Resources/terminal_guide.html"
+        },
+        {
+          "title": "מדריך GitHub",
+          "url": "https://bdnhost.net/Resources/github_guide.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s4",
+      "session_number": 4,
+      "title": "ניתוח נתוני ייצור עם Pandas",
+      "description": "עבודה עם ספריית Pandas לניתוח נתוני ייצור. קריאת קבצי Excel/CSV, ניקוי נתונים, חישובים סטטיסטיים, זיהוי חריגות. יצירת דוחות ייצור אוטומטיים.",
+      "objectives": "1. טעינה ועיבוד נתוני ייצור.\n2. חישוב OEE (Overall Equipment Effectiveness).\n3. זיהוי מגמות ובעיות איכות.\n4. יצירת דוח Excel אוטומטי.",
+      "date": "2025-12-23",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "teacher_notes": "להכין dataset ייצור אמיתי (מאנונימי). לכלול נתונים עם בעיות איכות.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך ניתוח נתונים",
+          "url": "https://bdnhost.net/Resources/data_analysis_guide.html"
+        },
+        {
+          "title": "מדריך Excel",
+          "url": "https://bdnhost.net/Resources/excel_student.html"
+        },
+        {
+          "title": "מדריך Power BI",
+          "url": "https://bdnhost.net/Resources/powerbi_guide.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s5",
+      "session_number": 5,
+      "title": "אינטגרציה עם OpenAI API",
+      "description": "חיבור למערכת OpenAI API. שליחת נתונים לניתוח, קבלת המלצות, אוטומציה של תהליכי אבחון. בניית סקריפט שמנתח נתוני מכונה ומחזיר המלצות תחזוקה.",
+      "objectives": "1. קבלת API key והגדרת סביבה.\n2. שליחת בקשות ל-API וקבלת תשובות.\n3. ניתוח נתוני חיישנים אוטומטי.\n4. יצירת דוח המלצות תחזוקה.",
+      "date": "2025-12-30",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "video_conference_link": "https://zoom.us/j/mech-ai-session5",
+      "teacher_notes": "לוודא שלכולם יש API key פעיל. להסביר על מגבלות rate limiting.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך LLMs",
+          "url": "https://bdnhost.net/Resources/understanding-llms-how-it-works.html"
+        },
+        {
+          "title": "מדריך ChatGPT",
+          "url": "https://bdnhost.net/Resources/chatgpt_guide.html"
+        },
+        {
+          "title": "מדריך Web Scraping",
+          "url": "https://bdnhost.net/Resources/web_scraping_guide.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s6",
+      "session_number": 6,
+      "title": "מערכת ניטור חכמה - חלק 1",
+      "description": "בניית מערכת ניטור בזמן אמת למכונות. איסוף נתוני חיישנים (טמפרטורה, רטט, זרם), זיהוי חריגות אוטומטי, שמירה במסד נתונים SQLite.",
+      "objectives": "1. בניית מערכת איסוף נתונים.\n2. זיהוי חריגות בפרמטרים.\n3. שמירת נתונים היסטוריים.\n4. יצירת log מסודר.",
+      "date": "2026-01-06",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "teacher_notes": "להכין סימולטור של נתוני חיישנים. לוודא שלכולם מותקן SQLite.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך IoT",
+          "url": "https://bdnhost.net/Resources/iot_guide.html"
+        },
+        {
+          "title": "מדריך SQL",
+          "url": "https://bdnhost.net/Resources/sql_guide.html"
+        },
+        {
+          "title": "מדריך Docker",
+          "url": "https://bdnhost.net/Resources/docker-usage-guide.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s7",
+      "session_number": 7,
+      "title": "מערכת ניטור חכמה - חלק 2",
+      "description": "המשך בניית המערכת: הוספת מערכת התראות (SMS/Email), יצירת dashboard ויזואלי עם Streamlit, דוחות אוטומטיים יומיים. אינטגרציה של AI לניתוח מגמות.",
+      "objectives": "1. שליחת התראות בזמן אמת.\n2. יצירת dashboard אינטראקטיבי.\n3. דוחות PDF אוטומטיים.\n4. חיזוי מגמות עתידיות.",
+      "date": "2026-01-13",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "teacher_notes": "להכין חשבון SMTP לדוגמה. להדגים Streamlit dashboard מוכן.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך Power BI",
+          "url": "https://bdnhost.net/Resources/powerbi_guide.html"
+        },
+        {
+          "title": "מדריך UI/UX",
+          "url": "https://bdnhost.net/Resources/ui_ux_guide.html"
+        },
+        {
+          "title": "מדריך שיווק דיגיטלי",
+          "url": "https://bdnhost.net/Resources/marketing_guide.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s8",
+      "session_number": 8,
+      "title": "תחזוקה מונעת מבוססת AI",
+      "description": "למידת טכניקות Predictive Maintenance. ניתוח היסטורי של תקלות, זיהוי דפוסים, חיזוי תקלות עתידיות. שימוש ב-Machine Learning בסיסי (scikit-learn) ליצירת מודלי חיזוי.",
+      "objectives": "1. הבנת עקרונות תחזוקה מונעת.\n2. בניית מודל חיזוי פשוט.\n3. יצירת לוח זמנים לתחזוקה.\n4. אופטימיזציה של משאבי תחזוקה.",
+      "date": "2026-01-20",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "teacher_notes": "להכין dataset של תקלות (שנה אחורה). להסביר Linear Regression בסיסי.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך ניתוח נתונים",
+          "url": "https://bdnhost.net/Resources/data_analysis_guide.html"
+        },
+        {
+          "title": "מדריך הנדסה מכנית",
+          "url": "https://bdnhost.net/Resources/mechanical_design_guide.html"
+        },
+        {
+          "title": "מדריך רכב",
+          "url": "https://bdnhost.net/Resources/automotive_guide.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s9",
+      "session_number": 9,
+      "title": "Chatbot לתמיכה טכנית",
+      "description": "בניית chatbot לתמיכה טכנית במפעל. שאלות ותשובות נפוצות, אבחון תקלות בסיסיות, חיבור ל-WhatsApp/Telegram. יצירת knowledge base מנתוני המפעל.",
+      "objectives": "1. בניית chatbot פונקציונלי.\n2. אינטגרציה עם פלטפורמות הודעות.\n3. הוספת 30+ שאלות נפוצות.\n4. בדיקת המערכת עם משתמשים.",
+      "date": "2026-01-27",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "video_conference_link": "https://zoom.us/j/mech-ai-session9",
+      "teacher_notes": "להכין Bot Token ל-Telegram מראש. לדוגמה של chatbot פעיל.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך בניית צ'אטבוט",
+          "url": "https://bdnhost.net/Resources/no-code-customer-service-chatbot-building.html"
+        },
+        {
+          "title": "מדריך ChatGPT",
+          "url": "https://bdnhost.net/Resources/chatgpt_guide.html"
+        },
+        {
+          "title": "מדריך AI למחנכים",
+          "url": "https://bdnhost.net/Resources/ai-tools-and-applications-guide-for-education-professionals.html"
+        }
+      ]
+    },
+    {
+      "temp_id": "s10",
+      "session_number": 10,
+      "title": "הצגת פרויקטים וסיכום",
+      "description": "הצגת פרויקטי הגמר של הסטודנטים. כל צוות מציג את המערכת שבנה (10-15 דקות). משוב עמיתים, דיון על יישום בעולם האמיתי, וסיכום הקורס. חלוקת תעודות.",
+      "objectives": "1. הצגה מקצועית של פרויקט.\n2. קבלת משוב והצעות לשיפור.\n3. שיתוף ידע עם חברי הכיתה.\n4. זיהוי הזדמנויות ליישום במפעל.",
+      "date": "2026-02-03",
+      "start_time": "17:00",
+      "end_time": "20:30",
+      "duration_hours": 3.5,
+      "location": "מעבדת תעשייה 4.0 - בניין C",
+      "teacher_notes": "להכין רשימת הערכה לעמיתים. להזמין מנהלים מהתעשייה לצפות.",
+      "status": "planned",
+      "resource_links": [
+        {
+          "title": "מדריך מצגות",
+          "url": "https://bdnhost.net/Resources/presentation_skills.html"
+        },
+        {
+          "title": "מדריך פורטפוליו",
+          "url": "https://bdnhost.net/Resources/building-impressive-digital-portfolio.html"
+        },
+        {
+          "title": "מדריך קריירה",
+          "url": "https://bdnhost.net/Resources/career_prep.html"
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "title": "בוחן מפגש 1: מושגי יסוד ב-AI",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 1",
+      "type": "quiz",
+      "session_temp_id": "s1",
+      "due_date": "2025-12-02",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהי בינה מלאכותית?",
+            "options": [
+              "תוכנה שמחקה חשיבה אנושית",
+              "רובוט פיזי",
+              "מחשב מהיר"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו LLM?",
+            "options": [
+              "מודל שפה גדול",
+              "מכונת לייזר",
+              "תוכנת עיצוב"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "איזה כלי AI פותח על ידי OpenAI?",
+            "options": [
+              "ChatGPT",
+              "Gemini",
+              "Claude"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו יתרון מרכזי של AI בתעשייה?",
+            "options": [
+              "אוטומציה וחיזוי תקלות",
+              "החלפת כל העובדים",
+              "הורדת מחירים בלבד"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Prompt?",
+            "options": [
+              "הנחיה/שאלה למודל AI",
+              "סוג של מכונה",
+              "שפת תכנות"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: היכרות עם ChatGPT",
+      "description": "פתחו חשבון ChatGPT ונסו לשאול 5 שאלות על תחום ההנדסה המכנית. תעדו את השאלות והתשובות.",
+      "type": "assignment",
+      "session_temp_id": "s1",
+      "due_date": "2025-12-02",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: זיהוי יישומי AI",
+      "description": "זהו 5 תהליכים במקום העבודה שלכם שיכולים להשתפר עם AI. לכל תהליך כתבו: מה הבעיה הנוכחית, איך AI יכול לעזור, ומה התועלת הצפויה.",
+      "type": "assignment",
+      "session_temp_id": "s1",
+      "due_date": "2025-12-08",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן מפגש 2: Prompt Engineering",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 2",
+      "type": "quiz",
+      "session_temp_id": "s2",
+      "due_date": "2025-12-09",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהו עיקרון ה-Context בפרומפט?",
+            "options": [
+              "מתן רקע ומידע רלוונטי",
+              "כתיבה קצרה",
+              "שימוש באנגלית"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מה עדיף בפרומפט?",
+            "options": [
+              "להיות ספציפי ומפורט",
+              "להיות כללי וקצר",
+              "לכתוב רק מילה אחת"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהי טכניקת Chain of Thought?",
+            "options": [
+              "בקשה מהמודל לחשוב צעד אחר צעד",
+              "שרשרת של שאלות",
+              "חיבור מודלים"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מתי כדאי לתת דוגמאות בפרומפט?",
+            "options": [
+              "כשרוצים פורמט מסוים",
+              "תמיד",
+              "אף פעם"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Role Prompting?",
+            "options": [
+              "הגדרת תפקיד למודל",
+              "שינוי שם המודל",
+              "יצירת משתמש חדש"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: אבחון תקלות עם AI",
+      "description": "קבלתם 5 תיאורי תקלות במכונות. כתבו פרומפט מפורט לכל תקלה, הריצו ב-ChatGPT, והשוו תוצאות עם עמיתים.",
+      "type": "assignment",
+      "session_temp_id": "s2",
+      "due_date": "2025-12-09",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: בנק פרומפטים אישי",
+      "description": "צרו בנק של 10 פרומפטים לשימוש יומיומי בעבודה: 3 לאבחון תקלות, 3 לכתיבת נהלים, 2 לניתוח נתונים, 2 לתקשורת עם לקוחות.",
+      "type": "assignment",
+      "session_temp_id": "s2",
+      "due_date": "2025-12-15",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן מפגש 3: יסודות Python",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 3",
+      "type": "quiz",
+      "session_temp_id": "s3",
+      "due_date": "2025-12-16",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהו משתנה ב-Python?",
+            "options": [
+              "מקום לאחסון נתונים",
+              "פונקציה",
+              "לולאה"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "איך מדפיסים טקסט ב-Python?",
+            "options": [
+              "print()",
+              "echo()",
+              "write()"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מה עושה לולאת for?",
+            "options": [
+              "חוזרת על פעולה מספר פעמים",
+              "בודקת תנאי",
+              "מגדירה פונקציה"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו הסוג של 3.14?",
+            "options": [
+              "float",
+              "int",
+              "str"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "איך מגדירים פונקציה?",
+            "options": [
+              "def function_name():",
+              "function name():",
+              "create function():"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: מחשבון הנדסי",
+      "description": "כתבו תוכנית Python שמחשבת: מומנט (Torque = Force × Distance), מהירות זוויתית (ω = 2π × RPM / 60), והספק (P = Torque × ω).",
+      "type": "assignment",
+      "session_temp_id": "s3",
+      "due_date": "2025-12-16",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: מחשבון OEE",
+      "description": "כתבו תוכנית Python שמקבלת נתוני ייצור (זמן פעילות, זמן תכנון, יחידות מיוצרות, יחידות תקינות) ומחשבת OEE (Availability × Performance × Quality).",
+      "type": "assignment",
+      "session_temp_id": "s3",
+      "due_date": "2025-12-22",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן מפגש 4: Pandas וניתוח נתונים",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 4",
+      "type": "quiz",
+      "session_temp_id": "s4",
+      "due_date": "2025-12-23",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהו DataFrame?",
+            "options": [
+              "טבלת נתונים דו-ממדית",
+              "רשימה",
+              "מספר"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "איך קוראים קובץ CSV?",
+            "options": [
+              "pd.read_csv()",
+              "pd.load_csv()",
+              "pd.open_csv()"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מה עושה df.describe()?",
+            "options": [
+              "סטטיסטיקות בסיסיות",
+              "מציג 5 שורות",
+              "שומר קובץ"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "איך מסננים שורות?",
+            "options": [
+              "df[df['col'] > value]",
+              "df.filter(col > value)",
+              "df.select(col > value)"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו OEE?",
+            "options": [
+              "מדד יעילות ציוד כוללת",
+              "סוג של מכונה",
+              "שפת תכנות"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: ניתוח נתוני ייצור",
+      "description": "טענו את קובץ production_data.csv, חשבו ממוצע יומי, זהו את היום עם הכי הרבה פסולת, וצרו גרף עמודות של הייצור השבועי.",
+      "type": "assignment",
+      "session_temp_id": "s4",
+      "due_date": "2025-12-23",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: דוח OEE אוטומטי",
+      "description": "כתבו סקריפט Python שקורא נתוני ייצור, מחשב OEE יומי, מזהה ימים עם OEE נמוך מ-85%, ומייצר דוח Excel עם גרפים.",
+      "type": "assignment",
+      "session_temp_id": "s4",
+      "due_date": "2025-12-29",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן מפגש 5: OpenAI API",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 5",
+      "type": "quiz",
+      "session_temp_id": "s5",
+      "due_date": "2025-12-30",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהו API Key?",
+            "options": [
+              "מפתח אימות לגישה לשירות",
+              "סיסמה",
+              "שם משתמש"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Rate Limiting?",
+            "options": [
+              "הגבלת מספר בקשות בזמן",
+              "מהירות חיבור",
+              "גודל קובץ"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "באיזה פורמט נשלחים נתונים ל-API?",
+            "options": [
+              "JSON",
+              "CSV",
+              "TXT"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Token ב-LLM?",
+            "options": [
+              "יחידת טקסט בסיסית",
+              "מטבע",
+              "סיסמה"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מה עושה temperature בבקשת API?",
+            "options": [
+              "שולט ברמת היצירתיות",
+              "מודד חום",
+              "קובע מהירות"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: שליחת בקשות ל-API",
+      "description": "כתבו סקריפט Python ששולח נתוני חיישן (טמפרטורה, רטט, זרם) ל-OpenAI API ומקבל ניתוח והמלצות. נסו עם 3 תרחישים שונים.",
+      "type": "assignment",
+      "session_temp_id": "s5",
+      "due_date": "2025-12-30",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: מערכת אבחון אוטומטית",
+      "description": "בנו סקריפט שקורא נתוני חיישנים מקובץ CSV, שולח כל שורה חריגה ל-API לניתוח, ושומר את ההמלצות בקובץ דוח.",
+      "type": "assignment",
+      "session_temp_id": "s5",
+      "due_date": "2026-01-05",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן מפגש 6: מערכות ניטור",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 6",
+      "type": "quiz",
+      "session_temp_id": "s6",
+      "due_date": "2026-01-06",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהו SQLite?",
+            "options": [
+              "מסד נתונים קל משקל",
+              "שפת תכנות",
+              "חיישן"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Threshold?",
+            "options": [
+              "ערך סף לזיהוי חריגה",
+              "סוג חיישן",
+              "יחידת מדידה"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "למה חשוב לשמור נתונים היסטוריים?",
+            "options": [
+              "לניתוח מגמות וחיזוי",
+              "לחסוך מקום",
+              "לא חשוב"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Sampling Rate?",
+            "options": [
+              "תדירות דגימת נתונים",
+              "מהירות מכונה",
+              "גודל קובץ"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Log?",
+            "options": [
+              "רישום אירועים",
+              "סוג עץ",
+              "חישוב מתמטי"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: סימולטור חיישנים",
+      "description": "בנו סימולטור Python שמייצר נתוני חיישנים (טמפרטורה 20-80°C, רטט 0-10mm/s, זרם 0-50A) ושומר אותם ב-SQLite כל 5 שניות.",
+      "type": "assignment",
+      "session_temp_id": "s6",
+      "due_date": "2026-01-06",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: זיהוי חריגות",
+      "description": "הוסיפו למערכת הניטור לוגיקה לזיהוי חריגות: טמפרטורה > 70°C, רטט > 8mm/s, או זרם > 45A. שמרו התראות בטבלה נפרדת.",
+      "type": "assignment",
+      "session_temp_id": "s6",
+      "due_date": "2026-01-12",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן מפגש 7: Dashboard והתראות",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 7",
+      "type": "quiz",
+      "session_temp_id": "s7",
+      "due_date": "2026-01-13",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהו Streamlit?",
+            "options": [
+              "ספרייה ליצירת web apps ב-Python",
+              "מסד נתונים",
+              "חיישן"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו SMTP?",
+            "options": [
+              "פרוטוקול לשליחת מיילים",
+              "סוג חיישן",
+              "שפת תכנות"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "למה חשוב Dashboard?",
+            "options": [
+              "ויזואליזציה מהירה של נתונים",
+              "לחסוך מקום",
+              "לא חשוב"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Real-time monitoring?",
+            "options": [
+              "ניטור בזמן אמת",
+              "ניטור פעם בשבוע",
+              "ניטור ידני"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Alert System?",
+            "options": [
+              "מערכת התראות אוטומטית",
+              "מערכת גיבוי",
+              "מערכת הפעלה"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: Dashboard עם Streamlit",
+      "description": "בנו dashboard שמציג: גרף טמפרטורה בזמן אמת, מד רטט, טבלת התראות אחרונות, וסטטיסטיקות יומיות.",
+      "type": "assignment",
+      "session_temp_id": "s7",
+      "due_date": "2026-01-13",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: מערכת התראות",
+      "description": "הוסיפו למערכת שליחת Email אוטומטי כשמתגלה חריגה. השתמשו ב-smtplib או שירות כמו SendGrid. כללו בהתראה: סוג החריגה, ערך, זמן.",
+      "type": "assignment",
+      "session_temp_id": "s7",
+      "due_date": "2026-01-19",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן מפגש 8: תחזוקה מונעת",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 8",
+      "type": "quiz",
+      "session_temp_id": "s8",
+      "due_date": "2026-01-20",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהי תחזוקה מונעת (Predictive)?",
+            "options": [
+              "תחזוקה מבוססת חיזוי תקלות",
+              "תחזוקה לפי לוח זמנים קבוע",
+              "תחזוקה אחרי תקלה"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו RUL?",
+            "options": [
+              "Remaining Useful Life - זמן עד תקלה",
+              "סוג חיישן",
+              "יחידת מדידה"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Machine Learning?",
+            "options": [
+              "למידת מכונה - אלגוריתמים שלומדים מנתונים",
+              "תכנות רגיל",
+              "חומרה"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Linear Regression?",
+            "options": [
+              "מודל חיזוי ליניארי",
+              "סוג מכונה",
+              "שפת תכנות"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "למה חשוב לנתח נתונים היסטוריים?",
+            "options": [
+              "לזהות דפוסים ולחזות תקלות",
+              "לחסוך מקום",
+              "לא חשוב"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: מודל חיזוי תקלות",
+      "description": "השתמשו ב-scikit-learn לבניית מודל Linear Regression שחוזה זמן עד תקלה (RUL) על בסיס נתוני חיישנים היסטוריים.",
+      "type": "assignment",
+      "session_temp_id": "s8",
+      "due_date": "2026-01-20",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: לוח זמנים תחזוקה",
+      "description": "בנו מערכת שמנתחת נתוני תקלות היסטוריים, מזהה דפוסים (עונתיות, קורלציות), ומייצרת לוח זמנים מומלץ לתחזוקה מונעת.",
+      "type": "assignment",
+      "session_temp_id": "s8",
+      "due_date": "2026-01-26",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן מפגש 9: Chatbots",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 9",
+      "type": "quiz",
+      "session_temp_id": "s9",
+      "due_date": "2026-01-27",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 10,
+        "questions": [
+          {
+            "question": "מהו Chatbot?",
+            "options": [
+              "תוכנה שמדמה שיחה",
+              "רובוט פיזי",
+              "מכונת CNC"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Knowledge Base?",
+            "options": [
+              "מאגר מידע לשאלות ותשובות",
+              "מסד נתונים רגיל",
+              "חיישן"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Bot Token?",
+            "options": [
+              "מפתח זיהוי לבוט",
+              "סיסמה",
+              "שם משתמש"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "למה חשוב NLP ב-chatbot?",
+            "options": [
+              "להבין שפה טבעית",
+              "לחסוך מקום",
+              "לא חשוב"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Intent Recognition?",
+            "options": [
+              "זיהוי כוונת המשתמש",
+              "זיהוי פנים",
+              "זיהוי קול"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: Chatbot בסיסי",
+      "description": "בנו chatbot Python שעונה על 10 שאלות נפוצות על מכונות במפעל. השתמשו ב-OpenAI API ליצירת תשובות חכמות.",
+      "type": "assignment",
+      "session_temp_id": "s9",
+      "due_date": "2026-01-27",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: חיבור ל-Telegram",
+      "description": "חברו את ה-chatbot שבניתם ל-Telegram באמצעות python-telegram-bot. הוסיפו 20 שאלות נפוצות נוספות ובדקו עם 3 משתמשים.",
+      "type": "assignment",
+      "session_temp_id": "s9",
+      "due_date": "2026-02-02",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "בוחן סיכום: כל הקורס",
+      "description": "בוחן קצר לבדיקת הבנת החומר של מפגש 10",
+      "type": "quiz",
+      "session_temp_id": "s10",
+      "due_date": "2026-02-03",
+      "max_score": 100,
+      "weight": 5,
+      "content_data": {
+        "time_limit": 15,
+        "questions": [
+          {
+            "question": "מהו היתרון המרכזי של AI בתעשייה?",
+            "options": [
+              "אוטומציה, חיזוי, ואופטימיזציה",
+              "החלפת עובדים",
+              "הורדת מחירים בלבד"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו Prompt Engineering?",
+            "options": [
+              "אמנות כתיבת הנחיות ל-AI",
+              "תכנות רגיל",
+              "עיצוב גרפי"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהו OEE?",
+            "options": [
+              "מדד יעילות ציוד כוללת",
+              "סוג מכונה",
+              "שפת תכנות"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מהי תחזוקה מונעת?",
+            "options": [
+              "תחזוקה מבוססת חיזוי",
+              "תחזוקה אחרי תקלה",
+              "תחזוקה שבועית"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "מה למדתם בקורס?",
+            "options": [
+              "AI, Python, ניתוח נתונים, ומערכות חכמות",
+              "רק Python",
+              "רק ChatGPT"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "תרגול בכיתה: הצגת פרויקט",
+      "description": "הציגו את פרויקט הגמר שלכם בפני הכיתה (10-15 דקות). כללו: הדגמה חיה, אתגרים שפתרתם, ולקחים שלמדתם.",
+      "type": "assignment",
+      "session_temp_id": "s10",
+      "due_date": "2026-02-03",
+      "max_score": 100,
+      "weight": 0
+    },
+    {
+      "title": "שיעורי בית: תיעוד סופי",
+      "description": "השלימו את התיעוד הטכני של הפרויקט: README מפורט, דוח טכני PDF, וסרטון הדגמה קצר (2-3 דקות).",
+      "type": "assignment",
+      "session_temp_id": "s10",
+      "due_date": "2026-02-10",
+      "max_score": 100,
+      "weight": 10
+    },
+    {
+      "title": "פרויקט גמר: מערכת ניטור ותחזוקה חכמה",
+      "description": "בנו מערכת שלמה המשלבת: איסוף נתוני חיישנים, זיהוי חריגות, חיזוי תקלות, dashboard ויזואלי, והתראות אוטומטיות. הפרויקט יוצג בשיעור האחרון.",
+      "type": "project",
+      "session_temp_id": "s10",
+      "due_date": "2026-02-03",
+      "max_score": 100,
+      "weight": 30,
+      "content_data": {
+        "milestones": [
+          {
+            "title": "הגדרת הבעיה והפתרון",
+            "deadline": "2026-01-13"
+          },
+          {
+            "title": "פיתוח ראשוני",
+            "deadline": "2026-01-20"
+          },
+          {
+            "title": "בדיקות ושיפורים",
+            "deadline": "2026-01-27"
+          },
+          {
+            "title": "הגשה והצגה",
+            "deadline": "2026-02-03"
+          }
+        ]
+      },
+      "rubric": {
+        "criteria": [
+          {
+            "title": "פונקציונליות",
+            "description": "המערכת עובדת לפי הדרישות",
+            "max_points": 30
+          },
+          {
+            "title": "שילוב AI",
+            "description": "שימוש יעיל ב-AI לניתוח וחיזוי",
+            "max_points": 25
+          },
+          {
+            "title": "ממשק משתמש",
+            "description": "Dashboard ברור ושימושי",
+            "max_points": 20
+          },
+          {
+            "title": "תיעוד",
+            "description": "קוד מתועד ו-README מפורט",
+            "max_points": 15
+          },
+          {
+            "title": "הצגה",
+            "description": "הצגה ברורה ומקצועית",
+            "max_points": 10
+          }
+        ]
+      }
+    }
+  ],
+  "materials": [
+    {
+      "title": "מצגת מפגש 1: מבוא ל-AI",
+      "description": "מצגת מלאה עם 50 שקופיות על יסודות AI ויישומים תעשייתיים",
+      "type": "presentation",
+      "file_url": "https://example.com/session1-intro-ai.pdf",
+      "session_temp_id": "s1"
+    },
+    {
+      "title": "מדריך יסודות AI",
+      "description": "מדריך מקיף על יסודות הבינה המלאכותית",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/ai_basics.html",
+      "session_temp_id": "s1"
+    },
+    {
+      "title": "מדריך ChatGPT",
+      "description": "מדריך מלא לשימוש ב-ChatGPT",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/chatgpt_guide.html",
+      "session_temp_id": "s1"
+    },
+    {
+      "title": "מדריך Prompt Engineering",
+      "description": "מדריך PDF של 20 עמודים לכתיבת פרומפטים יעילים",
+      "type": "document",
+      "file_url": "https://example.com/prompt-engineering-guide.pdf",
+      "session_temp_id": "s2"
+    },
+    {
+      "title": "מדריך הנדסת פרומפטים",
+      "description": "מדריך מקיף לכתיבת פרומפטים יעילים",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/prompt-engineering-guide.html",
+      "session_temp_id": "s2"
+    },
+    {
+      "title": "ספריית פרומפטים",
+      "description": "אוסף פרומפטים מוכנים לשימוש",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/prompts.html",
+      "session_temp_id": "s2"
+    },
+    {
+      "title": "קוד לדוגמה: Python Basics",
+      "description": "קבצי Python לדוגמה עם חישובים הנדסיים",
+      "type": "code",
+      "file_url": "https://github.com/example/mech-ai-python-basics",
+      "session_temp_id": "s3"
+    },
+    {
+      "title": "מדריך Python",
+      "description": "מדריך מקיף לתכנות Python",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/python_guide.html",
+      "session_temp_id": "s3"
+    },
+    {
+      "title": "מדריך Terminal",
+      "description": "מדריך לעבודה עם שורת הפקודה",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/terminal_guide.html",
+      "session_temp_id": "s3"
+    },
+    {
+      "title": "מדריך GitHub",
+      "description": "מדריך לניהול קוד עם Git ו-GitHub",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/github_guide.html",
+      "session_temp_id": "s3"
+    },
+    {
+      "title": "Dataset: נתוני ייצור לתרגול",
+      "description": "קובץ CSV עם נתוני ייצור חודשי (100MB)",
+      "type": "dataset",
+      "file_url": "https://example.com/production-data.csv",
+      "session_temp_id": "s4"
+    },
+    {
+      "title": "מדריך ניתוח נתונים",
+      "description": "מדריך מקיף לניתוח נתונים עם Python",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/data_analysis_guide.html",
+      "session_temp_id": "s4"
+    },
+    {
+      "title": "מדריך Excel",
+      "description": "מדריך Excel לסטודנטים",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/excel_student.html",
+      "session_temp_id": "s4"
+    },
+    {
+      "title": "סרטון הדרכה: OpenAI API",
+      "description": "וידאו של 30 דקות על שימוש ב-API",
+      "type": "video",
+      "file_url": "https://youtube.com/watch?v=openai-api-tutorial",
+      "session_temp_id": "s5"
+    },
+    {
+      "title": "מדריך LLMs",
+      "description": "הבנת מודלי שפה גדולים",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/understanding-llms-how-it-works.html",
+      "session_temp_id": "s5"
+    },
+    {
+      "title": "תבנית קוד: מערכת ניטור",
+      "description": "Starter code למערכת הניטור",
+      "type": "code",
+      "file_url": "https://github.com/example/monitoring-system-template",
+      "session_temp_id": "s6"
+    },
+    {
+      "title": "מדריך IoT",
+      "description": "מדריך לאינטרנט של הדברים",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/iot_guide.html",
+      "session_temp_id": "s6"
+    },
+    {
+      "title": "מדריך SQL",
+      "description": "מדריך לעבודה עם מסדי נתונים",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/sql_guide.html",
+      "session_temp_id": "s6"
+    },
+    {
+      "title": "מדריך Power BI",
+      "description": "מדריך ליצירת דשבורדים",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/powerbi_guide.html",
+      "session_temp_id": "s7"
+    },
+    {
+      "title": "מדריך UI/UX",
+      "description": "מדריך לעיצוב ממשק משתמש",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/ui_ux_guide.html",
+      "session_temp_id": "s7"
+    },
+    {
+      "title": "מאמר: Predictive Maintenance with AI",
+      "description": "מאמר אקדמי על תחזוקה מונעת (אנגלית)",
+      "type": "article",
+      "file_url": "https://example.com/predictive-maintenance-paper.pdf",
+      "session_temp_id": "s8"
+    },
+    {
+      "title": "מדריך הנדסה מכנית",
+      "description": "מדריך לעיצוב מכני",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/mechanical_design_guide.html",
+      "session_temp_id": "s8"
+    },
+    {
+      "title": "מדריך רכב",
+      "description": "מדריך לתעשיית הרכב",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/automotive_guide.html",
+      "session_temp_id": "s8"
+    },
+    {
+      "title": "מדריך בניית צ'אטבוט",
+      "description": "מדריך לבניית צ'אטבוט ללא קוד",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/no-code-customer-service-chatbot-building.html",
+      "session_temp_id": "s9"
+    },
+    {
+      "title": "מדריך מצגות",
+      "description": "מדריך להצגה מקצועית",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/presentation_skills.html",
+      "session_temp_id": "s10"
+    },
+    {
+      "title": "מדריך פורטפוליו",
+      "description": "מדריך לבניית תיק עבודות דיגיטלי",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/building-impressive-digital-portfolio.html",
+      "session_temp_id": "s10"
+    },
+    {
+      "title": "מדריך קריירה",
+      "description": "מדריך להכנה לקריירה",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/career_prep.html",
+      "session_temp_id": "s10"
+    },
+    {
+      "title": "מדריך קורות חיים",
+      "description": "מדריך לכתיבת CV מקצועי",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/cv_guide.html",
+      "session_temp_id": "s10"
+    },
+    {
+      "title": "GitHub Repository - כל חומרי הקורס",
+      "description": "מאגר קוד מרכזי עם כל הדוגמאות, מדריכים וקבצים",
+      "type": "link",
+      "file_url": "https://github.com/college/mech-ai-course-2025",
+      "course_global": true
+    },
+    {
+      "title": "Discord Server לשאלות ותמיכה",
+      "description": "שרת Discord פעיל עם ערוצי עזרה לכל נושא",
+      "type": "link",
+      "file_url": "https://discord.gg/mech-ai-2025",
+      "course_global": true
+    },
+    {
+      "title": "רשימת כלי AI מומלצים",
+      "description": "דף Google Docs עם כל הכלים, מחירים וקישורים",
+      "type": "link",
+      "file_url": "https://docs.google.com/document/d/ai-tools-list",
+      "course_global": true
+    },
+    {
+      "title": "מרכז המדריכים - LearningHub",
+      "description": "כל המדריכים במקום אחד",
+      "type": "link",
+      "file_url": "https://bdnhost.net/Resources/index.html",
+      "course_global": true
+    },
+    {
+      "title": "מפת האתר - כל המדריכים",
+      "description": "רשימה מלאה של כל המדריכים הזמינים",
+      "type": "link",
+      "file_url": "https://bdnhost.net/Resources/sitemap.html",
+      "course_global": true
+    },
+    {
+      "title": "מדריך אתיקה ב-AI",
+      "description": "מדריך לשימוש אתי בבינה מלאכותית",
+      "type": "guide",
+      "file_url": "https://bdnhost.net/Resources/ai_ethics.html",
+      "course_global": true
+    }
+  ],
+  "announcements": [
+    {
+      "title": "ברוכים הבאים לקורס AI להנדסאי מכונות!",
+      "content": "שמחים לראותכם בקורס! אנא וודאו שהתקנתם Python 3.8+ ו-VS Code לפני המפגש הראשון. יצרו גם חשבון OpenAI (החינמי מספיק לתחילה). נתראה ביום שלישי 02.12 בשעה 08:00!",
+      "priority": "high",
+      "session_temp_id": "s1"
+    },
+    {
+      "title": "📚 חומרי הכנה למפגש 1",
+      "content": "לפני המפגש הראשון, מומלץ לקרוא את המדריכים: יסודות AI (https://bdnhost.net/Resources/ai_basics.html) ומדריך ChatGPT (https://bdnhost.net/Resources/chatgpt_guide.html). זה יעזור לכם להגיע מוכנים!",
+      "priority": "medium",
+      "session_temp_id": "s1"
+    },
+    {
+      "title": "הכנה למפגש 3: התקנת Python",
+      "content": "בשבוע הבא נתחיל לעבוד עם Python. אנא התקינו מראש: Python 3.8+, VS Code, וספריות pandas, matplotlib. ההוראות המלאות ב-Discord בערוץ #installation-help.",
+      "priority": "medium",
+      "session_temp_id": "s2"
+    },
+    {
+      "title": "🎯 טיפ: איך לכתוב פרומפטים טובים",
+      "content": "זכרו את כלל ה-CRISP: Context (הקשר), Role (תפקיד), Instructions (הוראות), Specifics (פרטים), Persona (אישיות). קראו את המדריך המלא: https://bdnhost.net/Resources/prompt-engineering-guide.html",
+      "priority": "low",
+      "session_temp_id": "s2"
+    },
+    {
+      "title": "תזכורת: הגשת תרגיל 2",
+      "content": "תרגיל 2 (מחשבון הנדסי) להגשה עד יום ראשון 22.12. הגישו דרך המערכת קובץ .py אחד עם הקוד והערות. בהצלחה!",
+      "priority": "high",
+      "session_temp_id": "s3"
+    },
+    {
+      "title": "💡 משאב מומלץ: מדריך Python",
+      "content": "למי שרוצה להעמיק ב-Python, מומלץ לקרוא את המדריך המלא: https://bdnhost.net/Resources/python_guide.html. כולל דוגמאות קוד ותרגילים!",
+      "priority": "low",
+      "session_temp_id": "s3"
+    },
+    {
+      "title": "📊 הכנה למפגש 4: ניתוח נתונים",
+      "content": "במפגש הבא נעבוד עם Pandas לניתוח נתונים. הורידו את קובץ הנתונים לתרגול מה-Discord. קראו גם את מדריך ניתוח הנתונים: https://bdnhost.net/Resources/data_analysis_guide.html",
+      "priority": "medium",
+      "session_temp_id": "s4"
+    },
+    {
+      "title": "שינוי במיקום: מפגש 5",
+      "content": "מפגש 5 (30.12) יתקיים ב-Zoom בלבד עקב שיפוצים במעבדה. הקישור נשלח במייל.",
+      "priority": "high",
+      "session_temp_id": "s5"
+    },
+    {
+      "title": "🔑 חשוב: הכנת API Key",
+      "content": "למפגש 5 תצטרכו API Key של OpenAI. היכנסו ל-platform.openai.com, צרו חשבון, והפיקו מפתח. שמרו אותו במקום בטוח! הוראות מפורטות ב-Discord.",
+      "priority": "high",
+      "session_temp_id": "s5"
+    },
+    {
+      "title": "🏭 מפגש 6: מתחילים לבנות מערכת ניטור!",
+      "content": "השבוע נתחיל לבנות מערכת ניטור אמיתית. וודאו שיש לכם SQLite מותקן. קראו את מדריך IoT להכנה: https://bdnhost.net/Resources/iot_guide.html",
+      "priority": "medium",
+      "session_temp_id": "s6"
+    },
+    {
+      "title": "הזדמנות: הרצאת אורח",
+      "content": "ביום רביעי 15.01 בשעה 19:00 תתקיים הרצאה של מהנדס AI מחברת Siemens על יישומי AI בתעשייה. ההשתתפות אופציונלית אך מומלצת מאוד! הרשמה בקישור.",
+      "priority": "medium",
+      "session_temp_id": "s7"
+    },
+    {
+      "title": "📈 מפגש 7: Dashboard ויזואלי",
+      "content": "השבוע נבנה Dashboard עם Streamlit! התקינו מראש: pip install streamlit. קראו את מדריך UI/UX: https://bdnhost.net/Resources/ui_ux_guide.html",
+      "priority": "medium",
+      "session_temp_id": "s7"
+    },
+    {
+      "title": "תחילת עבודה על פרויקט הגמר",
+      "content": "השבוע מתחילים לעבוד על פרויקט הגמר! צרו צוותים של 2-3, בחרו נושא ממערכת הניטור/תחזוקה/chatbot, ותתחילו לתכנן. אבן הדרך הראשונה בעוד 2 שבועות. שאלות בדיסקורד!",
+      "priority": "high",
+      "session_temp_id": "s8"
+    },
+    {
+      "title": "🔮 מפגש 8: תחזוקה מונעת",
+      "content": "השבוע נלמד Machine Learning בסיסי לחיזוי תקלות. קראו את מדריך הנדסה מכנית: https://bdnhost.net/Resources/mechanical_design_guide.html",
+      "priority": "medium",
+      "session_temp_id": "s8"
+    },
+    {
+      "title": "🤖 מפגש 9: בניית Chatbot",
+      "content": "השבוע נבנה chatbot לתמיכה טכנית! צרו Bot ב-Telegram דרך @BotFather ושמרו את ה-Token. קראו: https://bdnhost.net/Resources/no-code-customer-service-chatbot-building.html",
+      "priority": "medium",
+      "session_temp_id": "s9"
+    },
+    {
+      "title": "🎓 מפגש אחרון: הצגות פרויקטים!",
+      "content": "המפגש האחרון! הכינו מצגת 10-15 דקות + הדגמה חיה. קראו את מדריך המצגות: https://bdnhost.net/Resources/presentation_skills.html. מזמינים אורחים מהתעשייה!",
+      "priority": "high",
+      "session_temp_id": "s10"
+    },
+    {
+      "title": "🏆 סיום הקורס - מה הלאה?",
+      "content": "מזל טוב לכל הסיימים! המשיכו ללמוד: בנו פורטפוליו (https://bdnhost.net/Resources/building-impressive-digital-portfolio.html), עדכנו קורות חיים (https://bdnhost.net/Resources/cv_guide.html), והישארו בקשר ב-Discord!",
+      "priority": "medium",
+      "session_temp_id": "s10"
+    }
+  ]
+}

@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>ניתוח נתונים למהנדסים | מדריך Excel, Python ו-AI | LearningHub</title>
+    <meta name="description" content="מדריך מקיף לניתוח נתונים (Data Analysis) למהנדסים: Excel, Python, ChatGPT ו-AI לתובנות עסקיות ✅ מדריך מקצועי חינמי ✅ דוגמאות מעשיות ✅ פרויקטים אמיתיים">
+    <meta name="keywords" content="ניתוח נתונים, Data Analysis, Excel, Python, Pandas, ChatGPT, AI, מהנדסים, תובנות עסקיות, ויזואליזציה, סטטיסטיקה, מדריך, לימוד, קורס חינמי, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ניתוח נתונים למהנדסים | מדריך Excel, Python ו-AI">
+    <meta property="og:description" content="למד ניתוח נתונים עם Excel, Python ו-ChatGPT - מנתונים גולמיים לתובנות עסקיות">
+    <meta property="og:image" content="/images/data-analysis-guide.jpg">
+    <meta property="og:url" content="/data_analysis_guide.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="הנדסה וטכנולוגיה">
+    <meta property="article:tag" content="Data Analysis, Excel, Python, AI, Engineering">
+    <meta property="article:published_time" content="2025-01-01">
+    <meta property="article:modified_time" content="2025-01-14">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ניתוח נתונים למהנדסים | מדריך Excel, Python ו-AI">
+    <meta name="twitter:description" content="למד ניתוח נתונים עם Excel, Python ו-ChatGPT - מנתונים גולמיים לתובנות עסקיות">
+    <meta name="twitter:image" content="/images/data-analysis-guide.jpg">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="msapplication-TileColor" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/data_analysis_guide.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="/data_analysis_guide.html">
+    <link rel="alternate" hreflang="x-default" href="/data_analysis_guide.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ניתוח נתונים למהנדסים - מדריך Excel, Python ו-AI",
+        "description": "מדריך מקיף לניתוח נתונים עם Excel, Python ו-ChatGPT להפקת תובנות עסקיות",
+        "image": "/images/data-analysis-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-14",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "/data_analysis_guide.html"
+        },
+        "articleSection": "הנדסה וטכנולוגיה",
+        "keywords": "ניתוח נתונים, Data Analysis, Excel, Python, AI",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "ניתוח נתונים, Excel, Python, ChatGPT, תובנות עסקיות",
+        "about": {
+            "@type": "Thing",
+            "name": "ניתוח נתונים ו-Data Science"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "ניתוח נתונים למהנדסים",
+        "description": "מדריך מקצועי לניתוח נתונים עם כלים מתקדמים",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online",
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "instructor": {
+                "@type": "Organization",
+                "name": "LearningHub"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל",
+        "sameAs": [
+            "https://www.linkedin.com/company/edumanage",
+            "https://github.com/edumanage"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "Hebrew"
+        }
+    }
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        :root {
+            --theme-primary: #1a1a2e;    /* צבע ראשי של המדריך */
+            --theme-accent: #3b82f6;     /* צבע מבטא - Data Blue */
+            --theme-light: #60a5fa;      /* צבע בהיר */
+            --theme-purple: #8b5cf6;     /* צבע סגול לאקסנטים */
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-purple) 100%);
+            color: white;
+        }
+
+        .concept-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--theme-accent);
+        }
+
+        .code-block {
+            background: var(--theme-primary);
+            color: #dfe6e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .tab-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #dfe6e9;
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2d3436;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            font-family: 'Heebo', sans-serif;
+            transition: color 0.3s;
+            border-radius: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--theme-accent);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .tab-btn.active {
+            color: var(--theme-accent);
+            background: rgba(59, 130, 246, 0.1);
+            border-bottom: 3px solid var(--theme-accent);
+            margin-bottom: -1.2rem;
+            padding-bottom: 1rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .grid-auto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .tool-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-right: 4px solid var(--theme-accent);
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: var(--theme-accent);
+            color: white;
+            padding: 1.2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .comparison-table td {
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid #dfe6e9;
+            text-align: center;
+        }
+
+        .comparison-table .feature-col {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .steps-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .steps-list li {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-right: 4px solid var(--theme-accent);
+            border-radius: 12px;
+            position: relative;
+            padding-right: 4rem;
+        }
+
+        .step-number {
+            position: absolute;
+            right: 1rem;
+            top: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--theme-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-auto {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" 
+               style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; transition: all 0.3s;"
+               onmouseover="this.style.background='#f8f9fa'"
+               onmouseout="this.style.background='white'">
+                פורטל התלמידים
+            </a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+               style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;"
+               onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+               onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                הצטרף חינם
+            </a>
+        </div>
+    </div>
+
+    <!-- Global Header -->
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links">
+                <a href="sitemap.html" class="nav-link">מפת האתר</a>
+                <a href="categories.html" class="nav-link">קטגוריות</a>
+                <a href="index.html" class="nav-link">ראשי</a>
+            </div>
+            <a href="index.html" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs with Schema -->
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "דף הבית",
+                    "item": "/index.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "קטגוריות",
+                    "item": "/categories.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "ניתוח נתונים למהנדסים",
+                    "item": "/data_analysis_guide.html"
+                }
+            ]
+        }
+        </script>
+        <a href="index.html">דף הבית</a>
+        <span>/</span>
+        <a href="categories.html">קטגוריות</a>
+        <span>/</span>
+        <span class="current">ניתוח נתונים למהנדסים</span>
+    </nav>
+    
+    <!-- Page Header with SEO Optimization -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 itemprop="headline">📊 ניתוח נתונים עם AI - מדריך מעשי</h1>
+            <p class="subtitle" itemprop="description">למד להשתמש ב-ChatGPT, Python ו-Excel כדי לנתח נתונים, ליצור תובנות ולקבל החלטות מושכלות</p>
+            
+            <!-- Article Meta Information -->
+            <div class="article-meta" style="margin-top: 1rem; font-size: 0.9rem; color: #fff; opacity: 0.9; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                    👨‍🏫 מאת: <span itemprop="name">LearningHub</span>
+                </span>
+                <span>📅 עודכן: <time itemprop="dateModified" datetime="2025-01-14">14 בינואר 2025</time></span>
+                <span>⏱️ זמן קריאה: <span data-reading-time>25</span> דקות</span>
+                <span>📊 רמת קושי: בסיסי עד מתקדם</span>
+            </div>
+            
+            <!-- Quick Navigation -->
+            <div class="quick-nav" style="margin-top: 1.5rem; text-align: center;">
+                <a href="#main-content" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📖 תוכן המדריך
+                </a>
+                <a href="#tasks" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📋 משימות
+                </a>
+                <a href="#join-course" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    🚀 הצטרף לקורס
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with SEO Structure -->
+    <main class="page-container" id="main-content" itemscope itemtype="https://schema.org/Article">
+        
+        <!-- Table of Contents for SEO -->
+        <div class="concept-card" style="background: #f8f9fa; border-right: 4px solid #007bff;">
+            <h2>📋 תוכן המדריך</h2>
+            <nav aria-label="תוכן המדריך">
+                <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><a href="#why-important" style="color: #007bff; text-decoration: none;">למה ניתוח נתונים חשוב למהנדסים?</a></li>
+                    <li><a href="#tools" style="color: #007bff; text-decoration: none;">הכלים שנשתמש בהם</a></li>
+                    <li><a href="#workflow" style="color: #007bff; text-decoration: none;">תהליך ניתוח נתונים</a></li>
+                    <li><a href="#chatgpt" style="color: #007bff; text-decoration: none;">ניתוח עם ChatGPT</a></li>
+                    <li><a href="#python" style="color: #007bff; text-decoration: none;">Python ו-Pandas</a></li>
+                    <li><a href="#examples" style="color: #007bff; text-decoration: none;">דוגמאות מעשיות</a></li>
+                    <li><a href="#tasks" style="color: #007bff; text-decoration: none;">משימות לתרגול</a></li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- מבוא -->
+        <section class="concept-card" id="why-important">
+            <h2 itemprop="headline">🎯 למה ניתוח נתונים חשוב למהנדסים?</h2>
+            <div itemprop="articleBody">
+                <p>כמהנדס, אתה מייצר ועובד עם נתונים כל הזמן: תקלות, תחזוקה, מדידות, בקרת איכות, ביצועים. <strong>ניתוח נתונים מאפשר לך להפוך נתונים גולמיים לתובנות פעולה.</strong></p>
+                
+                <div class="grid-auto">
+                    <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #28a745;">
+                        <h3 style="color: #28a745; margin-bottom: 1rem;">🚗 רכב - דוגמה</h3>
+                        <p>ניתוח 500 דוחות תקלות מגלה שב-40% מהמקרים הבעיה היא חיישן חמצן פגום → החלטה: להחליף חיישנים באופן מונע אחרי 80,000 ק"מ.</p>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #2196f3;">
+                        <h3 style="color: #2196f3; margin-bottom: 1rem;">🔧 מכונות - דוגמה</h3>
+                        <p>ניתוח זמני ייצור מגלה ש-60% מהזמן הוא setup → החלטה: להשקיע בקליפרים מהירים ולחסוך 20 דקות/batch.</p>
+                    </div>
+                </div>
+
+                <div style="background: #e8f5e9; border-right: 4px solid #28a745; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                    <h4 style="color: #28a745; margin-bottom: 0.5rem;">💡 מה AI תורם לניתוח נתונים?</h4>
+                    <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+                        <li><strong>מהירות:</strong> ניתוח שלוקח שעות באופן ידני - דקות עם AI</li>
+                        <li><strong>דיוק:</strong> פחות טעויות אנוש בחישובים</li>
+                        <li><strong>תובנות:</strong> AI יכול לזהות פטרנים שקשה לראות</li>
+                        <li><strong>אוטומציה:</strong> תהליכים חוזרים פעם אחת → רץ לנצח</li>
+                        <li><strong>נגישות:</strong> לא צריך להיות data scientist</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Tabs Navigation -->
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab('tools')">🛠️ כלים</button>
+            <button class="tab-btn" onclick="openTab('chatgpt')">🤖 ChatGPT</button>
+            <button class="tab-btn" onclick="openTab('python')">🐍 Python</button>
+            <button class="tab-btn" onclick="openTab('examples')">📊 דוגמאות</button>
+        </div>
+
+        <!-- Tab 1: Tools -->
+        <div id="tools" class="tab-content active">
+            <section class="concept-card" id="tools">
+                <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">🛠️ הכלים שנשתמש בהם</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">3 כלים עיקריים - כל אחד עם יתרונות משלו</p>
+
+                <div class="grid-auto">
+                    <div class="tool-card">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🤖</div>
+                        <h3 style="color: var(--theme-primary); margin-bottom: 0.5rem;">ChatGPT</h3>
+                        <p><strong>מתי להשתמש:</strong> ניתוח מהיר, תובנות ראשוניות, הסברים</p>
+                        <p><strong>יתרונות:</strong> קל, מהיר, ללא התקנה</p>
+                        <p><strong>חסרונות:</strong> מוגבל לנתונים קטנים</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🐍</div>
+                        <h3 style="color: var(--theme-primary); margin-bottom: 0.5rem;">Python + Pandas</h3>
+                        <p><strong>מתי להשתמש:</strong> ניתוח מורכב, נתונים גדולים, אוטומציה</p>
+                        <p><strong>יתרונות:</strong> עוצמה, גמישות, חינמי</p>
+                        <p><strong>חסרונות:</strong> עקומת למידה</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                        <h3 style="color: var(--theme-primary); margin-bottom: 0.5rem;">Excel + ChatGPT</h3>
+                        <p><strong>מתי להשתמש:</strong> נתונים בינוניים, ויזואליזציה מהירה</p>
+                        <p><strong>יתרונות:</strong> מוכר, נוח, אינטגרציה</p>
+                        <p><strong>חסרונות:</strong> איטי עם נתונים גדולים</p>
+                    </div>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-col">תכונה</th>
+                            <th>ChatGPT</th>
+                            <th>Python</th>
+                            <th>Excel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-col">קל ללמידה</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">עוצמה</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">מהירות</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">אוטומציה</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">ויזואליזציה</td>
+                            <td>⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="background: #e3f2fd; border-right: 4px solid #2196f3; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                    <h4 style="color: #2196f3; margin-bottom: 0.5rem;">🎯 אסטרטגיה מומלצת</h4>
+                    <p>התחל עם <strong>ChatGPT</strong> לחקירה ראשונית → עבור ל-<strong>Excel</strong> לניתוח בינוני → השתמש ב-<strong>Python</strong> לאוטומציה ונתונים גדולים.</p>
+                </div>
+            </section>
+
+            <section class="concept-card" id="workflow">
+                <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">📋 תהליך ניתוח נתונים - 5 שלבים</h2>
+
+                <ol class="steps-list">
+                    <li>
+                        <div class="step-number">1</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">הגדרת שאלת המחקר</div>
+                        <p>מה אתה רוצה לדעת? דוגמה: "מה הסיבה העיקרית לתקלות ברכבים שלנו?"</p>
+                    </li>
+
+                    <li>
+                        <div class="step-number">2</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">איסוף ונקיון נתונים</div>
+                        <p>אסוף נתונים רלוונטיים (CSV, Excel, מסדי נתונים). נקה: הסר שורות ריקות, תקן שגיאות, אחד פורמטים.</p>
+                    </li>
+
+                    <li>
+                        <div class="step-number">3</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">ניתוח ראשוני (EDA)</div>
+                        <p>סטטיסטיקות בסיסיות: ממוצע, חציון, טווח. התפלגויות, גרפים ראשוניים.</p>
+                    </li>
+
+                    <li>
+                        <div class="step-number">4</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">ניתוח מעמיק</div>
+                        <p>זיהוי פטרנים, מתאמים, מגמות. השוואות בין קבוצות. בדיקת השערות.</p>
+                    </li>
+
+                    <li>
+                        <div class="step-number">5</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">דיווח ופעולה</div>
+                        <p>סיכום תובנות, ויזואליזציה ברורה, המלצות פעולה ברורות.</p>
+                    </li>
+                </ol>
+            </section>
+        </div>
+
+        <!-- Tab 2: ChatGPT -->
+        <div id="chatgpt" class="tab-content">
+            <section class="concept-card">
+                <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">🤖 ניתוח נתונים עם ChatGPT</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">איך להעלות נתונים ולקבל תובנות מיידיות</p>
+
+                <h3>שלב 1: הכנת הנתונים</h3>
+                <p>ChatGPT יכול לקרוא קבצים: CSV, Excel, טקסט. הכן את הנתונים בפורמט נקי:</p>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre>תאריך,דגם,קילומטראז,קוד_תקלה,תיאור,עלות_תיקון
+2024-01-15,Toyota Corolla,85000,P0300,רעידות מנוע,1200
+2024-01-20,Honda Civic,95000,P0171,תערובת רזה,800
+2024-01-25,Mazda 3,70000,P0420,קטליזטור,2500
+2024-02-01,Toyota Corolla,88000,P0300,רעידות מנוע,1150
+2024-02-10,BMW 320i,120000,P0101,חיישן אוויר,950</pre>
+                </div>
+
+                <h3>שלב 2: פרומפט לניתוח</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre>אני מעלה קובץ CSV עם נתוני תקלות רכב ממוסך שלי.
+
+אנא נתח:
+1. כמה תקלות יש בסך הכל?
+2. מה הדגם הבעייתי ביותר?
+3. מה קוד התקלה השכיח ביותר?
+4. מה העלות הממוצעת לתיקון?
+5. האם יש קשר בין קילומטראז' לסוג התקלה?
+6. המלצות לתחזוקה מונעת
+
+הצג תוצאות בטבלה ברורה.</pre>
+                </div>
+
+                <div style="background: #e8f5e9; border-right: 4px solid #28a745; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                    <h4 style="color: #28a745; margin-bottom: 0.5rem;">💡 טיפ: בקש פורמט ספציפי</h4>
+                    <p>תמיד ציין איך אתה רוצה את התוצאות: "הצג בטבלה", "צור גרף", "רשימה ממוספרת" - זה עוזר ל-ChatGPT לתת פלט שימושי יותר.</p>
+                </div>
+
+                <h3>שלב 3: שאלות המשך</h3>
+                <p>ChatGPT שומר הקשר. אפשר לשאול שאלות המשך:</p>
+
+                <ul style="margin-right: 2rem; line-height: 2;">
+                    <li>"תתמקד רק ב-Toyota Corolla - מה התקלות השכיחות?"</li>
+                    <li>"צור ניבוי - אם יש לי 100 רכבים נוספים, כמה תקלות P0300 צפויות?"</li>
+                    <li>"המלץ על אסטרטגיית תחזוקה מונעת"</li>
+                    <li>"כתוב דוח ניהולי עם 3 תובנות עיקריות"</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Tab 3: Python -->
+        <div id="python" class="tab-content">
+            <section class="concept-card">
+                <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">🐍 Python ו-Pandas לניתוח נתונים</h2>
+                
+                <h3>התקנה ראשונית</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre>pip install pandas matplotlib seaborn numpy</pre>
+                </div>
+
+                <h3>טעינת נתונים וניתוח בסיסי</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre>import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# טעינת נתונים
+df = pd.read_csv('car_failures.csv')
+
+# מבט ראשוני על הנתונים
+print("מספר שורות:", len(df))
+print("עמודות:", df.columns.tolist())
+print("\nמידע כללי:")
+print(df.info())
+
+# סטטיסטיקות בסיסיות
+print("\nסטטיסטיקות עלות תיקון:")
+print(df['עלות_תיקון'].describe())</pre>
+                </div>
+
+                <h3>ניתוח מתקדם - תקלות לפי דגם</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre># ספירת תקלות לפי דגם
+failures_by_model = df['דגם'].value_counts()
+print("תקלות לפי דגם:")
+print(failures_by_model)
+
+# עלות ממוצעת לפי דגם
+avg_cost_by_model = df.groupby('דגם')['עלות_תיקון'].mean()
+print("\nעלות ממוצעת לפי דגם:")
+print(avg_cost_by_model.sort_values(ascending=False))
+
+# יצירת גרף
+plt.figure(figsize=(10, 6))
+failures_by_model.plot(kind='bar')
+plt.title('מספר תקלות לפי דגם רכב')
+plt.xlabel('דגם')
+plt.ylabel('מספר תקלות')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()</pre>
+                </div>
+
+                <div style="background: #e3f2fd; border-right: 4px solid #2196f3; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                    <h4 style="color: #2196f3; margin-bottom: 0.5rem;">🔍 הסבר טכני</h4>
+                    <p><strong>Pandas</strong> הוא הכלי הסטנדרטי לניתוח נתונים ב-Python. הוא מאפשר לטעון, לנקות, לנתח ולהציג נתונים בצורה יעילה. <strong>Matplotlib</strong> ו-<strong>Seaborn</strong> משמשים ליצירת גרפים וויזואליזציות.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tab 4: Examples -->
+        <div id="examples" class="tab-content">
+            <section class="concept-card">
+                <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">📊 דוגמאות מעשיות</h2>
+                
+                <div class="grid-auto">
+                    <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #28a745;">
+                        <h3 style="color: #28a745; margin-bottom: 1rem;">🚗 ניתוח תקלות רכב</h3>
+                        <p><strong>המטרה:</strong> זיהוי הדגמים הבעייתיים ביותר</p>
+                        <p><strong>הנתונים:</strong> 1000 דוחות תקלות מ-6 חודשים</p>
+                        <p><strong>התובנה:</strong> Toyota Corolla - 40% מהתקלות, בעיקר חיישן חמצן</p>
+                        <p><strong>הפעולה:</strong> החלפה מונעת אחרי 80,000 ק"מ</p>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #2196f3;">
+                        <h3 style="color: #2196f3; margin-bottom: 1rem;">🔧 אופטימיזציה של זמני ייצור</h3>
+                        <p><strong>המטרה:</strong> הפחתת זמני setup במכונות CNC</p>
+                        <p><strong>הנתונים:</strong> זמני ייצור של 500 batch-ים</p>
+                        <p><strong>התובנה:</strong> 60% מהזמן הוא setup, לא ייצור</p>
+                        <p><strong>הפעולה:</strong> השקעה בקליפרים מהירים - חיסכון 20 דקות/batch</p>
+                    </div>
+
+                    <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #ffc107;">
+                        <h3 style="color: #856404; margin-bottom: 1rem;">📈 ניתוח מכירות חלפים</h3>
+                        <p><strong>המטרה:</strong> תחזית ביקוש לחלפים</p>
+                        <p><strong>הנתונים:</strong> מכירות חלפים מ-2 שנים</p>
+                        <p><strong>התובנה:</strong> עלייה של 30% בביקוש לבלמים בחורף</p>
+                        <p><strong>הפעולה:</strong> הגדלת מלאי בלמים לפני החורף</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- משימות לתרגול -->
+        <section class="concept-card" id="tasks">
+            <h2>📋 משימות לשבוע הקרוב</h2>
+            
+            <div class="grid-auto">
+                <div style="background: #e8f5e9; border: 2px solid #28a745; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #155724; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🎯</span> רמה בסיסית (מתחילים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>צור קובץ Excel עם נתוני תקלות דמיוניים (20 שורות)</li>
+                        <li>העלה ל-ChatGPT ובקש ניתוח בסיסי</li>
+                        <li>נסה 3 פרומפטים שונים ורשום את ההבדלים</li>
+                        <li>צור גרף פשוט ב-Excel מהנתונים</li>
+                        <li>כתוב סיכום של 3 תובנות עיקריות</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #004085; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>⚡</span> רמה מתקדמת (מנוסים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>התקן Python ו-Pandas</li>
+                        <li>צור מסד נתונים של 100+ רשומות</li>
+                        <li>כתוב סקריפט Python לניתוח אוטומטי</li>
+                        <li>בנה dashboard עם גרפים אינטראקטיביים</li>
+                        <li>צור דוח PDF אוטומטי עם התובנות</li>
+                        <li>שלב עם מסד נתונים אמיתי מהעבודה</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: #e1f5fe; border-right: 4px solid #03a9f4; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+                <h4 style="color: #0277bd; margin-bottom: 0.5rem;">😎 פרויקט מתקדם</h4>
+                <p><strong>בנה מערכת ניתוח תקלות:</strong> צור מערכת שקוראת נתוני תקלות מ-Excel, מנתחת אותם ב-Python, ושולחת דוח אוטומטי למייל כל שבוע!</p>
+            </div>
+        </section>
+
+        <!-- קריאה לפעולה חזקה -->
+        <section class="concept-card" id="join-course" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+            <h2 style="color: white;">📊 הנתונים הם הזהב החדש</h2>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🔍</div>
+                <p style="font-size: 1.2rem; margin: 1.5rem 0;">
+                    <strong>ניתוח נתונים הוא הכלי שמפריד בין מהנדס טוב למהנדס מעולה</strong><br>
+                    מי שיודע להפוך נתונים לתובנות יהיה תמיד מבוקש!
+                </p>
+            </div>
+
+            <div class="grid-auto" style="margin: 2rem 0;">
+                <a href="python_guide.html" style="background: white; color: var(--theme-accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</span>
+                    <strong>Python מתקדם</strong>
+                    <span style="font-size: 0.9rem;">הבסיס לכל ניתוח</span>
+                </a>
+
+                <a href="chatgpt_guide.html" style="background: white; color: var(--theme-accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</span>
+                    <strong>ChatGPT מתקדם</strong>
+                    <span style="font-size: 0.9rem;">AI לניתוח מהיר</span>
+                </a>
+
+                <a href="excel_student.html" style="background: white; color: var(--theme-accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📊</span>
+                    <strong>Excel מתקדם</strong>
+                    <span style="font-size: 0.9rem;">כלי הניתוח הנפוץ</span>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-size: 1rem; opacity: 0.9;">
+                    💡 <strong>זכור:</strong> הנתונים מספרים סיפור - אתה צריך לדעת לקרוא אותו!
+                </p>
+            </div>
+
+            <!-- LMS Integration Call-to-Action -->
+            <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 16px; margin: 2rem 0; text-align: center; border: 2px solid rgba(255,255,255,0.3);">
+                <h3 style="color: white; margin-bottom: 1rem;">🚀 מוכן להפוך למומחה ניתוח נתונים?</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">הצטרף לקורס המקצועי שלנו וקבל גישה לפרויקטים אמיתיים, מסדי נתונים ותמיכה אישית</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+                       style="background: #28a745; color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;"
+                       onmouseover="this.style.background='#218838'"
+                       onmouseout="this.style.background='#28a745'">
+                        🎓 הצטרף לקורס חינם
+                    </a>
+                    <a href="https://edu-manage.org/" 
+                       style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;"
+                       onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+                       onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                        📚 פורטל התלמידים
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for SEO -->
+        <section class="concept-card" style="background: #f8f9fa;">
+            <h2>❓ שאלות נפוצות</h2>
+            <div itemscope itemtype="https://schema.org/FAQPage">
+                
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">מה זה ניתוח נתונים ולמה זה חשוב למהנדסים?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>ניתוח נתונים (Data Analysis) הוא תהליך של בחינה, ניקוי ומידול נתונים כדי לגלות מידע שימושי ולקבל החלטות מושכלות. למהנדסים זה חיוני לבקרת איכות, אופטימיזציה של תהליכים, תחזוקה מונעת וחיסכון בעלויות.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">איזה כלי עדיף - Excel, Python או ChatGPT?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>כל כלי מתאים למטרות שונות: ChatGPT מעולה לניתוח מהיר ותובנות ראשוניות, Excel נוח לנתונים בינוניים וויזואליזציה, Python הכי חזק לנתונים גדולים ואוטומציה. המלצה: התחל עם ChatGPT, עבור ל-Excel, והתקדם ל-Python.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">האם אני צריך רקע במתמטיקה כדי לנתח נתונים?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>לא בהכרח. לניתוח בסיסי מספיק הבנה של ממוצעים, אחוזים וגרפים. כלים מודרניים כמו ChatGPT ו-Excel מבצעים את החישובים המורכבים בשבילך. עם זאת, הבנה בסיסית של סטטיסטיקה תעזור לך להבין טוב יותר את התוצאות.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">כמה זמן לוקח ללמוד ניתוח נתונים?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>הבסיס ניתן ללמוד תוך שבועיים. לרמה בינונית - חודש-חודשיים. להתמחות מקצועית - 3-6 חודשים של תרגול קבוע. החשוב הוא להתחיל עם פרויקטים קטנים ולהתקדם בהדרגה.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">איך ניתוח נתונים עוזר בתעשייה?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>ניתוח נתונים מאפשר זיהוי מוקדם של תקלות, אופטימיזציה של תהליכי ייצור, חיסכון בעלויות תחזוקה, שיפור איכות המוצר וקבלת החלטות מבוססות נתונים במקום אינטואיציה. זה הבסיס ל-Industry 4.0.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Enhanced Global Footer with EduManage Branding -->
+    <footer class="global-footer" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 3rem 0 1rem;">
+        <div class="footer-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div class="footer-main" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div class="footer-brand">
+                    <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">🎓</span> 
+                        <span style="background: linear-gradient(45deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">EduManage</span>
+                    </h3>
+                    <p style="line-height: 1.6; opacity: 0.9; margin-bottom: 1rem;">
+                        מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://edu-manage.org/" style="background: var(--theme-accent); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem; transition: all 0.3s;">
+                            🚀 פורטל EduManage
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 style="margin-bottom: 1rem; color: var(--theme-light);">📚 למידה</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="categories.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">כל הקטגוריות</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="python_guide.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Python למהנדסים</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="chatgpt_guide.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">ChatGPT מתקדם</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="excel_student.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Excel מתקדם</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="cv_guide.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">ראייה ממוחשבת</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 style="margin-bottom: 1rem; color: var(--theme-light);">🛠️ משאבים</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="sitemap.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">מפת האתר</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="prompts.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">ספריית פרומפטים</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="ai_ethics.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">אתיקה ב-AI</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="algorithmic_thinking.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">חשיבה אלגוריתמית</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 style="margin-bottom: 1rem; color: var(--theme-light);">🤝 קהילה</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="https://edu-manage.org/" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">אודות EduManage</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">הצטרף לקורס</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">תמיכה טכנית</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">עדכונים</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #34495e; padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="font-size: 0.9rem; opacity: 0.8;">
+                    © 2025 EduManage - מערכת לניהול פדגוגי | פותח במסגרת פורטל הלמידה והחדשנות
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: #bdc3c7; font-size: 1.2rem; text-decoration: none;" title="LinkedIn">💼</a>
+                    <a href="#" style="color: #bdc3c7; font-size: 1.2rem; text-decoration: none;" title="GitHub">🐙</a>
+                    <a href="#" style="color: #bdc3c7; font-size: 1.2rem; text-decoration: none;" title="YouTube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript with Analytics and UX Features -->
+    <script src="global.js"></script>
+    <script>
+        // Tab Management
+        function openTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+
+            // Analytics tracking (if available)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'tab_click', {
+                    'tab_name': tabName,
+                    'page_title': document.title
+                });
+            }
+        }
+
+        // Copy Code Functionality
+        function copyCode(btn) {
+            const codeBlock = btn.nextElementSibling;
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'הועתק!';
+                btn.style.background = 'rgba(40, 167, 69, 0.8)';
+                
+                setTimeout(() => {
+                    btn.textContent = 'העתק';
+                    btn.style.background = 'rgba(255, 255, 255, 0.1)';
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                btn.textContent = 'הועתק!';
+                setTimeout(() => btn.textContent = 'העתק', 2000);
+            });
+
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'code_copy', {
+                    'code_type': 'data_analysis',
+                    'page_title': document.title
+                });
+            }
+        }
+
+        // Reading Time Calculation
+        function calculateReadingTime() {
+            const text = document.querySelector('main').textContent;
+            const wordsPerMinute = 200; // Average reading speed in Hebrew
+            const words = text.trim().split(/\s+/).length;
+            const readingTime = Math.ceil(words / wordsPerMinute);
+            
+            const readingTimeElement = document.querySelector('[data-reading-time]');
+            if (readingTimeElement) {
+                readingTimeElement.textContent = readingTime;
+            }
+        }
+
+        // Smooth Scrolling for Anchor Links
+        function initSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Progress Bar for Reading
+        function initReadingProgress() {
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: linear-gradient(90deg, var(--theme-accent), var(--theme-light));
+                z-index: 9999;
+                transition: width 0.3s ease;
+            `;
+            document.body.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Initialize all features when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateReadingTime();
+            initSmoothScrolling();
+            initReadingProgress();
+
+            // Track page view
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    'page_title': document.title,
+                    'page_location': window.location.href,
+                    'content_group1': 'Data Analysis Guide'
+                });
+            }
+
+            // Add hover effects to cards
+            document.querySelectorAll('.concept-card, .tool-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.05)';
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all concept cards for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.concept-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <!-- Schema.org FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "מה זה ניתוח נתונים ולמה זה חשוב למהנדסים?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ניתוח נתונים (Data Analysis) הוא תהליך של בחינה, ניקוי ומידול נתונים כדי לגלות מידע שימושי ולקבל החלטות מושכלות. למהנדסים זה חיוני לבקרת איכות, אופטימיזציה של תהליכים, תחזוקה מונעת וחיסכון בעלויות."
+                }
+            },
+            {
+                "@type": "Question", 
+                "name": "איזה כלי עדיף - Excel, Python או ChatGPT?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "כל כלי מתאים למטרות שונות: ChatGPT מעולה לניתוח מהיר ותובנות ראשוניות, Excel נוח לנתונים בינוניים וויזואליזציה, Python הכי חזק לנתונים גדולים ואוטומציה. המלצה: התחל עם ChatGPT, עבור ל-Excel, והתקדם ל-Python."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "האם אני צריך רקע במתמטיקה כדי לנתח נתונים?", 
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "לא בהכרח. לניתוח בסיסי מספיק הבנה של ממוצעים, אחוזים וגרפים. כלים מודרניים כמו ChatGPT ו-Excel מבצעים את החישובים המורכבים בשבילך. עם זאת, הבנה בסיסית של סטטיסטיקה תעזור לך להבין טוב יותר את התוצאות."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "כמה זמן לוקח ללמוד ניתוח נתונים?",
+                "acceptedAnswer": {
+                    "@type": "Answer", 
+                    "text": "הבסיס ניתן ללמוד תוך שבועיים. לרמה בינונית - חודש-חודשיים. להתמחות מקצועית - 3-6 חודשים של תרגול קבוע. החשוב הוא להתחיל עם פרויקטים קטנים ולהתקדם בהדרגה."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "איך ניתוח נתונים עוזר בתעשייה?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ניתוח נתונים מאפשר זיהוי מוקדם של תקלות, אופטימיזציה של תהליכי ייצור, חיסכון בעלויות תחזוקה, שיפור איכות המוצר וקבלת החלטות מבוססות נתונים במקום אינטואיציה. זה הבסיס ל-Industry 4.0."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "דף הבית",
+                "item": "/index.html"
+            },
+            {
+                "@type": "ListItem", 
+                "position": 2,
+                "name": "קטגוריות",
+                "item": "/categories.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "ניתוח נתונים למהנדסים",
+                "item": "/data_analysis_guide.html"
+            }
+        ]
+    }
+    </script>
+
+</body>
+</html>

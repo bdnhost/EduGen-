@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>יסודות האינטרנט | מדריך מקצועי חינמי | LearningHub</title>
+    <meta name="description" content="מדריך יסודות האינטרנט: איך אינטרנט עובד, פרוטוקולים, דומיינים ובטיחות באינטרנט ✅ דוגמאות מעשיות ✅ תרגילים ומטלות">
+    <meta name="keywords" content="אינטרנט, IP, DNS, HTTP, HTTPS, בטיחות אינטרנט, דומיינים, שרתים, פרוטוקולים, מדריך, לימוד, קורס חינמי, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="יסודות האינטרנט | מדריך מקצועי חינמי">
+    <meta property="og:description" content="הבנה עמוקה כיצד האינטרנט עובד - פרוטוקולים, דומיינים, בטיחות">
+    <meta property="og:image" content="/images/internet-basics-guide.jpg">
+    <meta property="og:url" content="/internet_basics.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="טכנולוגיה וכלים">
+    <meta property="article:tag" content="אינטרנט, IP, DNS, HTTP, בטיחות">
+    <meta property="article:published_time" content="2025-01-01">
+    <meta property="article:modified_time" content="2025-01-15">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="יסודות האינטרנט | מדריך מקצועי חינמי">
+    <meta name="twitter:description" content="הבנה עמוקה כיצד האינטרנט עובד - פרוטוקולים, דומיינים, בטיחות">
+    <meta name="twitter:image" content="/images/internet-basics-guide.jpg">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="msapplication-TileColor" content="#1a1a2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/internet_basics.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="/internet_basics.html">
+    <link rel="alternate" hreflang="x-default" href="/internet_basics.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "יסודות האינטרנט",
+        "description": "מדריך מקצועי ליסודות האינטרנט וכיצד הוא עובד",
+        "image": "/images/internet-basics-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "/internet_basics.html"
+        },
+        "articleSection": "טכנולוגיה וכלים",
+        "keywords": "אינטרנט, IP, DNS, HTTP, בטיחות",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "יסודות האינטרנט, פרוטוקולים, בטיחות",
+        "about": {
+            "@type": "Thing",
+            "name": "יסודות האינטרנט"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "יסודות האינטרנט",
+        "description": "מדריך מקצועי ליסודות האינטרנט - פרוטוקולים, דומיינים, בטיחות",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online"
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל"
+    }
+    </script>
+    
+    <style>
+        .svg-icon {
+            display: inline-block;
+            width: 1.2em;
+            height: 1.2em;
+            margin-left: 0.4rem;
+            vertical-align: middle;
+            stroke-width: 2;
+        }
+        .svg-diagram-container {
+            width: 100%;
+            max-width: 600px; /* Limit max width for large screens */
+            margin: 1.5rem auto; /* Center the diagram */
+            padding: 20px;
+        }
+
+        :root {
+            --primary: #1a1a2e;
+            --accent: #0984e3;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            text-align: right;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+
+        .concept-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--accent);
+        }
+
+        .code-block {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .teaser-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .teaser-idea {
+            background: #e8f5e9;
+            border-right: 4px solid #28a745;
+        }
+
+        .teaser-warning {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+        }
+
+        .teaser-title {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem;" onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='white'">פורטל התלמידים</a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">הצטרף חינם</a>
+        </div>
+    </div>
+
+    <!-- Global Header -->
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links">
+                <a href="sitemap.html" class="nav-link">מפת האתר</a>
+                <a href="categories.html" class="nav-link">קטגוריות</a>
+                <a href="index.html" class="nav-link">ראשי</a>
+            </div>
+            <a href="index.html" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "דף הבית",
+                    "item": "/index.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "קטגוריות",
+                    "item": "/categories.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "יסודות האינטרנט",
+                    "item": "/internet_basics.html"
+                }
+            ]
+        }
+        </script>
+        <a href="index.html">דף הבית</a>
+        <span>/</span>
+        <a href="categories.html">קטגוריות</a>
+        <span>/</span>
+        <span class="current">יסודות האינטרנט</span>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1>🌐 יסודות האינטרנט</h1>
+            <p class="subtitle">הבנה עמוקה כיצד האינטרנט עובד - מ-IP וDNS ועד HTTPS ובטיחות</p>
+            
+            <div class="article-meta" style="margin-top: 1rem; font-size: 0.9rem; color: #666; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span>👨‍🏫 מאת: <strong>LearningHub</strong></span>
+                <span>📅 עודכן: <strong>15 בינואר 2025</strong></span>
+                <span>⏱️ זמן קריאה: <strong>35 דקות</strong></span>
+                <span>📊 רמת קושי: <strong>בינוני</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-container" id="main-content">
+        
+        <div class="concept-card" style="background: #f8f9fa; border-right: 4px solid #0984e3;">
+            <h2>📋 תוכן המדריך</h2>
+            <nav aria-label="תוכן המדריך">
+                <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><a href="#why-important" style="color: #0984e3; text-decoration: none;">למה יסודות האינטרנט חשובים?</a></li>
+                    <li><a href="#how-works" style="color: #0984e3; text-decoration: none;">איך אינטרנט עובד - OSI Model</a></li>
+                    <li><a href="#tcp-ip" style="color: #0984e3; text-decoration: none;">TCP/IP - סדר הדום של האינטרנט</a></li>
+                    <li><a href="#ip-address" style="color: #0984e3; text-decoration: none;">כתובות IP וNAT</a></li>
+                    <li><a href="#dns" style="color: #0984e3; text-decoration: none;">DNS - כיצד שמות הופכים לכתובות</a></li>
+                    <li><a href="#http-https" style="color: #0984e3; text-decoration: none;">HTTP/HTTPS וTLS</a></li>
+                    <li><a href="#web-architecture" style="color: #0984e3; text-decoration: none;">ארכיטקטורת Web - Client-Server</a></li>
+                    <li><a href="#security" style="color: #0984e3; text-decoration: none;">בטיחות ברשתות</a></li>
+                    <li><a href="#advanced-topics" style="color: #0984e3; text-decoration: none;">נושאים מתקדמים</a></li>
+                    <li><a href="#tasks" style="color: #0984e3; text-decoration: none;">משימות מעשיות</a></li>
+                </ol>
+            </nav>
+        </div>
+
+        <section class="concept-card" id="why-important">
+            <h2>למה יסודות האינטרנט חשובים?</h2>
+            <p>הבנת היסודות של האינטרנט היא <strong>קריטית</strong> לכל מי שעובד בתחום הטכנולוגיה. בין אם אתה <a href="python_guide.html" style="color: #0984e3; text-decoration: underline;">כותב סקריפטים Python</a> לאוטומציה, עובד עם <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">שורת הפקודה (Terminal)</a>, או אפילו משתמש ב-<a href="chatgpt_guide.html" style="color: #0984e3; text-decoration: underline;">ChatGPT</a> ל-API calls - כל זה תלוי בהבנה עמוקה של פרוטוקולי התקשורת.</p>
+            <p>כאשר אתה מכיר את ה-TCP/IP, DNS, HTTP ובטיחות רשתות, אתה יכול:</p>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10z"></path><line x1="12" y1="18" x2="12" y2="22"></line><line x1="9" y1="22" x2="15" y2="22"></line></svg></span> <strong>לפתור בעיות תקשורת</strong> בשרתים ויישומים</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span> <strong>להגן על מערכות</strong> מפני התקפות וחדירות</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2z"></path><path d="M12 12L18 6"></path><path d="M6 18L12 12"></path><path d="M6 6L12 12"></path><path d="M18 18L12 12"></path></svg></span> <strong>לעבוד עם ניתוח נתונים</strong> שמגיע מרשתות מרוחקות</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></span> <strong>לבנות יישומים</strong> שמתקשרים בעולם</li>
+            </ul>
+        </section>
+
+        <section class="concept-card" id="how-works">
+            <h2>🔄 איך אינטרנט עובד - OSI Model</h2>
+            <p>ה-<strong>OSI Model</strong> (Open Systems Interconnection) הוא המסגרת התיאורטית הנפוצה ביותר לתיאור תקשורת ברשתות. הוא מחלק את התקשורת ל-7 שכבות:</p>
+            
+            <div class="svg-diagram-container">
+                <svg viewBox="0 0 300 175" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="25" y="5" width="250" height="20" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="150" y="17.5" font-family="Heebo, sans-serif" font-size="9" fill="white" text-anchor="middle">7. Application (HTTP, DNS)</text>
+                    <rect x="25" y="30" width="250" height="20" rx="2.5" fill="#0984e3" opacity="0.7"/>
+                    <text x="150" y="42.5" font-family="Heebo, sans-serif" font-size="9" fill="white" text-anchor="middle">6. Presentation (Encryption)</text>
+                    <rect x="25" y="55" width="250" height="20" rx="2.5" fill="#0984e3" opacity="0.6"/>
+                    <text x="150" y="67.5" font-family="Heebo, sans-serif" font-size="9" fill="white" text-anchor="middle">5. Session (TLS)</text>
+                    <rect x="25" y="80" width="250" height="20" rx="2.5" fill="#0984e3" opacity="0.5"/>
+                    <text x="150" y="92.5" font-family="Heebo, sans-serif" font-size="9" fill="white" text-anchor="middle">4. Transport (TCP, UDP)</text>
+                    <rect x="25" y="105" width="250" height="20" rx="2.5" fill="#0984e3" opacity="0.4"/>
+                    <text x="150" y="117.5" font-family="Heebo, sans-serif" font-size="9" fill="white" text-anchor="middle">3. Network (IP, Routing)</text>
+                    <rect x="25" y="130" width="250" height="20" rx="2.5" fill="#0984e3" opacity="0.3"/>
+                    <text x="150" y="142.5" font-family="Heebo, sans-serif" font-size="9" fill="white" text-anchor="middle">2. Data Link (MAC, Ethernet)</text>
+                    <rect x="25" y="155" width="250" height="20" rx="2.5" fill="#0984e3" opacity="0.2"/>
+                    <text x="150" y="167.5" font-family="Heebo, sans-serif" font-size="9" fill="white" text-anchor="middle">1. Physical (Cables, WiFi)</text>
+                </svg>
+            </div>
+            <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+                <thead>
+                    <tr style="background: #0984e3; color: white; text-align: right;">
+                        <th style="padding: 1rem; border: 1px solid #ccc;">שכבה</th>
+                        <th style="padding: 1rem; border: 1px solid #ccc;">שם</th>
+                        <th style="padding: 1rem; border: 1px solid #ccc;">דוגמה</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;">7</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Application</strong></td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;">HTTP, HTTPS, DNS, SMTP</td>
+                    </tr>
+                    <tr style="background: #f9f9f9; border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;">6</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Presentation</strong></td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;">Encryption, Compression</td>
+                    </tr>
+                    <tr style="border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;">5</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Session</strong></td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;">SSH, TLS sessions</td>
+                    </tr>
+                    <tr style="background: #f9f9f9; border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;">4</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Transport</strong></td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;">TCP, UDP</td>
+                    </tr>
+                    <tr style="border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;">3</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Network</strong></td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;">IP, ICMP, Routing</td>
+                    </tr>
+                    <tr style="background: #f9f9f9; border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;">2</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Data Link</strong></td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;">Ethernet, MAC addresses</td>
+                    </tr>
+                    <tr style="border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;">1</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Physical</strong></td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;">כבלים, WiFi, סיבים אופטיים</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="teaser-box teaser-idea">
+                <h4 class="teaser-title">💡 מנמוניק להיזכרות</h4>
+                <p><strong>"Please Do Not Throw Sausage Pizza Away"</strong> - Physical, Data Link, Network, Transport, Session, Presentation, Application (מלמעלה למטה)</p>
+            </div>
+
+            <h3 style="margin: 1.5rem 0 1rem;">תהליך שליחת נתונים</h3>
+            <p>כאשר אתה מבצע בקשה HTTP בדפדפן (למשל כניסה ל-Google):</p>
+            <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></span> <strong>Application Layer:</strong> הדפדפן יוצר HTTP request</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span> <strong>Transport Layer:</strong> TCP עוטף את זה ב-TCP header עם ports</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> <strong>Network Layer:</strong> IP עוטף את זה ב-IP header עם כתובות IP</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07L9.5 11.03V4.5H2v7h7.5L10 13z"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07L14.5 12.97V19.5H22v-7h-7.5L14 11z"></path></svg></span> <strong>Data Link:</strong> Ethernet עוטף עם MAC addresses</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 18 0v2a9 9 0 0 1-18 0v-2z"></path><path d="M8 10v1c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-1"></path></svg></span> <strong>Physical:</strong> משודר בעבור כבלים או WiFi</li>
+            </ol>
+        </section>
+
+        <section class="concept-card" id="tcp-ip">
+            <h2>🔌 TCP/IP - סדר הדום של האינטרנט</h2>
+            <p>ה-<strong>TCP/IP Model</strong> היא המודל המעשי שבו משתמשים יום יום. בניגוד ל-OSI עם 7 שכבות, TCP/IP יש רק 4:</p>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">TCP (Transmission Control Protocol)</h3>
+            <p>TCP הוא פרוטוקול <strong>מموثק ויציב</strong> - הוא מבטיח שכל הנתונים יגיעו לסדר הנכון:</p>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span> חלוקה לחבילות (segments)</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> אישור קבלה (acknowledgment)</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6"></path><path d="M21.5 13a9 9 0 1 1-18 0c0-4.5 4-9 9-9s9 4.5 9 9z"></path></svg></span> שליחה חוזרת אם חבילה אבדה</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-4"></path></svg></span> בקרת זרימה (flow control)</li>
+            </ul>
+
+            <div class="code-block">TCP Handshake (3-way):<br><br>
+Client → Server: SYN (לא, אני רוצה להתחבר)<br>
+Server → Client: SYN-ACK (כן, אני מסכים)<br>
+Client → Server: ACK (תודה, התחברנו)
+            </div>
+
+            <h3 style="margin: 1.5rem 0 1rem;">UDP (User Datagram Protocol)</h3>
+            <p>UDP הוא פרוטוקול <strong>מהיר אך לא מוثק</strong> - משדר נתונים בלי לוודא קבלה:</p>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></span> מהיר יותר מ-TCP</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span> לא מבטיח קבלה</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path><path d="M12 6v6l4 2"></path></svg></span> משמש לrealtime (משחקים, וידיאו)</li>
+            </ul>
+
+            <div class="teaser-box teaser-warning">
+                <h4 class="teaser-title">⚠️ בחרו את הפרוטוקול הנכון</h4>
+                <p><strong>TCP</strong> עבור כל מה שצריך להיות תקין (email, web, files) | <strong>UDP</strong> עבור real-time (משחקים, וידיאו חי, VoIP)</p>
+            </div>
+        </section>
+
+        <section class="concept-card" id="ip-address">
+            <h2>🔢 כתובות IP וNAT</h2>
+            <p>כתובת IP היא הזהות הייחודית של כל מכשיר ברשת - כמו מספר טלפון או כתובת בדואר. בלי זה, האינטרנט לא יודע לאן לשלוח את התוכן שלך.</p>
+            
+            <div class="svg-diagram-container">
+                <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="37.5" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="30" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">מכשיר A</text>
+                    <rect x="75" y="37.5" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="100" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">מכשיר B</text>
+                    <rect x="145" y="37.5" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="170" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">מכשיר C</text>
+                    <rect x="215" y="37.5" width="80" height="25" rx="2.5" fill="#e67e22" opacity="0.8"/>
+                    <text x="255" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">נתב (Router) + NAT</text>
+                    <line x1="55" y1="50" x2="75" y2="50" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="125" y1="50" x2="145" y2="50" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="195" y1="50" x2="215" y2="50" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <text x="135" y="30" font-family="Heebo, sans-serif" font-size="7" fill="#2c3e50" text-anchor="middle">IP פרטי</text>
+                    <text x="255" y="30" font-family="Heebo, sans-serif" font-size="7" fill="#2c3e50" text-anchor="middle">IP פומבי</text>
+                    <defs>
+                        <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+                            <polygon points="0 0, 5 1.75, 0 3.5" fill="#2c3e50" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h3 style="margin: 1.5rem 0 1rem;">IPv4 vs IPv6</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+                <thead>
+                    <tr style="background: #0984e3; color: white; text-align: right;">
+                        <th style="padding: 1rem; border: 1px solid #ccc;">IPv4</th>
+                        <th style="padding: 1rem; border: 1px solid #ccc;">IPv6</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>פורמט:</strong> 192.168.1.1</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>פורמט:</strong> 2001:0db8::1</td>
+                    </tr>
+                    <tr style="background: #f9f9f9; border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>כתובות זמינות:</strong> 4.3 מיליארד</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>כתובות זמינות:</strong> 340 טריליון טריליון</td>
+                    </tr>
+                    <tr style="border: 1px solid #ccc;">
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>סטטוס:</strong> כמעט אזל</td>
+                        <td style="padding: 1rem; border: 1px solid #ccc;"><strong>סטטוס:</strong> העתיד</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin: 1.5rem 0 1rem;">NAT (Network Address Translation)</h3>
+            <p>NAT היא טכנולוגיה שמאפשרת למספר מכשירים ברשת הביתית להשתמש בכתובת IP פומבית אחת:</p>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span> <strong>אבטחה:</strong> מחשבים בתוך הרשת לא נראים ישירות</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span> <strong>חסכון כתובות:</strong> אתה צריך רק כתובת אחת פומבית</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> <strong>הרחבה:</strong> אתה יכול לחבר כמה מכשירים שתרצה</li>
+            </ul>
+
+            <div class="code-block">בדוק את כתובת IP שלך:<br><br>
+Windows (PowerShell):<br>
+ipconfig<br><br>
+Mac/Linux (Terminal):<br>
+ifconfig
+            </div>
+
+            <div class="teaser-box teaser-secret">
+                <h4 class="teaser-title">🤫 סוד: כתובות IP פרטיות</h4>
+                <p>ישנן 3 טווחים של IP שמעולם לא יישודרו לאינטרנט:<br><strong>10.0.0.0 - 10.255.255.255</strong><br><strong>172.16.0.0 - 172.31.255.255</strong><br><strong>192.168.0.0 - 192.168.255.255</strong><br><br>אלו נשמרים תמיד לשימוש פרטי בארגונים וביתי.</p>
+            </div>
+        </section>
+
+        <section class="concept-card" id="dns">
+            <h2>🏷️ DNS - כיצד שמות הופכים לכתובות</h2>
+            <p>DNS (Domain Name System) היא אחת ה<strong>טכנולוגיות המשכלליות</strong> של האינטרנט. מבלי בה, היינו צריכים לזכור כתובות IP של כל אתר - בדיוק כמו זכור מספרי טלפון בראש!</p>
+            
+            <div class="svg-diagram-container">
+                <svg viewBox="0 0 450 125" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="50" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="30" y="65" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">דפדפן</text>
+                    <rect x="75" y="50" width="60" height="25" rx="2.5" fill="#e67e22" opacity="0.8"/>
+                    <text x="105" y="65" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Recursive</text>
+                    <rect x="155" y="50" width="50" height="25" rx="2.5" fill="#28a745" opacity="0.8"/>
+                    <text x="180" y="65" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Root</text>
+                    <rect x="225" y="50" width="50" height="25" rx="2.5" fill="#6f42c1" opacity="0.8"/>
+                    <text x="250" y="65" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">TLD</text>
+                    <rect x="295" y="50" width="60" height="25" rx="2.5" fill="#dc3545" opacity="0.8"/>
+                    <text x="325" y="65" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Authoritative</text>
+                    <line x1="55" y1="62.5" x2="75" y2="62.5" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="135" y1="62.5" x2="155" y2="62.5" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="205" y1="62.5" x2="225" y2="62.5" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="275" y1="62.5" x2="295" y2="62.5" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <defs>
+                        <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+                            <polygon points="0 0, 5 1.75, 0 3.5" fill="#2c3e50" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h3 style="margin: 1.5rem 0 1rem;">ארכיטקטורת DNS</h3>
+            <p>DNS מורכבת מהיררכיה של שרתים:</p>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07L9.5 11.03V4.5H2v7h7.5L10 13z"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07L14.5 12.97V19.5H22v-7h-7.5L14 11z"></path></svg></span> <strong>Root Name Servers:</strong> עשרות שרתים בעולם שיודעים על כל ה-TLDs (.com, .org, .co.il וכו')</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> <strong>TLD Name Servers:</strong> שרתים המטפלים בהרחבות (.com, .org)</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></span> <strong>Authoritative Name Servers:</strong> השרת של מלכים - המחזיק את הרשומה של ה-domain</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6"></path><path d="M21.5 13a9 9 0 1 1-18 0c0-4.5 4-9 9-9s9 4.5 9 9z"></path></svg></span> <strong>Recursive Resolvers:</strong> הדפדפן שלך והספק האינטרנט שלך</li>
+            </ul>
+
+            <h3 style="margin: 1.5rem 0 1rem;">תהליך DNS Resolution</h3>
+            <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                <li>אתה מקליד <strong>google.com</strong> בדפדפן</li>
+                <li>הדפדפן שלך שואל את ה-<strong>Recursive Resolver</strong> (בדרך כלל של ה-ISP שלך)</li>
+                <li>ה-Recursive Resolver שואל את ה-<strong>Root Name Server</strong></li>
+                <li>Root Server אומר: "אני לא יודע, אבל שאל את TLD server של .com"</li>
+                <li>TLD Server אומר: "אני לא יודע, אבל Google הוא כאן (ה-authoritative server)"</li>
+                <li>Google's Authoritative Server חוזר עם IP: <strong>142.251.33.102</strong></li>
+                <li>הדפדפן מתחבר ל-IP הזה ו-<strong>voilà</strong>! אתה ב-Google</li>
+            </ol>
+
+            <div class="code-block">בדוק DNS עם <a href="terminal_guide.html" style="color: #20c997; text-decoration: underline;">Terminal</a>:<br><br>
+nslookup google.com<br><br>
+Output:<br>
+Server: 8.8.8.8<br>
+Address: 142.251.33.102
+            </div>
+
+            <div class="teaser-box teaser-bonus">
+                <h4 class="teaser-title">😎 בונוס: DNS Caching</h4>
+                <p>הדפדפן שלך שומר בזיכרון (cache) את ה-IP של אתרים שביקרת בהם. בפעם הבאה שאתה נכנס ל-Google, הוא לא חוקר את כל הרשת - הוא פשוט זוכר את ה-IP! זה כמו להיזכר בפתח הבית של חברה אחרי ביקור ראשון.</p>
+            </div>
+        </section>
+
+        <section class="concept-card" id="http-https">
+            <h2>🔐 HTTP/HTTPS וTLS - התקשורת המאובטחת</h2>
+            <p>HTTP (Hypertext Transfer Protocol) הוא האפליקציה הנדרשת שדפדפנים משתמשים כדי להורד עמודים. אבל HTTP <strong>לא מאובטח</strong> - כל אחד יכול להאזין לתקשורת שלך!</p>
+
+            <div class="svg-diagram-container">
+                <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="25" y="37.5" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="50" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Client</text>
+                    <rect x="225" y="37.5" width="50" height="25" rx="2.5" fill="#28a745" opacity="0.8"/>
+                    <text x="250" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Server</text>
+                    <line x1="75" y1="45" x2="225" y2="45" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="2.5,2.5" marker-end="url(#arrowhead)"/>
+                    <text x="150" y="40" font-family="Heebo, sans-serif" font-size="8" fill="#dc3545" text-anchor="middle">HTTP (לא מוצפן)</text>
+                    <line x1="75" y1="65" x2="225" y2="65" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                    <text x="150" y="72.5" font-family="Heebo, sans-serif" font-size="8" fill="#28a745" text-anchor="middle">HTTPS (מוצפן)</text>
+                    <defs>
+                        <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+                            <polygon points="0 0, 5 1.75, 0 3.5" fill="#2c3e50" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h3 style="margin: 1.5rem 0 1rem;">HTTPS - HTTP + TLS</h3>
+            <p><strong>HTTPS</strong> הוא HTTP שעטוף בשכבת הצפנה בשם <strong>TLS</strong> (Transport Layer Security):</p>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li>🔒 <strong>Encryption:</strong> הודעות מוצפנות - אף אחד לא רואה את התוכן</li>
+                <li>✅ <strong>Authenticity:</strong> סרטיפיקט דיגיטלי מוודא שזה באמת Google, לא פחזן</li>
+                <li>🛡️ <strong>Integrity:</strong> בדיקה שלא שינו את התוכן בדרך</li>
+            </ul>
+
+            <h3 style="margin: 1.5rem 0 1rem;">TLS Handshake - איך היצפנה מתחילה</h3>
+            <p>כל פעם שאתה נכנס לאתר HTTPS, יש תהליך של 4 צעדים כדי לבנות חיבור מוצפן:</p>
+            <div class="code-block">
+Client: "שלום, אני רוצה להתחבר בצורה מאובטחת"<br>
+Server: "בסדר, זה הסרטיפיקט שלי" [שולח SSL certificate]<br>
+Client: "תודה, בואו נשתמש בהצפנה הזו"<br>
+Server: "בדיוק! התחברנו בצורה מאובטחת" ✅
+            </div>
+
+            <div class="teaser-box teaser-warning">
+                <h4 class="teaser-title">⚠️ בדוק את הנעילה בדפדפן</h4>
+                <p>בדוק תמיד שיש <strong>נעילה 🔒</strong> לפני כתובת URL. אם אתה משדר סיסמה, מספר כרטיס או מידע רגיש, זה חייב להיות HTTPS. אם אתה רואה <span style="color: #e74c3c;">⚠️ Not Secure</span> - עזוב כמו שרוצה זה!</p>
+            </div>
+
+            <div class="teaser-box teaser-secret">
+                <h4 class="teaser-title">🤫 כמה זה עולה ל-HTTPS?</h4>
+                <p>בעבר, סרטיפיקטים עלו הרבה כסף. היום, <strong>Let's Encrypt</strong> מעניק סרטיפיקטים בחינם לכל אתר! זה הסיבה שכמעט כל אתר זול היום משתמש ב-HTTPS.</p>
+            </div>
+        </section>
+
+        <section class="concept-card" id="web-architecture">
+            <h2>🏗️ ארכיטקטורת Web - Client-Server Model</h2>
+            <p>האינטרנט בנוי על מודל פשוט: <strong>Client</strong> שמבקש משאבים מ-<strong>Server</strong> שמוחזיק אותם.</p>
+
+            <div class="svg-diagram-container">
+                <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="25" y="37.5" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="50" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Client</text>
+                    <rect x="225" y="37.5" width="50" height="25" rx="2.5" fill="#28a745" opacity="0.8"/>
+                    <text x="250" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Server</text>
+                    <line x1="75" y1="45" x2="225" y2="45" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <text x="150" y="40" font-family="Heebo, sans-serif" font-size="7" fill="#2c3e50" text-anchor="middle">בקשה (Request)</text>
+                    <line x1="225" y1="65" x2="75" y2="65" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <text x="150" y="72.5" font-family="Heebo, sans-serif" font-size="7" fill="#2c3e50" text-anchor="middle">תגובה (Response)</text>
+                    <defs>
+                        <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+                            <polygon points="0 0, 5 1.75, 0 3.5" fill="#2c3e50" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h3 style="margin: 1.5rem 0 1rem;">Client</h3>
+            <p>הצד שלך - הדפדפן שלך (Chrome, Firefox, Safari) שמבקש משאבים:</p>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></span> שולח HTTP Request</li>
+                <li>⏳ מחכה לתשובה</li>
+                <li>🎨 מעבד את ה-HTML/CSS/JavaScript</li>
+                <li>📺 מציג את הדף</li>
+            </ul>
+
+            <h3 style="margin: 1.5rem 0 1rem;">Server</h3>
+            <p>מחשב חזק בשרת בעולם (למשל בכניסה של Google בקליפורניה) שמחכה לבקשות:</p>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path><path d="M12 6v6l4 2"></path></svg></span> מקשיב ל-requests על port 80 (HTTP) או 443 (HTTPS)</li>
+                <li>📂 חומר HTML/CSS/JS או מסדי נתונים</li>
+                <li>📤 שולח HTTP Response חזרה</li>
+                <li>🔄 חוזר על זה אלפי פעמים בשנייה</li>
+            </ul>
+
+            <div class="teaser-box teaser-idea">
+                <h4 class="teaser-title">💡 כל פעם שאתה עולה לאתר...</h4>
+                <p>קורה משהו בדיוק כמו זה:<br>
+                <strong>אתה:</strong> "היי server, תן לי את הדף של google.com"<br>
+                <strong>Server:</strong> "בואו, זה ה-HTML שלו" [משלח 1MB של נתונים]<br>
+                <strong>אתה:</strong> "תודה! אני צריך גם את ה-CSS" [עוד בקשה]<br>
+                <strong>Server:</strong> "בואו!" [משלח עוד 500KB]<br>
+                וכן הלאה... זה קורה כמאות פעמים לדף אחד!</p>
+            </div>
+        </section>
+
+        <section class="concept-card" id="security">
+            <h2>🛡️ בטיחות ברשתות - הגנה מפני התקפות</h2>
+            <p>ברגע שאתה מחובר לאינטרנט, אתה חשוף להתקפות. זה לא משעה, זה קול! כל יום מיליוני התקפות מנסות לחדור למחשבים.</p>
+            
+            <div class="svg-diagram-container">
+                <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="25" y="37.5" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="50" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">משתמש</text>
+                    <rect x="125" y="37.5" width="50" height="25" rx="2.5" fill="#e67e22" opacity="0.8"/>
+                    <text x="150" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">אינטרנט</text>
+                    <rect x="225" y="37.5" width="50" height="25" rx="2.5" fill="#dc3545" opacity="0.8"/>
+                    <text x="250" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">איומים</text>
+                    <line x1="75" y1="50" x2="125" y2="50" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="175" y1="50" x2="225" y2="50" stroke="#dc3545" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <defs>
+                        <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+                            <polygon points="0 0, 5 1.75, 0 3.5" fill="#2c3e50" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h3 style="margin: 1.5rem 0 1rem;">סוגי התקפות שכיחות</h3>
+            <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> <strong>Phishing:</strong> אתרים מזויפים שנראים כמו הבנק שלך אבל זה טורחן</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10z"></path><line x1="12" y1="18" x2="12" y2="22"></line><line x1="9" y1="22" x2="15" y2="22"></line></svg></span> <strong>Man-in-the-Middle (MITM):</strong> מישהו מאזין לתקשורת שלך בWiFi ציבורי</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path><path d="M12 6v6l4 2"></path></svg></span> <strong>DDoS:</strong> הפקת אתר בעזרת אלפי בקשות בשנייה</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path><path d="M12 6v6l4 2"></path></svg></span> <strong>Malware:</strong> תוכנה זדונית שמזיקה למחשב</li>
+                <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span> <strong>SQL Injection:</strong> הכנסת קוד זדוני לתוך טפסים</li>
+            </ul>
+
+            <h3 style="margin: 1.5rem 0 1rem;">הגנה בסיסית</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <div style="background: #d4edda; border-right: 4px solid #28a745; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: #155724; margin-bottom: 1rem;">✅ סיסמאות חזקות</h4>
+                    <p><strong>לא:</strong> password123, 123456</p>
+                    <p><strong>כן:</strong> P@ssw0rd!2K25xYz (ערבוב אותיות, ספרות, סימנים)</p>
+                </div>
+
+                <div style="background: #cce5ff; border-right: 4px solid #007bff; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: #004085; margin-bottom: 1rem;">✅ 2FA (Two-Factor Authentication)</h4>
+                    <p>סיסמה + קוד מ-Google Authenticator = הרבה יותר בטוח</p>
+                </div>
+
+                <div style="background: #fff3cd; border-right: 4px solid #ffc107; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: #856404; margin-bottom: 1rem;">✅ HTTPS תמיד</h4>
+                    <p>זה מצפין את התקשורת שלך מפני ציעים שמאזינים</p>
+                </div>
+
+                <div style="background: #f8d7da; border-right: 4px solid #dc3545; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: #721c24; margin-bottom: 1rem;">✅ VPN בWiFi ציבורי</h4>
+                    <p>Tunnel מוצפן שמחבר את כל התקשורת שלך דרך שרת בטוח</p>
+                </div>
+
+                <div style="background: #d1ecf1; border-right: 4px solid #17a2b8; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: #0c5460; margin-bottom: 1rem;">✅ עדכנים/Patches</h4>
+                    <p>עדכן את ה-OS שלך ותוכנה - לעתים קרובות זה תיקוני אבטחה</p>
+                </div>
+
+                <div style="background: #e2e3e5; border-right: 4px solid #6c757d; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: #383d41; margin-bottom: 1rem;">✅ זהירות ממיילים חשודים</h4>
+                    <p>לא תלחץ על לינקים או הורידה ממיילים בלתי צפויים</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="concept-card" id="advanced-topics">
+            <h2>🚀 נושאים מתקדמים</h2>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">CDN (Content Delivery Network)</h3>
+            <div class="svg-diagram-container">
+                <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="37.5" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="30" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">משתמש</text>
+                    <rect x="75" y="37.5" width="50" height="25" rx="2.5" fill="#28a745" opacity="0.8"/>
+                    <text x="100" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">CDN Edge</text>
+                    <rect x="145" y="37.5" width="50" height="25" rx="2.5" fill="#28a745" opacity="0.8"/>
+                    <text x="170" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">CDN Edge</text>
+                    <rect x="215" y="37.5" width="80" height="25" rx="2.5" fill="#e67e22" opacity="0.8"/>
+                    <text x="255" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Origin Server</text>
+                    <line x1="55" y1="50" x2="75" y2="50" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="125" y1="50" x2="145" y2="50" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="195" y1="50" x2="215" y2="50" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                </svg>
+            </div>
+            <p>אתרים גדולים כמו Netflix משתמשים ברשתות של שרתים בכל העולם כדי למסור תוכן מהר יותר. כאשר אתה שומה סרט, זה לא בא מחולצה בקליפורניה - זה בא מShserver בישראל שהוא קרוב אליך!</p>
+
+            <h3 style="margin: 1.5rem 0 1rem;">Load Balancing</h3>
+            <div class="svg-diagram-container">
+                <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="37.5" width="50" height="25" rx="2.5" fill="#0984e3" opacity="0.8"/>
+                    <text x="30" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">משתמש</text>
+                    <rect x="75" y="37.5" width="50" height="25" rx="2.5" fill="#e67e22" opacity="0.8"/>
+                    <text x="100" y="52.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">Load Balancer</text>
+                    <rect x="175" y="12.5" width="50" height="25" rx="2.5" fill="#28a745" opacity="0.8"/>
+                    <text x="200" y="27.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">שרת 1</text>
+                    <rect x="175" y="62.5" width="50" height="25" rx="2.5" fill="#28a745" opacity="0.8"/>
+                    <text x="200" y="77.5" font-family="Heebo, sans-serif" font-size="8" fill="white" text-anchor="middle">שרת 2</text>
+                    <line x1="55" y1="50" x2="75" y2="50" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="125" y1="50" x2="175" y2="25" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                    <line x1="125" y1="50" x2="175" y2="75" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrowhead)"/>
+                </svg>
+            </div>
+            <p>כאשר מיליארדים של בקשות מגיעים לGoogle, הם לא כל הם חציים לשרת אחד. במקום זאת, יש מכשיר בשם <strong>Load Balancer</strong> שמחלק את הבקשות למאות שרתים בו-זמנית.</p>
+            <h3 style="margin: 1.5rem 0 1rem;">API (Application Programming Interface)</h3>
+            <p>APIs הם כלים שמאפשרים לתוכנות לדבר עם שרתים. כאשר אתה משתמש ב-<a href="chatgpt_guide.html" style="color: #0984e3; text-decoration: underline;">ChatGPT API</a>, בעצם שאתה שולח HTTP request ל-OpenAI servers, והם חוזרים עם טקסט שנוצר על ידי AI!</p>
+
+            <h3 style="margin: 1.5rem 0 1rem;">WebSockets</h3>
+            <p>בניגוד ל-HTTP שהוא request-response, WebSockets שומרים על חיבור פתוח בין client ל-server. זה משמש לתקשורת בזמן אמת כמו משחקים או צ'אט.</p>
+                    <h3 style="color: #155724; margin-bottom: 1rem;">🎯 רמה בסיסית</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>שנה את סיסמתך לסיסמה חזקה ייחודית</li>
+                        <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> בדוק את כתובת IP שלך באתר <a href="https://whatismyipaddress.com" style="color: #0984e3; text-decoration: underline;">whatismyipaddress.com</a></li>
+                        <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span> נסה להשתמש ב-VPN בWiFi ציבורי</li>
+                        <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span> קרא 3 מאמרים על בטיחות אינטרנט</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #004085; margin-bottom: 1rem;">⚡ רמה מתקדמת</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span> תרגול שאילתות DNS עם nslookup (בטרמינל)</li>
+                        <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> בדוק את הסרטיפיקט SSL של אתר (F12 → Security)</li>
+                        <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6"></path><path d="M21.5 13a9 9 0 1 1-18 0c0-4.5 4-9 9-9s9 4.5 9 9z"></path></svg></span> המר אתר מ-HTTP ל-HTTPS (אם יש לך אתר)</li>
+                        <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path><path d="M12 6v6l4 2"></path></svg></span> למד על מבנה התוכן ה-IP שלך (tracert)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- משימות מעשיות - רמה בסיסית -->
+        <section class="concept-card" id="tasks">
+            <h2>📋 משימות מעשיות</h2>
+            
+            <h3 style="margin: 1.5rem 0 1rem; color: #155724;">🎯 רמה בסיסית - הבנה יסודית</h3>
+            <div style="background: #e8f5e9; border: 2px solid #28a745; border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem;">
+                <ol style="margin-right: 1.5rem; line-height: 2;">
+                    <li>
+                        <strong>בדוק את כתובת IP שלך</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">בקר באתר: <a href="https://whatismyipaddress.com" style="color: #0984e3; text-decoration: underline;">whatismyipaddress.com</a><br>
+                        תרשום את:
+                        <ul style="margin: 0.5rem 0 0 1.5rem; list-style: none;">
+                            <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> כתובת IPv4 שלך (הפומבית)</li>
+                            <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> כתובת IPv6 שלך (אם זה זה בעלות)</li>
+                            <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> מיקום גיאוגרפי שלך</li>
+                        </ul>
+                        </span>
+                    </li>
+                    
+                    <li style="margin-top: 1rem;">
+                        <strong>בדוק כתובת IP פרטית עם <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">Terminal</a></strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">פתח Terminal והריץ:
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                            Windows: ipconfig<br>
+                            Mac/Linux: ifconfig
+                        </div>
+                        תרשום את כתובת ה-IP של ה-Ethernet adapter או Wi-Fi adapter שלך (נראה כמו 192.168.x.x)
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>תרגול DNS עם <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">Terminal</a></strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">הריץ את הפקודות הבאות בטרמינל:
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                            nslookup google.com<br>
+                            nslookup facebook.com<br>
+                            nslookup github.com
+                        </div>
+                        תרשום את כתובת IP של כל אתר וראה איך ה-DNS מתרגם שם לכתובת.
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>בדוק HTTPS וסרטיפיקט</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>פתח אתר כמו Amazon או Gmail</li>
+                            <li>לחץ על אייקון הנעילה <span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span> בחלון הכתובת של הדפדפן</li>
+                            <li>בחר "Certificate" או "Connection is secure"</li>
+                            <li>תרשום מי הנושא של הסרטיפיקט (Issued to) ומתי הוא פקע (Expires)</li>
+                        </ul>
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>יצור סיסמה חזקה</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        צור סיסמה חזקה המכילה:<br>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> אותיות גדולות וקטנות (aAbBcC)</li>
+                            <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span> מספרים (0-9)</li>
+                            <li><span class="svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span> סימנים מיוחדים (!@#$%)</li>
+                            <li>✓ לפחות 12 תווים</li>
+                        </ul>
+                        <strong>דוגמה:</strong> M!lk$Cow#2025xyz
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>הגדר 2FA (Two-Factor Authentication)</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        בחר לפחות אתר אחד (Gmail, Facebook, GitHub) והגדר 2FA עם Google Authenticator או Microsoft Authenticator.
+                        </span>
+                    </li>
+                </ol>
+            </div>
+
+            <h3 style="margin: 1.5rem 0 1rem; color: #004085;">⚡ רמה מתקדמת - Networking עמוק</h3>
+            <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem;">
+                <ol style="margin-right: 1.5rem; line-height: 2;">
+                    <li>
+                        <strong>תרגול Traceroute - עקוב אחרי נתיבים</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">פתח <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">Terminal</a> (ייתכן שתידרש הרצת כמנהל):
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                            Windows: tracert google.com<br>
+                            Mac/Linux: traceroute google.com
+                        </div>
+                        זה יראה את כל ה-routers שדרכם עובר הנתון עד ל-Google. שימו לב לעיכובים (latency) בכל hop!
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>בדוק TCP Connections עם <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">Terminal</a></strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                            netstat -an | find "ESTABLISHED"
+                        </div>
+                        זה מראה כל TCP connections פתוחות במחשב שלך כרגע!
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>כתוב <a href="python_guide.html" style="color: #0984e3; text-decoration: underline;">סקריפט Python</a> שבודק HTTP Status</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        <div class="code-block" style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+import requests<br><br>
+response = requests.get("https://google.com")<br>
+print(f"Status Code: {response.status_code}")<br>
+print(f"Headers: {response.headers}")
+                        </div>
+                        זה יודפס לך את HTTP status code (200 = בסדר, 404 = לא נמצא, וכו')
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>בדוק Socket עם <a href="python_guide.html" style="color: #0984e3; text-decoration: underline;">Python</a></strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+import socket<br><br>
+# בדוק אם ה-DNS עובד<br>
+ip = socket.gethostbyname("google.com")<br>
+print(f"IP of google.com: {ip}")
+                        </div>
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>ניסיון Packet Sniffing (חינוכי בלבד!)</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        הורד Wireshark (<a href="https://www.wireshark.org" style="color: #0984e3; text-decoration: underline;">wireshark.org</a>) והתחל ללכוד חבילות ברשת שלך. אתה תראה:
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>IP sources ודestinations</li>
+                            <li>TCP/UDP ports</li>
+                            <li>HTTP requests (אם לא HTTPS)</li>
+                            <li>DNS queries</li>
+                        </ul>
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>קרא RFC (Request for Comments)</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        בקר בחיתוך <a href="https://www.ietf.org/rfc/" style="color: #0984e3; text-decoration: underline;">ietf.org/rfc</a> וקרא:<br>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>RFC 791 - IPv4 Specification</li>
+                            <li>RFC 793 - TCP Specification</li>
+                            <li>RFC 1035 - DNS Specification (המסמך המקורי!)</li>
+                        </ul>
+                        אלו המסמכים הרשמיים שמגדירים את הפרוטוקולים!
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="concept-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; position: relative; overflow: hidden;">
+            <div style="position: relative; z-index: 2;">
+                <h2 style="color: white;">🚀 הצטרף לקורס המלא!</h2>
+                <p style="font-size: 1.1rem; margin: 1.5rem 0;">המדריך הזה הוא רק ההתחלה. בקורס המלא תקבל מטלות מעשיות, משוב אישי ותעודת סיום מקצועית. תוכל גם ללמוד כיצד לעבוד עם קוד פרטי עם <a href="python_guide.html" style="color: #ffc107; text-decoration: underline;">Python</a> ו-<a href="terminal_guide.html" style="color: #ffc107; text-decoration: underline;">Terminal</a> כדי לבחון את הרשתות שלך!</p>
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+                       style="display: inline-block; background: #ffc107; color: #212529; padding: 1.2rem 3rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.3);">
+                        🎓 הצטרף לקורס החינמי עכשיו!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides -->
+        <div class="concept-card">
+            <h2 style="text-align: center;">📚 מדריכים קשורים</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <a href="terminal_guide.html" style="background: white; color: var(--primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span class="svg-icon" style="font-size: 2rem; margin-bottom: 0.5rem; width: 48px; height: 48px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></span>
+                    <strong>Terminal Guide</strong>
+                    <span style="font-size: 0.9rem; color: #666;">שורת הפקודה למהנדסים</span>
+                </a>
+
+                <a href="python_guide.html" style="background: white; color: var(--primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span class="svg-icon" style="font-size: 2rem; margin-bottom: 0.5rem; width: 48px; height: 48px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5L2 12l10 7 10-7-10-7z"></path><path d="M2 12l10 7 10-7"></path><path d="M12 22l-10-7 10-7 10 7-10 7z"></path></svg></span>
+                    <strong>Python Guide</strong>
+                    <span style="font-size: 0.9rem; color: #666;">תכנות בPython</span>
+                </a>
+
+                <a href="chatgpt_guide.html" style="background: white; color: var(--primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span class="svg-icon" style="font-size: 2rem; margin-bottom: 0.5rem; width: 48px; height: 48px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
+                    <strong>ChatGPT Guide</strong>
+                    <span style="font-size: 0.9rem; color: #666;">AI וBots</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><span class="brand-icon">🎓</span> LearningHub</h3>
+                    <p class="footer-description">
+                        פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>למידה</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html" class="footer-link">כל הקטגוריות</a></li>
+                        <li><a href="python_guide.html" class="footer-link">Python</a></li>
+                        <li><a href="chatgpt_guide.html" class="footer-link">ChatGPT</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="sitemap.html" class="footer-link">מפת האתר</a></li>
+                        <li><a href="https://edu-manage.org/" class="footer-link">פורטל התלמידים</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 EduManage • מערכת לניהול פדגוגי
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="global.js"></script>
+</body>
+
+</html>
+                    </ul>
+                </div>
+
+                <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #004085; margin-bottom: 1rem;">⚡ רמה מתקדמת</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li><span class="icon">🔍</span> תרגול שאילתות DNS עם nslookup (בטרמינל)</li>
+                        <li><span class="icon">🔐</span> בדוק את הסרטיפיקט SSL של אתר (F12 → Security)</li>
+                        <li><span class="icon">🔄</span> המר אתר מ-HTTP ל-HTTPS (אם יש לך אתר)</li>
+                        <li><span class="icon">🗺️</span> למד על מבנה התוכן ה-IP שלך (tracert)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- משימות מעשיות - רמה בסיסית -->
+        <section class="concept-card" id="tasks">
+            <h2>📋 משימות מעשיות</h2>
+            
+            <h3 style="margin: 1.5rem 0 1rem; color: #155724;">🎯 רמה בסיסית - הבנה יסודית</h3>
+            <div style="background: #e8f5e9; border: 2px solid #28a745; border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem;">
+                <ol style="margin-right: 1.5rem; line-height: 2;">
+                    <li>
+                        <strong>בדוק את כתובת IP שלך</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">בקר באתר: <a href="https://whatismyipaddress.com" style="color: #0984e3; text-decoration: underline;">whatismyipaddress.com</a><br>
+                        תרשום את:
+                        <ul style="margin: 0.5rem 0 0 1.5rem; list-style: none;">
+                            <li>✓ כתובת IPv4 שלך (הפומבית)</li>
+                            <li>✓ כתובת IPv6 שלך (אם זה זה בעלות)</li>
+                            <li>✓ מיקום גיאוגרפי שלך</li>
+                        </ul>
+                        </span>
+                    </li>
+                    
+                    <li style="margin-top: 1rem;">
+                        <strong>בדוק כתובת IP פרטית עם <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">Terminal</a></strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">פתח Terminal והריץ:
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                            Windows: ipconfig<br>
+                            Mac/Linux: ifconfig
+                        </div>
+                        תרשום את כתובת ה-IP של ה-Ethernet adapter או Wi-Fi adapter שלך (נראה כמו 192.168.x.x)
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>תרגול DNS עם <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">Terminal</a></strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">הריץ את הפקודות הבאות בטרמינל:
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                            nslookup google.com<br>
+                            nslookup facebook.com<br>
+                            nslookup github.com
+                        </div>
+                        תרשום את כתובת IP של כל אתר וראה איך ה-DNS מתרגם שם לכתובת.
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>בדוק HTTPS וסרטיפיקט</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>פתח אתר כמו Amazon או Gmail</li>
+                            <li>לחץ על אייקון הנעילה 🔒 בחלון הכתובת של הדפדפן</li>
+                            <li>בחר "Certificate" או "Connection is secure"</li>
+                            <li>תרשום מי הנושא של הסרטיפיקט (Issued to) ומתי הוא פקע (Expires)</li>
+                        </ul>
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>יצור סיסמה חזקה</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        צור סיסמה חזקה המכילה:<br>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li><span class="icon">✅</span> אותיות גדולות וקטנות (aAbBcC)</li>
+                            <li><span class="icon">🔢</span> מספרים (0-9)</li>
+                            <li><span class="icon">#️⃣</span> סימנים מיוחדים (!@#$%)</li>
+                            <li>✓ לפחות 12 תווים</li>
+                        </ul>
+                        <strong>דוגמה:</strong> M!lk$Cow#2025xyz
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>הגדר 2FA (Two-Factor Authentication)</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        בחר לפחות אתר אחד (Gmail, Facebook, GitHub) והגדר 2FA עם Google Authenticator או Microsoft Authenticator.
+                        </span>
+                    </li>
+                </ol>
+            </div>
+
+            <h3 style="margin: 1.5rem 0 1rem; color: #004085;">⚡ רמה מתקדמת - Networking עמוק</h3>
+            <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem;">
+                <ol style="margin-right: 1.5rem; line-height: 2;">
+                    <li>
+                        <strong>תרגול Traceroute - עקוב אחרי נתיבים</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">פתח <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">Terminal</a> (ייתכן שתידרש הרצת כמנהל):
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                            Windows: tracert google.com<br>
+                            Mac/Linux: traceroute google.com
+                        </div>
+                        זה יראה את כל ה-routers שדרכם עובר הנתון עד ל-Google. שימו לב לעיכובים (latency) בכל hop!
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>בדוק TCP Connections עם <a href="terminal_guide.html" style="color: #0984e3; text-decoration: underline;">Terminal</a></strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                            netstat -an | find "ESTABLISHED"
+                        </div>
+                        זה מראה כל TCP connections פתוחות במחשב שלך כרגע!
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>כתוב <a href="python_guide.html" style="color: #0984e3; text-decoration: underline;">סקריפט Python</a> שבודק HTTP Status</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        <div class="code-block" style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+import requests<br><br>
+response = requests.get("https://google.com")<br>
+print(f"Status Code: {response.status_code}")<br>
+print(f"Headers: {response.headers}")
+                        </div>
+                        זה יודפס לך את HTTP status code (200 = בסדר, 404 = לא נמצא, וכו')
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>בדוק Socket עם <a href="python_guide.html" style="color: #0984e3; text-decoration: underline;">Python</a></strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        <div style="background: #2d3436; color: #dfe6e9; padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; direction: ltr; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+import socket<br><br>
+# בדוק אם ה-DNS עובד<br>
+ip = socket.gethostbyname("google.com")<br>
+print(f"IP of google.com: {ip}")
+                        </div>
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>ניסיון Packet Sniffing (חינוכי בלבד!)</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        הורד Wireshark (<a href="https://www.wireshark.org" style="color: #0984e3; text-decoration: underline;">wireshark.org</a>) והתחל ללכוד חבילות ברשת שלך. אתה תראה:
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>IP sources ודestinations</li>
+                            <li>TCP/UDP ports</li>
+                            <li>HTTP requests (אם לא HTTPS)</li>
+                            <li>DNS queries</li>
+                        </ul>
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 1rem;">
+                        <strong>קרא RFC (Request for Comments)</strong><br>
+                        <span style="color: #666; font-size: 0.9rem;">
+                        בקר בחיתוך <a href="https://www.ietf.org/rfc/" style="color: #0984e3; text-decoration: underline;">ietf.org/rfc</a> וקרא:<br>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>RFC 791 - IPv4 Specification</li>
+                            <li>RFC 793 - TCP Specification</li>
+                            <li>RFC 1035 - DNS Specification (המסמך המקורי!)</li>
+                        </ul>
+                        אלו המסמכים הרשמיים שמגדירים את הפרוטוקולים!
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="concept-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; position: relative; overflow: hidden;">
+            <div style="position: relative; z-index: 2;">
+                <h2 style="color: white;">🚀 הצטרף לקורס המלא!</h2>
+                <p style="font-size: 1.1rem; margin: 1.5rem 0;">המדריך הזה הוא רק ההתחלה. בקורס המלא תקבל מטלות מעשיות, משוב אישי ותעודת סיום מקצועית. תוכל גם ללמוד כיצד לעבוד עם קוד פרטי עם <a href="python_guide.html" style="color: #ffc107; text-decoration: underline;">Python</a> ו-<a href="terminal_guide.html" style="color: #ffc107; text-decoration: underline;">Terminal</a> כדי לבחון את הרשתות שלך!</p>
+                <img src="https://source.unsplash.com/800x400/?online-course,learning,education" alt="Join Course" style="width:100%; height:auto; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+                       style="display: inline-block; background: #ffc107; color: #212529; padding: 1.2rem 3rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.3);">
+                        🎓 הצטרף לקורס החינמי עכשיו!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides -->
+        <div class="concept-card">
+            <h2 style="text-align: center;">📚 מדריכים קשורים</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <a href="terminal_guide.html" style="background: white; color: var(--primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">💻</span>
+                    <strong>Terminal Guide</strong>
+                    <span style="font-size: 0.9rem; color: #666;">שורת הפקודה למהנדסים</span>
+                </a>
+
+                <a href="python_guide.html" style="background: white; color: var(--primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</span>
+                    <strong>Python Guide</strong>
+                    <span style="font-size: 0.9rem; color: #666;">תכנות בPython</span>
+                </a>
+
+                <a href="chatgpt_guide.html" style="background: white; color: var(--primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span class="icon" style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</span>
+                    <strong>ChatGPT Guide</strong>
+                    <span style="font-size: 0.9rem; color: #666;">AI וBots</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><span class="brand-icon">🎓</span> LearningHub</h3>
+                    <p class="footer-description">
+                        פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>למידה</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html" class="footer-link">כל הקטגוריות</a></li>
+                        <li><a href="python_guide.html" class="footer-link">Python</a></li>
+                        <li><a href="chatgpt_guide.html" class="footer-link">ChatGPT</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="sitemap.html" class="footer-link">מפת האתר</a></li>
+                        <li><a href="https://edu-manage.org/" class="footer-link">פורטל התלמידים</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 EduManage • מערכת לניהול פדגוגי
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1059 @@
+<!--
+================================================================================
+🎉 GUIDE METADATA FOR AUTO-DETECTION 🎉
+================================================================================
+Edit the JSON below to classify your guide automatically.
+The auto-detector (generate-manifest-auto.js) will read this metadata.
+
+CATEGORIES AVAILABLE:
+🧪 AI & Automation     - AI, ChatGPT, Machine Learning, Automation, Web Scraping, React, Python
+💼 Career             - Career Prep, CV, Presentations, Skills, Professional Development
+🎨 Creative Studio    - Design, Canva, Video Editing, Midjourney, UI/UX, Graphics
+📊 Data & Business    - Data Analysis, Power BI, Excel, Marketing, SQL, Analytics
+📚 Digital Basics     - Terminal, GitHub, Internet, File Management, Fundamentals
+🚀 Technology         - Docker, IoT, Automotive, Cloud, DevOps, Infrastructure
+
+================================================================================
+INSTRUCTIONS:
+1. Replace [שם המדריך] with your guide name (will appear in catalog)
+2. Choose an appropriate emoji (🎨 🐍 📊 💻 ⚖️ etc.)
+3. Pick ONE category from the list above
+4. Add a short description (50 chars max)
+5. Save & run: npm run auto
+================================================================================
+-->
+
+<!--
+{
+  "guide_metadata": {
+    "name": "הנדסת פרומפטים (Prompt Engineering) - המדריך המלא",
+    "icon": "🤖",
+    "category": "AI & Automation",
+    "description": "מדריך מקיף להנדסת פרומפטים ו-LLMs."
+  }
+}
+-->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>הנדסת פרומפטים (Prompt Engineering) - המדריך המלא | מדריך מקצועי חינמי | LearningHub</title>
+    <meta name="description" content="גלו את הכוח שמאחורי מודלי שפה גדולים (LLMs) עם מדריך מקיף להנדסת פרומפטים. למדו כיצד לנסח הנחיות אפקטיביות, לשפר דיוק, להפחית 'הזיות' ולשלוט בפלט AI לקבלת תוצאות מיטביות. חיוני לסטודנטים ולמקצוענים בעולם ה-AI.">
+    <meta name="keywords" content="הנדסת פרומפטים, Prompt Engineering, AI, מודלי שפה גדולים, LLM, בינה מלאכותית, הנחיות AI, אופטימיזציה של פרומפטים, עבודה עם AI, טיפים לפרומפטים, מדריך, לימוד, קורס חינמי, הדרכה מקצועית, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="הנדסת פרומפטים (Prompt Engineering) - המדריך המלא | מדריך מקצועי חינמי">
+    <meta property="og:description" content="מדריך מקיף להנדסת פרומפטים ו-LLMs. - למד בצורה מעשיות עם דוגמאות ותרגילים">
+    <meta property="og:image" content="https://image.pollinations.ai/prompt/Minimalist%2C%20modern%2C%20tech%20vector%20art%20illustration%20of%20a%20human%20hand%20interacting%20with%20a%20glowing%20abstract%20AI%20brain%20or%20a%20complex%20digital%20network.%20Emphasize%20concepts%20like%20'input'%2C%20'output'%2C%20'refinement'%2C%20and%20'intelligence'.%20Clean%20lines%2C%20vibrant%20but%20professional%20color%20palette%2C%20showcasing%20the%20synergy%20between%20human%20instruction%20and%20artificial%20intelligence.%20minimalist%20flat%20vector%20art%20style%20high%20quality%204k">
+    <meta property="og:url" content="https://learninghub.co.il/guides/prompt-engineering-guide.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="AI & Automation">
+    <meta property="article:tag" content="הנדסת פרומפטים, Prompt Engineering, AI, מודלי שפה גדולים, LLM, בינה מלאכותית, הנחיות AI, אופטימיזציה של פרומפטים, עבודה עם AI, טיפים לפרומפטים">
+    <meta property="article:published_time" content="2025-12-15">
+    <meta property="article:modified_time" content="2025-12-15">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="הנדסת פרומפטים (Prompt Engineering) - המדריך המלא | מדריך מקצועי חינמי">
+    <meta name="twitter:description" content="מדריך מקיף להנדסת פרומפטים ו-LLMs. - למד בצורה מעשיות עם דוגמאות ותרגילים">
+    <meta name="twitter:image" content="https://image.pollinations.ai/prompt/Minimalist%2C%20modern%2C%20tech%20vector%20art%20illustration%20of%20a%20human%20hand%20interacting%20with%20a%20glowing%20abstract%20AI%20brain%20or%20a%20complex%20digital%20network.%20Emphasize%20concepts%20like%20'input'%2C%20'output'%2C%20'refinement'%2C%20and%20'intelligence'.%20Clean%20lines%2C%20vibrant%20but%20professional%20color%20palette%2C%20showcasing%20the%20synergy%20between%20human%20instruction%20and%20artificial%20intelligence.%20minimalist%20flat%20vector%20art%20style%20high%20quality%204k">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="msapplication-TileColor" content="#1a1a2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://learninghub.co.il/guides/prompt-engineering-guide.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="https://learninghub.co.il/guides/prompt-engineering-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://learninghub.co.il/guides/prompt-engineering-guide.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Mermaid JS (Injected for diagrams) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'base',
+                themeVariables: {
+                    primaryColor: '#e8f4fd',
+                    primaryTextColor: '#1a1a2e',
+                    primaryBorderColor: '#6c5ce7',
+                    lineColor: '#6c5ce7',
+                    secondaryColor: '#f4f4f4',
+                    tertiaryColor: '#fff'
+                },
+                flowchart: {
+                    htmlLabels: true,
+                    curve: 'basis'
+                }
+            });
+        });
+    </script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "הנדסת פרומפטים (Prompt Engineering) - המדריך המלא",
+        "description": "גלו את הכוח שמאחורי מודלי שפה גדולים (LLMs) עם מדריך מקיף להנדסת פרומפטים. למדו כיצד לנסח הנחיות אפקטיביות, לשפר דיוק, להפחית 'הזיות' ולשלוט בפלט AI לקבלת תוצאות מיטביות. חיוני לסטודנטים ולמקצוענים בעולם ה-AI.",
+        "image": "https://image.pollinations.ai/prompt/Minimalist%2C%20modern%2C%20tech%20vector%20art%20illustration%20of%20a%20human%20hand%20interacting%20with%20a%20glowing%20abstract%20AI%20brain%20or%20a%20complex%20digital%20network.%20Emphasize%20concepts%20like%20'input'%2C%20'output'%2C%20'refinement'%2C%20and%20'intelligence'.%20Clean%20lines%2C%20vibrant%20but%20professional%20color%20palette%2C%20showcasing%20the%20synergy%20between%20human%20instruction%20and%20artificial%20intelligence.%20minimalist%20flat%20vector%20art%20style%20high%20quality%204k",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-12-15",
+        "dateModified": "2025-12-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://learninghub.co.il/guides/prompt-engineering-guide.html"
+        },
+        "articleSection": "AI & Automation",
+        "keywords": "הנדסת פרומפטים, Prompt Engineering, AI, מודלי שפה גדולים, LLM, בינה מלאכותית, הנחיות AI, אופטימיזציה של פרומפטים, עבודה עם AI, טיפים לפרומפטים",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "Skills related to הנדסת פרומפטים (Prompt Engineering) - המדריך המלא",
+        "about": {
+            "@type": "Thing",
+            "name": "הנדסת פרומפטים (Prompt Engineering) - המדריך המלא"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "הנדסת פרומפטים (Prompt Engineering) - המדריך המלא",
+        "description": "גלו את הכוח שמאחורי מודלי שפה גדולים (LLMs) עם מדריך מקיף להנדסת פרומפטים. למדו כיצד לנסח הנחיות אפקטיביות, לשפר דיוק, להפחית 'הזיות' ולשלוט בפלט AI לקבלת תוצאות מיטביות. חיוני לסטודנטים ולמקצוענים בעולם ה-AI.",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online",
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "instructor": {
+                "@type": "Organization",
+                "name": "LearningHub"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל",
+        "sameAs": [
+            "https://www.linkedin.com/company/edumanage",
+            "https://github.com/edumanage"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "Hebrew"
+        }
+    }
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        :root {
+            --theme-primary: #1a1a2e;    /* צבע ראשי של המדריך */
+            --theme-accent: #6c5ce7;     /* צבע מבטא */
+            --theme-light: #a29bfe;      /* צבע בהיר */
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%);
+            color: white;
+        }
+
+        .concept-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--theme-accent);
+            overflow: hidden; /* Prevent diagram overflow */
+        }
+
+        /* Diagrams */
+        .diagram-container {
+            background: #fdfdfd;
+            border: 1px dashed #e0e0e0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .code-block {
+            background: var(--theme-primary);
+            color: #e8f4fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* טיזרים */
+        .teaser-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .teaser-idea {
+            background: #e8f5e9;
+            border-right: 4px solid #28a745;
+        }
+
+        .teaser-warning {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+        }
+
+        .teaser-secret {
+            background: #f3e5f5;
+            border-right: 4px solid #6f42c1;
+        }
+
+        .teaser-bonus {
+            background: #e1f5fe;
+            border-right: 4px solid #03a9f4;
+        }
+
+        .teaser-title {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .feature-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-height: 400px;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" 
+               style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; transition: all 0.3s;"
+               onmouseover="this.style.background='#f8f9fa'"
+               onmouseout="this.style.background='white'">
+                פורטל התלמידים
+            </a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+               style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;"
+               onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+               onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                הצטרף חינם
+            </a>
+        </div>
+    </div>
+
+    <!-- Global Header -->
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links">
+                <a href="sitemap.html" class="nav-link">מפת האתר</a>
+                <a href="categories.html" class="nav-link">קטגוריות</a>
+                <a href="index.html" class="nav-link">ראשי</a>
+            </div>
+            <a href="index.html" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs with Schema -->
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "דף הבית",
+                    "item": "https://learninghub.co.il/index.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "קטגוריות",
+                    "item": "https://learninghub.co.il/categories.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "הנדסת פרומפטים (Prompt Engineering) - המדריך המלא",
+                    "item": "https://learninghub.co.il/guides/prompt-engineering-guide.html"
+                }
+            ]
+        }
+        </script>
+        <a href="index.html">דף הבית</a>
+        <span>/</span>
+        <a href="categories.html">קטגוריות</a>
+        <span>/</span>
+        <span class="current">הנדסת פרומפטים (Prompt Engineering) - המדריך המלא</span>
+    </nav>
+
+    <!-- Page Header with SEO Optimization -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 itemprop="headline">🤖 הנדסת פרומפטים (Prompt Engineering) - המדריך המלא</h1>
+            <p class="subtitle" itemprop="description">גלו את הכוח שמאחורי מודלי שפה גדולים (LLMs) עם מדריך מקיף להנדסת פרומפטים. למדו כיצד לנסח הנחיות אפקטיביות, לשפר דיוק, להפחית 'הזיות' ולשלוט בפלט AI לקבלת תוצאות מיטביות. חיוני לסטודנטים ולמקצוענים בעולם ה-AI.</p>
+            
+             <!-- Dynamic AI Image -->
+            <img src="https://image.pollinations.ai/prompt/Minimalist%2C%20modern%2C%20tech%20vector%20art%20illustration%20of%20a%20human%20hand%20interacting%20with%20a%20glowing%20abstract%20AI%20brain%20or%20a%20complex%20digital%20network.%20Emphasize%20concepts%20like%20'input'%2C%20'output'%2C%20'refinement'%2C%20and%20'intelligence'.%20Clean%20lines%2C%20vibrant%20but%20professional%20color%20palette%2C%20showcasing%20the%20synergy%20between%20human%20instruction%20and%20artificial%20intelligence.%20minimalist%20flat%20vector%20art%20style%20high%20quality%204k" alt="הנדסת פרומפטים (Prompt Engineering) - המדריך המלא illustration" class="feature-image" />
+
+            <!-- Article Meta Information -->
+            <div class="article-meta" style="margin-top: 1rem; font-size: 0.9rem; color: #666; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                    👨‍🏫 מאת: <span itemprop="name">LearningHub</span>
+                </span>
+                <span>📅 עודכן: <time itemprop="dateModified" datetime="2025-12-15">2025-12-15</time></span>
+                <span>⏱️ זמן קריאה: 12 דקות</span>
+                <span>📊 רמת קושי: בינוני</span>
+            </div>
+            
+            <!-- Quick Navigation -->
+            <div class="quick-nav" style="margin-top: 1.5rem; text-align: center;">
+                <a href="#main-content" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📖 תוכן המדריך
+                </a>
+                <a href="#tasks" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📋 משימות
+                </a>
+                <a href="#join-course" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    🚀 הצטרף לקורס
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with SEO Structure -->
+    <main class="page-container" id="main-content" itemscope itemtype="https://schema.org/Article">
+        
+        <!-- Table of Contents for SEO -->
+        <div class="concept-card" style="background: #f8f9fa; border-right: 4px solid #007bff;">
+            <h2>📋 תוכן המדריך</h2>
+            <nav aria-label="תוכן המדריך">
+                <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><a href="#why-important" style="color: #007bff; text-decoration: none;">למה הנדסת פרומפטים (Prompt Engineering) - המדריך המלא חשוב?</a></li>
+                    <li><a href="#part-1" style="color: #007bff; text-decoration: none;">היסודות התיאורטיים: מהי הנדסת פרומפטים ולמה היא חשובה?</a></li>
+                    <li><a href="#part-2" style="color: #007bff; text-decoration: none;">יישום מעשי: איך לבנות פרומפטים אפקטיביים?</a></li>
+                    <li><a href="#advanced" style="color: #007bff; text-decoration: none;">מושגים מתקדמים ואסטרטגיות להנדסת פרומפטים</a></li>
+                    <li><a href="#summary" style="color: #007bff; text-decoration: none;">מסקנות ויישום מעשי</a></li>
+                    <li><a href="#tasks" style="color: #007bff; text-decoration: none;">משימות לשבוע הקרוב</a></li>
+                </ol>
+            </nav>
+        </div>
+        
+        <!-- מבוא -->
+        <section class="concept-card" id="why-important">
+            <h2 itemprop="headline">למה הנדסת פרומפטים (Prompt Engineering) - המדריך המלא חשוב?</h2>
+            <div itemprop="articleBody">
+                <p>בעידן שבו בינה מלאכותית (AI) הופכת לכלי יומיומי, מודלי שפה גדולים (LLMs) כמו GPT-4 או Gemini שינו את האופן שבו אנו מתקשרים עם טכנולוגיה. ממשימות יצירתיות ועד ניתוח נתונים מורכב, היכולות שלהם נראות כמעט בלתי מוגבלות. אך כדי לרתום את מלוא הפוטנציאל של הכלים העוצמתיים הללו, נדרשת מיומנות ספציפית: הנדסת פרומפטים (Prompt Engineering). מדוע זה כל כך חשוב? דמיינו שיש לכם עוזר אישי גאון, בעל ידע עצום, אך הוא מילולי להפליא. אם תבקשו ממנו 'תכתוב משהו', הוא עלול לכתוב כל דבר. אך אם תבקשו 'כתוב מאמר אקדמי בן 500 מילים על ההשפעה הכלכלית של בינה מלאכותית על שוק העבודה, תוך התמקדות ביתרונות ובחסרונות, ושיהיה מנוסח בסגנון רשמי עם אזכורים למחקרים עדכניים', סביר להניח שתקבלו תוצאה מדויקת ושימושית בהרבה. הנדסת פרומפטים היא בדיוק זה: האמנות והמדע של ניסוח הנחיות (פרומפטים) בצורה שתמקסם את היכולות של מודל ה-AI ותבטיח את הפלט הרצוי. מדריך זה יצלול לעומק עולם הנדסת הפרומפטים, יסביר את העקרונות התיאורטיים שמאחוריה, יציג טכניקות מעשיות לבניית פרומפטים אפקטיביים, ויחשוף אסטרטגיות מתקדמות שיעזרו לכם להפוך למשתמשי AI מומחים. בין אם אתם סטודנטים, מפתחים, חוקרים או סתם סקרנים, הבנת הנדסת פרומפטים היא מיומנות קריטית בעידן הדיגיטלי המתפתח במהירות.</p>
+            </div>
+        </section>
+
+        <!-- תוכן עיקרי - חלק 1 -->
+        <section class="concept-card" id="part-1">
+            <h2>1. היסודות התיאורטיים: מהי הנדסת פרומפטים ולמה היא חשובה?</h2>
+            <p>הנדסת פרומפטים, במילים פשוטות, היא התהליך של עיצוב הקלט (הפרומפט) שאנו מספקים למודל שפה גדול (LLM) כדי לקבל את הפלט (התגובה) הטוב ביותר האפשרי. זהו גשר התקשורת בינינו לבין הבינה המלאכותית. אבל למה זה כל כך קריטי? תארו לעצמכם מודל LLM כספרייה ענקית המכילה כמעט את כל הידע האנושי. בלי מפתח חיפוש מדויק, תתקשו למצוא את המידע הספציפי שאתם צריכים. הפרומפט הוא המפתח הזה. ככל שהוא מנוסח טוב יותר, כך גדל הסיכוי שהמודל יבין את כוונתכם ויספק תגובה רלוונטית, מדויקת ומועילה. היעדר הנדסת פרומפטים טובה עלול להוביל ל'הזיות' (hallucinations) – מצבים שבהם המודל ממציא מידע לא נכון, לתשובות כלליות מדי, לא רלוונטיות או אפילו מוטות. זה לא שהמודל 'טועה' במובן האנושי, אלא שהוא מפרש את הנחייתכם בצורה שלא תואמת את ציפיותיכם. העקרונות המנחים את הנדסת הפרומפטים כוללים: בהירות (Clarity) – ודאו שהבקשה ברורה וחד משמעית; ספציפיות (Specificity) – ציינו פרטים, מגבלות, דוגמאות במידת הצורך; הקשר (Context) – ספקו רקע רלוונטי כדי שהמודל יבין את המסגרת; פרסונה (Persona) – הגדירו תפקיד למודל (לדוגמה: 'אתה מומחה לשיווק'); ופורמט (Format) – בקשו פורמט פלט ספציפי (רשימה, טבלה, מאמר). הבנת העקרונות הללו היא הליבה של עבודה אפקטיבית עם LLMs. היא מאפשרת לנו לא רק לשלוף מידע, אלא גם לייצר תוכן מורכב, לסכם מסמכים, לתרגם, לכתוב קוד, ולבצע מגוון משימות יצירתיות ואנליטיות ברמת דיוק ואיכות גבוהה בהרבה. זהו לא רק 'טריק', אלא מיומנות יסוד המאפשרת למשתמשים להפוך מצוותים פסיביים לשותפים אקטיביים ומובילים בתהליך היצירה עם AI.</p>
+            
+            <div class="diagram-container">
+                <h4 style="margin-bottom: 1rem; color: #666;">תרשים מושגים (Concept Map)</h4>
+                <div class="mermaid">
+                    graph TD; א[הנדסת פרומפטים] --> ב[עקרונות ליבה]; א --> ג[טכניקות מתקדמות]; ב --> ב1[בהירות]; ב --> ב2[ספציפיות]; ב --> ב3[הקשר]; ב --> ב4[פרסונה]; ב --> ב5[פורמט]; ג --> ג1[Zero-shot]; ג --> ג2[Few-shot]; ג --> ג3[שרשרת מחשבה (CoT)]; ג --> ג4[עץ מחשבה (ToT)]; ב1 --> ב1.1[הימנע מעמימות]; ב2 --> ב2.1[פרטים ומגבלות]; ב3 --> ב3.1[רקע רלוונטי]; ב4 --> ב4.1[הגדר תפקיד ל-AI]; ב5 --> ב5.1[פורמט פלט רצוי];
+                </div>
+            </div>
+            
+            <!-- דוגמת קוד אם רלוונטי -->
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre>```python
+# דוגמה לפרומפט מובנה ואפקטיבי למודל שפה גדול (LLM)
+
+# הגדרת הפרסונה והמטרה
+persona_context = "אתה מומחה לשיווק דיגיטלי המתמחה בקמפיינים במדיה חברתית עבור חברות סטארט-אפ בתחום הטכנולוגיה."
+
+# הגדרת המשימה הספציפית
+task = "כתוב 5 רעיונות לפוסטים קצרים ומושכים לפייסבוק ואינסטגרם עבור השקת אפליקציה חדשה לניהול משימות אישיות."
+
+# מתן הקשר ופרטים נוספים
+app_details = "האפליקציה נקראת 'FocusFlow'. היא עוזרת למשתמשים לארגן משימות, להגדיר סדרי עדיפויות ולעקוב אחר התקדמותם באמצעות ממשק אינטואיטיבי ומינימליסטי. הדגש הוא על פרודוקטיביות ללא הסחות דעת."
+
+# דרישות פורמט ומגבלות
+format_requirements = "לכל פוסט: כותרת קצרה, גוף טקסט של עד 150 תווים, 3-5 האשטגים רלוונטיים, וקריאה לפעולה (CTA) ברורה. הפוסטים צריכים להיות מעוררי השראה וממוקדים בפתרון בעיות."
+
+# בניית הפרומפט המלא
+full_prompt = f"""
+{persona_context}
+
+המשימה שלך היא: {task}
+
+פרטים על האפליקציה:
+{app_details}
+
+דרישות לפורמט הפלט:
+{format_requirements}
+
+אנא וודא שהפוסטים מעודדים הורדה של האפליקציה ומדגישים את היתרונות הייחודיים שלה.
+"""
+
+# הדפסת הפרומפט (לצורך הדגמה, בפועל נשלח למודל ה-AI)
+print(full_prompt)
+
+# פלט צפוי (דוגמה – לא חלק מהקוד בפועל):
+# אתה מומחה לשיווק דיגיטלי... המשימה שלך היא: כתוב 5 רעיונות...
+# ...
+# 1. כותרת: 'להתראות בלאגן, שלום מיקוד!'
+#    טקסט: 'FocusFlow: האפליקציה החדשה שתשנה את הדרך בה אתם מנהלים משימות. קלה לשימוש, עוזרת לכם להישאר ממוקדים ולהשיג יותר. שחררו את הפוטנציאל שלכם!'
+#    האשטגים: #FocusFlow #פרודוקטיביות #ניהולמשימות #אפליקציותחדשות #מיקוד
+#    CTA: 'הורידו עכשיו וקבלו שבוע חינם!'
+# ...
+```</pre>
+            </div>
+        </section>
+
+        <!-- טיזר 1 - חומר למחשבה -->
+        <div class="teaser-box teaser-idea">
+            <h4 class="teaser-title" style="color: #28a745;">💡 חומר למחשבה</h4>
+            <p><strong>האם ידעת ש...</strong> האם ידעתם ששינוי מילה אחת בפרומפט יכול להפוך תגובה גנרית לחלוטין לפתרון עסקי מבריק, או לחשוף יכולות נסתרות במודל AI שלא חשבתם שקיימות?</p>
+        </div>
+
+        <!-- תוכן עיקרי - חלק 2 -->
+        <section class="concept-card" id="part-2">
+            <h2>2. יישום מעשי: איך לבנות פרומפטים אפקטיביים?</h2>
+            <p>לאחר שהבנו את העקרונות התיאורטיים, הגיע הזמן לצלול לעולם המעשי של בניית פרומפטים. הנדסת פרומפטים היא תהליך איטרטיבי, בדומה לתכנות או עיצוב. לעיתים רחוקות תצליחו ליצור את הפרומפט המושלם בניסיון הראשון. המפתח הוא להתחיל עם בסיס טוב, לבדוק, להעריך ולשפר. החלק הזה ידריך אתכם צעד אחר צעד בתהליך בניית פרומפטים אפקטיביים, מניסוח הרעיון הראשוני ועד לליטוש הסופי, תוך שימוש בטכניקות מוכחות. זכרו, כל מודל AI מגיב מעט אחרת, ומה שעובד מצוין במודל אחד ייתכן שיצריך התאמות קלות במודל אחר. הגמישות והנכונות להתנסות הן המפתח להצלחה.</p>
+
+             <div class="diagram-container">
+                <h4 style="margin-bottom: 1rem; color: #666;">תהליך העבודה (Workflow)</h4>
+                <div class="mermaid">
+                    graph LR; א[הגדרת מטרה ברורה] --> ב[ניסוח פרומפט ראשוני]; ב --> ג[הפעלה ובדיקה]; ג --> ד{האם הפלט רצוי?}; ד -- כן --> ה[סיום/שמירה]; ד -- לא --> ו[ניתוח וזיהוי פערים]; ו --> ז[שיפור וליטוש הפרומפט]; ז --> ג;
+                </div>
+            </div>
+            
+            <!-- רשימה או שלבים -->
+            <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                 <li><strong>שלב 1:</strong> **שלב 1: הגדירו את המטרה בבירור.** לפני שאתם כותבים מילה אחת, שאלו את עצמכם: מה בדיוק אני רוצה שהמודל יעשה? מהי התוצאה הסופית הרצויה? ככל שהמטרה תהיה ספציפית יותר, כך יהיה קל יותר לנסח את הפרומפט.</li>
+                <li><strong>שלב 2:</strong> **שלב 2: התחילו מפשוט.** נסחו פרומפט ראשוני קצר ופשוט. אל תנסו לכלול הכל מההתחלה. זהו בסיס מצוין לבדיקה מהירה של הבנת המודל.</li>
+                <li><strong>שלב 3:</strong> **שלב 3: הוסיפו הקשר ופרטים.** אם הפלט הראשוני אינו מספק, התחילו להוסיף פרטים: מידע רקע, הגדרות מונחים, נתונים רלוונטיים. ספקו למודל את כל הכלים הדרושים לו כדי 'להבין' את בקשתכם.</li>
+                <li><strong>שלב 4:</strong> **שלב 4: הגדירו פרסונה וסגנון.** האם אתם רוצים שהמודל יגיב כעורך דין, מדען, משורר או חבר? הגדרת פרסונה (לדוגמה: 'התנהג כיועץ פיננסי') משפיעה באופן דרמטי על סגנון התשובה. ציינו גם את הטון הרצוי (רשמי, הומוריסטי, מקצועי).</li>
+                <li><strong>שלב 5:</strong> **שלב 5: קבעו פורמט פלט.** כדי למנוע תשובות לא מאורגנות, בקשו פורמט ספציפי: רשימה ממוספרת, טבלה, קוד, סיכום בפסקאות, נקודות תבליט, JSON וכו'. לדוגמה: 'הצג את המידע בטבלה עם שלוש עמודות: נושא, יתרונות, חסרונות'.</li>
+                <li><strong>שלב 6:</strong> **שלב 6: השתמשו בדוגמאות (Few-Shot Prompting).** אם המשימה מורכבת או דורשת הבנה ניואנסית, ספקו למודל דוגמה אחת או יותר של קלט-פלט רצוי. זהו אחד הכלים החזקים ביותר לשיפור דיוק. לדוגמה: 'קלט: 'חתול'; פלט: 'יונק, טורף, פרווה, מגרגר'. קלט: 'כלב'; פלט: '...'</li>
+                <li><strong>שלב 7:</strong> **שלב 7: שברו משימות מורכבות.** למשימות ארוכות ומורכבות, חלקו אותן למספר פרומפטים קטנים יותר ורצופים. קחו את הפלט מפרומפט אחד כקלט לפרומפט הבא. זה משפר את השליטה ומפחית שגיאות.</li>
+                <li><strong>שלב 8:</strong> **שלב 8: בצעו איטרציה וליטוש.** הפעילו את הפרומפט, העריכו את הפלט. אם הוא לא מושלם, נתחו מה השתבש: האם הפרומפט היה עמום? חסר הקשר? בקשת הפורמט לא הייתה ברורה? תקנו ונסו שוב. זהו תהליך למידה מתמיד.</li>
+            </ol>
+        </section>
+
+        <!-- טיזר 2 - אזהרה -->
+        <div class="teaser-box teaser-warning">
+            <h4 class="teaser-title" style="color: #856404;">⚠️ רגע, עצור!</h4>
+            <p><strong>שים לב:</strong> אזהרה: פרומפט שגוי או מטעה עלול לא רק להוביל לתשובות חסרות תועלת, אלא במקרים מסוימים אף ליצור תוכן מוטה, לא מדויק או אף פוגעני. הבנה עמוקה של הנדסת פרומפטים היא קריטית לאחריות אתית.</p>
+        </div>
+
+        <!-- תוכן מתקדם -->
+        <section class="concept-card" id="advanced">
+            <h2>3. מושגים מתקדמים ואסטרטגיות להנדסת פרומפטים</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-right: 4px solid var(--theme-accent);">
+                    <h3 style="color: var(--theme-primary); margin-bottom: 1rem;">טכניקות מתקדמות להגברת דיוק ויצירתיות</h3>
+                    <ul style="margin-right: 1.5rem;">
+                         <li>**שרשרת מחשבה (Chain-of-Thought - CoT):** במקום לבקש מהמודל תשובה ישירה, בקשו ממנו לחשוב בקול רם ולפרט את שלבי הפתרון. לדוגמה: 'חשוב צעד אחר צעד, ואז תן את התשובה הסופית'. זה משפר דרמטית את יכולתו לפתור בעיות מורכבות ומשימות לוגיות.</li>
+                        <li>**עץ מחשבה (Tree-of-Thought - ToT):** הרחבה של CoT, שבה המודל בוחן מספר נתיבי מחשבה אפשריים במקביל, מעריך אותם, ובוחר את המסלול האופטימלי. זה מאפשר פתרון בעיות יצירתיות יותר ומורכבות רבות שלוקחות בחשבון מספר אופציות.</li>
+                        <li>**הנחיה עצמית (Self-Reflection):** בקשו מהמודל לבחון את התשובה שנתן בעצמו, לזהות פגמים או שיפורים אפשריים, ואז לשפר את התשובה. לדוגמה: 'לאחר שנתת את התשובה, בקר אותה בעצמך ונסה לשפר אותה'.</li>
+                        <li>**הנחיה מבוססת תפקידים (Role-Based Prompting):** הגדרת תפקיד מפורש למודל ('אתה מומחה לבלשנות', 'אתה משורר סונטות') מגבירה את הרלוונטיות והעקביות של התשובות בסגנון ובטון הרצויים.</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-right: 4px solid var(--theme-light);">
+                    <h3 style="color: var(--theme-primary); margin-bottom: 1rem;">ניהול פרמטרים ואינטגרציה עם כלים</h3>
+                    <ul style="margin-right: 1.5rem;">
+                         <li>**כוונון פרמטרים (Parameter Tuning):** מודלי LLM רבים מאפשרים לכוונן פרמטרים כמו 'טמפרטורה' (Temperature) ו-'Top-P'. טמפרטורה גבוהה תגרום לתשובות יצירתיות ופחות צפויות (טוב ליצירה), בעוד טמפרטורה נמוכה תוביל לתשובות דטרמיניסטיות וממוקדות יותר (טוב לדיוק). הבנת הפרמטרים הללו מאפשרת שליטה עדינה על אופי הפלט.</li>
+                        <li>**הנדסת פרומפטים אוטומטית (Automated Prompt Engineering):** שימוש באלגוריתמים או מודלים אחרים ליצירת פרומפטים אוטומטית, במיוחד כאשר יש צורך ליצור וריאציות רבות או לבצע אופטימיזציה קבועה.</li>
+                        <li>**אינטגרציה עם כלים חיצוניים (Tool Integration):** פרומפטים שיכולים להפעיל כלים חיצוניים (כמו חיפוש באינטרנט, הפעלת קוד, גישה למאגרי נתונים) מרחיבים דרמטית את יכולות ה-LLM ומאפשרים לו לבצע משימות מעבר לידע המובנה שלו. זהו הבסיס ל'סוכני AI' (AI Agents).</li>
+                        <li>**הגנה מפני הזרקת פרומפטים (Prompt Injection Defenses):** פיתוח אסטרטגיות למנוע ממשתמשים זדוניים 'להזריק' הנחיות לפרומפט שלכם כדי לגרום למודל לבצע פעולות לא רצויות או לחשוף מידע רגיש. זה קריטי למערכות הפונות לקהל הרחב.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- טיזר 3 - סוד קטן -->
+        <div class="teaser-box teaser-secret">
+            <h4 class="teaser-title" style="color: #6f42c1;">🤫 סוד קטן</h4>
+            <p><strong>טעות נפוצה:</strong> הסוד הגדול של מומחי הנדסת פרומפטים הוא לא רק לדעת מה לבקש, אלא לדעת איך לבקש מהמודל 'לחשוב' בצורה אנושית, לשקף, ולתקן את עצמו, ובכך להפוך אותו לשותף אינטליגנטי באמת.</p>
+        </div>
+
+        <!-- מסקנות ויישום מעשי -->
+        <section class="concept-card" id="summary" style="background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%); color: white; border: none;">
+            <h2 style="color: white;">🎯 מסקנות ויישום מעשי</h2>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                <h3 style="color: white; margin-bottom: 1rem;">✅ מה למדנו היום?</h3>
+                <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                     <li>הנדסת פרומפטים היא מיומנות חיונית לרתימת מלוא הפוטנציאל של מודלי שפה גדולים (LLMs).</li>
+                        <li>עקרונות הליבה כוללים: בהירות, ספציפיות, הקשר, פרסונה ופורמט.</li>
+                        <li>תהליך בניית פרומפטים הוא איטרטיבי: מתחילים מפשוט, מוסיפים פרטים, בודקים ומשפרים.</li>
+                        <li>טכניקות כמו CoT, ToT והנחיה עצמית משפרות דרמטית את דיוק המודל במשימות מורכבות.</li>
+                        <li>הבנת פרמטרים כמו 'טמפרטורה' מאפשרת שליטה עדינה על אופי הפלט.</li>
+                        <li>שימוש בכלים חיצוניים והגנה מפני הזרקת פרומפטים הם קריטיים ליישומים מתקדמים ובטוחים.</li>
+                        <li>הנדסת פרומפטים היא יותר מאשר 'טריק'; זוהי שפת תקשורת עם עתיד הבינה המלאכותית.</li>
+                </ul>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">🚀 איך להמשיך להתפתח?</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.6;">
+                         <li>**התנסו בעצמכם:** בחרו מודל LLM (כמו ChatGPT, Gemini, Claude) והתחילו ליישם את העקרונות שלמדתם. נסו משימות שונות ובחנו את ההבדלים בפלט.</li>
+                        <li>**חקרו דוגמאות פרומפטים:** חפשו מאגרי פרומפטים (כמו PromptBase או קהילות אונליין) כדי ללמוד מטכניקות של אחרים ולקבל השראה.</li>
+                        <li>**התעמקו בטכניקות מתקדמות:** קראו מאמרים ומחקרים על CoT, ToT, Self-Reflection וטכניקות נוספות כדי להבין את העומק התיאורטי והמעשי שלהן.</li>
+                        <li>**למדו על כלי פיתוח:** הכירו ספריות וכלים כמו LangChain או LlamaIndex המאפשרים בנייה וניהול של פרומפטים מורכבים ואינטגרציה עם מקורות נתונים חיצוניים.</li>
+                        <li>**הצטרפו לקהילות:** השתתפו בפורומים, קבוצות דיון או כנסים בנושא AI והנדסת פרומפטים כדי ללמוד ממומחים ולשתף ידע.</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">⚠️ טעויות נפוצות</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.6;">
+                        <li>**פרומפטים עמומים מדי:** אי מתן מספיק פרטים או הקשר, מה שמוביל לתשובות כלליות ולא שימושיות.</li>
+                        <li>**הנחות מוקדמות על ידע המודל:** ציפייה שהמודל יבין ניואנסים או ידע ספציפי שלא הוגדר בפרומפט.</li>
+                        <li>**אי הגדרת פורמט פלט:** קבלת תשובות לא מאורגנות או קשות לעיבוד.</li>
+                        <li>**התעלמות מפרסונה:** אי הגדרת תפקיד או טון למודל, מה שמוביל לתשובות לא עקביות בסגנון.</li>
+                        <li>**ניסיון לפתור הכל בפרומפט אחד:** משימות מורכבות דורשות פירוק לשלבים או שימוש בטכניקות מתקדמות כמו CoT.</li>
+                        <li>**חוסר איטרציה:** אי בדיקה וליטוש של הפרומפט לאחר קבלת פלט ראשוני.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- משימות לשבוע הקרוב -->
+        <section class="concept-card" id="tasks">
+            <h2>📋 משימות לשבוע הקרוב</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                <div style="background: #e8f5e9; border: 2px solid #28a745; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #155724; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🎯</span> רמה בסיסית (מתחילים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                         <li>כתבו פרומפט שיבקש מהמודל לסכם מאמר חדשותי קצר על אירוע אקטואלי, תוך הגבלת הסיכום ל-3 משפטים בלבד.</li>
+                        <li>בקשו מהמודל לכתוב מתכון לעוגת שוקולד, תוך הגדרת פרסונה של 'שף קונדיטור צרפתי' ושימוש בפורמט של רשימת מצרכים והוראות ממוספרות.</li>
+                        <li>בקשו מהמודל לתרגם משפט פשוט מאנגלית לעברית, ולאחר מכן בקשו ממנו להסביר 'מדוע בחר בתרגום הספציפי הזה'.</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #004085; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>⚡</span> רמה מתקדמת (מנוסים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>בחרו נושא מורכב (לדוגמה: 'השפעת שינוי האקלים על הכלכלה העולמית') ובנו פרומפט המשתמש בטכניקת 'שרשרת מחשבה' (CoT) כדי לקבל ניתוח מעמיק הכולל לפחות 3 שלבי חשיבה ברורים.</li>
+                        <li>בנו פרומפט המגדיר פרסונה של 'מבקר ספרותי נודע' ובקשו ממנו לכתוב ביקורת על ספר שקראתם לאחרונה, תוך ציון נקודות חוזק וחולשה. לאחר מכן, בקשו מהמודל 'לבקר את הביקורת של עצמו' ולשפר אותה.</li>
+                        <li>צרו פרומפט המשלב דוגמאות (few-shot) כדי ללמד את המודל קטגוריזציה ספציפית של טקסטים (לדוגמה: 'סווג משפטים כ'חדשות', 'ספורט' או 'בידור' על בסיס דוגמאות שתספקו').</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- טיזר 4 - בונוס -->
+            <div class="teaser-box teaser-bonus">
+                <h4 class="teaser-title" style="color: #0277bd;">😎 בונוס</h4>
+                <p><strong>תרגיל מעשי:</strong> הבונוס הגדול ביותר בהנדסת פרומפטים הוא היכולת להפוך רעיון מופשט למציאות קונקרטית, ולשחרר את הפוטנציאל היצירתי והאנליטי של הבינה המלאכותית בדרך שמעולם לא הייתה אפשרית.</p>
+            </div>
+        </section>
+
+        <!-- מסע המשתמש - חזרה ל-LMS -->
+        <div class="concept-card" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; border: none; position: relative; overflow: hidden;">
+            <!-- רקע דקורטיבי -->
+            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.3;"></div>
+            <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.2;"></div>
+            
+            <div style="position: relative; z-index: 2;">
+                <h2 style="color: white; text-align: center; margin-bottom: 1.5rem;">🎯 סיימת את המדריך? זמן להמשיך ללמוד!</h2>
+                
+                <div style="text-align: center; margin: 2rem 0;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                    <p style="font-size: 1.2rem; margin: 1.5rem 0; line-height: 1.6;">
+                        <strong>אם הגעת לכאן כחלק ממטלה בקורס</strong><br>
+                        חזור עכשיו לפורטל התלמידים להמשך הלמידה והגשת המטלות
+                    </p>
+                </div>
+
+                <!-- כפתור חזרה ל-LMS לתלמידים רשומים -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="https://edu-manage.org/" 
+                       style="display: inline-block; background: white; color: #28a745; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s; border: 3px solid white;"
+                       onmouseover="this.style.background='#f8f9fa'; this.style.transform='translateY(-2px)'"
+                       onmouseout="this.style.background='white'; this.style.transform='translateY(0)'">
+                        🎓 חזור לפורטל התלמידים - EduManage
+                    </a>
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">📚 המשך המסע שלך:</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>✅ סמן את המטלה כהושלמה</li>
+                        <li>📝 השלם את השאלות והתרגילים</li>
+                        <li>💬 שתף את החוויה בפורום הקורס</li>
+                        <li>🎯 עבור למטלה הבאה</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- הזמנה לגולשים חדשים -->
+        <section class="concept-card" id="join-course" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; position: relative; overflow: hidden;">
+            <!-- רקע דקורטיבי -->
+            <div style="position: absolute; top: -30px; left: -30px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.3;"></div>
+            <div style="position: absolute; bottom: -40px; right: -40px; width: 180px; height: 180px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.2;"></div>
+            
+            <div style="position: relative; z-index: 2;">
+                <h2 style="color: white; text-align: center; margin-bottom: 1.5rem;">🌟 רוצה ללמוד יותר? הצטרף לקורס המלא!</h2>
+                
+                <div style="text-align: center; margin: 2rem 0;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
+                    <p style="font-size: 1.1rem; margin: 1.5rem 0; line-height: 1.6;">
+                        <strong>המדריך הזה הוא רק טעימה קטנה!</strong><br>
+                        בקורס המלא תקבל מטלות מעשיות, משוב אישי ותעודת סיום
+                    </p>
+                </div>
+
+                <!-- יתרונות הקורס -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+                        <strong>מטלות מעשיות</strong>
+                        <p style="font-size: 0.9rem; margin: 0.5rem 0;">תרגול אמיתי עם פרויקטים</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">👨‍🏫</div>
+                        <strong>משוב אישי</strong>
+                        <p style="font-size: 0.9rem; margin: 0.5rem 0;">הדרכה צמודה ממדריכים</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
+                        <strong>תעודת סיום</strong>
+                        <p style="font-size: 0.9rem; margin: 0.5rem 0;">הכרה מקצועית בתחום</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">👥</div>
+                        <strong>קהילת לומדים</strong>
+                        <p style="font-size: 0.9rem; margin: 0.5rem 0;">רשת מקצועית וחברתית</p>
+                    </div>
+                </div>
+
+                <!-- כפתור הצטרפות -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+                       style="display: inline-block; background: #ffc107; color: #212529; padding: 1.2rem 3rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: all 0.3s; border: 3px solid #ffc107;"
+                       onmouseover="this.style.background='#ffcd39'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.4)'"
+                       onmouseout="this.style.background='#ffc107'; this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'">
+                        🚀 הצטרף לקורס החינמי עכשיו!
+                    </a>
+                </div>
+
+                <div style="text-align: center; font-size: 0.9rem; opacity: 0.9;">
+                    💡 <strong>ההרשמה חינמית לחלוטין</strong> • ללא התחייבות • תוכל להתחיל מיד
+                </div>
+            </div>
+        </div>
+
+        <!-- מדריכים קשורים -->
+        <div class="concept-card">
+            <h2 style="text-align: center; margin-bottom: 2rem;">📚 מדריכים קשורים שיעניינו אותך</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                
+                <a href="#" style="background: white; color: var(--theme-primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;"
+                   onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</span>
+                    <strong style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;">מבוא ללמידת מכונה</strong>
+                    <span style="font-size: 0.9rem; color: #666; text-align: center;">המדריך המקיף לבנייה ושימוש במודלי למידת מכונה.</span>
+                </a>
+
+                <a href="#" style="background: white; color: var(--theme-primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;"
+                   onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span style="font-size: 2.5rem; margin-bottom: 1rem;">💼</span>
+                    <strong style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;">AI וקריירה: להתכונן לעתיד</strong>
+                    <span style="font-size: 0.9rem; color: #666; text-align: center;">כיצד AI משנה את עולם העבודה והקריירה.</span>
+                </a>
+
+                <a href="#" style="background: white; color: var(--theme-primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;"
+                   onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span style="font-size: 2.5rem; margin-bottom: 1rem;">🎨</span>
+                    <strong style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;">אמנות יצירת תמונות ב-AI</strong>
+                    <span style="font-size: 0.9rem; color: #666; text-align: center;">כלים וטכניקות ליצירת תמונות מרהיבות עם AI.</span>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 12px;">
+                <p style="font-size: 1rem; color: #666; margin: 0;">
+                    💡 <strong>זכור:</strong> הלמידה היא מסע מתמשך, והצעד הבא שלך מתחיל כאן!
+                </p>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- FAQ Section for SEO -->
+    <section class="concept-card" style="margin-top: 2rem;">
+        <h2>❓ שאלות נפוצות</h2>
+        <div itemscope itemtype="https://schema.org/FAQPage">
+            
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">מהי הנדסת פרומפטים?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>הנדסת פרומפטים היא התהליך של ניסוח הנחיות (פרומפטים) למודלי שפה גדולים (LLMs) באופן שממקסם את יעילותם ומבטיח שהפלט יהיה מדויק, רלוונטי ועונה על הציפיות. זהו המפתח לתקשורת אפקטיבית עם AI.</p>
+                    </div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">מדוע הנדסת פרומפטים חשובה כל כך?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>היא חיונית כי היא מאפשרת למשתמשים לרתום את מלוא הפוטנציאל של מודלי AI, לשפר את דיוק התשובות, להפחית 'הזיות' (hallucinations), לשלוט בפורמט ובסגנון הפלט, ובסופו של דבר להשיג תוצאות טובות יותר ומועילות יותר מהאינטראקציה עם ה-AI.</p>
+                    </div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">מהם עקרונות הליבה של פרומפט אפקטיבי?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>העקרונות המרכזיים כוללים: בהירות (שהבקשה תהיה חד משמעית), ספציפיות (מתן פרטים ומגבלות), הקשר (רקע רלוונטי), פרסונה (הגדרת תפקיד למודל) ופורמט (בקשת פורמט פלט ספציפי).</p>
+                    </div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">האם הנדסת פרומפטים היא מיומנות שכל אחד יכול ללמוד?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>כן, בהחלט. כל אחד יכול ללמוד את העקרונות ולתרגל ניסוח פרומפטים טובים יותר. כמו כל מיומנות, היא דורשת תרגול והתנסות, אך היא נגישה לכל מי שעובד או מתעניין בבינה מלאכותית.</p>
+                    </div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">כיצד ניתן לשפר את דיוק התשובות של מודל AI?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>שימוש בטכניקות כמו 'שרשרת מחשבה' (CoT) שמנחה את המודל לחשוב צעד אחר צעד, מתן דוגמאות (few-shot prompting), הגדרת פרסונה מפורטת, ובקשה לפורמט פלט מוגדר היטב.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><span class="brand-icon">🎓</span> LearningHub</h3>
+                    <p class="footer-description">
+                        פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+                           style="display: inline-block; background: #28a745; color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s;"
+                           onmouseover="this.style.background='#218838'"
+                           onmouseout="this.style.background='#28a745'">
+                            🚀 הצטרף לקורס החינמי
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>למידה</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html" class="footer-link">כל הקטגוריות</a></li>
+                        <li><a href="python_guide.html" class="footer-link">Python</a></li>
+                        <li><a href="chatgpt_guide.html" class="footer-link">ChatGPT</a></li>
+                        <li><a href="data_analysis_guide.html" class="footer-link">ניתוח נתונים</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="sitemap.html" class="footer-link">מפת האתר</a></li>
+                        <li><a href="prompts.html" class="footer-link">ספריית פרומפטים</a></li>
+                        <li><a href="ai_ethics.html" class="footer-link">אתיקה ב-AI</a></li>
+                        <li><a href="https://edu-manage.org/" class="footer-link">פורטל התלמידים</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>EduManage LMS</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://edu-manage.org/" class="footer-link">כניסה לפורטל</a></li>
+                        <li><a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" class="footer-link">הצטרפות לקורס</a></li>
+                        <li><a href="#" class="footer-link">מדריך למשתמש</a></li>
+                        <li><a href="#" class="footer-link">תמיכה טכנית</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <div>© 2025 <a href="https://edu-manage.org/" style="color: inherit; text-decoration: none;">EduManage</a> • מערכת לניהול פדגוגי</div>
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.3rem;">
+                        פותח ע"י BD TechAcademy • ביצוע ב-BDNHOST
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" title="LinkedIn">💼</a>
+                    <a href="#" class="social-link" title="GitHub">🐙</a>
+                    <a href="#" class="social-link" title="YouTube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="global.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Copy code function
+        function copyCode(btn) {
+            const pre = btn.nextElementSibling;
+            navigator.clipboard.writeText(pre.innerText);
+            btn.innerText = 'הועתק!';
+            setTimeout(() => btn.innerText = 'העתק', 2000);
+        }
+        
+        // SEO and UX Enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track reading progress for SEO signals
+            let maxScroll = 0;
+            window.addEventListener('scroll', function() {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                    // Send engagement signal to analytics (if implemented)
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'scroll', {
+                            'event_category': 'engagement',
+                            'event_label': 'reading_progress',
+                            'value': scrollPercent
+                        });
+                    }
+                }
+            });
+            
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add reading time calculation
+            const content = document.querySelector('main');
+            if (content) {
+                const text = content.innerText;
+                const wordsPerMinute = 200; // Average reading speed in Hebrew
+                const words = text.trim().split(/s+/).length;
+                const readingTime = Math.ceil(words / wordsPerMinute);
+                
+                // Update reading time in header if element exists
+                const readingTimeElement = document.querySelector('[data-reading-time]');
+                if (readingTimeElement) {
+                    readingTimeElement.textContent = readingTime + ' דקות';
+                }
+            }
+            
+            // Lazy loading for images (if any)
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+            
+            // Track CTA clicks for conversion optimization
+            document.querySelectorAll('a[href*="edu-manage.org"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'click', {
+                            'event_category': 'conversion',
+                            'event_label': 'cta_click',
+                            'value': this.href.includes('JoinCourse') ? 'join_course' : 'portal_login'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Schema.org structured data for reading actions
+        function markAsRead() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'read', {
+                    'event_category': 'engagement',
+                    'event_label': 'article_completed'
+                });
+            }
+        }
+        
+        // Call markAsRead when user reaches the end
+        window.addEventListener('scroll', function() {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+                markAsRead();
+            }
+        });
+    </script>
+    
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            'custom_map': {
+                'custom_parameter_1': 'guide_category',
+                'custom_parameter_2': 'user_type'
+            }
+        });
+        
+        // Track guide category and user type
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            'custom_parameter_1': 'AI & Automation',
+            'custom_parameter_2': 'free_user'
+        });
+    </script>
+</body>
+
+</html>

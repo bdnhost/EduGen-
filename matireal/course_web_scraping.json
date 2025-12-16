@@ -1,0 +1,139 @@
+{
+    "_DOCUMENTATION": {
+        "title": "קובץ ייבוא אוטומטי: Web Scraping למהנדסים",
+        "overview": "קורס זה נוצר אוטומטית על ידי generate_course.py על בסיס המדריך 'web_scraping_guide.html'.",
+        "author": "Gemini Code Assist Generator",
+        "version": "1.0"
+    },
+    "course": {
+        "name": "🚀 Web Scraping למהנדסים",
+        "code": "WEB-PRO-2025",
+        "description": "מדריך איסוף נתונים Web Scraping עם Python ו-Beautiful Soup - למדו לגרוף מחירים, מפרטים וביקורות ✅ דוגמאות מעשיות ✅ תרגילים ומטלות",
+        "institution": "LearningHub - EduManage",
+        "semester": "סמסטר אוטומטי",
+        "year": "2025",
+        "start_date": "2025-12-15",
+        "total_sessions": 4,
+        "total_hours": 16,
+        "color": "from-blue-500 to-indigo-500",
+        "allow_self_registration": true
+    },
+    "sessions": [
+        {
+            "temp_id": "s1",
+            "session_number": 1,
+            "title": "מפגש 1: 🎯 מה זה Web Scraping ולמה זה שימושי? | 🛠️ הכלים שנשתמש בהם",
+            "description": "במפגש זה נכסה את הנושאים הבאים: 🎯 מה זה Web Scraping ולמה זה שימושי?, 🛠️ הכלים שנשתמש בהם.",
+            "objectives": "1. הבנת עקרונות '🎯 מה זה Web Scraping ולמה זה שימושי?'.\n2. הבנת עקרונות '🛠️ הכלים שנשתמש בהם'.",
+            "date": "2025-12-15",
+            "duration_hours": 4.0
+        },
+        {
+            "temp_id": "s2",
+            "session_number": 2,
+            "title": "מפגש 2: 🔧 יסודות Web Scraping | 📝 דוגמה מלאה - גריפת מחירי מוצר",
+            "description": "במפגש זה נכסה את הנושאים הבאים: 🔧 יסודות Web Scraping, 📝 דוגמה מלאה - גריפת מחירי מוצר.",
+            "objectives": "1. הבנת עקרונות '🔧 יסודות Web Scraping'.\n2. הבנת עקרונות '📝 דוגמה מלאה - גריפת מחירי מוצר'.",
+            "date": "2025-12-22",
+            "duration_hours": 4.0
+        },
+        {
+            "temp_id": "s3",
+            "session_number": 3,
+            "title": "מפגש 3: 🚗 דוגמאות מעשיות - רכב | ⚙️ דוגמאות מעשיות - מכונות וציוד תעשייתי | 🚀 טכניקות מתקדמות",
+            "description": "במפגש זה נכסה את הנושאים הבאים: 🚗 דוגמאות מעשיות - רכב, ⚙️ דוגמאות מעשיות - מכונות וציוד תעשייתי, 🚀 טכניקות מתקדמות.",
+            "objectives": "1. הבנת עקרונות '🚗 דוגמאות מעשיות - רכב'.\n2. הבנת עקרונות '⚙️ דוגמאות מעשיות - מכונות וציוד תעשייתי'.\n3. הבנת עקרונות '🚀 טכניקות מתקדמות'.",
+            "date": "2025-12-29",
+            "duration_hours": 4.0
+        },
+        {
+            "temp_id": "s4",
+            "session_number": 4,
+            "title": "מפגש 4: ⚖️ חוקיות ואתיקה | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב | 🚀 הפוך לאמן Web Scraping",
+            "description": "במפגש זה נכסה את הנושאים הבאים: ⚖️ חוקיות ואתיקה, 🎯 מסקנות ויישום מעשי, 📋 משימות לשבוע הקרוב, 🚀 הפוך לאמן Web Scraping.",
+            "objectives": "1. הבנת עקרונות '⚖️ חוקיות ואתיקה'.\n2. הבנת עקרונות '🎯 מסקנות ויישום מעשי'.\n3. הבנת עקרונות '📋 משימות לשבוע הקרוב'.\n4. הבנת עקרונות '🚀 הפוך לאמן Web Scraping'.",
+            "date": "2026-01-05",
+            "duration_hours": 4.0
+        }
+    ],
+    "assignments": [
+        {
+            "//_COMMENT": "פרויקט גמר שנוצר אוטומטית על בסיס המדריך.",
+            "title": "🏆 פרויקט גמר: יישום מעשי של Web Scraping למהנדסים",
+            "description": "בפרויקט זה תיישמו את כל העקרונות מהמדריך כדי לבנות פרויקט מקיף.",
+            "type": "project",
+            "session_temp_id": "s4",
+            "due_date": "2026-01-12",
+            "max_score": 100,
+            "weight": 60,
+            "key_concepts": [
+                {
+                    "term": "יישום מעשי",
+                    "definition": "הפיכת תיאוריה לתוצר עובד."
+                },
+                {
+                    "term": "פתרון בעיות",
+                    "definition": "התמודדות עם אתגרים לא צפויים בתהליך."
+                }
+            ],
+            "resource_links": [
+                "https://bdnhost.net/Resources/web_scraping_guide.html"
+            ],
+            "content_data": {
+                "instructions": "- התחילו בקטן והתקדמו בהדרגה.",
+                "milestones": [
+                    {
+                        "title": "שלב 1: הגשת הצעת פרויקט",
+                        "deadline": "2026-01-05"
+                    },
+                    {
+                        "title": "הגשה סופית",
+                        "deadline": "2026-01-12"
+                    }
+                ]
+            },
+            "rubric": {
+                "name": "מחוון פרויקט גמר",
+                "criteria": [
+                    {
+                        "title": "עמידה בדרישות",
+                        "description": "האם הפרויקט מיישם את כל הנושאים הנדרשים מהמדריך.",
+                        "max_points": 50
+                    },
+                    {
+                        "title": "איכות התוצר",
+                        "description": "התוצר עובד, יעיל ומובנה היטב.",
+                        "max_points": 30
+                    },
+                    {
+                        "title": "הימנעות מטעויות נפוצות",
+                        "description": "התייחסות לאזהרות מהמדריך. ",
+                        "max_points": 10
+                    },
+                    {
+                        "title": "תיעוד והגשה",
+                        "description": "ההגשה כוללת את כל הקבצים הנדרשים והסברים ברורים.",
+                        "max_points": 10
+                    }
+                ]
+            }
+        }
+    ],
+    "materials": [
+        {
+            "title": "📚 המדריך המרכזי: Web Scraping למהנדסים",
+            "description": "המדריך שעליו מבוסס הקורס.",
+            "type": "link",
+            "file_url": "https://bdnhost.net/Resources/web_scraping_guide.html",
+            "course_global": true
+        }
+    ],
+    "announcements": [
+        {
+            "title": "🎉 ברוכים הבאים לקורס 'Web Scraping למהנדסים'!",
+            "content": "אנו שמחים להתחיל יחד את המסע. אנא עברו על סילבוס הקורס והכינו את סביבת העבודה הנדרשת לקראת המפגש הראשון.",
+            "priority": "high",
+            "session_temp_id": "s1"
+        }
+    ]
+}

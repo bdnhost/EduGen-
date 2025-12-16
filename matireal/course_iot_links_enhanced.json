@@ -1,0 +1,35 @@
+{
+  "syllabus_pdf": "course_iot_syllabus_enhanced.pdf",
+  "slides_pptx": "course_iot_master_slides_enhanced.pptx",
+  "session_pdfs": {
+    "s1": {
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח",
+      "path": "session_pdfs_enhanced\\session_s1_outline.pdf"
+    },
+    "s2": {
+      "title": "מפגש 2: חומרה וחיווט",
+      "path": "session_pdfs_enhanced\\session_s2_outline.pdf"
+    },
+    "s3": {
+      "title": "מפגש 3: קושחה מודולרית",
+      "path": "session_pdfs_enhanced\\session_s3_outline.pdf"
+    },
+    "s4": {
+      "title": "מפגש 4: איסוף נתונים ו-visualization",
+      "path": "session_pdfs_enhanced\\session_s4_outline.pdf"
+    },
+    "s5": {
+      "title": "מפגש 5: פרוטוקולים ואבטחה",
+      "path": "session_pdfs_enhanced\\session_s5_outline.pdf"
+    },
+    "s6": {
+      "title": "מפגש 6: פרויקט גמר והצגות",
+      "path": "session_pdfs_enhanced\\session_s6_outline.pdf"
+    }
+  },
+  "directories": {
+    "assignments": "assignments",
+    "diagrams": "diagrams",
+    "session_pdfs": "session_pdfs_enhanced"
+  }
+}

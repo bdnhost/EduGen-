@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Web Scraping למהנדסים | מדריך מקצועי חינמי | LearningHub</title>
+    <meta name="description" content="מדריך איסוף נתונים Web Scraping עם Python ו-Beautiful Soup - למדו לגרוף מחירים, מפרטים וביקורות ✅ דוגמאות מעשיות ✅ תרגילים ומטלות">
+    <meta name="keywords" content="Web Scraping, Python, Beautiful Soup, איסוף נתונים, בוט, אוטומציה, רכב, מכונות, מדריך, לימוד, קורס חינמי, הדרכה מקצועית, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Web Scraping למהנדסים | מדריך מקצועי חינמי">
+    <meta property="og:description" content="למדו לאסוף נתונים מהאינטרנט באופן אוטומטי בעזרת Python">
+    <meta property="og:image" content="/images/web-scraping-guide.jpg">
+    <meta property="og:url" content="/web_scraping_guide.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="תכנות וAutomat">
+    <meta property="article:tag" content="Web Scraping, Python, Beautiful Soup, אוטומציה">
+    <meta property="article:published_time" content="2025-01-01">
+    <meta property="article:modified_time" content="2025-01-15">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Web Scraping למהנדסים | מדריך מקצועי חינמי">
+    <meta name="twitter:description" content="לימוד Web Scraping עם Python - אוטומציה של איסוף נתונים">
+    <meta name="twitter:image" content="/images/web-scraping-guide.jpg">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="msapplication-TileColor" content="#1a1a2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/web_scraping_guide.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="/web_scraping_guide.html">
+    <link rel="alternate" hreflang="x-default" href="/web_scraping_guide.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Web Scraping למהנדסים - מדריך מקצועי",
+        "description": "מדריך מקצועי לאיסוף נתונים Web Scraping עם Python ו-Beautiful Soup",
+        "image": "/images/web-scraping-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "/web_scraping_guide.html"
+        },
+        "articleSection": "תכנות והתוכנה",
+        "keywords": "Web Scraping, Python, Beautiful Soup, איסוף נתונים",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "Web Scraping, Python, Beautiful Soup, איסוף נתונים אוטומטי",
+        "about": {
+            "@type": "Thing",
+            "name": "Web Scraping"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Web Scraping למהנדסים",
+        "description": "מדריך מקצועי לאיסוף נתונים אוטומטי עם Python",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online",
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "instructor": {
+                "@type": "Organization",
+                "name": "LearningHub"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל",
+        "sameAs": [
+            "https://www.linkedin.com/company/edumanage",
+            "https://github.com/edumanage"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "Hebrew"
+        }
+    }
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        :root {
+            --theme-primary: #1a1a2e;
+            --theme-accent: #10b981;
+            --theme-light: #34d399;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%);
+            color: white;
+        }
+
+        .concept-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--theme-accent);
+        }
+
+        .code-block {
+            background: var(--theme-primary);
+            color: #e8f4fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* טיזרים */
+        .teaser-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .teaser-idea {
+            background: #e8f5e9;
+            border-right: 4px solid #28a745;
+        }
+
+        .teaser-warning {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+        }
+
+        .teaser-secret {
+            background: #f3e5f5;
+            border-right: 4px solid #6f42c1;
+        }
+
+        .teaser-bonus {
+            background: #e1f5fe;
+            border-right: 4px solid #03a9f4;
+        }
+
+        .teaser-title {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" 
+               style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; transition: all 0.3s;"
+               onmouseover="this.style.background='#f8f9fa'"
+               onmouseout="this.style.background='white'">
+                פורטל התלמידים
+            </a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+               style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;"
+               onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+               onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                הצטרף חינם
+            </a>
+        </div>
+    </div>
+
+    <!-- Global Header -->
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links">
+                <a href="sitemap.html" class="nav-link">מפת האתר</a>
+                <a href="categories.html" class="nav-link">קטגוריות</a>
+                <a href="index.html" class="nav-link">ראשי</a>
+            </div>
+            <a href="index.html" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs with Schema -->
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "דף הבית",
+                    "item": "/index.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "קטגוריות",
+                    "item": "/categories.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Web Scraping",
+                    "item": "/web_scraping_guide.html"
+                }
+            ]
+        }
+        </script>
+        <a href="index.html">דף הבית</a>
+        <span>/</span>
+        <a href="categories.html">קטגוריות</a>
+        <span>/</span>
+        <span class="current">Web Scraping</span>
+    </nav>
+
+    <!-- Page Header with SEO Optimization -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 itemprop="headline">🌐 Web Scraping למהנדסים</h1>
+            <p class="subtitle" itemprop="description">למדו לאסוף נתונים מהאינטרנט באופן אוטומטי עם Python ו-Beautiful Soup</p>
+            
+            <!-- Article Meta Information -->
+            <div class="article-meta" style="margin-top: 1rem; font-size: 0.9rem; color: #666; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                    👨‍🏫 מאת: <span itemprop="name">LearningHub</span>
+                </span>
+                <span>📅 עודכן: <time itemprop="dateModified" datetime="2025-01-15">15 בינואר 2025</time></span>
+                <span>⏱️ זמן קריאה: 50 דקות</span>
+                <span>📊 רמת קושי: בינוני-מתקדם</span>
+            </div>
+            
+            <!-- Quick Navigation -->
+            <div class="quick-nav" style="margin-top: 1.5rem; text-align: center;">
+                <a href="#main-content" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📖 תוכן המדריך
+                </a>
+                <a href="#tasks" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📋 משימות
+                </a>
+                <a href="#join-course" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    🚀 הצטרף לקורס
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with SEO Structure -->
+    <main class="page-container" id="main-content" itemscope itemtype="https://schema.org/Article">
+            <div class="section">
+                <h2 class="section-title">🎯 מה זה Web Scraping ולמה זה שימושי?</h2>
+
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    <strong>Web Scraping</strong> הוא תהליך אוטומטי של איסוף מידע מאתרי אינטרנט.
+                    במקום להעתיק ידנית מידע מאתרים - אתה כותב תוכנה שעושה את זה בשבילך.
+                </p>
+
+                <h3 style="margin: 2rem 0 1rem;">למה להנדסאי רכב/מכונות זה חשוב?</h3>
+
+                <div class="example-grid">
+                    <div class="example-card">
+                        <div class="example-card-title">
+                            <span>💰</span>
+                            <span>השוואת מחירים</span>
+                        </div>
+                        <p>לגרוף מחירי חלפים מעשרות אתרים בדקות במקום שעות של חיפוש ידני.</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-card-title">
+                            <span>📋</span>
+                            <span>איסוף מפרטים</span>
+                        </div>
+                        <p>לאסוף מפרטים טכניים של מאות רכיבים/מכונות בקליק אחד.</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-card-title">
+                            <span>⭐</span>
+                            <span>ניתוח ביקורות</span>
+                        </div>
+                        <p>לאסוף אלפי ביקורות רכב/ציוד ולנתח מה הבעיות השכיחות.</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-card-title">
+                            <span>📊</span>
+                            <span>מעקב שוק</span>
+                        </div>
+                        <p>לעקוב אחרי שינויי מחירים, מלאי, דגמים חדשים - אוטומטית.</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 דוגמה מעשית</div>
+                    <p><strong>לפני:</strong> אתה מחפש רפידות בלמים ל-Toyota Corolla 2020 ב-10 אתרים שונים. לוקח שעה.
+                    </p>
+                    <p style="margin-top: 0.5rem;"><strong>עם Scraping:</strong> הסקריפט בודק 50 אתרים ב-2 דקות, מציג
+                        טבלה עם המחיר הזול ביותר.</p>
+                </div>
+
+                <div class="info-box warning">
+                    <div class="info-box-title">⚠️ חשוב לדעת</div>
+                    <p>Web Scraping הוא חוקי אבל <strong>צריך לעשות אותו אחראית:</strong></p>
+                    <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+                        <li>לא להציף שרתים בבקשות (יש לשמור על rate limiting)</li>
+                        <li>לכבד את תנאי השימוש של האתר</li>
+                        <li>לא לגרוף מידע אישי של אנשים</li>
+                        <li>לבדוק את ה-robots.txt של האתר</li>
+                    </ul>
+                    <p style="margin-top: 0.5rem;">נדון בזה לעומק בטאב "חוקיות".</p>
+                </div>
+
+                <!-- טיזר 1 -->
+                <div style="background: #e8f5e9; border-right: 4px solid #28a745; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                    <h4 style="color: #28a745; margin-bottom: 0.5rem;">💡 חומר למחשבה</h4>
+                    <p><strong>האם ידעת ש...</strong> גוגל עצמה מבוססת על Web Scraping? הם "זוחלים" (crawling) על כל האינטרנט כדי לאנדקס אותו. אתה עושה בעצם את אותו הדבר, רק בקנה מידה קטן יותר!</p>
+                </div>
+            </div>
+
+            <!-- Tools Overview -->
+            <div class="section">
+                <h2 class="section-title">🛠️ הכלים שנשתמש בהם</h2>
+
+                <ol class="steps-list">
+                    <li>
+                        <div class="step-number">1</div>
+                        <div class="step-title">Python</div>
+                        <p>שפת התכנות הפופולרית ביותר ל-scraping. קלה ללמידה, עוצמתית.</p>
+                    </li>
+
+                    <li>
+                        <div class="step-number">2</div>
+                        <div class="step-title">Requests</div>
+                        <p>ספרייה לשליחת בקשות HTTP - כדי "לבקר" באתרים.</p>
+                    </li>
+
+                    <li>
+                        <div class="step-number">3</div>
+                        <div class="step-title">Beautiful Soup</div>
+                        <p>ספרייה לניתוח HTML - לחלץ את המידע שאתה רוצה מהדף.</p>
+                    </li>
+
+                    <li>
+                        <div class="step-number">4</div>
+                        <div class="step-title">Pandas</div>
+                        <p>לניהול וניתוח הנתונים שאספת.</p>
+                    </li>
+
+                    <li>
+                        <div class="step-number">5</div>
+                        <div class="step-title">Selenium (מתקדם)</div>
+                        <p>לאתרים דינמיים עם JavaScript - יוצר דפדפן אוטומטי.</p>
+                    </li>
+                </ol>
+
+                <h3 style="margin: 2rem 0 1rem;">התקנה ראשונית (פעם אחת)</h3>
+                <div class="code-box">
+                    <div class="code-box-title">Terminal / CMD</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>pip install requests beautifulsoup4 pandas lxml selenium</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Basics Tab -->
+        <div class="tab-content" id="basics">
+            <div class="section">
+                <h2 class="section-title">🔧 יסודות Web Scraping</h2>
+                <p class="section-subtitle">תהליך עבודה שלב אחר שלב</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">שלב 1: לשלוח בקשה לאתר</h3>
+                <div class="code-box">
+                    <div class="code-box-title">Python - בקשה בסיסית</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>import requests
+
+# שליחת בקשה GET
+url = "https://example.com/products"
+response = requests.get(url)
+
+# בדיקת תקינות
+if response.status_code == 200:
+    print("הבקשה הצליחה!")
+    html_content = response.text
+else:
+    print(f"שגיאה: {response.status_code}")</pre>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">שלב 2: לנתח את ה-HTML</h3>
+                <div class="code-box">
+                    <div class="code-box-title">Python - ניתוח HTML</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>from bs4 import BeautifulSoup
+
+# יצירת soup object
+soup = BeautifulSoup(html_content, 'lxml')
+
+# מציאת אלמנטים
+# לפי תגית
+all_links = soup.find_all('a')
+
+# לפי class
+products = soup.find_all('div', class_='product')
+
+# לפי id
+main_content = soup.find(id='main-content')
+
+# CSS selector (מתקדם)
+prices = soup.select('.product .price')</pre>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">שלב 3: לחלץ מידע</h3>
+                <div class="code-box">
+                    <div class="code-box-title">Python - חילוץ מידע</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre># לחלץ טקסט
+product_name = soup.find('h2', class_='title').text.strip()
+
+# לחלץ attribute
+image_url = soup.find('img')['src']
+link = soup.find('a')['href']
+
+# לחלץ ממספר אלמנטים
+products = []
+for item in soup.find_all('div', class_='product'):
+    name = item.find('h3').text.strip()
+    price = item.find('span', class_='price').text.strip()
+    products.append({'name': name, 'price': price})
+
+print(products)</pre>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">שלב 4: לשמור את הנתונים</h3>
+                <div class="code-box">
+                    <div class="code-box-title">Python - שמירה ל-CSV</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>import pandas as pd
+
+# המרה ל-DataFrame
+df = pd.DataFrame(products)
+
+# שמירה ל-CSV
+df.to_csv('products.csv', index=False, encoding='utf-8-sig')
+print("הנתונים נשמרו בהצלחה!")</pre>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 טיפ חשוב: תמיד בדוק את structure ה-HTML!</div>
+                    <p>לפני שכותבים קוד, פתח את האתר בדפדפן → לחץ F12 → Inspect Element.</p>
+                    <p>זה יראה לך את ה-HTML ותוכל למצוא את ה-classes וה-tags הנכונים.</p>
+                </div>
+
+                <!-- טיזר 2 -->
+                <div style="background: #fff3cd; border-right: 4px solid #ffc107; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                    <h4 style="color: #856404; margin-bottom: 0.5rem;">⚠️ רגע, עצור!</h4>
+                    <p><strong>לפני שתמשיך...</strong> זכור שאתרים משתנים כל הזמן! הקוד שעובד היום עלול להפסיק לעבוד מחר אם האתר שינה את המבנה. תמיד בדוק ותתחזק את הקוד שלך!</p>
+                </div>
+            </div>
+
+            <!-- Complete Example -->
+            <div class="section">
+                <h2 class="section-title">📝 דוגמה מלאה - גריפת מחירי מוצר</h2>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python - סקריפט מלא</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import time
+
+def scrape_prices(search_term):
+    """
+    גורף מחירים מאתר דמה
+    """
+    # הוסף user agent (מתחזה לדפדפן רגיל)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    }
+    
+    url = f"https://example-shop.com/search?q={search_term}"
+    
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.content, 'lxml')
+        
+        results = []
+        products = soup.find_all('div', class_='product-item')
+        
+        for product in products:
+            name = product.find('h3', class_='product-name').text.strip()
+            price_text = product.find('span', class_='price').text.strip()
+            # נקה מחיר (הסר ₪, רווחים וכו')
+            price = float(price_text.replace('₪', '').replace(',', '').strip())
+            rating = product.find('span', class_='rating').text.strip()
+            link = product.find('a')['href']
+            
+            results.append({
+                'שם_מוצר': name,
+                'מחיר': price,
+                'דירוג': rating,
+                'קישור': link
+            })
+        
+        return results
+        
+    except Exception as e:
+        print(f"שגיאה: {e}")
+        return []
+
+# שימוש
+products = scrape_prices("brake pads toyota corolla")
+
+# המרה ל-DataFrame
+df = pd.DataFrame(products)
+
+# מיון לפי מחיר
+df = df.sort_values('מחיר')
+
+# הצגה
+print(df)
+
+# שמירה
+df.to_csv('brake_pads_prices.csv', index=False, encoding='utf-8-sig')
+
+# המחיר הזול ביותר
+cheapest = df.iloc[0]
+print(f"\nהזול ביותר: {cheapest['שם_מוצר']} - {cheapest['מחיר']} ₪")</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Automotive Examples Tab -->
+        <div class="tab-content" id="automotive">
+            <div class="section">
+                <h2 class="section-title">🚗 דוגמאות מעשיות - רכב</h2>
+                <p class="section-subtitle">5 תרחישים אמיתיים עם קוד מוכן לשימוש</p>
+
+                <!-- Example 1 -->
+                <h3 style="margin: 2rem 0 1rem; font-size: 1.5rem; color: var(--accent);">1. גריפת מחירי חלפים ממספר
+                    ספקים</h3>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import time
+
+def scrape_multiple_suppliers(part_name, car_model):
+    """
+    גורף מחירי חלק מספקים שונים
+    """
+    suppliers = {
+        'supplier_a': 'https://supplier-a.com/search',
+        'supplier_b': 'https://supplier-b.com/parts',
+        'supplier_c': 'https://supplier-c.com/catalog'
+    }
+    
+    all_results = []
+    
+    for supplier_name, base_url in suppliers.items():
+        try:
+            # הוסף delay בין בקשות (מנומס!)
+            time.sleep(2)
+            
+            url = f"{base_url}?part={part_name}&model={car_model}"
+            response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+            
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, 'lxml')
+                
+                # כאן תתאים את הסלקטורים לכל ספק
+                items = soup.find_all('div', class_='item')
+                
+                for item in items:
+                    name = item.find('h3').text.strip()
+                    price = float(item.find('span', class_='price').text.replace('₪', '').strip())
+                    stock = item.find('span', class_='stock').text.strip()
+                    
+                    all_results.append({
+                        'ספק': supplier_name,
+                        'שם_חלק': name,
+                        'מחיר': price,
+                        'מלאי': stock
+                    })
+            
+        except Exception as e:
+            print(f"שגיאה בגריפה מ-{supplier_name}: {e}")
+    
+    return pd.DataFrame(all_results)
+
+# שימוש
+df = scrape_multiple_suppliers("brake pads", "Toyota Corolla 2020")
+
+# מיון לפי מחיר
+df_sorted = df.sort_values('מחיר')
+
+print("=== השוואת מחירים ===")
+print(df_sorted)
+
+# סטטיסטיקות
+print(f"\nמחיר ממוצע: {df['מחיר'].mean():.2f} ₪")
+print(f"מחיר מינימלי: {df['מחיר'].min():.2f} ₪")
+print(f"מחיר מקסימלי: {df['מחיר'].max():.2f} ₪")
+print(f"הבדל: {df['מחיר'].max() - df['מחיר'].min():.2f} ₪")</pre>
+                </div>
+
+                <!-- Example 2 -->
+                <h3 style="margin: 2rem 0 1rem; font-size: 1.5rem; color: var(--accent);">2. איסוף ביקורות רכב לניתוח
+                </h3>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>from collections import Counter
+import re
+
+def scrape_car_reviews(car_model, max_pages=5):
+    """
+    אוסף ביקורות רכב ומנתח תלונות שכיחות
+    """
+    reviews = []
+    
+    for page in range(1, max_pages + 1):
+        url = f"https://car-reviews-site.com/{car_model}/reviews?page={page}"
+        
+        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+        soup = BeautifulSoup(response.content, 'lxml')
+        
+        review_elements = soup.find_all('div', class_='review')
+        
+        for review in review_elements:
+            rating = review.find('span', class_='rating').text
+            text = review.find('p', class_='review-text').text.strip()
+            pros = review.find('div', class_='pros').text.strip()
+            cons = review.find('div', class_='cons').text.strip()
+            
+            reviews.append({
+                'דירוג': rating,
+                'טקסט': text,
+                'יתרונות': pros,
+                'חסרונות': cons
+            })
+        
+        time.sleep(1)  # מנומס!
+    
+    return pd.DataFrame(reviews)
+
+def analyze_complaints(reviews_df):
+    """
+    מנתח תלונות שכיחות
+    """
+    # איחוד כל החסרונות
+    all_cons = ' '.join(reviews_df['חסרונות'].tolist())
+    
+    # מילות מפתח לחיפוש
+    keywords = ['רעש', 'צריכה', 'בלמים', 'מנוע', 'תקלה', 'אבזור', 'נוחות']
+    
+    keyword_count = {}
+    for keyword in keywords:
+        count = len(re.findall(keyword, all_cons, re.IGNORECASE))
+        keyword_count[keyword] = count
+    
+    # מיון לפי תדירות
+    sorted_complaints = sorted(keyword_count.items(), key=lambda x: x[1], reverse=True)
+    
+    print("\n=== תלונות שכיחות ===")
+    for complaint, count in sorted_complaints:
+        if count > 0:
+            print(f"{complaint}: {count} פעמים")
+    
+    return keyword_count
+
+# שימוש
+reviews = scrape_car_reviews("mazda-3-2021")
+complaints = analyze_complaints(reviews)
+
+# סיכום
+avg_rating = reviews['דירוג'].astype(float).mean()
+print(f"\nדירוג ממוצע: {avg_rating:.2f}/5")
+print(f"סה\"כ ביקורות: {len(reviews)}")</pre>
+                </div>
+
+                <!-- Example 3 -->
+                <h3 style="margin: 2rem 0 1rem; font-size: 1.5rem; color: var(--accent);">3. מעקב אחר מחירי רכבים יד
+                    שנייה</h3>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python - מעקב יומי</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>import datetime
+
+def track_car_prices(model, year, max_km):
+    """
+    עוקב אחרי מחירי רכבים יד שנייה
+    """
+    url = f"https://yad2.co.il/vehicles/cars?manufacturer={model}&year={year}&km={max_km}"
+    
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+    soup = BeautifulSoup(response.content, 'lxml')
+    
+    cars = []
+    listings = soup.find_all('div', class_='feeditem')
+    
+    for listing in listings:
+        try:
+            title = listing.find('span', class_='title').text.strip()
+            price = int(listing.find('span', class_='price').text.replace('₪', '').replace(',', '').strip())
+            year = listing.find('span', class_='year').text.strip()
+            km = int(listing.find('span', class_='km').text.replace(',', '').strip())
+            location = listing.find('span', class_='city').text.strip()
+            
+            cars.append({
+                'תאריך_סריקה': datetime.datetime.now().strftime('%Y-%m-%d'),
+                'כותרת': title,
+                'מחיר': price,
+                'שנה': year,
+                'קילומטראז': km,
+                'מיקום': location
+            })
+        except:
+            continue
+    
+    df = pd.DataFrame(cars)
+    
+    # שמירה עם תאריך
+    filename = f"car_prices_{datetime.datetime.now().strftime('%Y%m%d')}.csv"
+    df.to_csv(filename, index=False, encoding='utf-8-sig')
+    
+    # סטטיסטיקות
+    print(f"=== סריקה ביום {datetime.datetime.now().strftime('%d/%m/%Y')} ===")
+    print(f"נמצאו: {len(cars)} רכבים")
+    print(f"מחיר ממוצע: {df['מחיר'].mean():,.0f} ₪")
+    print(f"מחיר מינימלי: {df['מחיר'].min():,.0f} ₪")
+    print(f"מחיר מקסימלי: {df['מחיר'].max():,.0f} ₪")
+    
+    return df
+
+# שימוש יומי (הרץ עם cron/task scheduler)
+df = track_car_prices("Toyota", "2020", 100000)
+
+# מעקב אחר שינויים לאורך זמן
+# אפשר לטעון קבצים קודמים ולהשוות</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mechanical Examples Tab -->
+        <div class="tab-content" id="mechanical">
+            <div class="section">
+                <h2 class="section-title">⚙️ דוגמאות מעשיות - מכונות וציוד תעשייתי</h2>
+
+                <!-- Example 1 -->
+                <h3 style="margin: 2rem 0 1rem; font-size: 1.5rem; color: var(--accent);">1. השוואת מחירי כלי עבודה
+                    וציוד</h3>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>def scrape_tool_prices(tool_name):
+    """
+    גורף מחירי כלי עבודה מאתרים שונים
+    """
+    # דוגמה: השוואת מקדחות CNC
+    
+    sources = {
+        'aliexpress': f"https://aliexpress.com/wholesale?SearchText={tool_name}",
+        'amazon': f"https://amazon.com/s?k={tool_name}",
+        'ebay': f"https://ebay.com/sch/i.html?_nkw={tool_name}"
+    }
+    
+    results = []
+    
+    for source, url in sources.items():
+        time.sleep(2)
+        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+        soup = BeautifulSoup(response.content, 'lxml')
+        
+        # כל אתר יש structure שונה - צריך להתאים
+        if source == 'aliexpress':
+            items = soup.find_all('div', class_='product-item')
+            for item in items[:10]:  # רק 10 ראשונים
+                name = item.find('h3').text.strip()
+                price_usd = float(item.find('span', class_='price').text.replace('$', '').strip())
+                price_ils = price_usd * 3.7  # המרה בערך
+                
+                results.append({
+                    'מקור': source,
+                    'שם': name,
+                    'מחיר_USD': price_usd,
+                    'מחיר_ILS': round(price_ils, 2),
+                    'קישור': item.find('a')['href']
+                })
+    
+    df = pd.DataFrame(results)
+    df_sorted = df.sort_values('מחיר_ILS')
+    
+    return df_sorted
+
+# שימוש
+tools = scrape_tool_prices("cnc drill bit set")
+print(tools.head(10))</pre>
+                </div>
+
+                <!-- Example 2 -->
+                <h3 style="margin: 2rem 0 1rem; font-size: 1.5rem; color: var(--accent);">2. גריפת מפרטים טכניים של
+                    מכונות</h3>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>def scrape_machine_specs(machine_model):
+    """
+    אוסף מפרטים טכניים של מכונות
+    """
+    url = f"https://machinery-specs.com/{machine_model}"
+    
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+    soup = BeautifulSoup(response.content, 'lxml')
+    
+    specs = {}
+    
+    # מציאת טבלת מפרטים
+    spec_table = soup.find('table', class_='specifications')
+    
+    if spec_table:
+        rows = spec_table.find_all('tr')
+        for row in rows:
+            cols = row.find_all('td')
+            if len(cols) == 2:
+                key = cols[0].text.strip()
+                value = cols[1].text.strip()
+                specs[key] = value
+    
+    # תמונות
+    images = []
+    img_elements = soup.find_all('img', class_='product-image')
+    for img in img_elements:
+        images.append(img['src'])
+    
+    # מחיר
+    price_element = soup.find('span', class_='price')
+    price = price_element.text.strip() if price_element else 'N/A'
+    
+    result = {
+        'דגם': machine_model,
+        'מפרטים': specs,
+        'תמונות': images,
+        'מחיר': price
+    }
+    
+    return result
+
+# שימוש
+machine = scrape_machine_specs("DMG-MORI-NLX2500")
+
+print(f"דגם: {machine['דגם']}")
+print("\nמפרטים:")
+for key, value in machine['מפרטים'].items():
+    print(f"  {key}: {value}")
+print(f"\nמחיר: {machine['מחיר']}")</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Tab -->
+        <div class="tab-content" id="advanced">
+            <div class="section">
+                <h2 class="section-title">🚀 טכניקות מתקדמות</h2>
+
+                <h3 style="margin: 1.5rem 0 1rem;">1. Selenium - לאתרים דינמיים</h3>
+                <p>אתרים רבים משתמשים ב-JavaScript לטעינת תוכן. Selenium פותח דפדפן אמיתי.</p>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python - Selenium</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# הגדרת דפדפן
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')  # רץ ברקע
+driver = webdriver.Chrome(options=options)
+
+# פתיחת עמוד
+driver.get("https://dynamic-website.com/products")
+
+# המתנה לטעינת אלמנט ספציפי
+wait = WebDriverWait(driver, 10)
+products = wait.until(
+    EC.presence_of_all_elements_located((By.CLASS_NAME, "product-item"))
+)
+
+# חילוץ מידע
+results = []
+for product in products:
+    name = product.find_element(By.CLASS_NAME, "name").text
+    price = product.find_element(By.CLASS_NAME, "price").text
+    results.append({'name': name, 'price': price})
+
+driver.quit()
+
+print(results)</pre>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">2. Rate Limiting - להיות מנומס</h3>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python - Rate Limiting</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>import time
+from ratelimit import limits, sleep_and_retry
+
+# מגביל ל-10 בקשות לדקה
+@sleep_and_retry
+@limits(calls=10, period=60)
+def make_request(url):
+    return requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+
+# שימוש
+urls = ['url1', 'url2', 'url3', ...]
+for url in urls:
+    response = make_request(url)
+    # עיבוד...</pre>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">3. Error Handling - טיפול בשגיאות</h3>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>def safe_scrape(url, max_retries=3):
+    """
+    גריפה עם retry אוטומטי
+    """
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            return response
+        
+        except requests.exceptions.Timeout:
+            print(f"Timeout - ניסיון {attempt + 1}/{max_retries}")
+            time.sleep(2 ** attempt)  # exponential backoff
+        
+        except requests.exceptions.HTTPError as e:
+            print(f"HTTP Error: {e}")
+            break
+        
+        except Exception as e:
+            print(f"שגיאה: {e}")
+            break
+    
+    return None</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legal Tab -->
+        <div class="tab-content" id="legal">
+            <div class="section">
+                <h2 class="section-title">⚖️ חוקיות ואתיקה</h2>
+
+                <div class="info-box warning">
+                    <div class="info-box-title">⚠️ חשוב מאוד לקרוא!</div>
+                    <p>Web Scraping הוא <strong>חוקי</strong>, אבל יש כללים שחובה לעקוב אחריהם.</p>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">מה מותר ומה אסור?</h3>
+
+                <ul class="feature-list">
+                    <li><strong>מותר:</strong> לגרוף מידע פומבי (מחירים, מפרטים, ביקורות)</li>
+                    <li><strong>מותר:</strong> לגרוף למטרות מחקר אישי וניתוח</li>
+                    <li><strong>מותר:</strong> לגרוף אתרים שאין להם robots.txt שאוסר</li>
+                    <li><strong>אסור:</strong> לגרוף מידע אישי (אימיילים, טלפונים של אנשים פרטיים)</li>
+                    <li><strong>אסור:</strong> להציף שרת בבקשות (DDoS בטעות)</li>
+                    <li><strong>אסור:</strong> לעקוף מנגנוני הגנה (CAPTCHA, login)</li>
+                    <li><strong>אסור:</strong> להפר זכויות יוצרים (לגרוף תוכן ולפרסם כשלך)</li>
+                </ul>
+
+                <h3 style="margin: 2rem 0 1rem;">robots.txt - מה זה?</h3>
+                <p>קובץ robots.txt מגדיר אילו חלקים של האתר מותרים לגריפה.</p>
+
+                <div class="code-box">
+                    <div class="code-box-title">Python - בדיקת robots.txt</div>
+                    <button class="copy-code-btn" onclick="copyCode(this)">📋 העתק</button>
+                    <pre>from urllib.robotparser import RobotFileParser
+
+def can_scrape(url):
+    """
+    בודק אם מותר לגרוף URL
+    """
+    rp = RobotFileParser()
+    rp.set_url("https://example.com/robots.txt")
+    rp.read()
+    
+    return rp.can_fetch("*", url)
+
+# שימוש
+if can_scrape("https://example.com/products"):
+    print("מותר לגרוף!")
+else:
+    print("אסור לגרוף!")</pre>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Best Practices</h3>
+
+                <div class="example-grid">
+                    <div class="example-card">
+                        <div class="example-card-title">⏱️ Rate Limiting</div>
+                        <p>תמיד הוסף delay בין בקשות (1-3 שניות לפחות)</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-card-title">🤖 User Agent</div>
+                        <p>זהה את עצמך בצורה כנה ב-User-Agent header</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-card-title">🕐 שעות פעילות</div>
+                        <p>הרץ scraping בשעות לא עמוסות (לילה/סופ"ש)</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-card-title">💾 Cache</div>
+                        <p>שמור תוצאות ולא תבקש אותו מידע פעמיים</p>
+                    </div>
+                </div>
+
+                <div class="info-box danger">
+                    <div class="info-box-title">🚨 לא משפטן? התייעץ!</div>
+                    <p>אם אתה מתכנן scraping מסחרי או בקנה מידה גדול - <strong>התייעץ עם עורך דין</strong>.</p>
+                    <p>המידע כאן הוא כללי בלבד ולא מהווה ייעוץ משפטי.</p>
+                </div>
+            </div>
+        </div>
+        <!-- טיזר 3 -->
+        <div style="background: #f3e5f5; border-right: 4px solid #6f42c1; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+            <h4 style="color: #6f42c1; margin-bottom: 0.5rem;">🤫 סוד קטן</h4>
+            <p><strong>ניסית פעם...?</strong> להוסיף <code>time.sleep(random.uniform(1, 3))</code> במקום <code>time.sleep(2)</code>? זה עושה delay אקראי שנראה יותר "אנושי" ופחות חשוד לשרתים!</p>
+        </div>
+
+        <!-- מסקנות ויישום מעשי -->
+        <div class="section" style="background: linear-gradient(135deg, var(--accent) 0%, #059669 100%); color: white;">
+            <h2 style="color: white; border-right: 4px solid white;">🎯 מסקנות ויישום מעשי</h2>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                <h3 style="color: white; margin-bottom: 1rem;">✅ מה למדנו היום?</h3>
+                <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><strong>Web Scraping זה כוח-על</strong> - אוטומציה של איסוף מידע</li>
+                    <li><strong>Python + Beautiful Soup</strong> - הכלים הבסיסיים שצריך</li>
+                    <li><strong>יישומים מעשיים</strong> - מחירים, מפרטים, ביקורות</li>
+                    <li><strong>אחריות וחוקיות</strong> - איך לעשות את זה נכון</li>
+                    <li><strong>טכניקות מתקדמות</strong> - Selenium, Rate Limiting, Error Handling</li>
+                </ul>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">🚀 איך להמשיך להתפתח?</h3>
+                    <ol style="margin-right: 1.5rem; line-height: 1.6;">
+                        <li><strong>תרגול מעשי</strong> - התחל עם אתר פשוט</li>
+                        <li><strong>למד Selenium</strong> - לאתרים דינמיים</li>
+                        <li><strong>בנה פרויקטים</strong> - מעקב מחירים, ניתוח שוק</li>
+                        <li><strong>למד APIs</strong> - לפעמים יש דרך קלה יותר</li>
+                        <li><strong>שלב עם AI</strong> - ChatGPT לניתוח הנתונים</li>
+                    </ol>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">⚠️ טעויות נפוצות להימנע מהן</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.6;">
+                        <li><strong>לא לבדוק robots.txt</strong> - תמיד בדוק קודם</li>
+                        <li><strong>בקשות מהירות מדי</strong> - תוסיף delay!</li>
+                        <li><strong>לא לטפל בשגיאות</strong> - האינטרנט לא מושלם</li>
+                        <li><strong>קוד לא גמיש</strong> - אתרים משתנים</li>
+                        <li><strong>התעלמות מחוקיות</strong> - עשה את זה נכון</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- משימות לשבוע הקרוב -->
+        <div class="section">
+            <h2 class="section-title">📋 משימות לשבוע הקרוב</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                <div style="background: #e8f5e9; border: 2px solid #28a745; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #155724; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🎯</span> רמה בסיסית (מתחילים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>התקן Python ו-Beautiful Soup</li>
+                        <li>נסה את הדוגמה הבסיסית מהמדריך</li>
+                        <li>גרוף מחירים מאתר פשוט (כמו quotes.toscrape.com)</li>
+                        <li>שמור את התוצאות ל-CSV</li>
+                        <li>למד F12 Developer Tools בדפדפן</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #004085; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>⚡</span> רמה מתקדמת (מנוסים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>בנה scraper למעקב מחירי חלפים</li>
+                        <li>התקן Selenium ונסה אתר דינמי</li>
+                        <li>צור מערכת התראות על שינוי מחירים</li>
+                        <li>למד על APIs כחלופה ל-scraping</li>
+                        <li>שלב עם ניתוח נתונים - <a href="data_analysis_guide.html" style="color: var(--accent);">עבור למדריך ניתוח נתונים</a></li>
+                        <li>בנה dashboard עם הנתונים שאספת</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- טיזר 4 -->
+            <div style="background: #e1f5fe; border-right: 4px solid #03a9f4; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+                <h4 style="color: #0277bd; margin-bottom: 0.5rem;">😎 בונוס</h4>
+                <p><strong>תרגיל קטן:</strong> נסה לגרוף את מחירי הדלק מאתר דלק ישראל ולעקוב אחר השינויים. זה מעשי ומעניין לכל נהג!</p>
+            </div>
+        </div>
+
+        <!-- קריאה לפעולה חזקה -->
+        <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+            <h2 style="color: white; border-right: 4px solid white;">🚀 הפוך לאמן Web Scraping</h2>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🌐</div>
+                <p style="font-size: 1.2rem; margin: 1.5rem 0;">
+                    <strong>כל המידע באינטרנט זמין לך - רק צריך לדעת איך לגשת אליו</strong><br>
+                    התחל עכשיו ותהיה המהנדס שיודע להפיק תובנות מכל מקום!
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <a href="python_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</span>
+                    <strong>Python מתקדם</strong>
+                    <span style="font-size: 0.9rem;">חזק את הבסיס</span>
+                </a>
+
+                <a href="data_analysis_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📊</span>
+                    <strong>ניתוח נתונים</strong>
+                    <span style="font-size: 0.9rem;">נתח מה שגרפת</span>
+                </a>
+
+                <a href="chatgpt_guide.html" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</span>
+                    <strong>ChatGPT</strong>
+                    <span style="font-size: 0.9rem;">AI לעזרה בקוד</span>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-size: 1rem; opacity: 0.9;">
+                    💡 <strong>זכור:</strong> עם Web Scraping אתה לא מוגבל למה שהאתרים רוצים להראות לך - אתה שולט במידע!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Tab Switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Copy Code
+        function copyCode(button) {
+            const codeBox = button.parentElement;
+            const code = codeBox.querySelector('pre').textContent;
+
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✓ הועתק!';
+                button.style.background = 'var(--success)';
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = 'var(--primary)';
+                }, 2000);
+            });
+        }
+
+        // Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+    </script>
+    <footer class="global-footer">
+        <div class="footer-content">
+            <h4>פורטל חומרי למידה</h4>
+            <p class="footer-desc">מרכז ידע לסטודנטים: מדריכים, דוגמאות קוד, וכלים לשימוש ב-AI ומדעי הנתונים.</p>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">דף הבית</a>
+                <a href="categories.html" class="footer-link">קטגוריות</a>
+                <a href="#" class="footer-link">אודות</a>
+                <a href="#" class="footer-link">צור קשר</a>
+            </div>
+            <div class="copyright">
+                © 2025 נבנה ע"י יעקב בידני | כל הזכויות שמורות
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

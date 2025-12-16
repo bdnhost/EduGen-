@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <style> .label{font-family:Arial, Helvetica, sans-serif; font-size:14px; fill:#222;} .small{font-size:12px; fill:#444} </style>
+  <rect x="20" y="40" width="260" height="220" rx="10" fill="#f7f9fb" stroke="#cfd8dc" />
+  <text x="150" y="60" text-anchor="middle" class="label">Arduino / ESP32 (Example)</text>
+  <!-- Pins -->
+  <circle cx="110" cy="120" r="6" fill="#90a4ae" />
+  <text x="130" y="124" class="small">GND</text>
+  <circle cx="110" cy="160" r="6" fill="#ffab91" />
+  <text x="130" y="164" class="small">5V / 3.3V</text>
+  <circle cx="110" cy="200" r="6" fill="#81c784" />
+  <text x="130" y="204" class="small">D2 (DATA)</text>
+
+  <!-- DHT22 -->
+  <rect x="380" y="90" width="120" height="120" rx="8" fill="#fff3e0" stroke="#ffcc80" />
+  <text x="440" y="110" text-anchor="middle" class="label">DHT22</text>
+  <text x="440" y="132" text-anchor="middle" class="small">VCC • DATA • GND</text>
+
+  <!-- Wires -->
+  <line x1="116" y1="160" x2="380" y2="130" stroke="#ffab91" stroke-width="3" />
+  <line x1="116" y1="200" x2="380" y2="170" stroke="#81c784" stroke-width="3" />
+  <line x1="116" y1="120" x2="380" y2="100" stroke="#90a4ae" stroke-width="3" />
+
+  <text x="400" y="210" class="small">VCC → 5V (או 3.3V לפי חיישן)</text>
+  <text x="400" y="226" class="small">DATA → דיגיטל 2 (עם pull-up 10K)</text>
+  <text x="400" y="242" class="small">GND → GND</text>
+
+  <!-- Footer note -->
+  <text x="20" y="320" class="small">תמונה פשוטה להמחשה בלבד — בדקו דפי המוצר עבור חיווט מדויק.</text>
+</svg>

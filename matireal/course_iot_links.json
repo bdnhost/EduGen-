@@ -1,0 +1,30 @@
+{
+  "syllabus_pdf": "https://edu-manage.org/courses/iot-master-2025/assets/course_iot_syllabus.pdf",
+  "slides_pptx": "https://edu-manage.org/courses/iot-master-2025/assets/course_iot_master_slides.pptx",
+  "session_pdfs": {
+    "s1": {
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח",
+      "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s1_outline.pdf"
+    },
+    "s2": {
+      "title": "מפגש 2: חומרה וחיווט",
+      "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s2_outline.pdf"
+    },
+    "s3": {
+      "title": "מפגש 3: קושחה מודולרית",
+      "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s3_outline.pdf"
+    },
+    "s4": {
+      "title": "מפגש 4: איסוף נתונים ו-visualization",
+      "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s4_outline.pdf"
+    },
+    "s5": {
+      "title": "מפגש 5: פרוטוקולים ואבטחה",
+      "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s5_outline.pdf"
+    },
+    "s6": {
+      "title": "מפגש 6: פרויקט גמר והצגות",
+      "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s6_outline.pdf"
+    }
+  }
+}

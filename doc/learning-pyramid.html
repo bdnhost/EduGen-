@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פירמידת הלמידה - Learning Pyramid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+        
+        .pyramid {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin: 30px 0;
+        }
+        
+        .pyramid-level {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pyramid-level::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            transition: width 0.3s ease;
+        }
+        
+        .pyramid-level:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .level-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .level-info {
+            flex: 1;
+        }
+        
+        .level-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .level-description {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .retention-rate {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            min-width: 80px;
+            text-align: left;
+        }
+        
+        /* Different widths for pyramid effect */
+        .level-1 { 
+            width: 100%; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .level-2 { 
+            width: 95%; 
+            margin: 0 auto;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .level-3 { 
+            width: 90%; 
+            margin: 0 auto;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .level-4 { 
+            width: 85%; 
+            margin: 0 auto;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        .level-5 { 
+            width: 80%; 
+            margin: 0 auto;
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        .level-6 { 
+            width: 75%; 
+            margin: 0 auto;
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        .level-7 { 
+            width: 70%; 
+            margin: 0 auto;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .recommendations {
+            margin-top: 40px;
+            padding: 25px;
+            background: #f7fafc;
+            border-radius: 15px;
+            border-right: 5px solid #667eea;
+        }
+        
+        .recommendations h2 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .recommendation-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        
+        .recommendation-item:hover {
+            transform: translateX(-3px);
+        }
+        
+        .recommendation-icon {
+            font-size: 1.5rem;
+            margin-left: 15px;
+        }
+        
+        .recommendation-text {
+            flex: 1;
+        }
+        
+        .recommendation-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .recommendation-desc {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .level-title {
+                font-size: 1rem;
+            }
+            
+            .retention-rate {
+                font-size: 1.5rem;
+            }
+            
+            .pyramid-level {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 פירמידת הלמידה</h1>
+        <p class="subtitle">אחוזי זכירה לפי שיטת הוראה (מקור: National Training Laboratories)</p>
+        
+        <div class="pyramid">
+            <div class="pyramid-level level-1">
+                <div class="level-content">
+                    <div class="level-info">
+                        <div class="level-title">🎤 הרצאה (Lecture)</div>
+                        <div class="level-description">האזנה פסיבית, אין אינטראקציה</div>
+                    </div>
+                    <div class="retention-rate">5%</div>
+                </div>
+            </div>
+            
+            <div class="pyramid-level level-2">
+                <div class="level-content">
+                    <div class="level-info">
+                        <div class="level-title">📖 קריאה (Reading)</div>
+                        <div class="level-description">למידה עצמאית מטקסט</div>
+                    </div>
+                    <div class="retention-rate">10%</div>
+                </div>
+            </div>
+            
+            <div class="pyramid-level level-3">
+                <div class="level-content">
+                    <div class="level-info">
+                        <div class="level-title">🎬 אודיו-ויזואלי</div>
+                        <div class="level-description">וידאו, אנימציות, מצגות</div>
+                    </div>
+                    <div class="retention-rate">20%</div>
+                </div>
+            </div>
+            
+            <div class="pyramid-level level-4">
+                <div class="level-content">
+                    <div class="level-info">
+                        <div class="level-title">💡 הדגמה (Demonstration)</div>
+                        <div class="level-description">הצגה מעשית של התהליך</div>
+                    </div>
+                    <div class="retention-rate">30%</div>
+                </div>
+            </div>
+            
+            <div class="pyramid-level level-5">
+                <div class="level-content">
+                    <div class="level-info">
+                        <div class="level-title">💬 דיון קבוצתי</div>
+                        <div class="level-description">שיתוף פעולה ודיאלוג</div>
+                    </div>
+                    <div class="retention-rate">50%</div>
+                </div>
+            </div>
+            
+            <div class="pyramid-level level-6">
+                <div class="level-content">
+                    <div class="level-info">
+                        <div class="level-title">🔧 תרגול מעשי</div>
+                        <div class="level-description">Learning by doing</div>
+                    </div>
+                    <div class="retention-rate">75%</div>
+                </div>
+            </div>
+            
+            <div class="pyramid-level level-7">
+                <div class="level-content">
+                    <div class="level-info">
+                        <div class="level-title">👨‍🏫 הוראת אחרים</div>
+                        <div class="level-description">הסבר והדגמה למישהו אחר</div>
+                    </div>
+                    <div class="retention-rate">90%</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="recommendations">
+            <h2>💡 המלצות ליישום במערכת LMS</h2>
+            
+            <div class="recommendation-item">
+                <div class="recommendation-icon">🎯</div>
+                <div class="recommendation-text">
+                    <div class="recommendation-title">שלב מספר מודליות</div>
+                    <div class="recommendation-desc">אל תסתמך רק על וידאו או טקסט - שלב הדגמות, תרגולים ודיונים</div>
+                </div>
+            </div>
+            
+            <div class="recommendation-item">
+                <div class="recommendation-icon">⚡</div>
+                <div class="recommendation-text">
+                    <div class="recommendation-title">תרגול מיידי אחרי למידה</div>
+                    <div class="recommendation-desc">תוך 5-10 דקות מצפייה בחומר - הוסף תרגיל מעשי</div>
+                </div>
+            </div>
+            
+            <div class="recommendation-item">
+                <div class="recommendation-icon">👥</div>
+                <div class="recommendation-text">
+                    <div class="recommendation-title">למידה חברתית</div>
+                    <div class="recommendation-desc">פורומים, peer review, ותרגילי צוות מגבירים שימור</div>
+                </div>
+            </div>
+            
+            <div class="recommendation-item">
+                <div class="recommendation-icon">🔄</div>
+                <div class="recommendation-text">
+                    <div class="recommendation-title">חזרה מרווחת (Spaced Repetition)</div>
+                    <div class="recommendation-desc">חזור על חומר קריטי במרווחי זמן: 1 יום, 3 ימים, שבוע, חודש</div>
+                </div>
+            </div>
+            
+            <div class="recommendation-item">
+                <div class="recommendation-icon">🎓</div>
+                <div class="recommendation-text">
+                    <div class="recommendation-title">הפוך סטודנטים למורים</div>
+                    <div class="recommendation-desc">פרויקטים שבהם מסבירים לאחרים = שימור של 90%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

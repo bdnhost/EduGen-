@@ -1,0 +1,43 @@
+/* c:/Users/User/Desktop/matireal/course_dashboard.css */
+
+#main_container {
+    padding: 1 2;
+    layout: vertical;
+    overflow-y: auto;
+}
+
+.group_header {
+    background: $primary-background-darken-2;
+    color: $text;
+    padding: 1;
+    margin-top: 2;
+    text-style: bold;
+    text-align: center;
+}
+
+Input {
+    margin: 1 0;
+}
+
+Select {
+    width: 100%;
+    margin: 1 0;
+}
+
+Button {
+    width: 100%;
+    margin-top: 2;
+}
+
+.log {
+    margin-top: 1;
+    padding: 1;
+    height: 3;
+    border: tall $background;
+    text-align: center;
+    content-align: center middle;
+}
+
+.log.success { border: tall $success; color: $success; }
+.log.error { border: tall $error; color: $error; }
+.log.info { border: tall $primary; color: $primary; }

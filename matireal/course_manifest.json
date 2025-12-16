@@ -1,0 +1,159 @@
+{
+  "course": {
+    "id": "IOT-MASTER-2025",
+    "name": "🚀 IoT ואוטומציה למהנדסים — Masterpiece",
+    "description": "קורס מעמיק פרקטי+תאורטי ליצירת מוצרי IoT מאובטחים ומוכנים לפריסה.",
+    "syllabus_pdf": {
+      "path": "course_iot_syllabus.pdf",
+      "url": "https://edu-manage.org/courses/iot-master-2025/assets/course_iot_syllabus.pdf",
+      "purpose": "Main course syllabus document",
+      "pedagogical_role": "Overview of course structure, sessions, and objectives"
+    },
+    "slides": {
+      "path": "course_iot_master_slides.pptx",
+      "url": "https://edu-manage.org/courses/iot-master-2025/assets/course_iot_master_slides.pptx",
+      "purpose": "Presentation slides for classroom instruction",
+      "pedagogical_role": "Visual support for lectures and discussions"
+    }
+  },
+  "sessions": [
+    {
+      "id": "s1",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח",
+      "objectives": [
+        "הגדירו MVP ו- success criteria",
+        "הקימו סביבת פיתוח (PlatformIO/Arduino IDE)",
+        "הבינו ארכיטקטורת IoT בסיסית"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "session_outline_pdf": {
+          "path": "session_pdfs_linked\\session_s1_outline.pdf",
+          "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s1_outline.pdf",
+          "purpose": "Detailed outline for this specific session",
+          "pedagogical_role": "Guide for instructors and reference for students"
+        }
+      },
+      "pedagogical_sequence": "Session s1 of 6"
+    },
+    {
+      "id": "s2",
+      "title": "מפגש 2: חומרה וחיווט",
+      "objectives": [
+        "חיבור חיישנים אנלוגיים ודיגיטליים",
+        "הבנת ADC וסינון אותות",
+        "הכנת BOM בסיסי ותיעוד חיבור"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "session_outline_pdf": {
+          "path": "session_pdfs_linked\\session_s2_outline.pdf",
+          "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s2_outline.pdf",
+          "purpose": "Detailed outline for this specific session",
+          "pedagogical_role": "Guide for instructors and reference for students"
+        }
+      },
+      "pedagogical_sequence": "Session s2 of 6"
+    },
+    {
+      "id": "s3",
+      "title": "מפגש 3: קושחה מודולרית",
+      "objectives": [
+        "מבנה מודולארי של קוד",
+        "הטמעת power management",
+        "הטמעת logging ו-OTA"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "session_outline_pdf": {
+          "path": "session_pdfs_linked\\session_s3_outline.pdf",
+          "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s3_outline.pdf",
+          "purpose": "Detailed outline for this specific session",
+          "pedagogical_role": "Guide for instructors and reference for students"
+        }
+      },
+      "pedagogical_sequence": "Session s3 of 6"
+    },
+    {
+      "id": "s4",
+      "title": "מפגש 4: איסוף נתונים ו-visualization",
+      "objectives": [
+        "בניית pipeline real-time",
+        "יישום smoothing ו-alerting",
+        "הסכמה על פורמט נתונים לשמירה"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "session_outline_pdf": {
+          "path": "session_pdfs_linked\\session_s4_outline.pdf",
+          "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s4_outline.pdf",
+          "purpose": "Detailed outline for this specific session",
+          "pedagogical_role": "Guide for instructors and reference for students"
+        }
+      },
+      "pedagogical_sequence": "Session s4 of 6"
+    },
+    {
+      "id": "s5",
+      "title": "מפגש 5: פרוטוקולים ואבטחה",
+      "objectives": [
+        "עיצוב MQTT topics ותכנון QoS",
+        "הטמעת TLS/provisioning בסיסי",
+        "ביצוע threat model פשוט"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "session_outline_pdf": {
+          "path": "session_pdfs_linked\\session_s5_outline.pdf",
+          "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s5_outline.pdf",
+          "purpose": "Detailed outline for this specific session",
+          "pedagogical_role": "Guide for instructors and reference for students"
+        }
+      },
+      "pedagogical_sequence": "Session s5 of 6"
+    },
+    {
+      "id": "s6",
+      "title": "מפגש 6: פרויקט גמר והצגות",
+      "objectives": [
+        "הצגת פרוטוטייפ עובד",
+        "peer review ושיפור מהיר",
+        "הגשת deliverables: repo, demo video, report"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "session_outline_pdf": {
+          "path": "session_pdfs_linked\\session_s6_outline.pdf",
+          "url": "https://edu-manage.org/courses/iot-master-2025/assets/session_pdfs_linked/session_s6_outline.pdf",
+          "purpose": "Detailed outline for this specific session",
+          "pedagogical_role": "Guide for instructors and reference for students"
+        }
+      },
+      "pedagogical_sequence": "Session s6 of 6"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "proj_final",
+      "title": "פרויקט גמר: יישום מעשי",
+      "description": "בנו פרוטוטייפ עובד המיישם את עקרונות המדריך והציגו demo קצר.",
+      "session_id": "s6",
+      "due_in_weeks": 6,
+      "weight": 80,
+      "rubric": {
+        "technical": 50,
+        "demo": 20,
+        "security": 15,
+        "docs": 10,
+        "presentation": 5
+      },
+      "resources": {
+        "related_slides": {
+          "url": "https://edu-manage.org/courses/iot-master-2025/assets/course_iot_master_slides.pptx",
+          "reference": "See project slide in presentation"
+        }
+      },
+      "pedagogical_note": "Final project integrates concepts from all sessions"
+    }
+  ]
+}

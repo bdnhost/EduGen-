@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניהול עומס קוגניטיבי - Cognitive Load Theory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 40px;
+        }
+        
+        .load-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .load-card {
+            padding: 25px;
+            border-radius: 15px;
+            border-right: 5px solid;
+            transition: transform 0.3s ease;
+        }
+        
+        .load-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .intrinsic {
+            background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
+            border-right-color: #667eea;
+        }
+        
+        .extraneous {
+            background: linear-gradient(135deg, #f0937922 0%, #f5576c22 100%);
+            border-right-color: #f5576c;
+        }
+        
+        .germane {
+            background: linear-gradient(135deg, #43e97b22 0%, #38f9d722 100%);
+            border-right-color: #43e97b;
+        }
+        
+        .load-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .load-icon {
+            font-size: 1.8rem;
+        }
+        
+        .load-description {
+            color: #4a5568;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .load-examples {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .example-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .example-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+        
+        .example-item:last-child {
+            border-bottom: none;
+        }
+        
+        .strategies {
+            margin-top: 40px;
+        }
+        
+        .strategies h2 {
+            color: #2d3748;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .strategy-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid #667eea;
+        }
+        
+        .strategy-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .strategy-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .strategy-desc {
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .visual-meter {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f7fafc;
+            border-radius: 15px;
+        }
+        
+        .meter-title {
+            text-align: center;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .meter-bars {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .meter-bar {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .bar-label {
+            font-size: 0.85rem;
+            color: #4a5568;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .bar-visual {
+            height: 200px;
+            background: white;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .bar-fill {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transition: height 0.5s ease;
+        }
+        
+        .good-fill {
+            background: linear-gradient(to top, #43e97b, #38f9d7);
+        }
+        
+        .bad-fill {
+            background: linear-gradient(to top, #f5576c, #f093fb);
+        }
+        
+        .bar-percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .meter-bars {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 ניהול עומס קוגניטיבי</h1>
+        <p class="subtitle">Cognitive Load Theory - המפתח להגשת תכנים אפקטיבית</p>
+        
+        <div class="load-types">
+            <div class="load-card intrinsic">
+                <div class="load-title">
+                    <span class="load-icon">📚</span>
+                    <span>Intrinsic Load<br/><small>(עומס מהותי)</small></span>
+                </div>
+                <div class="load-description">
+                    המורכבות הטבעית של החומר עצמו. לא ניתן להקטין אותו - זה קשור לתוכן.
+                </div>
+                <div class="load-examples">
+                    <div class="example-title">דוגמאות:</div>
+                    <div class="example-item">
+                        <span>✓</span>
+                        <span>למידת תחביר של שפת תכנות</span>
+                    </div>
+                    <div class="example-item">
+                        <span>✓</span>
+                        <span>הבנת משוואות מתמטיות מורכבות</span>
+                    </div>
+                    <div class="example-item">
+                        <span>✓</span>
+                        <span>שפה זרה - דקדוק וסינטקס</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-card extraneous">
+                <div class="load-title">
+                    <span class="load-icon">❌</span>
+                    <span>Extraneous Load<br/><small>(עומס זר/מיותר)</small></span>
+                </div>
+                <div class="load-description">
+                    עומס שנוצר מאופן ההצגה הלא אפקטיבי. <strong>זה מה שאנחנו רוצים למזער!</strong>
+                </div>
+                <div class="load-examples">
+                    <div class="example-title">דוגמאות לבעיות:</div>
+                    <div class="example-item">
+                        <span>✗</span>
+                        <span>טקסט קטן מדי או צפוף</span>
+                    </div>
+                    <div class="example-item">
+                        <span>✗</span>
+                        <span>מוזיקת רקע מסיחה</span>
+                    </div>
+                    <div class="example-item">
+                        <span>✗</span>
+                        <span>ניווט מבלבל במערכת</span>
+                    </div>
+                    <div class="example-item">
+                        <span>✗</span>
+                        <span>אנימציות מיותרות</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-card germane">
+                <div class="load-title">
+                    <span class="load-icon">✨</span>
+                    <span>Germane Load<br/><small>(עומס רלוונטי)</small></span>
+                </div>
+                <div class="load-description">
+                    המאמץ המושקע ביצירת סכמות והבנה עמוקה. <strong>זה מה שאנחנו רוצים למקסם!</strong>
+                </div>
+                <div class="load-examples">
+                    <div class="example-title">איך יוצרים:</div>
+                    <div class="example-item">
+                        <span>✓</span>
+                        <span>דוגמאות מעשיות רלוונטיות</span>
+                    </div>
+                    <div class="example-item">
+                        <span>✓</span>
+                        <span>קישור לידע קיים</span>
+                    </div>
+                    <div class="example-item">
+                        <span>✓</span>
+                        <span>תרגול והסבר למישהו אחר</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="visual-meter">
+            <div class="meter-title">📊 השוואה: הגשת תוכן גרועה vs מצוינת</div>
+            <div class="meter-bars">
+                <div class="meter-bar">
+                    <div class="bar-label">❌ הגשה גרועה</div>
+                    <div class="bar-visual">
+                        <div class="bar-fill bad-fill" style="height: 80%"></div>
+                        <div class="bar-percentage">80%<br/><small style="font-size: 0.7rem;">עומס מיותר</small></div>
+                    </div>
+                </div>
+                
+                <div class="meter-bar">
+                    <div class="bar-label">⚠️ הגשה סבירה</div>
+                    <div class="bar-visual">
+                        <div class="bar-fill bad-fill" style="height: 40%"></div>
+                        <div class="bar-percentage">40%<br/><small style="font-size: 0.7rem;">עומס מיותר</small></div>
+                    </div>
+                </div>
+                
+                <div class="meter-bar">
+                    <div class="bar-label">✅ הגשה מצוינת</div>
+                    <div class="bar-visual">
+                        <div class="bar-fill good-fill" style="height: 85%"></div>
+                        <div class="bar-percentage">85%<br/><small style="font-size: 0.7rem;">למידה אפקטיבית</small></div>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; color: #4a5568; margin-top: 15px;">
+                <strong>המטרה:</strong> להקטין עומס מיותר ולהגדיל למידה רלוונטית
+            </p>
+        </div>
+        
+        <div class="strategies">
+            <h2>🎯 12 אסטרטגיות מעשיות להקטנת עומס</h2>
+            
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-number">1</div>
+                    <div class="strategy-title">Chunking</div>
+                    <div class="strategy-desc">חלק תוכן למקטעים של 5-7 דקות. זיכרון העבודה שלנו מוגבל ל-7±2 אלמנטים.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">2</div>
+                    <div class="strategy-title">Progressive Disclosure</div>
+                    <div class="strategy-desc">חשוף מידע בהדרגה, לא הכל בבת אחת. הצג רק מה שרלוונטי לשלב הנוכחי.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">3</div>
+                    <div class="strategy-title">Worked Examples</div>
+                    <div class="strategy-desc">הצג פתרון מלא לפני תרגול עצמאי. זה מקטין מאמץ ומגדיל למידה.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">4</div>
+                    <div class="strategy-title">Dual Coding</div>
+                    <div class="strategy-desc">שלב חזותי + מילולי. תמונה + הסבר = זיכרון טוב יותר מאחד מהם בלבד.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">5</div>
+                    <div class="strategy-title">Signaling</div>
+                    <div class="strategy-desc">הדגש מידע חשוב בצבע, גודל, או מיקום. עזור ללומד לזהות מה קריטי.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">6</div>
+                    <div class="strategy-title">Spatial Contiguity</div>
+                    <div class="strategy-desc">שים טקסט הסבר ליד התמונה המתאימה, לא רחוק. חסוך חיפוש ויזואלי.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">7</div>
+                    <div class="strategy-title">Temporal Contiguity</div>
+                    <div class="strategy-desc">הצג אנימציה והסבר באותו זמן, לא בנפרד. סנכרון = הבנה טובה יותר.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">8</div>
+                    <div class="strategy-title">Redundancy Removal</div>
+                    <div class="strategy-desc">הסר מידע כפול. אם יש תרשים מובן - אל תוסיף טקסט זהה לצידו.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">9</div>
+                    <div class="strategy-title">Coherence</div>
+                    <div class="strategy-desc">הסר מידע מעניין אבל לא רלוונטי. כל משפט צריך לתרום להבנה.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">10</div>
+                    <div class="strategy-title">Segmenting</div>
+                    <div class="strategy-desc">אפשר ללומד לשלוט בקצב. כפתור "המשך" מצוין לסרטונים ארוכים.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">11</div>
+                    <div class="strategy-title">Pre-training</div>
+                    <div class="strategy-desc">הסבר מושגי יסוד לפני החומר המורכב. בנה בסיס לפני הבנייה.</div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-number">12</div>
+                    <div class="strategy-title">Modality Effect</div>
+                    <div class="strategy-desc">תרשים + הקראה = יותר טוב מתרשים + טקסט כתוב. נצל שני ערוצים.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

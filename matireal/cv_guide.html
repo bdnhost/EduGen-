@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>ראייה ממוחשבת למהנדסים | מדריך OpenCV מקצועי | LearningHub</title>
+    <meta name="description" content="מדריך מקיף לראייה ממוחשבת (Computer Vision) עם OpenCV: זיהוי אובייקטים, בדיקות איכות, מדידות אוטומטיות ויישומים תעשייתיים ✅ מדריך מקצועי חינמי ✅ דוגמאות מעשיות ✅ פרויקטים אמיתיים">
+    <meta name="keywords" content="Computer Vision, ראייה ממוחשבת, OpenCV, Python, זיהוי אובייקטים, בקרת איכות, אוטומציה תעשייתית, עיבוד תמונה, מדריך, לימוד, קורס חינמי, הדרכה מקצועית, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ראייה ממוחשבת למהנדסים | מדריך OpenCV מקצועי">
+    <meta property="og:description" content="למד Computer Vision עם OpenCV - זיהוי אובייקטים, בקרת איכות ויישומים תעשייתיים">
+    <meta property="og:image" content="/images/computer-vision-guide.jpg">
+    <meta property="og:url" content="/cv_guide.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="הנדסה וטכנולוגיה">
+    <meta property="article:tag" content="Computer Vision, OpenCV, Python, Engineering">
+    <meta property="article:published_time" content="2025-01-01">
+    <meta property="article:modified_time" content="2025-01-14">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ראייה ממוחשבת למהנדסים | מדריך OpenCV מקצועי">
+    <meta name="twitter:description" content="למד Computer Vision עם OpenCV - זיהוי אובייקטים, בקרת איכות ויישומים תעשייתיים">
+    <meta name="twitter:image" content="/images/computer-vision-guide.jpg">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#e17055">
+    <meta name="msapplication-TileColor" content="#e17055">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/cv_guide.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="/cv_guide.html">
+    <link rel="alternate" hreflang="x-default" href="/cv_guide.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ראייה ממוחשבת למהנדסים - מדריך OpenCV",
+        "description": "מדריך מקיף לראייה ממוחשבת עם OpenCV לזיהוי אובייקטים ובקרת איכות תעשייתית",
+        "image": "/images/computer-vision-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-14",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "/cv_guide.html"
+        },
+        "articleSection": "הנדסה וטכנולוגיה",
+        "keywords": "Computer Vision, ראייה ממוחשבת, OpenCV, Python",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "ראייה ממוחשבת, OpenCV, זיהוי אובייקטים, בקרת איכות",
+        "about": {
+            "@type": "Thing",
+            "name": "Computer Vision ו-OpenCV"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "ראייה ממוחשבת למהנדסים",
+        "description": "מדריך מקצועי לראייה ממוחשבת עם כלים וטכניקות מתקדמות",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online",
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "instructor": {
+                "@type": "Organization",
+                "name": "LearningHub"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל",
+        "sameAs": [
+            "https://www.linkedin.com/company/edumanage",
+            "https://github.com/edumanage"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "Hebrew"
+        }
+    }
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        :root {
+            --theme-primary: #2c3e50;    /* צבע ראשי של המדריך */
+            --theme-accent: #e17055;     /* צבע מבטא - Vision Orange */
+            --theme-light: #fab1a0;      /* צבע בהיר */
+        }
+
+        header {
+            background: radial-gradient(circle at 10% 20%, var(--theme-primary) 0%, var(--theme-accent) 90%);
+            color: white;
+        }
+
+        .concept-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--theme-accent);
+        }
+
+        .code-block {
+            background: var(--theme-primary);
+            color: #dfe6e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .tab-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #dfe6e9;
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2d3436;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            font-family: 'Heebo', sans-serif;
+            transition: color 0.3s;
+            border-radius: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--theme-accent);
+            background: rgba(225, 112, 85, 0.1);
+        }
+
+        .tab-btn.active {
+            color: var(--theme-accent);
+            background: rgba(225, 112, 85, 0.1);
+            border-bottom: 3px solid var(--theme-accent);
+            margin-bottom: -1.2rem;
+            padding-bottom: 1rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .grid-auto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .application-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-right: 4px solid var(--theme-accent);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-auto {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" 
+               style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; transition: all 0.3s;"
+               onmouseover="this.style.background='#f8f9fa'"
+               onmouseout="this.style.background='white'">
+                פורטל התלמידים
+            </a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+               style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;"
+               onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+               onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                הצטרף חינם
+            </a>
+        </div>
+    </div>
+
+    <!-- Global Header -->
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links">
+                <a href="sitemap.html" class="nav-link">מפת האתר</a>
+                <a href="categories.html" class="nav-link">קטגוריות</a>
+                <a href="index.html" class="nav-link">ראשי</a>
+            </div>
+            <a href="index.html" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs with Schema -->
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "דף הבית",
+                    "item": "/index.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "קטגוריות",
+                    "item": "/categories.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "ראייה ממוחשבת למהנדסים",
+                    "item": "/cv_guide.html"
+                }
+            ]
+        }
+        </script>
+        <a href="index.html">דף הבית</a>
+        <span>/</span>
+        <a href="categories.html">קטגוריות</a>
+        <span>/</span>
+        <span class="current">ראייה ממוחשבת למהנדסים</span>
+    </nav>
+    
+    <!-- Page Header with SEO Optimization -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 itemprop="headline">👁️ ראייה ממוחשבת למהנדסים</h1>
+            <p class="subtitle" itemprop="description">שימוש במצלמות וקוד לביצוע בדיקות איכות, מדידות ואוטומציה תעשייתית</p>
+            
+            <!-- Article Meta Information -->
+            <div class="article-meta" style="margin-top: 1rem; font-size: 0.9rem; color: #fff; opacity: 0.9; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                    👨‍🏫 מאת: <span itemprop="name">LearningHub</span>
+                </span>
+                <span>📅 עודכן: <time itemprop="dateModified" datetime="2025-01-14">14 בינואר 2025</time></span>
+                <span>⏱️ זמן קריאה: <span data-reading-time>16</span> דקות</span>
+                <span>📊 רמת קושי: בסיסי עד מתקדם</span>
+            </div>
+            
+            <!-- Quick Navigation -->
+            <div class="quick-nav" style="margin-top: 1.5rem; text-align: center;">
+                <a href="#main-content" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📖 תוכן המדריך
+                </a>
+                <a href="#tasks" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📋 משימות
+                </a>
+                <a href="#join-course" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    🚀 הצטרף לקורס
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with SEO Structure -->
+    <main class="page-container" id="main-content" itemscope itemtype="https://schema.org/Article">
+        
+        <!-- Table of Contents for SEO -->
+        <div class="concept-card" style="background: #f8f9fa; border-right: 4px solid #007bff;">
+            <h2>📋 תוכן המדריך</h2>
+            <nav aria-label="תוכן המדריך">
+                <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><a href="#why-important" style="color: #007bff; text-decoration: none;">למה מהנדס צריך Computer Vision?</a></li>
+                    <li><a href="#setup" style="color: #007bff; text-decoration: none;">התקנת הסביבה</a></li>
+                    <li><a href="#basics" style="color: #007bff; text-decoration: none;">יסודות עיבוד תמונה</a></li>
+                    <li><a href="#project" style="color: #007bff; text-decoration: none;">פרויקט מעשי: זיהוי פגמים</a></li>
+                    <li><a href="#applications" style="color: #007bff; text-decoration: none;">יישומים תעשייתיים</a></li>
+                    <li><a href="#summary" style="color: #007bff; text-decoration: none;">מסקנות ויישום מעשי</a></li>
+                    <li><a href="#tasks" style="color: #007bff; text-decoration: none;">משימות לשבוע הקרוב</a></li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- מבוא -->
+        <section class="concept-card" id="why-important">
+            <h2 itemprop="headline">למה מהנדס מכונות צריך ראייה ממוחשבת?</h2>
+            <div itemprop="articleBody">
+                <p>בתעשייה המודרנית (Industry 4.0), מצלמות מחליפות את העין האנושית בבקרת איכות. במקום שמפעיל יבדוק ידנית כל חלק שיוצא מהמכונה, מצלמה המחוברת למחשב יכולה לבצע בדיקות מדויקות ומהירות.</p>
+                <p>הכלי הנפוץ ביותר בעולם למשימות אלו הוא ספריית <strong>OpenCV</strong> בשפת Python - זה הסטנדרט בתעשייה.</p>
+            </div>
+        </section>
+
+        <!-- Interactive Tabs Navigation -->
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab('setup')">התקנה</button>
+            <button class="tab-btn" onclick="openTab('basics')">עיבוד תמונה בסיסי</button>
+            <button class="tab-btn" onclick="openTab('project')">פרויקט מעשי</button>
+        </div>
+
+        <!-- Tab 1: Setup -->
+        <div id="setup" class="tab-content active">
+            <section class="concept-card">
+                <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">⚙️ התקנת הסביבה</h2>
+                
+                <p>כדי להתחיל לעבוד, נצטרך להתקין את ספריית OpenCV ואת ספריית Matplotlib להצגת התמונות.</p>
+
+                <h3>פקודת התקנה (Terminal)</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre>pip install opencv-python matplotlib numpy</pre>
+                </div>
+
+                <h3>בדיקת התקנה</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre>import cv2
+import numpy as np
+
+print(f"OpenCV Version: {cv2.__version__}")
+# Output should be something like: 4.8.x</pre>
+                </div>
+
+                <div style="background: #e8f5e9; border-right: 4px solid #28a745; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                    <h4 style="color: #28a745; margin-bottom: 0.5rem;">💡 טיפ חשוב</h4>
+                    <p><strong>אם ההתקנה נכשלת:</strong> נסה להתקין עם <code>pip install opencv-python-headless</code> - זה פותר בעיות נפוצות במערכות Linux ו-Mac.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tab 2: Basics -->
+        <div id="basics" class="tab-content">
+            <section class="concept-card">
+                <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">🔍 יסודות עיבוד תמונה</h2>
+
+                <h3>1. טעינת תמונה והמרה לגווני אפור</h3>
+                <p>עיבוד תמונה נעשה לרוב על תמונות שחור-לבן (Grayscale) כי הן מכילות פחות מידע מיותר וקל יותר לזהות בהן גבולות.</p>
+                
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre>import cv2
+import matplotlib.pyplot as plt
+
+# Load image (1 = color, 0 = grayscale)
+img = cv2.imread('gear_part.jpg')
+
+# Convert to RGB for display (OpenCV uses BGR by default)
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# Convert to Grayscale for processing
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+plt.imshow(img_rgb)
+plt.title("Original Image")
+plt.show()</pre>
+                </div>
+
+                <h3>2. זיהוי גבולות (Canny Edge Detection)</h3>
+                <p>אלגוריתם Canny הוא הדרך הקלאסית למצוא קצוות של אובייקטים בתמונה - זה הבסיס לרוב אלגוריתמי הזיהוי.</p>
+                
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre># Canny Edge Detection
+# Thresholds: 100 (min), 200 (max)
+edges = cv2.Canny(gray, 100, 200)
+
+plt.imshow(edges, cmap='gray')
+plt.title("Edge Detection")
+plt.show()</pre>
+                </div>
+
+                <h3>3. סינון וטשטוש</h3>
+                <p>לפני זיהוי אובייקטים, חשוב להפחית רעשים בתמונה באמצעות סינון.</p>
+                
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre># Gaussian Blur - מפחית רעשים
+blurred = cv2.GaussianBlur(gray, (9, 9), 2)
+
+# Median Filter - טוב לרעשים נקודתיים
+median = cv2.medianBlur(gray, 5)
+
+plt.subplot(1, 3, 1)
+plt.imshow(gray, cmap='gray')
+plt.title('Original')
+
+plt.subplot(1, 3, 2)
+plt.imshow(blurred, cmap='gray')
+plt.title('Gaussian Blur')
+
+plt.subplot(1, 3, 3)
+plt.imshow(median, cmap='gray')
+plt.title('Median Filter')
+plt.show()</pre>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tab 3: Project -->
+        <div id="project" class="tab-content">
+            <section class="concept-card">
+                <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">🛠️ פרויקט מעשי: ספירת אומים (Nuts) בתמונה</h2>
+                
+                <p>נכתוב קוד שמקבל תמונה של חלקים מעורבבים, וסופר כמה עיגולים (למשל אומים או דיסקיות) יש בה.</p>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre>import cv2
+import numpy as np
+
+# 1. טעינת תמונה
+image = cv2.imread('parts.jpg')
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# 2. טשטוש להפחתת רעשים
+blurred = cv2.GaussianBlur(gray, (9, 9), 2)
+
+# 3. זיהוי מעגלים באמצעות Hough Transform
+circles = cv2.HoughCircles(
+    blurred, 
+    cv2.HOUGH_GRADIENT, 
+    dp=1, 
+    minDist=50, # מרחק מינימלי בין מעגלים
+    param1=50, 
+    param2=30, 
+    minRadius=10, 
+    maxRadius=100
+)
+
+# 4. ציור התוצאות
+if circles is not None:
+    circles = np.uint16(np.around(circles))
+    count = 0
+    for i in circles[0, :]:
+        # צייר את המעגל החיצוני (ירוק)
+        cv2.circle(image, (i[0], i[1]), i[2], (0, 255, 0), 2)
+        # צייר את המרכז (אדום)
+        cv2.circle(image, (i[0], i[1]), 2, (0, 0, 255), 3)
+        count += 1
+    
+    print(f"נמצאו {count} חלקים עגולים תקינים.")
+else:
+    print("לא נמצאו חלקים.")
+
+# הצגה
+cv2.imshow('Detected Parts', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()</pre>
+                </div>
+                
+                <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #2196f3;">
+                    <h4 style="color: #1976d2; margin-bottom: 0.5rem;">🔍 הסבר טכני</h4>
+                    <p><strong>הפונקציה HoughCircles</strong> סורקת את התמונה ומחפשת צורות מעגליות מושלמות. זהו כלי חזק מאוד בבקרת איכות של מסבים, צינורות ואומים. הפרמטרים קובעים את רגישות הזיהוי ואת טווח הגדלים.</p>
+                </div>
+
+                <h3>שיפורים נוספים לפרויקט</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                    <pre># הוספת מדידת שטח ומיון לפי גודל
+areas = []
+for i in circles[0, :]:
+    radius = i[2]
+    area = np.pi * radius * radius
+    areas.append(area)
+    
+    # הוסף טקסט עם מספר החלק
+    cv2.putText(image, f'#{len(areas)}', 
+                (i[0]-10, i[1]-i[2]-10), 
+                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
+
+print(f"שטח ממוצע: {np.mean(areas):.2f} פיקסלים")
+print(f"שטח מקסימלי: {np.max(areas):.2f} פיקסלים")
+print(f"שטח מינימלי: {np.min(areas):.2f} פיקסלים")</pre>
+                </div>
+            </section>
+        </div>
+        <!-- יישומים תעשייתיים -->
+        <section class="concept-card" id="applications">
+            <h2 style="color: var(--theme-primary); margin-bottom: 1.5rem;">🏭 יישומים תעשייתיים</h2>
+            
+            <div class="grid-auto">
+                <div class="application-card">
+                    <h3 style="color: #007bff; margin-bottom: 1rem;">🔍 בקרת איכות</h3>
+                    <ul style="margin-right: 1.5rem;">
+                        <li><strong>זיהוי פגמים</strong> - שריטות, סדקים, חורים</li>
+                        <li><strong>מדידת מידות</strong> - דיוק של מיקרונים</li>
+                        <li><strong>בדיקת צבע</strong> - עקביות בצביעה</li>
+                        <li><strong>ספירה אוטומטית</strong> - חלקים בקופסה</li>
+                    </ul>
+                </div>
+                
+                <div class="application-card">
+                    <h3 style="color: #28a745; margin-bottom: 1rem;">🤖 רובוטיקה</h3>
+                    <ul style="margin-right: 1.5rem;">
+                        <li><strong>Pick & Place</strong> - אחיזה מדויקת של חלקים</li>
+                        <li><strong>ניווט</strong> - רובוטים אוטונומיים</li>
+                        <li><strong>מעקב</strong> - עקיבה אחר אובייקטים נעים</li>
+                        <li><strong>זיהוי מיקום</strong> - היכן החלק על הפס?</li>
+                    </ul>
+                </div>
+                
+                <div class="application-card">
+                    <h3 style="color: #dc3545; margin-bottom: 1rem;">📊 ניתוח נתונים</h3>
+                    <ul style="margin-right: 1.5rem;">
+                        <li><strong>סטטיסטיקות</strong> - כמה פגמים ביום?</li>
+                        <li><strong>מגמות</strong> - האיכות משתפרת או יורדת?</li>
+                        <li><strong>התראות</strong> - בעיה בפס הייצור</li>
+                        <li><strong>דוחות</strong> - סיכום יומי למנהלים</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: #fff3cd; border-right: 4px solid #ffc107; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                <h4 style="color: #856404; margin-bottom: 0.5rem;">⚠️ רגע, עצור!</h4>
+                <p><strong>לפני שתקנה מצלמות יקרות...</strong> תתחיל עם webcam רגילה ותלמד את הבסיס. רוב הפרויקטים לא צריכים מצלמות של אלפי שקלים!</p>
+            </div>
+        </section>
+
+        <!-- מסקנות ויישום מעשי -->
+        <section class="concept-card" id="summary" style="background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%); color: white; border: none;">
+            <h2 style="color: white;">🎯 מסקנות ויישום מעשי</h2>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                <h3 style="color: white; margin-bottom: 1rem;">✅ מה למדנו היום?</h3>
+                <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><strong>Computer Vision זה לא קסם</strong> - זה מתמטיקה ואלגוריתמים</li>
+                    <li><strong>OpenCV הוא הכלי הסטנדרטי</strong> - נפוץ בתעשייה</li>
+                    <li><strong>התחל פשוט</strong> - גווני אפור ואלגוריתמים בסיסיים</li>
+                    <li><strong>יישומים אינסופיים</strong> - מבקרת איכות ועד רכב אוטונומי</li>
+                    <li><strong>תרגול חשוב</strong> - כל תמונה היא הזדמנות ללמוד</li>
+                </ul>
+            </div>
+
+            <div class="grid-auto">
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">👁️ איך להמשיך להתפתח?</h3>
+                    <ol style="margin-right: 1.5rem; line-height: 1.6;">
+                        <li><strong>תרגל עם תמונות שלך</strong> - צלם חלקים ונסה לזהות</li>
+                        <li><strong>למד אלגוריתמים נוספים</strong> - YOLO, SSD</li>
+                        <li><strong>שלב עם חומרה</strong> - Arduino, Raspberry Pi</li>
+                        <li><strong>בנה פרויקט אמיתי</strong> - בקרת איכות לתחביב</li>
+                        <li><strong>הצטרף לקהילה</strong> - פורומים ו-GitHub</li>
+                    </ol>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">⚠️ אתגרים נפוצים</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.6;">
+                        <li><strong>תאורה לא אחידה</strong> - השתמש בתאורה מבוקרת</li>
+                        <li><strong>רעש בתמונה</strong> - טשטוש וסינון</li>
+                        <li><strong>אובייקטים חופפים</strong> - אלגוריתמים מתקדמים</li>
+                        <li><strong>מהירות עיבוד</strong> - אופטימיזציה נדרשת</li>
+                        <li><strong>דיוק מול מהירות</strong> - תמיד יש פשרות</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- משימות לשבוע הקרוב -->
+        <section class="concept-card" id="tasks">
+            <h2>📋 משימות לשבוע הקרוב</h2>
+            
+            <div class="grid-auto">
+                <div style="background: #e8f5e9; border: 2px solid #28a745; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #155724; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🎯</span> רמה בסיסית (מתחילים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>התקן Python ו-OpenCV</li>
+                        <li>צלם 10 תמונות של אובייקטים עגולים</li>
+                        <li>הרץ את הקוד לזיהוי מעגלים</li>
+                        <li>נסה לשנות פרמטרים ותראה מה קורה</li>
+                        <li>צפה ב-3 סרטוני YouTube על Computer Vision</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 16px; padding: 2rem;">
+                    <h3 style="color: #004085; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>⚡</span> רמה מתקדמת (מנוסים)
+                    </h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                        <li>בנה מערכת זיהוי פגמים פשוטה</li>
+                        <li>למד על YOLO לזיהוי אובייקטים</li>
+                        <li>התנסה עם מצלמת רשת (webcam) בזמן אמת</li>
+                        <li>צור מסד נתונים של תמונות מסווגות</li>
+                        <li>קרא על Deep Learning ו-CNNs</li>
+                        <li>שלב עם פרויקט Arduino/Raspberry Pi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: #e1f5fe; border-right: 4px solid #03a9f4; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+                <h4 style="color: #0277bd; margin-bottom: 0.5rem;">😎 בונוס</h4>
+                <p><strong>פרויקט מגניב:</strong> צור "מד איכות" לפירות - צלם תפוח ותן למחשב לדרג אותו מ-1 עד 10 לפי הצבע והמרקם!</p>
+            </div>
+        </section>
+
+        <!-- קריאה לפעולה חזקה -->
+        <section class="concept-card" id="join-course" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+            <h2 style="color: white;">👁️ העתיד של התעשייה רואה הכל</h2>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🤖</div>
+                <p style="font-size: 1.2rem; margin: 1.5rem 0;">
+                    <strong>Computer Vision הוא אחד הכלים החזקים ביותר של המהנדס המודרני</strong><br>
+                    מי שיודע "ללמד" מחשבים לראות יהיה תמיד מבוקש!
+                </p>
+            </div>
+
+            <div class="grid-auto" style="margin: 2rem 0;">
+                <a href="python_guide.html" style="background: white; color: var(--theme-accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</span>
+                    <strong>Python מתקדם</strong>
+                    <span style="font-size: 0.9rem;">הבסיס לכל פרויקט</span>
+                </a>
+
+                <a href="iot_guide.html" style="background: white; color: var(--theme-accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🌐</span>
+                    <strong>IoT ומצלמות</strong>
+                    <span style="font-size: 0.9rem;">חבר למערכות חכמות</span>
+                </a>
+
+                <a href="data_analysis_guide.html" style="background: white; color: var(--theme-accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📊</span>
+                    <strong>ניתוח נתונים</strong>
+                    <span style="font-size: 0.9rem;">הפוך תמונות לתובנות</span>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-size: 1rem; opacity: 0.9;">
+                    💡 <strong>זכור:</strong> המחשב רואה מספרים, אתה רואה משמעות - זה מה שעושה אותך בלתי תחליפי!
+                </p>
+            </div>
+
+            <!-- LMS Integration Call-to-Action -->
+            <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 16px; margin: 2rem 0; text-align: center; border: 2px solid rgba(255,255,255,0.3);">
+                <h3 style="color: white; margin-bottom: 1rem;">🚀 מוכן לצלול עמוק יותר?</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">הצטרף לקורס המקצועי שלנו וקבל גישה למשימות מתקדמות, פרויקטים אמיתיים ותמיכה אישית</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+                       style="background: #28a745; color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;"
+                       onmouseover="this.style.background='#218838'"
+                       onmouseout="this.style.background='#28a745'">
+                        🎓 הצטרף לקורס חינם
+                    </a>
+                    <a href="https://edu-manage.org/" 
+                       style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;"
+                       onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+                       onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                        📚 פורטל התלמידים
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for SEO -->
+        <section class="concept-card" style="background: #f8f9fa;">
+            <h2>❓ שאלות נפוצות</h2>
+            <div itemscope itemtype="https://schema.org/FAQPage">
+                
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">מה זה Computer Vision ולמה זה חשוב למהנדסים?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>Computer Vision (ראייה ממוחשבת) היא טכנולוגיה שמאפשרת למחשבים "לראות" ולהבין תמונות ווידאו. למהנדסים זה חיוני לבקרת איכות אוטומטית, זיהוי פגמים, מדידות מדויקות והנחיית רובוטים בתהליכי ייצור.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">האם אני צריך רקע במתמטיקה כדי ללמוד OpenCV?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>לא בהכרח. OpenCV מספק פונקציות מוכנות לשימוש שמסתירות את המתמטיקה המורכבת. עם זאת, הבנה בסיסית של גיאומטריה ואלגברה ליניארית תעזור לך להבין טוב יותר איך האלגוריתמים עובדים.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">איזה מצלמה מומלצת למתחילים?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>התחל עם webcam רגילה או מצלמת הטלפון שלך. לאחר שתלמד את הבסיס, תוכל לעבור למצלמות תעשייתיות מתקדמות יותר. החשוב הוא להתחיל ללמוד, לא הציוד.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">כמה זמן לוקח ללמוד Computer Vision?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>הבסיס ניתן ללמוד תוך מספר שבועות. לפרויקטים פשוטים - חודש-חודשיים. להתמחות מקצועית - 6-12 חודשים של תרגול קבוע. הכל תלוי ברמת המעורבות ובמטרות שלך.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                    <h3 itemprop="name" style="color: var(--theme-primary); margin-bottom: 0.5rem;">איך Computer Vision משתלב עם Industry 4.0?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>Computer Vision הוא חלק מרכזי ב-Industry 4.0 - מאפשר בקרת איכות אוטומטית, מעקב אחר תהליכי ייצור בזמן אמת, חיבור למערכות IoT ואיסוף נתונים לניתוח ושיפור תהליכים.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Enhanced Global Footer with EduManage Branding -->
+    <footer class="global-footer" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 3rem 0 1rem;">
+        <div class="footer-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div class="footer-main" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div class="footer-brand">
+                    <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">🎓</span> 
+                        <span style="background: linear-gradient(45deg, #e17055, #fab1a0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">EduManage</span>
+                    </h3>
+                    <p style="line-height: 1.6; opacity: 0.9; margin-bottom: 1rem;">
+                        מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://edu-manage.org/" style="background: var(--theme-accent); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem; transition: all 0.3s;">
+                            🚀 פורטל EduManage
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 style="margin-bottom: 1rem; color: var(--theme-light);">📚 למידה</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="categories.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">כל הקטגוריות</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="python_guide.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Python למהנדסים</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="chatgpt_guide.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">ChatGPT מתקדם</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="data_analysis_guide.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">ניתוח נתונים</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="iot_guide.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">IoT ואוטומציה</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 style="margin-bottom: 1rem; color: var(--theme-light);">🛠️ משאבים</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="sitemap.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">מפת האתר</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="prompts.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">ספריית פרומפטים</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="ai_ethics.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">אתיקה ב-AI</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="algorithmic_thinking.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">חשיבה אלגוריתמית</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 style="margin-bottom: 1rem; color: var(--theme-light);">🤝 קהילה</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="https://edu-manage.org/" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">אודות EduManage</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">הצטרף לקורס</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">תמיכה טכנית</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">עדכונים</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #34495e; padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="font-size: 0.9rem; opacity: 0.8;">
+                    © 2025 EduManage - מערכת לניהול פדגוגי | פותח במסגרת פורטל הלמידה והחדשנות
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: #bdc3c7; font-size: 1.2rem; text-decoration: none;" title="LinkedIn">💼</a>
+                    <a href="#" style="color: #bdc3c7; font-size: 1.2rem; text-decoration: none;" title="GitHub">🐙</a>
+                    <a href="#" style="color: #bdc3c7; font-size: 1.2rem; text-decoration: none;" title="YouTube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript with Analytics and UX Features -->
+    <script src="global.js"></script>
+    <script>
+        // Tab Management
+        function openTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+
+            // Analytics tracking (if available)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'tab_click', {
+                    'tab_name': tabName,
+                    'page_title': document.title
+                });
+            }
+        }
+
+        // Copy Code Functionality
+        function copyCode(btn) {
+            const codeBlock = btn.nextElementSibling;
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'הועתק!';
+                btn.style.background = 'rgba(40, 167, 69, 0.8)';
+                
+                setTimeout(() => {
+                    btn.textContent = 'העתק';
+                    btn.style.background = 'rgba(255, 255, 255, 0.1)';
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                btn.textContent = 'הועתק!';
+                setTimeout(() => btn.textContent = 'העתק', 2000);
+            });
+
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'code_copy', {
+                    'code_type': 'computer_vision',
+                    'page_title': document.title
+                });
+            }
+        }
+
+        // Reading Time Calculation
+        function calculateReadingTime() {
+            const text = document.querySelector('main').textContent;
+            const wordsPerMinute = 200; // Average reading speed in Hebrew
+            const words = text.trim().split(/\s+/).length;
+            const readingTime = Math.ceil(words / wordsPerMinute);
+            
+            const readingTimeElement = document.querySelector('[data-reading-time]');
+            if (readingTimeElement) {
+                readingTimeElement.textContent = readingTime;
+            }
+        }
+
+        // Smooth Scrolling for Anchor Links
+        function initSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Progress Bar for Reading
+        function initReadingProgress() {
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: linear-gradient(90deg, var(--theme-accent), var(--theme-light));
+                z-index: 9999;
+                transition: width 0.3s ease;
+            `;
+            document.body.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Initialize all features when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateReadingTime();
+            initSmoothScrolling();
+            initReadingProgress();
+
+            // Track page view
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    'page_title': document.title,
+                    'page_location': window.location.href,
+                    'content_group1': 'Computer Vision Guide'
+                });
+            }
+
+            // Add hover effects to cards
+            document.querySelectorAll('.concept-card, .application-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.05)';
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all concept cards for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.concept-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <!-- Schema.org FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "מה זה Computer Vision ולמה זה חשוב למהנדסים?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Computer Vision (ראייה ממוחשבת) היא טכנולוגיה שמאפשרת למחשבים לראות ולהבין תמונות ווידאו. למהנדסים זה חיוני לבקרת איכות אוטומטית, זיהוי פגמים, מדידות מדויקות והנחיית רובוטים בתהליכי ייצור."
+                }
+            },
+            {
+                "@type": "Question", 
+                "name": "האם אני צריך רקע במתמטיקה כדי ללמוד OpenCV?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "לא בהכרח. OpenCV מספק פונקציות מוכנות לשימוש שמסתירות את המתמטיקה המורכבת. עם זאת, הבנה בסיסית של גיאומטריה ואלגברה ליניארית תעזור לך להבין טוב יותר איך האלגוריתמים עובדים."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "איזה מצלמה מומלצת למתחילים?", 
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "התחל עם webcam רגילה או מצלמת הטלפון שלך. לאחר שתלמד את הבסיס, תוכל לעבור למצלמות תעשייתיות מתקדמות יותר. החשוב הוא להתחיל ללמוד, לא הציוד."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "כמה זמן לוקח ללמוד Computer Vision?",
+                "acceptedAnswer": {
+                    "@type": "Answer", 
+                    "text": "הבסיס ניתן ללמוד תוך מספר שבועות. לפרויקטים פשוטים - חודש-חודשיים. להתמחות מקצועית - 6-12 חודשים של תרגול קבוע. הכל תלוי ברמת המעורבות ובמטרות שלך."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "איך Computer Vision משתלב עם Industry 4.0?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Computer Vision הוא חלק מרכזי ב-Industry 4.0 - מאפשר בקרת איכות אוטומטית, מעקב אחר תהליכי ייצור בזמן אמת, חיבור למערכות IoT ואיסוף נתונים לניתוח ושיפור תהליכים."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "דף הבית",
+                "item": "/index.html"
+            },
+            {
+                "@type": "ListItem", 
+                "position": 2,
+                "name": "קטגוריות",
+                "item": "/categories.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "ראייה ממוחשבת למהנדסים",
+                "item": "/cv_guide.html"
+            }
+        ]
+    }
+    </script>
+
+</body>
+</html>

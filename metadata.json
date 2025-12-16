@@ -1,0 +1,5 @@
+{
+  "name": "EduGen - Professional Guide Generator",
+  "description": "A Hebrew-first application powered by Gemini to generate professional educational HTML guides based on a specific LearningHub template.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,19 @@
+{
+  "name": "learninghub-manifest-generator",
+  "version": "1.0.0",
+  "description": "עדכון אוטומטי של sitemap, categories ו-sitemap.xml כאשר מתווספים מדריכים חדשים",
+  "main": "generate-manifest.js",
+  "scripts": {
+    "generate": "node generate-manifest.js",
+    "auto": "node generate-manifest-auto.js",
+    "start": "node generate-manifest.js"
+  },
+  "keywords": [
+    "sitemap",
+    "categories",
+    "manifest",
+    "generator"
+  ],
+  "author": "LearningHub",
+  "license": "MIT"
+}

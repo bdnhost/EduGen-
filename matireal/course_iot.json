@@ -1,0 +1,192 @@
+{
+  "_DOCUMENTATION": {
+    "title": "קובץ ייבוא אוטומטי: 📡 IoT ואוטומציה למהנדסים",
+    "overview": "קורס זה נוצר אוטומטית על ידי generate_course.py על בסיס המדריכים: iot_guide.html.",
+    "author": "LearningHub AI Course Generator",
+    "version": "1.0"
+  },
+  "course": {
+    "name": "🚀 📡 IoT ואוטומציה למהנדסים",
+    "code": "IOT-PRO-2025",
+    "description": "מדריך IoT פרקטי למהנדסים — חיבור Arduino/ESP32, קריאת חיישנים, פרוטוקולי תקשורת וניתוח בזמן אמת עם Python.",
+    "institution": "LearningHub - EduManage",
+    "semester": "סמסטר אוטומטי",
+    "year": "2025",
+    "start_date": "2025-12-15",
+    "total_sessions": 6,
+    "total_hours": 30.0,
+    "color": "from-blue-500 to-indigo-500",
+    "allow_self_registration": true
+  },
+  "sessions": [
+    {
+      "temp_id": "s1",
+      "session_number": 1,
+      "title": "מפגש 1: 🎯 מטרות המדריך",
+      "description": "במפגש זה נצלול לעומק הנושאים הבאים: 🎯 מטרות המדריך. Start the description directly, without any introductory phrases.. נתחיל מהיסודות, נמשיך ליישומים מעשיים ונסקור דוגמאות מהעולם האמיתי כדי להבטיח הבנה מקיפה.",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '🎯 מטרות המדריך. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "date": "2025-12-15",
+      "duration_hours": 5.0
+    },
+    {
+      "temp_id": "s2",
+      "session_number": 2,
+      "title": "מפגש 2: 🛠️ חומרה וחיווט",
+      "description": "במפגש זה נצלול לעומק הנושאים הבאים: 🛠️ חומרה וחיווט. Start the description directly, without any introductory phrases.. נתחיל מהיסודות, נמשיך ליישומים מעשיים ונסקור דוגמאות מהעולם האמיתי כדי להבטיח הבנה מקיפה.",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '🛠️ חומרה וחיווט. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "date": "2025-12-22",
+      "duration_hours": 5.0
+    },
+    {
+      "temp_id": "s3",
+      "session_number": 3,
+      "title": "מפגש 3: 💾 קוד בארדואינו (Sketch)",
+      "description": "במפגש זה נצלול לעומק הנושאים הבאים: 💾 קוד בארדואינו (Sketch). Start the description directly, without any introductory phrases.. נתחיל מהיסודות, נמשיך ליישומים מעשיים ונסקור דוגמאות מהעולם האמיתי כדי להבטיח הבנה מקיפה.",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '💾 קוד בארדואינו (Sketch). The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "date": "2025-12-29",
+      "duration_hours": 5.0
+    },
+    {
+      "temp_id": "s4",
+      "session_number": 4,
+      "title": "מפגש 4: 🐍 Python — קריאת Serial וגרף בזמן אמת",
+      "description": "במפגש זה נצלול לעומק הנושאים הבאים: 🐍 Python — קריאת Serial וגרף בזמן אמת. Start the description directly, without any introductory phrases.. נתחיל מהיסודות, נמשיך ליישומים מעשיים ונסקור דוגמאות מהעולם האמיתי כדי להבטיח הבנה מקיפה.",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '🐍 Python — קריאת Serial וגרף בזמן אמת. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "date": "2026-01-05",
+      "duration_hours": 5.0
+    },
+    {
+      "temp_id": "s5",
+      "session_number": 5,
+      "title": "מפגש 5: 🔗 פרוטוקולים מתקדמים ואבטחה | ❓ שאלות נפוצות ופתרון תקלות",
+      "description": "במפגש זה נצלול לעומק הנושאים הבאים: 🔗 פרוטוקולים מתקדמים ואבטחה | ❓ שאלות נפוצות ופתרון תקלות. Start the description directly, without any introductory phrases.. נתחיל מהיסודות, נמשיך ליישומים מעשיים ונסקור דוגמאות מהעולם האמיתי כדי להבטיח הבנה מקיפה.",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '🔗 פרוטוקולים מתקדמים ואבטחה | ❓ שאלות נפוצות ופתרון תקלות. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "date": "2026-01-12",
+      "duration_hours": 5.0
+    },
+    {
+      "temp_id": "s6",
+      "session_number": 6,
+      "title": "מפגש 6: 📋 תרגילים ומטלות | 📚 מדריכים קשורים | 🌟 רוצה להעמיק? הצטרף לקורס המלא",
+      "description": "במפגש זה נצלול לעומק הנושאים הבאים: 📋 תרגילים ומטלות | 📚 מדריכים קשורים | 🌟 רוצה להעמיק? הצטרף לקורס המלא. Start the description directly, without any introductory phrases.. נתחיל מהיסודות, נמשיך ליישומים מעשיים ונסקור דוגמאות מהעולם האמיתי כדי להבטיח הבנה מקיפה.",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '📋 תרגילים ומטלות | 📚 מדריכים קשורים | 🌟 רוצה להעמיק? הצטרף לקורס המלא. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "date": "2026-01-19",
+      "duration_hours": 5.0
+    }
+  ],
+  "assignments": [
+    {
+      "//_COMMENT": "פרויקט גמר שנוצר אוטומטית על בסיס המדריך.",
+      "title": "🏆 פרויקט גמר: יישום מעשי של 📡 IoT ואוטומציה למהנדסים",
+      "description": "בפרויקט זה תיישמו את כל העקרונות מהמדריך כדי לבנות פרויקט מקיף.",
+      "type": "project",
+      "session_temp_id": "s6",
+      "due_date": "2026-01-26",
+      "max_score": 100,
+      "weight": 80,
+      "key_concepts": [
+        {
+          "term": "יישום מעשי",
+          "definition": "הפיכת תיאוריה לתוצר עובד."
+        },
+        {
+          "term": "פתרון בעיות",
+          "definition": "התמודדות עם אתגרים לא צפויים בתהליך. (מבוסס על מספר מדריכים)"
+        }
+      ],
+      "content_data": {
+        "instructions": "- התחילו בקטן והתקדמו בהדרגה.",
+        "milestones": [
+          {
+            "title": "הגשה סופית",
+            "deadline": "2026-01-26"
+          }
+        ]
+      },
+      "rubric": {
+        "name": "מחוון פרויקט גמר",
+        "criteria": [
+          {
+            "title": "עמידה בדרישות",
+            "description": "האם הפרויקט מיישם את כל הנושאים הנדרשים מהמדריך.",
+            "max_points": 50
+          },
+          {
+            "title": "איכות התוצר",
+            "description": "התוצר עובד, יעיל ומובנה היטב.",
+            "max_points": 30
+          },
+          {
+            "title": "הימנעות מטעויות נפוצות",
+            "description": "התייחסות לאזהרות מהמדריך. ",
+            "max_points": 10
+          },
+          {
+            "title": "תיעוד והגשה",
+            "description": "ההגשה כוללת את כל הקבצים הנדרשים והסברים ברורים.",
+            "max_points": 10
+          }
+        ]
+      }
+    }
+  ],
+  "materials": [
+    {
+      "title": "📚 מדריך: Iot",
+      "description": "מדריך מקור: iot_guide.html",
+      "type": "link",
+      "file_url": "https://bdnhost.net/Resources/iot_guide.html",
+      "course_global": true
+    },
+    {
+      "title": "🖼️ תמונת נושא: 🎯 מטרות המדריך",
+      "description": "תמונה להמחשת נושאי המפגש.",
+      "type": "link",
+      "file_url": "https://source.unsplash.com/800x600/?%F0%9F%8E%AF+%D7%9E%D7%98%D7%A8%D7%95%D7%AA+%D7%94%D7%9E%D7%93%D7%A8%D7%99%D7%9A",
+      "session_temp_id": "s1"
+    },
+    {
+      "title": "🖼️ תמונת נושא: 🛠️ חומרה וחיווט",
+      "description": "תמונה להמחשת נושאי המפגש.",
+      "type": "link",
+      "file_url": "https://source.unsplash.com/800x600/?%F0%9F%9B%A0%EF%B8%8F+%D7%97%D7%95%D7%9E%D7%A8%D7%94+%D7%95%D7%97%D7%99%D7%95%D7%95%D7%98",
+      "session_temp_id": "s2"
+    },
+    {
+      "title": "🖼️ תמונת נושא: 💾 קוד בארדואינו (Sketch)",
+      "description": "תמונה להמחשת נושאי המפגש.",
+      "type": "link",
+      "file_url": "https://source.unsplash.com/800x600/?%F0%9F%92%BE+%D7%A7%D7%95%D7%93+%D7%91%D7%90%D7%A8%D7%93%D7%95%D7%90%D7%99%D7%A0%D7%95+%28Sketch%29",
+      "session_temp_id": "s3"
+    },
+    {
+      "title": "🖼️ תמונת נושא: 🐍 Python — קריאת Serial וגרף בזמן אמת",
+      "description": "תמונה להמחשת נושאי המפגש.",
+      "type": "link",
+      "file_url": "https://source.unsplash.com/800x600/?%F0%9F%90%8D+Python+%E2%80%94+%D7%A7%D7%A8%D7%99%D7%90%D7%AA+Serial+%D7%95%D7%92%D7%A8%D7%A3+%D7%91%D7%96%D7%9E%D7%9F+%D7%90%D7%9E%D7%AA",
+      "session_temp_id": "s4"
+    },
+    {
+      "title": "🖼️ תמונת נושא: 🔗 פרוטוקולים מתקדמים ואבטחה",
+      "description": "תמונה להמחשת נושאי המפגש.",
+      "type": "link",
+      "file_url": "https://source.unsplash.com/800x600/?%F0%9F%94%97+%D7%A4%D7%A8%D7%95%D7%98%D7%95%D7%A7%D7%95%D7%9C%D7%99%D7%9D+%D7%9E%D7%AA%D7%A7%D7%93%D7%9E%D7%99%D7%9D+%D7%95%D7%90%D7%91%D7%98%D7%97%D7%94",
+      "session_temp_id": "s5"
+    },
+    {
+      "title": "🖼️ תמונת נושא: 📋 תרגילים ומטלות",
+      "description": "תמונה להמחשת נושאי המפגש.",
+      "type": "link",
+      "file_url": "https://source.unsplash.com/800x600/?%F0%9F%93%8B+%D7%AA%D7%A8%D7%92%D7%99%D7%9C%D7%99%D7%9D+%D7%95%D7%9E%D7%98%D7%9C%D7%95%D7%AA",
+      "session_temp_id": "s6"
+    }
+  ],
+  "announcements": [
+    {
+      "title": "🎉 ברוכים הבאים לקורס '📡 IoT ואוטומציה למהנדסים'!",
+      "content": "אנו שמחים להתחיל יחד את המסע. אנא עברו על סילבוס הקורס והכינו את סביבת העבודה הנדרשת לקראת המפגש הראשון.",
+      "priority": "high",
+      "session_temp_id": "s1"
+    }
+  ]
+}

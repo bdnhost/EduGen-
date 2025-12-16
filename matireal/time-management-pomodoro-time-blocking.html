@@ -1,0 +1,1165 @@
+<!--
+================================================================================
+🎉 GUIDE METADATA FOR AUTO-DETECTION 🎉
+================================================================================
+Edit the JSON below to classify your guide automatically.
+The auto-detector (generate-manifest-auto.js) will read this metadata.
+
+CATEGORIES AVAILABLE:
+🧪 AI & Automation     - AI, ChatGPT, Machine Learning, Automation, Web Scraping, React, Python
+💼 Career             - Career Prep, CV, Presentations, Skills, Professional Development
+🎨 Creative Studio    - Design, Canva, Video Editing, Midjourney, UI/UX, Graphics
+📊 Data & Business    - Data Analysis, Power BI, Excel, Marketing, SQL, Analytics
+📚 Digital Basics     - Terminal, GitHub, Internet, File Management, Fundamentals
+🚀 Technology         - Docker, IoT, Automotive, Cloud, DevOps, Infrastructure
+
+================================================================================
+INSTRUCTIONS:
+1. Replace [שם המדריך] with your guide name (will appear in catalog)
+2. Choose an appropriate emoji (🎨 🐍 📊 💻 ⚖️ etc.)
+3. Pick ONE category from the list above
+4. Add a short description (50 chars max)
+5. Save & run: npm run auto
+================================================================================
+-->
+
+<!--
+{
+  "guide_metadata": {
+    "name": "ניהול זמן בשיטת Pomodoro ו-Time Blocking",
+    "icon": "🎓",
+    "category": "Technology",
+    "description": "שיטות לניהול זמן יעיל בפרודוקטיביות"
+  }
+}
+-->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>ניהול זמן בשיטת Pomodoro ו-Time Blocking | Productivity Techniques in Technology | LearningHub</title>
+    <meta name="description" content="למדו כיצד לנהל זמן ביעילות באמצעות שיטות Pomodoro ו-Time Blocking ולשפר את הפרודוקטיביות האישית והמקצועית שלכם.">
+    <meta name="keywords" content="ניהול זמן, Pomodoro, Time Blocking, פרודוקטיביות, טכנולוגיה, Productivity Techniques in Technology, PTT-102-2024, מדריך, לימוד, קורס חינמי, הדרכה מקצועית, EduManage, LearningHub">
+    <meta name="author" content="LearningHub Academy - LearningHub">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ניהול זמן בשיטת Pomodoro ו-Time Blocking | Productivity Techniques in Technology">
+    <meta property="og:description" content="שיטות לניהול זמן יעיל בפרודוקטיביות">
+    <meta property="og:image" content="https://image.pollinations.ai/prompt/Minimalist%20modern%20tech%20illustration%20of%20time%20management%20with%20Pomodoro%20and%20Time%20Blocking%20techniques%20minimalist%20flat%20vector%20art%20style%20high%20quality%204k">
+    <meta property="og:url" content="https://learninghub.co.il/courses/PTT-102-2024/time-management-pomodoro-time-blocking.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="Technology">
+    <meta property="article:tag" content="ניהול זמן, Pomodoro, Time Blocking, פרודוקטיביות, טכנולוגיה">
+    <meta property="article:published_time" content="2025-12-16">
+    <meta property="article:modified_time" content="2025-12-16">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ניהול זמן בשיטת Pomodoro ו-Time Blocking | Productivity Techniques in Technology">
+    <meta name="twitter:description" content="שיטות לניהול זמן יעיל בפרודוקטיביות">
+    <meta name="twitter:image" content="https://image.pollinations.ai/prompt/Minimalist%20modern%20tech%20illustration%20of%20time%20management%20with%20Pomodoro%20and%20Time%20Blocking%20techniques%20minimalist%20flat%20vector%20art%20style%20high%20quality%204k">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="msapplication-TileColor" content="#1a1a2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://learninghub.co.il/courses/PTT-102-2024/time-management-pomodoro-time-blocking.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="https://learninghub.co.il/courses/PTT-102-2024/time-management-pomodoro-time-blocking.html">
+    <link rel="alternate" hreflang="x-default" href="https://learninghub.co.il/courses/PTT-102-2024/time-management-pomodoro-time-blocking.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Mermaid JS (Injected for diagrams) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'base',
+                themeVariables: {
+                    primaryColor: '#e8f4fd',
+                    primaryTextColor: '#1a1a2e',
+                    primaryBorderColor: '#6c5ce7',
+                    lineColor: '#6c5ce7',
+                    secondaryColor: '#f4f4f4',
+                    tertiaryColor: '#fff'
+                },
+                flowchart: {
+                    htmlLabels: true,
+                    curve: 'basis'
+                }
+            });
+        });
+    </script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ניהול זמן בשיטת Pomodoro ו-Time Blocking",
+        "description": "למדו כיצד לנהל זמן ביעילות באמצעות שיטות Pomodoro ו-Time Blocking ולשפר את הפרודוקטיביות האישית והמקצועית שלכם.",
+        "image": "https://image.pollinations.ai/prompt/Minimalist%20modern%20tech%20illustration%20of%20time%20management%20with%20Pomodoro%20and%20Time%20Blocking%20techniques%20minimalist%20flat%20vector%20art%20style%20high%20quality%204k",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub Academy",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-12-16",
+        "dateModified": "2025-12-16",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://learninghub.co.il/courses/PTT-102-2024/time-management-pomodoro-time-blocking.html"
+        },
+        "articleSection": "Technology",
+        "keywords": "ניהול זמן, Pomodoro, Time Blocking, פרודוקטיביות, טכנולוגיה",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "Skills related to ניהול זמן בשיטת Pomodoro ו-Time Blocking",
+        "about": {
+            "@type": "Course",
+            "name": "Productivity Techniques in Technology",
+            "courseCode": "PTT-102-2024"
+        }
+    }
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        :root {
+            --theme-primary: #1a1a2e;    /* צבע ראשי של המדריך */
+            --theme-accent: #6c5ce7;     /* צבע מבטא */
+            --theme-light: #a29bfe;      /* צבע בהיר */
+        }
+        
+        /* Page Container */
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 1rem;
+            background: var(--bg-body, #f8f9fa);
+            font-size: 0.9rem;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .breadcrumbs a {
+            color: var(--accent, #6c5ce7);
+            text-decoration: none;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+            background: rgba(108, 92, 231, 0.1);
+        }
+        
+        .breadcrumbs .current {
+            color: var(--text-secondary, #636e72);
+            font-weight: 500;
+        }
+        
+        .breadcrumbs span {
+            margin: 0 0.5rem;
+            color: #999;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            font-family: var(--font-heading, 'Frank Ruhl Libre', serif);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .concept-card {
+            background: var(--bg-card, white);
+            padding: 2rem;
+            border-radius: var(--radius-md, 12px);
+            box-shadow: var(--shadow-md, 0 4px 15px rgba(0, 0, 0, 0.05));
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--theme-accent);
+            overflow: hidden; /* Prevent diagram overflow */
+        }
+
+        /* Formatted Content Styles */
+        .formatted-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .formatted-content ul, .formatted-content ol {
+            margin-bottom: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .formatted-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .formatted-content strong {
+            color: var(--theme-primary);
+            font-weight: 700;
+        }
+
+        /* Diagrams */
+        .diagram-container {
+            background: #fdfdfd;
+            border: 1px dashed #e0e0e0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .code-block {
+            background: var(--theme-primary);
+            color: #e8f4fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* טיזרים */
+        .teaser-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .teaser-idea {
+            background: #e8f5e9;
+            border-right: 4px solid #28a745;
+        }
+
+        .teaser-warning {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+        }
+
+        .teaser-secret {
+            background: #f3e5f5;
+            border-right: 4px solid #6f42c1;
+        }
+
+        .teaser-bonus {
+            background: #e1f5fe;
+            border-right: 4px solid #03a9f4;
+        }
+
+        .teaser-tip {
+            background: #e0f7fa;
+            border-right: 4px solid #17a2b8;
+        }
+
+        .teaser-challenge {
+            background: #ffebee;
+            border-right: 4px solid #dc3545;
+        }
+
+        .teaser-title {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        /* Footer Styles */
+        .global-footer {
+            background: var(--primary, #1a1a2e);
+            color: var(--text-light, #b2bec3);
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-main {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-bottom: 2rem;
+        }
+        
+        .footer-brand h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-description {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-link {
+            color: var(--text-light, #b2bec3);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2.5rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-link:hover {
+            background: var(--accent, #6c5ce7);
+        }
+
+        /* Global Header Styles */
+        .global-header {
+            background: var(--primary, #1a1a2e);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .global-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent, #6c5ce7);
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .nav-brand {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-brand:hover {
+            color: var(--accent, #6c5ce7);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+        }
+        
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .global-nav {
+                position: relative;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary, #1a1a2e);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .hamburger-menu {
+                display: flex;
+            }
+            
+            .page-container {
+                padding: 1rem 0.5rem;
+            }
+            
+            .concept-card {
+                padding: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" 
+               style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; transition: all 0.3s;"
+               onmouseover="this.style.background='#f8f9fa'"
+               onmouseout="this.style.background='white'">
+                פורטל התלמידים
+            </a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+               style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;"
+               onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+               onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                הצטרף חינם
+            </a>
+        </div>
+    </div>
+
+    <!-- Global Header -->
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links">
+                <a href="#" onclick="alert('מפת האתר - בפיתוח'); return false;" class="nav-link">מפת האתר</a>
+                <a href="#" onclick="alert('קטגוריות - בפיתוח'); return false;" class="nav-link">קטגוריות</a>
+                <a href="#" onclick="alert('דף הבית - בפיתוח'); return false;" class="nav-link">ראשי</a>
+            </div>
+            <a href="#" onclick="alert('LearningHub - בפיתוח'); return false;" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי" onclick="alert('תפריט נייד - בפיתוח')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs with Schema -->
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "דף הבית",
+                    "item": "https://learninghub.co.il/index.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "קטגוריות",
+                    "item": "https://learninghub.co.il/categories.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "ניהול זמן בשיטת Pomodoro ו-Time Blocking",
+                    "item": "https://learninghub.co.il/courses/PTT-102-2024/time-management-pomodoro-time-blocking.html"
+                }
+            ]
+        }
+        </script>
+        <a href="#" onclick="alert('דף הבית - בפיתוח'); return false;">דף הבית</a>
+        <span>/</span>
+        <a href="#" onclick="alert('קטגוריות - בפיתוח'); return false;">קטגוריות</a>
+        <span>/</span>
+        <span class="current">ניהול זמן בשיטת Pomodoro ו-Time Blocking</span>
+    </nav>
+
+    <!-- Page Header with SEO Optimization -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 itemprop="headline">🎓 ניהול זמן בשיטת Pomodoro ו-Time Blocking</h1>
+            <p class="subtitle" itemprop="description">למדו כיצד לנהל זמן ביעילות באמצעות שיטות Pomodoro ו-Time Blocking ולשפר את הפרודוקטיביות האישית והמקצועית שלכם.</p>
+            
+            <!-- Article Meta Information -->
+            <div class="article-meta" style="margin-top: 1rem; font-size: 0.9rem; color: #666; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                    👨‍🏫 מאת: <span itemprop="name">LearningHub</span>
+                </span>
+                <span>📅 עודכן: <time itemprop="dateModified" datetime="2025-12-16">2025-12-16</time></span>
+                <span>⏱️ זמן קריאה: 12 דקות</span>
+                <span>📊 רמת קושי: בסיסי</span>
+            </div>
+            
+            <!-- Quick Navigation -->
+            <div class="quick-nav" style="margin-top: 1.5rem; text-align: center;">
+                <a href="#main-content" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📖 תוכן המדריך
+                </a>
+                <a href="#tasks" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📋 משימות
+                </a>
+                <a href="#join-course" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    🚀 הצטרף לקורס
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with SEO Structure -->
+    <main class="page-container" id="main-content" itemscope itemtype="https://schema.org/Article">
+        
+        <!-- Table of Contents for SEO -->
+        <div class="concept-card" style="background: #f8f9fa; border-right: 4px solid #007bff;">
+            <h2>📋 סילבוס המפגש</h2>
+            <nav aria-label="תוכן המדריך">
+                <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><a href="#why-important" style="color: #007bff; text-decoration: none;">מבוא וחשיבות</a></li>
+                    <li><a href="#part-1" style="color: #007bff; text-decoration: none;">שיטת Pomodoro</a></li>
+                    <li><a href="#part-2" style="color: #007bff; text-decoration: none;">שיטת Time Blocking</a></li>
+                    <li><a href="#advanced" style="color: #007bff; text-decoration: none;">העמקה בשיטות</a></li>
+                    <li><a href="#summary" style="color: #007bff; text-decoration: none;">סיכום המפגש</a></li>
+                    <li><a href="#lms-assignments" style="color: #007bff; text-decoration: none;">מטלות להגשה (LMS)</a></li>
+                </ol>
+            </nav>
+        </div>
+        
+        <!-- מבוא -->
+        <section class="concept-card" id="why-important">
+            <h2 itemprop="headline">למה הנושא חשוב בקורס "Productivity Techniques in Technology"?</h2>
+            <div itemprop="articleBody" class="formatted-content">
+                <p>בעולם המודרני, עם כמות המשימות והמידע שאנחנו נדרשים לעבד, ניהול זמן הוא מיומנות קריטית. <strong>שיטת Pomodoro</strong> ושיטת <strong>Time Blocking</strong> מציעות פתרונות פרקטיים לשיפור הפרודוקטיביות בעזרת גישות שונות.</p>
+            </div>
+        </section>
+
+        <!-- תוכן עיקרי - חלק 1 -->
+        <section class="concept-card" id="part-1">
+            <h2>1. שיטת Pomodoro</h2>
+            <div class="formatted-content">
+                <p>שיטת Pomodoro היא טכניקה לניהול זמן שפותחה על ידי פרנצ'סקו צ'ירילו בשנות ה-80. השיטה מבוססת על הרעיון של חלוקת העבודה למקטעים קצרים ותחומים בזמן של 25 דקות, הנקראים 'Pomodoros', עם הפסקות קצרות ביניהם. השיטה עוזרת למנוע עייפות ולשפר ריכוז על ידי יצירת תחושת דחיפות.</p><ul><li><strong>יתרון:</strong> הגברת המיקוד ויכולת הריכוז.</li><li><strong>חיסרון:</strong> עשוי להיות קשה ליישום במשימות ארוכות טווח.</li></ul>
+            </div>
+            
+            <div class="diagram-container">
+                <h4 style="margin-bottom: 1rem; color: #666;">תרשים מושגים (Concept Map)</h4>
+                <div class="mermaid">
+                    graph TD; A[תחילת עבודה] --> B[Pomodoro של 25 דקות]; B --> C[הפסקה קצרה]; C --> D{ממשיך למשימה הבאה?}; D -->|כן| B; D -->|לא| E[הפסקה ארוכה]
+                </div>
+            </div>
+            
+            <!-- דוגמת קוד אם רלוונטי -->
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre></pre>
+            </div>
+        </section>
+
+        <!-- טיזרים פדגוגיים מפוזרים לאורך המדריך -->
+        
+                <div class="teaser-box teaser-idea">
+                    <h4 class="teaser-title" style="color: #28a745;">💡 חומר למחשבה</h4>
+                    <p><strong>האם ידעת ש...</strong> שיטה זו יכולה לשנות את האופן שבו אתם מתמודדים עם עומס משימות יומיומי.</p>
+                </div>
+            
+
+                <div class="teaser-box teaser-warning">
+                    <h4 class="teaser-title" style="color: #856404;">⚠️ רגע, עצור!</h4>
+                    <p><strong>שים לב:</strong> חשוב לשמור על גמישות בתכנון כדי למנוע תסכול.</p>
+                </div>
+            
+
+                <div class="teaser-box teaser-secret">
+                    <h4 class="teaser-title" style="color: #6f42c1;">🤫 סוד קטן</h4>
+                    <p><strong>טעות נפוצה:</strong> שילוב בין השיטות יכול להוביל לאופטימיזציה בפרודוקטיביות.</p>
+                </div>
+            
+
+                <div class="teaser-box teaser-bonus">
+                    <h4 class="teaser-title" style="color: #0277bd;">😎 בונוס</h4>
+                    <p><strong>תרגיל מעשי:</strong> גלה כיצד לשלב את השיטות עם כלים דיגיטליים לניהול משימות.</p>
+                </div>
+            ה</h4>
+            <p><strong>האם ידעת ש...</strong> שיטה זו יכולה לשנות את האופן שבו אתם מתמודדים עם עומס משימות יומיומי.</p>
+        </div>
+
+        <!-- תוכן עיקרי - חלק 2 -->
+        <section class="concept-card" id="part-2">
+            <h2>2. שיטת Time Blocking</h2>
+            <div class="formatted-content">
+                <p>שיטת Time Blocking היא טכניקה לניהול זמן שבה מחלקים את היום לבלוקים של זמן המוקדשים לפעילויות שונות. כל בלוק מתוכנן מראש וכולל זמן מוקדש למשימה ספציפית, מה שמסייע למנוע הסחות דעת ולהתמקד במטלה אחת בכל פעם.</p><ul><li><strong>יתרון:</strong> מאפשר תכנון יום מלא בצורה יעילה.</li><li><strong>חיסרון:</strong> דורש משמעת גבוהה לשמירה על לוחות זמנים.</li></ul>
+            </div>
+
+             <div class="diagram-container">
+                <h4 style="margin-bottom: 1rem; color: #666;">תהליך העבודה (Workflow)</h4>
+                <div class="mermaid">
+                    graph TD; A[לוח זמנים יומי] --> B[בלוק עבודה]; B --> C[בלוק הפסקה]; C --> D[בלוק פגישה]; D --> E[בלוק משימה אישית]
+                </div>
+            </div>
+            
+            <!-- רשימה או שלבים -->
+            <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                 <li><strong>שלב 1:</strong> זהו משימות ודחו אותן לבלוקים יומיים.</li>
+                <li><strong>שלב 2:</strong> הגדירו סדרי עדיפויות לכל בלוק.</li>
+                <li><strong>שלב 3:</strong> השאירו מקום לשינויים בלתי צפויים.</li>
+            </ol>
+        </section>
+
+        <!-- טיזר 2 - אזהרה -->
+        <div class="teaser-box teaser-warning">
+            <h4 class="teaser-title" style="color: #856404;">⚠️ רגע, עצור!</h4>
+            <p><strong>שים לב:</strong> חשוב לשמור על גמישות בתכנון כדי למנוע תסכול.</p>
+        </div>
+
+        <!-- תוכן מתקדם -->
+        <section class="concept-card" id="advanced">
+            <h2>3. העמקה בשיטות</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-right: 4px solid var(--theme-accent);">
+                    <h3 style="color: var(--theme-primary); margin-bottom: 1rem;">Pomodoro מתקדם</h3>
+                    <ul style="margin-right: 1.5rem;">
+                         <li>השתמשו בטיימר דיגיטלי לניטור מדויק.</li>
+                        <li>שלבו עם אפליקציות לניהול משימות.</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-right: 4px solid var(--theme-light);">
+                    <h3 style="color: var(--theme-primary); margin-bottom: 1rem;">Time Blocking מתקדם</h3>
+                    <ul style="margin-right: 1.5rem;">
+                         <li>שלבו עם יומן דיגיטלי לניהול יעיל.</li>
+                        <li>קחו בחשבון זמנים לשיחות והפסקות.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- טיזר 3 - סוד קטן -->
+        <div class="teaser-box teaser-secret">
+            <h4 class="teaser-title" style="color: #6f42c1;">🤫 סוד קטן</h4>
+            <p><strong>טעות נפוצה:</strong> שילוב בין השיטות יכול להוביל לאופטימיזציה בפרודוקטיביות.</p>
+        </div>
+
+        <!-- מסקנות ויישום מעשי -->
+        <section class="concept-card" id="summary" style="background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%); color: white; border: none;">
+            <h2 style="color: white;">🎯 סיכום המפגש ויישום מעשי</h2>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                <h3 style="color: white; margin-bottom: 1rem;">✅ נקודות מפתח שלמדנו היום</h3>
+                <ul style="margin-right: 1.5rem; line-height: 1.8;">
+                     <li>Pomodoro עוזרת להתמקד בפרקי זמן קצרים.</li>
+                        <li>Time Blocking מסייע בתכנון יום מלא ויעיל.</li>
+                        <li>שילוב השיטות מתאים להתמודדות עם משימות שונות.</li>
+                </ul>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">🚀 הצעדים הבאים שלכם</h3>
+                    <ol style="margin-right: 1.5rem; line-height: 1.6;">
+                         <li><strong>שלב 1:</strong> התנסו בשיטות במשך שבוע.</li>
+                         <li><strong>שלב 2:</strong> התאימו את השיטות לסגנון העבודה שלכם.</li>
+                    </ol>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: white; margin-bottom: 1rem;">⚠️ מלכודות נפוצות להימנע מהן</h3>
+                    <ul style="margin-right: 1.5rem; line-height: 1.6;">
+                        <li><strong>נמנעו מ:</strong> התעקשות על זמן קבוע למשימות לא גמישות.</li>
+                        <li><strong>נמנעו מ:</strong> אי השארת זמן למצבים בלתי צפויים.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- קריאה לפעולה -->
+            <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 12px;">
+                <h3 style="color: white; margin-bottom: 1rem;">🎯 קדימה לעבודה!</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">עכשיו שיש לכם את הכלים והידע, הגיע הזמן ליישם במציאות</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">💪 תתחילו מהמשימות הבסיסיות</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">🔥 תתקדמו למשימות המתקדמות</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">🚀 תשתפו את התוצאות</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- משימות לשבוע הקרוב (LMS Assignments) -->
+        <section class="concept-card" id="lms-assignments">
+            <h2>📋 מטלות להגשה (מתוך מערכת הקורס)</h2>
+            <p style="margin-bottom: 1.5rem; color: #666;">יש להגיש את המטלות הבאות דרך מערכת ה-LMS עד המועד הנקוב.</p>
+            
+            
+        <div style="background: #e3f2fd; border: 2px solid #007bff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                <h3 style="color: #333; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>📋 מטלה</span> תרגול שיטות ניהול זמן
+                </h3>
+                <span style="background: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(0,0,0,0.1);">
+                    משקל: 10%
+                </span>
+            </div>
+            <p style="margin-bottom: 1rem; color: #444;">בצעו שבוע של תיעוד זמן באמצעות Pomodoro ו-Time Blocking וכתבו דוח על התובנות שלכם.</p>
+            
+      <div style="margin-top: 1rem; background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #e0e0e0;">
+        <h5 style="margin-top: 0; margin-bottom: 0.5rem; color: #555; font-size: 0.9rem;">📊 מחוון הערכה (Rubric)</h5>
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+          <thead>
+            <tr style="background: #f9f9f9; text-align: right;">
+              <th style="padding: 0.5rem; border-bottom: 2px solid #eee;">קריטריון</th>
+              <th style="padding: 0.5rem; border-bottom: 2px solid #eee;">תיאור</th>
+              <th style="padding: 0.5rem; border-bottom: 2px solid #eee;">נקודות</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td style="padding: 0.5rem; border-bottom: 1px solid #eee;"><strong>דיוק התיעוד</strong></td>
+                <td style="padding: 0.5rem; border-bottom: 1px solid #eee;">תיעוד מדויק של זמני העבודה וההפסקות.</td>
+                <td style="padding: 0.5rem; border-bottom: 1px solid #eee;">5</td>
+              </tr>
+            
+              <tr>
+                <td style="padding: 0.5rem; border-bottom: 1px solid #eee;"><strong>ניתוח תובנות</strong></td>
+                <td style="padding: 0.5rem; border-bottom: 1px solid #eee;">ניתוח מעמיק של התובנות מהתרגול.</td>
+                <td style="padding: 0.5rem; border-bottom: 1px solid #eee;">5</td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    
+        </div>
+      
+
+            <!-- טיזר 4 - בונוס -->
+            <div class="teaser-box teaser-bonus">
+                <h4 class="teaser-title" style="color: #0277bd;">😎 בונוס (רשות)</h4>
+                <p><strong>תרגיל אתגר:</strong> גלה כיצד לשלב את השיטות עם כלים דיגיטליים לניהול משימות.</p>
+            </div>
+        </section>
+
+        <!-- משימות לשבוע הקרוב -->
+        
+
+        <!-- מסע המשתמש - חזרה ל-LMS -->
+        <div class="concept-card" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; border: none; position: relative; overflow: hidden;">
+            <!-- רקע דקורטיבי -->
+            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.3;"></div>
+            <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.2;"></div>
+            
+            <div style="position: relative; z-index: 2;">
+                <h2 style="color: white; text-align: center; margin-bottom: 1.5rem;">🎯 סיימת את יחידת הלימוד!</h2>
+                
+                <div style="text-align: center; margin: 2rem 0;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                    <p style="font-size: 1.2rem; margin: 1.5rem 0; line-height: 1.6;">
+                        <strong>חומר זה הוא חלק מקורס Productivity Techniques in Technology (PTT-102-2024)</strong><br>
+                        יש לחזור לפורטל הקורס לצורך ביצוע המבחן המסכם והגשת המטלות.
+                    </p>
+                </div>
+
+                <!-- כפתור חזרה ל-LMS לתלמידים רשומים -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="https://edu-manage.org/" 
+                       style="display: inline-block; background: white; color: #28a745; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s; border: 3px solid white;"
+                       onmouseover="this.style.background='#f8f9fa'; this.style.transform='translateY(-2px)'"
+                       onmouseout="this.style.background='white'; this.style.transform='translateY(0)'">
+                        🎓 חזרה לפורטל הקורס - EduManage
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        
+      <!-- FAQ Section for SEO -->
+      <section class="concept-card" style="margin-top: 2rem;">
+        <h2>❓ שאלות נפוצות</h2>
+        <div itemscope itemtype="https://schema.org/FAQPage">
+          
+            
+            
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fa; border-radius: 12px; border-right: 4px solid #007bff;">
+                <h4 itemprop="name" style="color: #333; margin-bottom: 0.8rem; font-size: 1.1rem;">האם ניתן לשלב בין Pomodoro ו-Time Blocking?</h4>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    <p style="margin: 0; color: #555; line-height: 1.6;">כן, שילוב בין השיטות יכול להוביל לפרודוקטיביות משופרת על ידי ניהול זמן יעיל יותר.</p>
+                  </div>
+                </div>
+              </div>
+            
+          
+        </div>
+      </section>
+    
+
+        <!-- מדריכים קשורים -->
+        <div class="concept-card">
+            <h2 style="text-align: center; margin-bottom: 2rem;">📚 יחידות לימוד נוספות בקורס</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                
+                <a href="#" style="background: white; color: var(--theme-primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border-radius: 12px; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #f8f9fa;"
+                   onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <span style="font-size: 2.5rem; margin-bottom: 1rem;">🔧</span>
+                    <strong style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;">ניהול זמן בפרויקטים דיגיטליים</strong>
+                    <span style="font-size: 0.9rem; color: #666; text-align: center;">למדו כיצד לנהל זמן בפרויקטים דיגיטליים מורכבים.</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- FAQ Section for SEO -->
+    <section class="concept-card" style="margin-top: 2rem;">
+        <h2>❓ שאלות נפוצות על המפגש</h2>
+        <div itemscope itemtype="https://schema.org/FAQPage">
+            
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">האם ניתן לשלב בין Pomodoro ו-Time Blocking?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>כן, שילוב בין השיטות יכול להוביל לפרודוקטיביות משופרת על ידי ניהול זמן יעיל יותר.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><span class="brand-icon">🎓</span> LearningHub</h3>
+                    <p class="footer-description">
+                        פורטל הלמידה והחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+                           style="display: inline-block; background: #28a745; color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s;"
+                           onmouseover="this.style.background='#218838'"
+                           onmouseout="this.style.background='#28a745'">
+                            🚀 הצטרף לקורס החינמי
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>למידה</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="alert('כל הקטגוריות - בפיתוח'); return false;" class="footer-link">כל הקטגוריות</a></li>
+                        <li><a href="#" onclick="alert('מדריך Python - בפיתוח'); return false;" class="footer-link">Python</a></li>
+                        <li><a href="#" onclick="alert('מדריך ChatGPT - בפיתוח'); return false;" class="footer-link">ChatGPT</a></li>
+                        <li><a href="#" onclick="alert('מדריך ניתוח נתונים - בפיתוח'); return false;" class="footer-link">ניתוח נתונים</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="alert('מפת האתר - בפיתוח'); return false;" class="footer-link">מפת האתר</a></li>
+                        <li><a href="#" onclick="alert('ספריית פרומפטים - בפיתוח'); return false;" class="footer-link">ספריית פרומפטים</a></li>
+                        <li><a href="#" onclick="alert('אתיקה ב-AI - בפיתוח'); return false;" class="footer-link">אתיקה ב-AI</a></li>
+                        <li><a href="https://edu-manage.org/" class="footer-link">פורטל התלמידים</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>EduManage LMS</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://edu-manage.org/" class="footer-link">כניסה לפורטל</a></li>
+                        <li><a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" class="footer-link">הצטרפות לקורס</a></li>
+                        <li><a href="#" onclick="alert('מדריך למשתמש - בפיתוח'); return false;" class="footer-link">מדריך למשתמש</a></li>
+                        <li><a href="#" onclick="alert('תמיכה טכנית - בפיתוח'); return false;" class="footer-link">תמיכה טכנית</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <div>© 2025 <a href="https://edu-manage.org/" style="color: inherit; text-decoration: none;">EduManage</a> • מערכת לניהול פדגוגי</div>
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.3rem;">
+                        פותח ע"י BD TechAcademy • ביצוע ב-BDNHOST
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="#" onclick="alert('LinkedIn - בפיתוח'); return false;" class="social-link" title="LinkedIn">💼</a>
+                    <a href="#" onclick="alert('GitHub - בפיתוח'); return false;" class="social-link" title="GitHub">🐙</a>
+                    <a href="#" onclick="alert('YouTube - בפיתוח'); return false;" class="social-link" title="YouTube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script>
+        // Global JavaScript functionality for preview
+        console.log('LearningHub Guide - Preview Mode');
+        
+        // Handle navigation clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Mobile menu toggle functionality
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '100%';
+                    navLinks.style.left = '0';
+                    navLinks.style.right = '0';
+                    navLinks.style.background = 'var(--primary, #1a1a2e)';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.padding = '1rem';
+                    navLinks.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+                });
+            }
+        });
+    </script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Copy code function
+        function copyCode(btn) {
+            const pre = btn.nextElementSibling;
+            navigator.clipboard.writeText(pre.innerText);
+            btn.innerText = 'הועתק!';
+            setTimeout(() => btn.innerText = 'העתק', 2000);
+        }
+        
+        // SEO and UX Enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track reading progress for SEO signals
+            let maxScroll = 0;
+            window.addEventListener('scroll', function() {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                    // Send engagement signal to analytics (if implemented)
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'scroll', {
+                            'event_category': 'engagement',
+                            'event_label': 'reading_progress',
+                            'value': scrollPercent
+                        });
+                    }
+                }
+            });
+            
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Lazy loading for images (if any)
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

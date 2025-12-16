@@ -1,0 +1,369 @@
+{
+  "course": {
+    "id": "DIGITAL-PRO-2025",
+    "name": "🚀 מימניות דיגיטליות בסיסיות לסטודנט",
+    "description": "פיתוח מיומנויות דיגיטליות בסיסיות לסטודנטים: חיפוש אקדמי, ארגון קבצים, הגשת מטלות וניהול זמן ✅ מדריך מקצועי חינמי ✅ דוגמאות מעשיות ✅ תרגילים ומטלות",
+    "syllabus_pdf": {
+      "path": "course_digital_literacy_syllabus_enhanced.pdf",
+      "purpose": "Main digital literacy course syllabus document with assignments and diagrams",
+      "pedagogical_role": "Overview of course structure, sessions, objectives, and resources"
+    },
+    "slides": {
+      "path": "course_digital_literacy_master_slides_enhanced.pptx",
+      "purpose": "Presentation slides for digital literacy instruction",
+      "pedagogical_role": "Visual support for lectures and discussions on digital skills"
+    },
+    "statistics": {
+      "total_sessions": 4,
+      "total_assignments": 12,
+      "assignments_per_session": 3,
+      "total_diagrams": 12,
+      "diagrams_per_session": 3,
+      "assignment_types": {
+        "exercises": 4,
+        "assignments": 4,
+        "projects": 4
+      }
+    },
+    "assignment_categories": [
+      {
+        "id": "exercises",
+        "name": "תרגילים",
+        "description": "תרגילים קצרים ליישום מיידי",
+        "count": 4
+      },
+      {
+        "id": "assignments",
+        "name": "משימות",
+        "description": "משימות מקיפות יותר",
+        "count": 4
+      },
+      {
+        "id": "projects",
+        "name": "פרויקטים",
+        "description": "פרויקטים ארוכי טווח",
+        "count": 4
+      }
+    ]
+  },
+  "sessions": [
+    {
+      "id": "s1",
+      "title": "מפגש 1: למה מיומנויות דיגיטליות חשובות לסטודנטים? | 📋 תוכן המדריך | 📢 כרזות קורס - מימניות דיגיטליות לסטודנט",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות 'למה מיומנויות דיגיטליות חשובות לסטודנטים? | 📋 תוכן המדריך | 📢 כרזות קורס - מימניות דיגיטליות לסטודנט. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "duration_hours": 5.0,
+      "session_pdf": {
+        "path": "session_pdfs_digital_enhanced\\session_s1_outline.pdf",
+        "purpose": "Detailed outline for this specific digital literacy session",
+        "pedagogical_role": "Guide for instructors and reference for students"
+      },
+      "assignments_count": 3,
+      "diagrams_count": 3,
+      "pedagogical_sequence": "Session 1 of 4"
+    },
+    {
+      "id": "s2",
+      "title": "מפגש 2: 1. חיפוש אקדמי יעיל וסינון מידע | 2. ארגון קבצים ומסמכים אקדמיים | 3. הגשת מטלות וניהול זמן דיגיטלי",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '1. חיפוש אקדמי יעיל וסינון מידע | 2. ארגון קבצים ומסמכים אקדמיים | 3. הגשת מטלות וניהול זמן דיגיטלי. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "duration_hours": 5.0,
+      "session_pdf": {
+        "path": "session_pdfs_digital_enhanced\\session_s2_outline.pdf",
+        "purpose": "Detailed outline for this specific digital literacy session",
+        "pedagogical_role": "Guide for instructors and reference for students"
+      },
+      "assignments_count": 3,
+      "diagrams_count": 3,
+      "pedagogical_sequence": "Session 2 of 4"
+    },
+    {
+      "id": "s3",
+      "title": "מפגש 3: 🎯 סיימת את המדריך? זמן להמשיך ללמוד! | 🌟 רוצה ללמוד יותר? הצטרף לקורס המלא! | 📚 מדריכים קשורים שיעניינו אותך",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '🎯 סיימת את המדריך? זמן להמשיך ללמוד! | 🌟 רוצה ללמוד יותר? הצטרף לקורס המלא! | 📚 מדריכים קשורים שיעניינו אותך. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "duration_hours": 5.0,
+      "session_pdf": {
+        "path": "session_pdfs_digital_enhanced\\session_s3_outline.pdf",
+        "purpose": "Detailed outline for this specific digital literacy session",
+        "pedagogical_role": "Guide for instructors and reference for students"
+      },
+      "assignments_count": 3,
+      "diagrams_count": 3,
+      "pedagogical_sequence": "Session 3 of 4"
+    },
+    {
+      "id": "s4",
+      "title": "מפגש 4: ❓ שאלות נפוצות | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב",
+      "objectives": "1. הסטודנט ידע ליישם את עקרונות '❓ שאלות נפוצות | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב. The objectives should start with 'הסטודנט ידע/יכיר/יבין'. Provide only the numbered list.' בפרויקט מעשי.",
+      "duration_hours": 5.0,
+      "session_pdf": {
+        "path": "session_pdfs_digital_enhanced\\session_s4_outline.pdf",
+        "purpose": "Detailed outline for this specific digital literacy session",
+        "pedagogical_role": "Guide for instructors and reference for students"
+      },
+      "assignments_count": 3,
+      "diagrams_count": 3,
+      "pedagogical_sequence": "Session 4 of 4"
+    }
+  ],
+  "assignments": [],
+  "structured_assignments": [
+    {
+      "id": "s1_ex1",
+      "type": "exercise",
+      "title": "מפגש 1: למה מיומנויות דיגיטליות חשובות לסטודנטים? | 📋 תוכן המדריך | 📢 כרזות קורס - מימניות דיגיטליות לסטודנט - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s1_as1",
+      "type": "assignment",
+      "title": "מפגש 1: למה מיומנויות דיגיטליות חשובות לסטודנטים? | 📋 תוכן המדריך | 📢 כרזות קורס - מימניות דיגיטליות לסטודנט - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s1_pr1",
+      "type": "project",
+      "title": "מפגש 1: למה מיומנויות דיגיטליות חשובות לסטודנטים? | 📋 תוכן המדריך | 📢 כרזות קורס - מימניות דיגיטליות לסטודנט - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    },
+    {
+      "id": "s2_ex1",
+      "type": "exercise",
+      "title": "מפגש 2: 1. חיפוש אקדמי יעיל וסינון מידע | 2. ארגון קבצים ומסמכים אקדמיים | 3. הגשת מטלות וניהול זמן דיגיטלי - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s2_as1",
+      "type": "assignment",
+      "title": "מפגש 2: 1. חיפוש אקדמי יעיל וסינון מידע | 2. ארגון קבצים ומסמכים אקדמיים | 3. הגשת מטלות וניהול זמן דיגיטלי - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s2_pr1",
+      "type": "project",
+      "title": "מפגש 2: 1. חיפוש אקדמי יעיל וסינון מידע | 2. ארגון קבצים ומסמכים אקדמיים | 3. הגשת מטלות וניהול זמן דיגיטלי - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    },
+    {
+      "id": "s3_ex1",
+      "type": "exercise",
+      "title": "מפגש 3: 🎯 סיימת את המדריך? זמן להמשיך ללמוד! | 🌟 רוצה ללמוד יותר? הצטרף לקורס המלא! | 📚 מדריכים קשורים שיעניינו אותך - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s3_as1",
+      "type": "assignment",
+      "title": "מפגש 3: 🎯 סיימת את המדריך? זמן להמשיך ללמוד! | 🌟 רוצה ללמוד יותר? הצטרף לקורס המלא! | 📚 מדריכים קשורים שיעניינו אותך - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s3_pr1",
+      "type": "project",
+      "title": "מפגש 3: 🎯 סיימת את המדריך? זמן להמשיך ללמוד! | 🌟 רוצה ללמוד יותר? הצטרף לקורס המלא! | 📚 מדריכים קשורים שיעניינו אותך - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    },
+    {
+      "id": "s4_ex1",
+      "type": "exercise",
+      "title": "מפגש 4: ❓ שאלות נפוצות | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s4_as1",
+      "type": "assignment",
+      "title": "מפגש 4: ❓ שאלות נפוצות | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s4_pr1",
+      "type": "project",
+      "title": "מפגש 4: ❓ שאלות נפוצות | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "s1_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 1: למה מיומנויות דיגיטליות חשובות לסטודנטים? | 📋 תוכן המדריך | 📢 כרזות קורס - מימניות דיגיטליות לסטודנט - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s1_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s1_architecture",
+      "type": "architecture",
+      "title": "מפגש 1: למה מיומנויות דיגיטליות חשובות לסטודנטים? | 📋 תוכן המדריך | 📢 כרזות קורס - מימניות דיגיטליות לסטודנט - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s1_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s1_timeline",
+      "type": "timeline",
+      "title": "מפגש 1: למה מיומנויות דיגיטליות חשובות לסטודנטים? | 📋 תוכן המדריך | 📢 כרזות קורס - מימניות דיגיטליות לסטודנט - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s1_timeline.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s2_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 2: 1. חיפוש אקדמי יעיל וסינון מידע | 2. ארגון קבצים ומסמכים אקדמיים | 3. הגשת מטלות וניהול זמן דיגיטלי - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s2_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s2_architecture",
+      "type": "architecture",
+      "title": "מפגש 2: 1. חיפוש אקדמי יעיל וסינון מידע | 2. ארגון קבצים ומסמכים אקדמיים | 3. הגשת מטלות וניהול זמן דיגיטלי - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s2_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s2_timeline",
+      "type": "timeline",
+      "title": "מפגש 2: 1. חיפוש אקדמי יעיל וסינון מידע | 2. ארגון קבצים ומסמכים אקדמיים | 3. הגשת מטלות וניהול זמן דיגיטלי - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s2_timeline.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s3_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 3: 🎯 סיימת את המדריך? זמן להמשיך ללמוד! | 🌟 רוצה ללמוד יותר? הצטרף לקורס המלא! | 📚 מדריכים קשורים שיעניינו אותך - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s3_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s3_architecture",
+      "type": "architecture",
+      "title": "מפגש 3: 🎯 סיימת את המדריך? זמן להמשיך ללמוד! | 🌟 רוצה ללמוד יותר? הצטרף לקורס המלא! | 📚 מדריכים קשורים שיעניינו אותך - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s3_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s3_timeline",
+      "type": "timeline",
+      "title": "מפגש 3: 🎯 סיימת את המדריך? זמן להמשיך ללמוד! | 🌟 רוצה ללמוד יותר? הצטרף לקורס המלא! | 📚 מדריכים קשורים שיעניינו אותך - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s3_timeline.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s4_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 4: ❓ שאלות נפוצות | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s4_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s4_architecture",
+      "type": "architecture",
+      "title": "מפגש 4: ❓ שאלות נפוצות | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s4_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s4_timeline",
+      "type": "timeline",
+      "title": "מפגש 4: ❓ שאלות נפוצות | 🎯 מסקנות ויישום מעשי | 📋 משימות לשבוע הקרוב - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s4_timeline.svg",
+      "format": "SVG"
+    }
+  ],
+  "resources": {
+    "assignments_directory": "assignments",
+    "diagrams_directory": "diagrams",
+    "session_pdfs_directory": "session_pdfs_digital_enhanced"
+  }
+}

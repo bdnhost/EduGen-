@@ -1,0 +1,576 @@
+{
+  "course": {
+    "name": "🚀 IoT ואוטומציה למהנדסים — Masterpiece",
+    "code": "IOT-MASTER-2025",
+    "description": "קורס מעמיק פרקטי+תאורטי ליצירת מוצרי IoT מאובטחים ומוכנים לפריסה.",
+    "start_date": "2025-12-15",
+    "total_sessions": 6,
+    "total_hours": 30,
+    "density": "medium"
+  },
+  "sessions": [
+    {
+      "id": "s1",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח",
+      "objectives": [
+        "הגדירו MVP ו- success criteria",
+        "הקימו סביבת פיתוח (PlatformIO/Arduino IDE)",
+        "הבינו ארכיטקטורת IoT בסיסית"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "assignments": [
+          "s1_ex1",
+          "s1_as1",
+          "s1_pr1"
+        ],
+        "diagrams": [
+          "s1_flowchart",
+          "s1_architecture",
+          "s1_timeline"
+        ]
+      }
+    },
+    {
+      "id": "s2",
+      "title": "מפגש 2: חומרה וחיווט",
+      "objectives": [
+        "חיבור חיישנים אנלוגיים ודיגיטליים",
+        "הבנת ADC וסינון אותות",
+        "הכנת BOM בסיסי ותיעוד חיבור"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "assignments": [
+          "s2_ex1",
+          "s2_as1",
+          "s2_pr1"
+        ],
+        "diagrams": [
+          "s2_flowchart",
+          "s2_architecture",
+          "s2_timeline"
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "title": "מפגש 3: קושחה מודולרית",
+      "objectives": [
+        "מבנה מודולארי של קוד",
+        "הטמעת power management",
+        "הטמעת logging ו-OTA"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "assignments": [
+          "s3_ex1",
+          "s3_as1",
+          "s3_pr1"
+        ],
+        "diagrams": [
+          "s3_flowchart",
+          "s3_architecture",
+          "s3_timeline"
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "title": "מפגש 4: איסוף נתונים ו-visualization",
+      "objectives": [
+        "בניית pipeline real-time",
+        "יישום smoothing ו-alerting",
+        "הסכמה על פורמט נתונים לשמירה"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "assignments": [
+          "s4_ex1",
+          "s4_as1",
+          "s4_pr1"
+        ],
+        "diagrams": [
+          "s4_flowchart",
+          "s4_architecture",
+          "s4_timeline"
+        ]
+      }
+    },
+    {
+      "id": "s5",
+      "title": "מפגש 5: פרוטוקולים ואבטחה",
+      "objectives": [
+        "עיצוב MQTT topics ותכנון QoS",
+        "הטמעת TLS/provisioning בסיסי",
+        "ביצוע threat model פשוט"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "assignments": [
+          "s5_ex1",
+          "s5_as1",
+          "s5_pr1"
+        ],
+        "diagrams": [
+          "s5_flowchart",
+          "s5_architecture",
+          "s5_timeline"
+        ]
+      }
+    },
+    {
+      "id": "s6",
+      "title": "מפגש 6: פרויקט גמר והצגות",
+      "objectives": [
+        "הצגת פרוטוטייפ עובד",
+        "peer review ושיפור מהיר",
+        "הגשת deliverables: repo, demo video, report"
+      ],
+      "duration_hours": 5,
+      "resources": {
+        "assignments": [
+          "s6_ex1",
+          "s6_as1",
+          "s6_pr1"
+        ],
+        "diagrams": [
+          "s6_flowchart",
+          "s6_architecture",
+          "s6_timeline"
+        ]
+      }
+    }
+  ],
+  "assignments": [
+    {
+      "id": "proj_final",
+      "title": "פרויקט גמר: יישום מעשי",
+      "description": "בנו פרוטוטייפ עובד המיישם את עקרונות המדריך והציגו demo קצר.",
+      "session_id": "s6",
+      "due_in_weeks": 6,
+      "weight": 80,
+      "rubric": {
+        "technical": 50,
+        "demo": 20,
+        "security": 15,
+        "docs": 10,
+        "presentation": 5
+      }
+    }
+  ],
+  "structured_assignments": [
+    {
+      "id": "s1_ex1",
+      "type": "exercise",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s1_as1",
+      "type": "assignment",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s1_pr1",
+      "type": "project",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    },
+    {
+      "id": "s2_ex1",
+      "type": "exercise",
+      "title": "מפגש 2: חומרה וחיווט - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s2_as1",
+      "type": "assignment",
+      "title": "מפגש 2: חומרה וחיווט - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s2_pr1",
+      "type": "project",
+      "title": "מפגש 2: חומרה וחיווט - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    },
+    {
+      "id": "s3_ex1",
+      "type": "exercise",
+      "title": "מפגש 3: קושחה מודולרית - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s3_as1",
+      "type": "assignment",
+      "title": "מפגש 3: קושחה מודולרית - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s3_pr1",
+      "type": "project",
+      "title": "מפגש 3: קושחה מודולרית - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    },
+    {
+      "id": "s4_ex1",
+      "type": "exercise",
+      "title": "מפגש 4: איסוף נתונים ו-visualization - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s4_as1",
+      "type": "assignment",
+      "title": "מפגש 4: איסוף נתונים ו-visualization - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s4_pr1",
+      "type": "project",
+      "title": "מפגש 4: איסוף נתונים ו-visualization - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    },
+    {
+      "id": "s5_ex1",
+      "type": "exercise",
+      "title": "מפגש 5: פרוטוקולים ואבטחה - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s5_as1",
+      "type": "assignment",
+      "title": "מפגש 5: פרוטוקולים ואבטחה - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s5_pr1",
+      "type": "project",
+      "title": "מפגש 5: פרוטוקולים ואבטחה - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    },
+    {
+      "id": "s6_ex1",
+      "type": "exercise",
+      "title": "מפגש 6: פרויקט גמר והצגות - תרגיל בסיסי",
+      "description": "תרגיל בסיסי להכרות עם הנושא",
+      "files": [
+        "instructions.md",
+        "starter_code.py"
+      ],
+      "due_in_days": 7,
+      "weight": 5,
+      "points": 10
+    },
+    {
+      "id": "s6_as1",
+      "type": "assignment",
+      "title": "מפגש 6: פרויקט גמר והצגות - משימה אישית",
+      "description": "משימה עצמאית ליישום הנלמד",
+      "files": [
+        "task_description.md",
+        "submission_template.md"
+      ],
+      "due_in_days": 14,
+      "weight": 15,
+      "points": 30
+    },
+    {
+      "id": "s6_pr1",
+      "type": "project",
+      "title": "מפגש 6: פרויקט גמר והצגות - פרויקט מעשי",
+      "description": "פרויקט מעשי ליישום הנלמד",
+      "files": [
+        "project_brief.md",
+        "requirements.json"
+      ],
+      "due_in_days": 21,
+      "weight": 25,
+      "points": 50
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "s1_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s1_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s1_architecture",
+      "type": "architecture",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s1_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s1_timeline",
+      "type": "timeline",
+      "title": "מפגש 1: הגדרת בעיה וסביבת פיתוח - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s1_timeline.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s2_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 2: חומרה וחיווט - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s2_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s2_architecture",
+      "type": "architecture",
+      "title": "מפגש 2: חומרה וחיווט - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s2_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s2_timeline",
+      "type": "timeline",
+      "title": "מפגש 2: חומרה וחיווט - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s2_timeline.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s3_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 3: קושחה מודולרית - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s3_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s3_architecture",
+      "type": "architecture",
+      "title": "מפגש 3: קושחה מודולרית - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s3_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s3_timeline",
+      "type": "timeline",
+      "title": "מפגש 3: קושחה מודולרית - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s3_timeline.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s4_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 4: איסוף נתונים ו-visualization - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s4_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s4_architecture",
+      "type": "architecture",
+      "title": "מפגש 4: איסוף נתונים ו-visualization - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s4_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s4_timeline",
+      "type": "timeline",
+      "title": "מפגש 4: איסוף נתונים ו-visualization - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s4_timeline.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s5_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 5: פרוטוקולים ואבטחה - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s5_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s5_architecture",
+      "type": "architecture",
+      "title": "מפגש 5: פרוטוקולים ואבטחה - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s5_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s5_timeline",
+      "type": "timeline",
+      "title": "מפגש 5: פרוטוקולים ואבטחה - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s5_timeline.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s6_flowchart",
+      "type": "flowchart",
+      "title": "מפגש 6: פרויקט גמר והצגות - תרשים זרימה",
+      "description": "תרשים זרימה של התהליכים במפגש",
+      "file": "s6_flowchart.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s6_architecture",
+      "type": "architecture",
+      "title": "מפגש 6: פרויקט גמר והצגות - תרשים ארכיטקטורה",
+      "description": "תרשים ארכיטקטורה של המערכת",
+      "file": "s6_architecture.svg",
+      "format": "SVG"
+    },
+    {
+      "id": "s6_timeline",
+      "type": "timeline",
+      "title": "מפגש 6: פרויקט גמר והצגות - ציר זמן",
+      "description": "ציר זמן של השלבים במפגש",
+      "file": "s6_timeline.svg",
+      "format": "SVG"
+    }
+  ],
+  "assignment_categories": [
+    {
+      "id": "exercises",
+      "name": "תרגילים",
+      "description": "תרגילים קצרים ליישום מיידי",
+      "count": 6
+    },
+    {
+      "id": "assignments",
+      "name": "משימות",
+      "description": "משימות מקיפות יותר",
+      "count": 6
+    },
+    {
+      "id": "projects",
+      "name": "פרויקטים",
+      "description": "פרויקטים ארוכי טווח",
+      "count": 6
+    }
+  ],
+  "statistics": {
+    "total_sessions": 6,
+    "total_assignments": 18,
+    "assignments_per_session": 3,
+    "total_diagrams": 18,
+    "diagrams_per_session": 3,
+    "assignment_types": {
+      "exercises": 6,
+      "assignments": 6,
+      "projects": 6
+    }
+  }
+}

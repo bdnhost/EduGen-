@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>המדריך המקיף לשימוש ב-Docker: בנייה, פריסה וניהול קונטיינרים | מדריך מקצועי חינמי | LearningHub</title>
+    <meta name="description" content="למד את יסודות Docker - אדריכטורה קונטיינרים, בניית תמונות, ניהול וקיפול (orchestration). המדריך מכסה עקרונות תיאורטיים, יישום מעשי וטכניקות אופטימיזציה. ✅ מדריך מקצועי חינמי ✅ דוגמאות מעשיות ✅ תרגילים ומטלות">
+    <meta name="keywords" content="Docker, קונטיינרים, Dockerfile, Docker Compose, שימוש בקונטיינרים, ניהול תמונות, DevOps, microservices, containerization, פריסה, אדריכטורה, מדריך, לימוד, קורס חינמי, הדרכה מקצועית, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="המדריך המקיף לשימוש ב-Docker: בנייה, פריסה וניהול קונטיינרים | מדריך מקצועי חינמי">
+    <meta property="og:description" content="למד כיצד להשתמש ב-Docker לבנייה, פריסה וניהול של אפליקציות מודרניות. המדריך מכסה עקרונות תיאורטיים, יישום מעשי וטכניקות אופטימיזציה. - למד בצורה מעשיות עם דוגמאות ותרגילים">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=docker">
+    <meta property="og:url" content="https://edu-manage.org/guides/docker-usage-guide">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="Education">
+    <meta property="article:tag" content="Docker, קונטיינרים, Dockerfile, DevOps, microservices, containerization, פריסה">
+    <meta property="article:published_time" content="2025-12-15">
+    <meta property="article:modified_time" content="2025-12-15">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="המדריך המקיף לשימוש ב-Docker: בנייה, פריסה וניהול קונטיינרים | מדריך מקצועי חינמי">
+    <meta name="twitter:description" content="למד כיצד להשתמש ב-Docker לבנייה, פריסה וניהול של אפליקציות מודרניות. המדריך מכסה עקרונות תיאורטיים, יישום מעשי וטכניקות אופטימיזציה.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=docker">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="msapplication-TileColor" content="#1a1a2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://learninghub.co.il/docker-usage-guide.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "המדריך המקיף לשימוש ב-Docker: בנייה, פריסה וניהול קונטיינרים",
+        "description": "למד כיצד להשתמש ב-Docker לבנייה, פריסה וניהול של אפליקציות מודרניות עם קונטיינרים. המדריך מכסה עקרונות תיאורטיים, יישום מעשי וטכניקות אופטימיזציה.",
+        "image": "https://picsum.photos/1200/630?random=docker",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-12-15",
+        "dateModified": "2025-12-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://learninghub.co.il/docker-usage-guide.html"
+        },
+        "articleSection": "Technology",
+        "keywords": "Docker, קונטיינרים, Dockerfile, Docker Compose, DevOps, microservices, containerization",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "שימוש ב-Docker לבנייה וניהול קונטיינרים",
+        "about": {
+            "@type": "Thing",
+            "name": "Docker - Platform קונטיינריזציה"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "המדריך המקיף לשימוש ב-Docker: בנייה, פריסה וניהול קונטיינרים",
+        "description": "קורס מקיף לשימוש ב-Docker - מהיסודות ועד טכניקות מתקדמות. בנייה, פריסה, ניהול קונטיינרים וDev Ops.",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online",
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "instructor": {
+                "@type": "Organization",
+                "name": "LearningHub"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "פורטל הלמידה והחדשנות - מדריכים מקצועיים בעברית וערבית",
+        "sameAs": [
+            "https://www.facebook.com/EduManage",
+            "https://twitter.com/EduManage",
+            "https://www.linkedin.com/company/EduManage"
+        ]
+    }
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        :root {
+            --theme-primary: #0066cc;    /* צבע כחול Docker */
+            --theme-accent: #2496ed;     /* צבע הדגשה - כחול בהיר */
+            --theme-light: #85c1f2;      /* צבע בהיר */
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f4f6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%);
+            color: white;
+        }
+
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .concept-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--theme-accent);
+        }
+
+        .code-block {
+            background: var(--theme-primary);
+            color: #e8f4fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* טיזרים */
+        .teaser-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .teaser-idea {
+            background: #e8f5e9;
+            border-right: 4px solid #28a745;
+        }
+
+        .teaser-warning {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+        }
+
+        .teaser-secret {
+            background: #f0e6ff;
+            border-right: 4px solid #a259ff;
+        }
+
+        .teaser-bonus {
+            background: #e8f4f8;
+            border-right: 4px solid #00bcd4;
+        }
+
+        .related-guides {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-right: 3px solid var(--theme-accent);
+        }
+
+        .related-guides h3 {
+            margin-top: 0;
+            color: var(--theme-primary);
+        }
+
+        .related-guides ul {
+            margin: 0;
+            padding-right: 1.5rem;
+        }
+
+        .related-guides li {
+            margin-bottom: 0.5rem;
+        }
+
+        .related-guides a {
+            color: var(--theme-accent);
+            text-decoration: none;
+        }
+
+        .related-guides a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: var(--theme-primary);
+            color: white;
+            padding: 0.75rem;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" 
+               style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; transition: all 0.3s;"
+               onmouseover="this.style.background='#f8f9fa'"
+               onmouseout="this.style.background='white'">
+                פורטל התלמידים
+            </a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+               style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s;"
+               onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+               onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                הצטרף חינם
+            </a>
+        </div>
+    </div>
+
+    <!-- Global Header -->
+    <header class="global-header">
+        <nav class="global-nav">
+            <div class="nav-links" style="display: none;"></div>
+            <a href="index.html" class="nav-brand">
+                <span class="logo">🎓</span>
+                LearningHub
+            </a>
+            <button class="hamburger-menu" aria-label="תפריט ראשי">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="page-container" aria-label="breadcrumb" style="padding-bottom: 0;">
+        <div style="font-size: 0.9rem; color: #666;">
+            <a href="index.html" style="color: #666;">דף הבית</a>
+            <span>/</span>
+            <a href="categories.html" style="color: #666;">קטגוריות</a>
+            <span>/</span>
+            <span class="current" style="color: var(--theme-accent); font-weight: 500;">המדריך המקיף לשימוש ב-Docker: בנייה, פריסה וניהול קונטיינרים</span>
+        </div>
+    </nav>
+
+    <!-- Page Header with SEO Optimization -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 itemprop="headline">🐳 המדריך המקיף לשימוש ב-Docker: בנייה, פריסה וניהול קונטיינרים</h1>
+            <p class="subtitle" itemprop="description">למד כיצד להשתמש ב-Docker לבנייה, פריסה וניהול של אפליקציות מודרניות עם קונטיינרים. המדריך מכסה עקרונות תיאורטיים, יישום מעשי וטכניקות אופטימיזציה מתקדמות.</p>
+            
+            <!-- Article Meta Information -->
+            <div class="article-meta" style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.8); display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                    👨‍🏫 מאת: <span itemprop="name">LearningHub</span>
+                </span>
+                <span>📅 עודכן: <time itemprop="dateModified" datetime="2025-12-15">15.12.2025</time></span>
+                <span>⏱️ זמן קריאה: 18 דקות</span>
+                <span>📊 רמת קושי: בינוני עד מתקדם</span>
+            </div>
+            
+            <!-- Quick Navigation -->
+            <div class="quick-nav" style="margin-top: 1.5rem; text-align: center;">
+                <a href="#main-content" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📖 תוכן המדריך
+                </a>
+                <a href="#tasks" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    📋 משימות
+                </a>
+                <a href="#join-course" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem;">
+                    🚀 הצטרף לקורס
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with SEO Structure -->
+    <main class="page-container" id="main-content" itemscope itemtype="https://schema.org/Article">
+        
+        <!-- Table of Contents for SEO -->
+        <div class="concept-card" style="background: #f8f9fa; border-right: 4px solid #0066cc;">
+            <h2>📋 תוכן המדריך</h2>
+            <nav aria-label="תוכן המדריך">
+                <ol style="margin-right: 1.5rem; line-height: 1.8;">
+                    <li><a href="#why-important" style="color: #0066cc; text-decoration: none;">למה Docker חשוב?</a></li>
+                    <li><a href="#part-1" style="color: #0066cc; text-decoration: none;">יסודות: מה זה Docker וקונטיינרים?</a></li>
+                    <li><a href="#part-2" style="color: #0066cc; text-decoration: none;">בנייה: יצירת Dockerfile ותמונות</a></li>
+                    <li><a href="#part-3" style="color: #0066cc; text-decoration: none;">הרצה: ניהול קונטיינרים עם Docker CLI</a></li>
+                    <li><a href="#part-4" style="color: #0066cc; text-decoration: none;">Compose: ניהול אפליקציות מרובות קונטיינרים</a></li>
+                    <li><a href="#advanced" style="color: #0066cc; text-decoration: none;">מושגים מתקדמים וטכניקות אופטימיזציה</a></li>
+                    <li><a href="#summary" style="color: #0066cc; text-decoration: none;">מסקנות ויישום מעשי</a></li>
+                    <li><a href="#tasks" style="color: #0066cc; text-decoration: none;">משימות לשבוע הקרוב</a></li>
+                </ol>
+            </nav>
+        </div>
+        
+        <!-- מבוא -->
+        <section class="concept-card" id="why-important">
+            <h2 itemprop="headline">למה Docker חשוב בעולם המודרני?</h2>
+            <div itemprop="articleBody">
+                <p>בעידן הדיגיטלי המודרני, חברות צריכות לפתח, לבדוק ולפרוס אפליקציות בקצב מהיר וביעילות גבוהה. בעבר, התחת "עבודה על המכונה שלי" הוביל לבעיות רבות כאשר קוד עבד בסביבה של מפתח אך לא בסביבת ייצור. Docker פותר בעיה זו באמצעות קונטיינרים - יחידות סטנדרטיות המכילות את כל מה שצריך לאפליקציה (קוד, תלויות, סביבה) כדי להרוץ.</p>
+                
+                <p><strong>למה Docker הפך חשוב כל כך?</strong></p>
+                <ul>
+                    <li><strong>עקביות:</strong> קונטיינר עובד בדיוק אותו הדבר בכל הסביבות - בעבודה של מפתח, בשרת בדיקה, ובייצור</li>
+                    <li><strong>יעילות:</strong> קונטיינרים קלים וקטנים יותר מ-Virtual Machines</li>
+                    <li><strong>מהירות:</strong> פריסה של קונטיינר היא עניין של שניות, לא שעות</li>
+                    <li><strong>סקלביליות:</strong> קל לחלק אפליקציה למספר קונטיינרים ולהרחיב</li>
+                    <li><strong>DevOps:</strong> Docker הפך לסטנדרט בתעשייה ב-CI/CD pipelines</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- יסודות -->
+        <section class="concept-card" id="part-1">
+            <h2>1. יסודות: מה זה Docker וקונטיינרים?</h2>
+            <p>Docker היא פלטפורמה קוד-פתוח המאפשרת לך "לכלול" אפליקציות בתוך מה שנקרא "קונטיינרים". קונטיינר הוא יחידה הנמצאת בין וירטואליזציה מלאה (Virtual Machine) לבין הרצה ישירה של קוד.</p>
+            
+            <h3>🔧 תרכיבי Docker</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>רכיב</th>
+                        <th>תיאור</th>
+                        <th>דוגמה</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Image</strong></td>
+                        <td>תבנית קריאה-בלבד המכילה את כל הקובץ, הקוד והתלויות</td>
+                        <td>ubuntu:20.04, python:3.9</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Container</strong></td>
+                        <td>הרצה חיה של Image - דוגמה של היישום</td>
+                        <td>my-app-container</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dockerfile</strong></td>
+                        <td>קובץ הנחיות לבניית Image</td>
+                        <td>FROM python:3.9</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Docker Hub</strong></td>
+                        <td>ריפוזיטורי ציבורי של Images מוכנות</td>
+                        <td>redis, mysql, nginx</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="teaser-idea">
+                <strong>💡 נקודת חשיבה:</strong> Image היא כמו "תמונת תיקייה" (snapshot) של אפליקציה, וקונטיינר היא ההרצה החיה שלה. תוכל להרוץ מספר קונטיינרים מאותה Image.
+            </div>
+        </section>
+
+        <!-- בנייה -->
+        <section class="concept-card" id="part-2">
+            <h2>2. בנייה: יצירת Dockerfile ותמונות</h2>
+            <p>כדי ליצור Image, נעשה שימוש בקובץ שנקרא Dockerfile. קובץ זה מכיל סדרת הנחיות שמגדירות כיצד לבנות את ה-Image.</p>
+            
+            <h3>דוגמה Dockerfile בסיסי</h3>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre># השתמש ב-Python 3.9 כבסיס
+FROM python:3.9-slim
+
+# הגדר ספריית עבודה
+WORKDIR /app
+
+# העתק את requirements.txt
+COPY requirements.txt .
+
+# התקן dependencies
+RUN pip install -r requirements.txt
+
+# העתק את כל קוד היישום
+COPY . .
+
+# חשוף את יציאה 5000
+EXPOSE 5000
+
+# הפקודה להרצה
+CMD ["python", "app.py"]</pre>
+            </div>
+
+            <h3>בנייה והרצה</h3>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre># בנייה של Image בשם my-app וגרסה 1.0
+docker build -t my-app:1.0 .
+
+# הרצה של קונטיינר מה-Image
+docker run -p 5000:5000 my-app:1.0</pre>
+            </div>
+
+            <div class="teaser-warning">
+                <strong>⚠️ אזהרה:</strong> תמיד השתמש בגרסיה ספציפית של תמונות בסיס (כמו python:3.9-slim) ולא ב-latest, כדי להימנע מעדכונים בלתי צפויים.
+            </div>
+        </section>
+
+        <!-- הרצה וניהול -->
+        <section class="concept-card" id="part-3">
+            <h2>3. הרצה: ניהול קונטיינרים עם Docker CLI</h2>
+            <p>כשיש לך Image, תוכל להרוץ קונטיינרים משלה. ישנן הרבה אפשרויות שימושיות.</p>
+
+            <h3>פקודות ניהול בסיסיות</h3>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre># הרא קונטיינר בפורגראונד
+docker run -it ubuntu:20.04 /bin/bash
+
+# הרץ בתצוגה - background
+docker run -d --name my-web -p 80:8080 nginx:latest
+
+# ראה רשימה של קונטיינרים רצים
+docker ps
+
+# ראה את כל הקונטיינרים (כולל מעצורים)
+docker ps -a
+
+# הצג logs של קונטיינר
+docker logs my-web
+
+# עצור קונטיינר
+docker stop my-web
+
+# הפעל קונטיינר שנעצר
+docker start my-web
+
+# מחק קונטיינר
+docker rm my-web</pre>
+            </div>
+
+            <div class="teaser-secret">
+                <strong>🔐 ערך חבוי:</strong> השתמש ב-`docker exec -it container_name /bin/bash` כדי להיכנס לקונטיינר רץ כדי לבדוק מה קורה בו בזמן אמת.
+            </div>
+        </section>
+
+        <!-- Docker Compose -->
+        <section class="concept-card" id="part-4">
+            <h2>4. Compose: ניהול אפליקציות מרובות קונטיינרים</h2>
+            <p>כאשר יש לך אפליקציה שדורשת מספר שירותים (בסיס נתונים, cache, web server), Docker Compose מאפשר לך להגדיר את כולם בקובץ YAML אחד ולהריץ את כולם בפקודה אחת.</p>
+
+            <h3>דוגמה docker-compose.yml</h3>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre>version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://db:5432/mydb
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: mydb
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  db-data:</pre>
+            </div>
+
+            <h3>הרצה עם Compose</h3>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre># הרץ את כל השירותים
+docker-compose up
+
+# הרץ בתצוגה
+docker-compose up -d
+
+# עצור את כל השירותים
+docker-compose down
+
+# צפה ב-logs
+docker-compose logs -f</pre>
+            </div>
+
+            <div class="teaser-bonus">
+                <strong>🎁 בונוס:</strong> Docker Compose אידיאלי לפיתוח מקומי. בייצור, השתמש ב-Kubernetes או שירותי ניהול קונטיינרים אחרים.
+            </div>
+        </section>
+
+        <!-- מושגים מתקדמים -->
+        <section class="concept-card" id="advanced">
+            <h2>5. מושגים מתקדמים וטכניקות אופטימיזציה</h2>
+            
+            <h3>Volumes ו-Bind Mounts</h3>
+            <p>כדי להחזיק נתונים בקונטיינר גם אחרי כיבויו:</p>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre># Volume ל-data persistence
+docker run -v my-volume:/data my-app:1.0
+
+# Bind mount לתיקייה בהוסט
+docker run -v /home/user/data:/app/data my-app:1.0</pre>
+            </div>
+
+            <h3>Networking</h3>
+            <p>קונטיינרים רבים יכולים להתקשר זה לזה דרך רשתות Docker:</p>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre># יצור רשת
+docker network create my-network
+
+# הרץ קונטיינרים על הרשת
+docker run -d --network my-network --name app1 my-app:1.0
+docker run -d --network my-network --name app2 my-app:1.0
+
+# app1 יכול להתקשר ל-app2 דרך שם הקונטיינר
+# curl http://app2:5000</pre>
+            </div>
+
+            <h3>אופטימיזציה של Images</h3>
+            <ul>
+                <li><strong>Multi-stage builds:</strong> בנה את האפליקציה בשלב 1, והעתק רק את הפלט לשלב 2 כדי להקטין גודל</li>
+                <li><strong>שימוש בתמונות מינימליסטיות:</strong> השתמש ב-alpine במקום ubuntu מלא</li>
+                <li><strong>Layer caching:</strong> סדר הנחיות בـ Dockerfile בכדי למקסימום את caching</li>
+                <li><strong>מחיקת קבצי זבל:</strong> הסר קבצים לא דרושים בתוך RUN commands</li>
+            </ul>
+
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">העתק</button>
+                <pre"># Multi-stage Dockerfile לאופטימיזציה
+FROM python:3.9 AS builder
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt
+
+FROM python:3.9-slim
+WORKDIR /app
+COPY --from=builder /app /app
+CMD ["python", "app.py"]</pre>
+            </div>
+        </section>
+
+        <!-- סיכום -->
+        <section class="concept-card" id="summary">
+            <h2>6. מסקנות ויישום מעשי</h2>
+            <p>Docker שינה את דרך התפתחות וב-deployment של אפליקציות. כעת, בעלי עסקים, DevOps Engineers ו-Developers יכולים לעבוד בקצב מהיר יותר ובביטחון יותר גדול שהאפליקציה תעבוד בכל סביבה.</p>
+
+            <h3>נקודות חשובות לזכור:</h3>
+            <ul>
+                <li>Docker מציע דרך עקבית לפתח ולפרוס אפליקציות</li>
+                <li>Images הן בלוקים בנייה - אתה יכול לשלב בין בסיסים שונים</li>
+                <li>Containers הם ephemeral - תמיד תכנן ל-data persistence</li>
+                <li>Docker Compose היא כלי פיתוח מעולה, אבל שימוש בייצור דורש orchestration</li>
+                <li>אבטחה חשובה - בדוק את אי-רגיוניזם אימג'ים ושמור עדכנת</li>
+            </ul>
+
+            <h3>השלבים הבאים שלך:</h3>
+            <ol>
+                <li>התקן Docker על המחשב שלך</li>
+                <li>בנה את Dockerfile הראשון שלך לאפליקציה קטנה</li>
+                <li>פרוס את זה ל-Docker Hub כדי ללמוד על registries</li>
+                <li>בנה אפליקציה עם Docker Compose (web + database)</li>
+                <li>למד על Kubernetes לניהול advanced של קונטיינרים</li>
+            </ol>
+        </section>
+
+        <!-- מדריכים קשורים -->
+        <div class="related-guides">
+            <h3>📚 מדריכים קשורים וחיוביים</h3>
+            <ul>
+                <li><a href="terminal_guide.html">🖥️ מדריך Terminal ותורת Command Line</a></li>
+                <li><a href="github_guide_new.html">🔗 GitHub ובקרת גרסאות Git</a></li>
+                <li><a href="python_guide.html">🐍 Python לכל מקצוע</a></li>
+                <li><a href="web_scraping_guide.html">🕷️ Web Scraping וניתוח נתונים</a></li>
+                <li><a href="data_analysis_guide.html">📊 ניתוח נתונים ו-Business Intelligence</a></li>
+                <li><a href="chatgpt_guide.html">💬 ChatGPT וAI לתעסוקה</a></li>
+            </ul>
+        </div>
+
+        <!-- משימות -->
+        <section class="concept-card" id="tasks">
+            <h2>📋 משימות לשבוע הקרוב</h2>
+            <p><strong>רמה בסיסית:</strong></p>
+            <ol>
+                <li>התקן Docker Desktop על המחשב שלך</li>
+                <li>בנה Dockerfile פשוט שמריץ Python script פשוט</li>
+                <li>בנה את ה-Image וזרוק קונטיינר</li>
+                <li>צפה בהפעלה שלו עם docker logs</li>
+            </ol>
+
+            <p><strong>רמה בינונית:</strong></p>
+            <ol>
+                <li>צור docker-compose.yml עם web service ו-database</li>
+                <li>בנה יישום Flask/Node.js בסיסי שמתחבר לבסיס נתונים</li>
+                <li>הרץ את כל זה עם docker-compose up</li>
+                <li>בדוק שהאפליקציה עובדת כצפוי</li>
+            </ol>
+
+            <p><strong>רמה מתקדמת:</strong></p>
+            <ol>
+                <li>בנה multi-stage Dockerfile לאפליקציה קיימת שלך</li>
+                <li>אופטימיזציה של גודל ה-Image</li>
+                <li>העלה ל-Docker Hub וצור public repository</li>
+                <li>כתוב CI/CD pipeline (GitHub Actions) שבנה ודוחף לHub</li>
+            </ol>
+        </section>
+
+        <!-- Join Course CTA -->
+        <section class="concept-card" id="join-course" style="background: linear-gradient(135deg, #0066cc15 0%, #2496ed15 100%); border-right: 4px solid #0066cc; text-align: center;">
+            <h2>🚀 הצטרף לקורס ה-Docker המלא</h2>
+            <p>בעל מפתחים, DevOps Engineers ו-Developers רבים כבר הצטרפו לקורס החינמי שלנו על Docker. תלמדו יישום מעשי, טכניקות advanced ותגובה בזמן אמת מחברי הקורס.</p>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+               style="display: inline-block; background: linear-gradient(135deg, #0066cc 0%, #2496ed 100%); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 1rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);"
+               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0, 102, 204, 0.4)'"
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 102, 204, 0.3)'">
+                הצטרף חינם - התחל ללמוד עכשיו
+            </a>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><span class="brand-icon">🎓</span> LearningHub</h3>
+                    <p class="footer-description">
+                        פורטל הלמידה וההחדשנות המוביל בישראל. כלים דיגיטליים, בינה מלאכותית ואוטומציה לכל מקצוע ותחום.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" 
+                           style="display: inline-block; background: #28a745; color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s;"
+                           onmouseover="this.style.background='#218838'"
+                           onmouseout="this.style.background='#28a745'">
+                            🚀 הצטרף לקורס החינמי
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>למידה</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html" class="footer-link">כל הקטגוריות</a></li>
+                        <li><a href="python_guide.html" class="footer-link">Python</a></li>
+                        <li><a href="chatgpt_guide.html" class="footer-link">ChatGPT</a></li>
+                        <li><a href="data_analysis_guide.html" class="footer-link">ניתוח נתונים</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="sitemap.html" class="footer-link">מפת האתר</a></li>
+                        <li><a href="prompts.html" class="footer-link">ספריית פרומפטים</a></li>
+                        <li><a href="ai_ethics.html" class="footer-link">אתיקה ב-AI</a></li>
+                        <li><a href="terminal_guide.html" class="footer-link">Terminal Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>EduManage LMS</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://edu-manage.org/" class="footer-link">כניסה לפורטל</a></li>
+                        <li><a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" class="footer-link">הצטרפות לקורס</a></li>
+                        <li><a href="#" class="footer-link">מדריך למשתמש</a></li>
+                        <li><a href="#" class="footer-link">תמיכה טכנית</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0 1.5rem;">
+            
+            <div class="footer-bottom">
+                <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                    © 2025 <a href="https://edu-manage.org/" style="color: inherit; text-decoration: none; font-weight: bold;">EduManage</a> 
+                    • מערכת לניהול פדגוגי ולמידה
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+    
+    <script>
+        function copyCode(btn) {
+            const codeBlock = btn.nextElementSibling;
+            const code = codeBlock.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.textContent = '✓ הועתק';
+                setTimeout(() => {
+                    btn.textContent = 'העתק';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+
+</html>

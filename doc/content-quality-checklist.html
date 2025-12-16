@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist - איכות הגשת תכנים</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .header p {
+            color: #718096;
+        }
+        
+        .progress-section {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e2e8f0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 10px;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .category {
+            margin-bottom: 30px;
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .category-icon {
+            font-size: 1.8rem;
+        }
+        
+        .category-title {
+            flex: 1;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .category-count {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .checklist-items {
+            display: none;
+        }
+        
+        .checklist-items.active {
+            display: block;
+        }
+        
+        .checklist-item {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            transition: all 0.2s ease;
+        }
+        
+        .checklist-item:hover {
+            background: #edf2f7;
+            transform: translateX(-5px);
+        }
+        
+        .checklist-item.checked {
+            background: #f0fff4;
+            border-right: 4px solid #48bb78;
+        }
+        
+        .checkbox-wrapper {
+            position: relative;
+        }
+        
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            appearance: none;
+            outline: none;
+        }
+        
+        .checkbox:checked {
+            background: #48bb78;
+            border-color: #48bb78;
+        }
+        
+        .checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 2px;
+            left: 6px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .item-content {
+            flex: 1;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .item-description {
+            color: #718096;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .priority {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        
+        .priority-critical {
+            background: #fed7d7;
+            color: #c53030;
+        }
+        
+        .priority-high {
+            background: #feebc8;
+            color: #c05621;
+        }
+        
+        .priority-medium {
+            background: #bee3f8;
+            color: #2c5282;
+        }
+        
+        .summary {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .summary h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .summary-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 3px solid #667eea;
+        }
+        
+        .summary-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .summary-label {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        .export-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+        
+        .export-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✅ Checklist - איכות הגשת תכנים</h1>
+            <p>בדוק את איכות השיעורים במערכת ה-LMS שלך</p>
+        </div>
+        
+        <div class="progress-section">
+            <h3 style="color: #2d3748; margin-bottom: 10px;">התקדמות כללית</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill">0%</div>
+            </div>
+        </div>
+        
+        <!-- Category 1: Structure & Navigation -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span class="category-icon">🗺️</span>
+                <span class="category-title">מבנה וניווט</span>
+                <span class="category-count" data-category="structure">0/8</span>
+            </div>
+            <div class="checklist-items active">
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="structure" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Breadcrumbs תמיד גלויים
+                        </div>
+                        <div class="item-description">
+                            הסטודנט יודע תמיד איפה הוא: קורס > מודול > שיעור
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="structure" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Progress bar ברור
+                        </div>
+                        <div class="item-description">
+                            הצגה ויזואלית של אחוזי ההתקדמות בשיעור ובקורס
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="structure" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Table of Contents נגיש
+                        </div>
+                        <div class="item-description">
+                            תוכן השיעור מוצג ב-sidebar או בתפריט נגיש
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="structure" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            ניווט קודם/הבא ברור
+                        </div>
+                        <div class="item-description">
+                            כפתורים גלויים למעבר בין שיעורים - למעלה ולמטה
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="structure" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Skip navigation
+                        </div>
+                        <div class="item-description">
+                            אפשרות לדלג לתוכן הראשי (accessibility)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="structure" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Back to top button
+                        </div>
+                        <div class="item-description">
+                            בשיעורים ארוכים - כפתור לחזרה למעלה
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="structure" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            הערכת זמן השיעור
+                        </div>
+                        <div class="item-description">
+                            כל שיעור מציג: "⏱️ 15-20 דקות"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="structure" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Mobile navigation נוח
+                        </div>
+                        <div class="item-description">
+                            תפריט hamburger, swipe gestures, touch targets גדולים
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 2: Content Quality -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span class="category-icon">📚</span>
+                <span class="category-title">איכות תוכן</span>
+                <span class="category-count" data-category="content">0/10</span>
+            </div>
+            <div class="checklist-items">
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            מטרות למידה ברורות
+                        </div>
+                        <div class="item-description">
+                            בתחילת כל שיעור: "בסוף תדע/תוכל..."
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Chunking - תוכן מחולק
+                        </div>
+                        <div class="item-description">
+                            כל קטע תוכן: 5-7 דקות מקסימום
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Multi-modal content
+                        </div>
+                        <div class="item-description">
+                            שילוב טקסט + וידאו/אודיו + אינטראקציה
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            דוגמאות מעשיות
+                        </div>
+                        <div class="item-description">
+                            לפחות דוגמה אחת לכל מושג מרכזי
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Visual hierarchy ברור
+                        </div>
+                        <div class="item-description">
+                            כותרות H1-H3, פסקאות קצרות, רווחים מספיקים
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Transcripts לוידאו
+                        </div>
+                        <div class="item-description">
+                            תמלול מלא לכל וידאו (accessibility + SEO)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Signaling - הדגשת מידע חשוב
+                        </div>
+                        <div class="item-description">
+                            שימוש בצבע/bold/callouts למידע קריטי
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Summary בסוף
+                        </div>
+                        <div class="item-description">
+                            סיכום של 3-5 נקודות מפתח בסוף כל שיעור
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            משאבים נוספים
+                        </div>
+                        <div class="item-description">
+                            קישורים למאמרים, cheat sheets, דוגמאות נוספות
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="content" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            RTL support מלא
+                        </div>
+                        <div class="item-description">
+                            עברית מוצגת נכון בכל המסכים ללא בעיות
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 3: Interaction & Engagement -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span class="category-icon">⚡</span>
+                <span class="category-title">אינטראקציה ומעורבות</span>
+                <span class="category-count" data-category="interaction">0/8</span>
+            </div>
+            <div class="checklist-items">
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="interaction" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            פידבק מיידי
+                        </div>
+                        <div class="item-description">
+                            תשובות לquiz/תרגילים בזמן אמת
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="interaction" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            תרגול אחרי כל מושג
+                        </div>
+                        <div class="item-description">
+                            לא רק צפייה - גם עשייה. תרגיל תוך 5-10 דק' מלמידה
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="interaction" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Quiz מסכם
+                        </div>
+                        <div class="item-description">
+                            בסוף כל שיעור/מודול - 5-10 שאלות
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="interaction" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Interactive elements
+                        </div>
+                        <div class="item-description">
+                            Tabs, accordions, reveal buttons למידע נוסף
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="interaction" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Discussion prompts
+                        </div>
+                        <div class="item-description">
+                            שאלות לדיון/מחשבה בסוף חלקים משמעותיים
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="interaction" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Save progress אוטומטי
+                        </div>
+                        <div class="item-description">
+                            התקדמות נשמרת כל הזמן, אפשר לחזור
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="interaction" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Bookmarking/Notes
+                        </div>
+                        <div class="item-description">
+                            אפשרות לסמן מקומות חשובים או לכתוב הערות
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="interaction" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Gamification elements
+                        </div>
+                        <div class="item-description">
+                            Points, badges, או progress milestones
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 4: Accessibility & Performance -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span class="category-icon">♿</span>
+                <span class="category-title">נגישות וביצועים</span>
+                <span class="category-count" data-category="accessibility">0/9</span>
+            </div>
+            <div class="checklist-items">
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Keyboard navigation מלא
+                        </div>
+                        <div class="item-description">
+                            כל פונקציה נגישה ב-Tab/Enter/Arrow keys
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Alt text לתמונות
+                        </div>
+                        <div class="item-description">
+                            כל תמונה עם תיאור משמעותי
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Color contrast WCAG AA
+                        </div>
+                        <div class="item-description">
+                            יחס ניגודיות: 4.5:1 לטקסט רגיל, 3:1 לגדול
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Font size מינימלי 16px
+                        </div>
+                        <div class="item-description">
+                            טקסט גוף עיקרי לפחות 16px במובייל
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Touch targets: 44x44px
+                        </div>
+                        <div class="item-description">
+                            כל כפתור/לינק לפחות 44x44 פיקסלים במובייל
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-critical">קריטי</span>
+                            Page load < 3 seconds
+                        </div>
+                        <div class="item-description">
+                            כל עמוד נטען מהר, עם loading indicators
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-high">חשוב</span>
+                            Video controls זמינים
+                        </div>
+                        <div class="item-description">
+                            Play/Pause, volume, speed, captions, fullscreen
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Focus indicators ברורים
+                        </div>
+                        <div class="item-description">
+                            אלמנט ב-focus מודגש בצבע/border בולט
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" class="checkbox" data-category="accessibility" onchange="updateProgress()">
+                    <div class="item-content">
+                        <div class="item-title">
+                            <span class="priority priority-medium">רצוי</span>
+                            Offline capability
+                        </div>
+                        <div class="item-description">
+                            תכנים בסיסיים נגישים גם ללא חיבור
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Summary Section -->
+        <div class="summary">
+            <h3>📊 סיכום</h3>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-number" id="totalChecked">0</div>
+                    <div class="summary-label">פריטים הושלמו</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number" id="totalItems">35</div>
+                    <div class="summary-label">סה"כ פריטים</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number" id="completionPercent">0%</div>
+                    <div class="summary-label">אחוז השלמה</div>
+                </div>
+            </div>
+            <button class="export-btn" onclick="exportResults()">📥 ייצא תוצאות ל-CSV</button>
+        </div>
+    </div>
+    
+    <script>
+        function toggleCategory(header) {
+            const items = header.nextElementSibling;
+            items.classList.toggle('active');
+        }
+        
+        function updateProgress() {
+            const allCheckboxes = document.querySelectorAll('.checkbox');
+            const checkedBoxes = document.querySelectorAll('.checkbox:checked');
+            const totalChecked = checkedBoxes.length;
+            const totalItems = allCheckboxes.length;
+            const percentage = Math.round((totalChecked / totalItems) * 100);
+            
+            // Update progress bar
+            const progressFill = document.getElementById('progressFill');
+            progressFill.style.width = percentage + '%';
+            progressFill.textContent = percentage + '%';
+            
+            // Update summary
+            document.getElementById('totalChecked').textContent = totalChecked;
+            document.getElementById('totalItems').textContent = totalItems;
+            document.getElementById('completionPercent').textContent = percentage + '%';
+            
+            // Update category counts
+            const categories = ['structure', 'content', 'interaction', 'accessibility'];
+            categories.forEach(cat => {
+                const catCheckboxes = document.querySelectorAll(`[data-category="${cat}"]`);
+                const catChecked = document.querySelectorAll(`[data-category="${cat}"]:checked`);
+                const countElement = document.querySelector(`[data-category="${cat}"]`);
+                if (countElement && countElement.classList.contains('category-count')) {
+                    countElement.textContent = `${catChecked.length}/${catCheckboxes.length}`;
+                }
+            });
+            
+            // Update checked items styling
+            allCheckboxes.forEach(checkbox => {
+                const item = checkbox.closest('.checklist-item');
+                if (checkbox.checked) {
+                    item.classList.add('checked');
+                } else {
+                    item.classList.remove('checked');
+                }
+            });
+        }
+        
+        function exportResults() {
+            const categories = document.querySelectorAll('.category');
+            let csv = 'Category,Item,Priority,Status\n';
+            
+            categories.forEach(category => {
+                const categoryName = category.querySelector('.category-title').textContent;
+                const items = category.querySelectorAll('.checklist-item');
+                
+                items.forEach(item => {
+                    const checkbox = item.querySelector('.checkbox');
+                    const title = item.querySelector('.item-title').textContent.replace(/\n/g, ' ').trim();
+                    const priority = item.querySelector('.priority').textContent;
+                    const status = checkbox.checked ? 'Completed' : 'Pending';
+                    
+                    csv += `"${categoryName}","${title}","${priority}","${status}"\n`;
+                });
+            });
+            
+            // Download CSV
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'lms-content-quality-checklist.csv';
+            a.click();
+        }
+        
+        // Initialize
+        updateProgress();
+    </script>
+</body>
+</html>

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Python למקצוענים | אוטומציה וסקריפטים | מדריך מקצועי | LearningHub</title>
+    <meta name="description" content="מדריך Python מעשי למקצוענים. למדו כיצד לייעל תהליכים, לבנות אוטומציות ולנתח נתונים עסקיים - ללא צורך ברקע קודם בתכנות ✅ מדריך מקצועי חינמי ✅ דוגמאות מעשיות ✅ תרגילים ומטלות">
+    <meta name="keywords" content="Python, תכנות, אוטומציה, סקריפטים, ניתוח נתונים, pandas, matplotlib, automation, programming, למתחילים, מקצוענים, מדריך, לימוד, קורס חינמי, הדרכה מקצועית, EduManage, LearningHub">
+    <meta name="author" content="LearningHub - EduManage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Python למקצוענים | אוטומציה וסקריפטים | מדריך מקצועי">
+    <meta property="og:description" content="מדריך Python מעשי למקצוענים - המדריך המלא לשימוש ב-Python לייעול העבודה היומיומית - למד בצורה מעשיות עם דוגמאות ותרגילים">
+    <meta property="og:image" content="/images/python-guide-cover.jpg">
+    <meta property="og:url" content="/python_guide.html">
+    <meta property="og:site_name" content="LearningHub - פורטל הלמידה והחדשנות">
+    <meta property="og:locale" content="he_IL">
+    <meta property="article:author" content="LearningHub">
+    <meta property="article:section" content="תכנות ופיתוח">
+    <meta property="article:tag" content="Python, תכנות, אוטומציה, ניתוח נתונים">
+    <meta property="article:published_time" content="2025-01-01T00:00:00+02:00">
+    <meta property="article:modified_time" content="2025-12-15T00:00:00+02:00">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Python למקצוענים | אוטומציה וסקריפטים | מדריך מקצועי">
+    <meta name="twitter:description" content="מדריך Python מעשי למקצוענים - המדריך המלא לשימוש ב-Python לייעול העבודה היומיומית - למד בצורה מעשיות עם דוגמאות ותרגילים">
+    <meta name="twitter:image" content="/images/python-guide-cover.jpg">
+    <meta name="twitter:site" content="@LearningHubIL">
+    <meta name="twitter:creator" content="@LearningHubIL">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#f9ca24">
+    <meta name="msapplication-TileColor" content="#f9ca24">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/python_guide.html">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="he" href="/python_guide.html">
+    <link rel="alternate" hreflang="x-default" href="/python_guide.html">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://edu-manage.org">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//edu-manage.org">
+    
+    <!-- Fonts with Performance Optimization -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Python למקצוענים - אוטומציה וסקריפטים",
+        "description": "מדריך Python מעשי למקצוענים. למדו כיצד לייעל תהליכים, לבנות אוטומציות ולנתח נתונים עסקיים - ללא צורך ברקע קודם בתכנות",
+        "image": "/images/python-guide-cover.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "LearningHub",
+            "url": "https://learninghub.co.il"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edu-manage.org/logo.png"
+            }
+        },
+        "datePublished": "2025-01-01T00:00:00+02:00",
+        "dateModified": "2025-12-15T00:00:00+02:00",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "/python_guide.html"
+        },
+        "articleSection": "תכנות ופיתוח",
+        "keywords": "Python, תכנות, אוטומציה, ניתוח נתונים",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "educationalLevel": "Beginner to Advanced",
+        "learningResourceType": "Tutorial",
+        "teaches": "תכנות Python לאוטומציה וניתוח נתונים",
+        "about": {
+            "@type": "Thing",
+            "name": "Python Programming"
+        }
+    }
+    </script>
+    
+    <!-- Course/Educational Content Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Python למקצוענים - אוטומציה וסקריפטים",
+        "description": "מדריך Python מעשי למקצוענים. למדו כיצד לייעל תהליכים, לבנות אוטומציות ולנתח נתונים עסקיים - ללא צורך ברקע קודם בתכנות",
+        "provider": {
+            "@type": "Organization",
+            "name": "EduManage",
+            "url": "https://edu-manage.org"
+        },
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "he-IL",
+        "isAccessibleForFree": true,
+        "courseMode": "online",
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "instructor": {
+                "@type": "Organization",
+                "name": "LearningHub"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EduManage",
+        "url": "https://edu-manage.org",
+        "logo": "https://edu-manage.org/logo.png",
+        "description": "מערכת לניהול פדגוגי - פורטל הלמידה והחדשנות המוביל בישראל",
+        "sameAs": [
+            "https://www.linkedin.com/company/edumanage",
+            "https://github.com/edumanage"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "Hebrew"
+        }
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #f9ca24;
+            /* Yellow/Gold for Python */
+            --accent-dark: #f0932b;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            text-align: right;
+            line-height: 1.6;
+            padding-top: 80px;
+            /* Space for fixed nav */
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '🐍';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -2rem;
+            left: -2rem;
+            transform: rotate(-15deg);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+
+        /* Tabs */
+        .tab-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #dfe6e9;
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+            font-family: 'Heebo', sans-serif;
+        }
+
+        .tab-btn:hover {
+            color: var(--accent-dark);
+        }
+
+        .tab-btn.active {
+            color: var(--accent-dark);
+            border-bottom: 3px solid var(--accent-dark);
+            margin-bottom: -1.2rem;
+            /* Overlap border */
+            padding-bottom: 1rem;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-right: 4px solid var(--accent);
+            padding-right: 1rem;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Code Blocks */
+        .code-block {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .code-copy {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .concept-card {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #dfe6e9;
+        }
+
+        .concept-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent-dark);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LMS Notice Banner -->
+    <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <span>🎓 <strong>תלמיד רשום?</strong> חזור לפורטל לאחר הלימוד</span>
+            <a href="https://edu-manage.org/" style="background: white; color: #28a745; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem;" onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='white'">פורטל התלמידים</a>
+            <span style="opacity: 0.8;">|</span>
+            <span>🚀 <strong>גולש חדש?</strong></span>
+            <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.8rem;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">הצטרף חינם</a>
+        </div>
+    </div>
+
+    <!-- Global Nav -->
+    <nav class="global-nav">
+        <div class="nav-links">
+            <a href="sitemap.html" class="nav-link">מפת האתר</a>
+            <a href="categories.html" class="nav-link">קטגוריות</a>
+            <a href="index.html" class="nav-link" style="font-weight:700">ראשי</a>
+        </div>
+        <a href="index.html" class="nav-brand">LearningHub v2</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>🐍 Python למקצוענים</h1>
+            <p class="subtitle">אוטומציה, ניתוח נתונים וייעול תהליכי עבודה - המדריך המעשי</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="showTab('basics')">יסודות השפה</button>
+            <button class="tab-btn" onclick="showTab('automation')">אוטומציה וייעול</button>
+            <button class="tab-btn" onclick="showTab('libraries')">ספריות נתונים</button>
+        </div>
+
+        <!-- Basics Tab -->
+        <div id="basics" class="section active">
+            <div class="content-card">
+                <h2>למה Python?</h2>
+                
+                <div class="icon-large">🐍💼</div>
+                
+                <p>Python היא השפה המובילה בעולם לאוטומציה וניתוח נתונים. היא מאפשרת למקצוענים מכל התחומים - שיווק, כספים, ניהול - לייעל את העבודה שלהם.</p>
+
+                <!-- טיזר 1 -->
+                <div class="info-box" style="margin: 1.5rem 0; border-right: 4px solid #2196f3;">
+                    <h4 style="color: #2196f3; margin-bottom: 0.5rem;">💡 חומר למחשבה</h4>
+                    <p><strong>האם ידעת ש...</strong> Python נקרא על שם הקבוצה הקומית "Monty Python"? היוצר רצה שפת תכנות שתהיה כיפית ללמוד - ובאמת הצליח!</p>
+                </div>
+
+                <div class="diagram-container">
+                    <div class="diagram-title">Python בעולם העבודה</div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0;">
+                        <div style="text-align: center; padding: 1rem; background: #e8f5e8; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⏰</div>
+                            <div style="font-weight: 600; color: #2e7d32;">חוסך זמן</div>
+                            <div style="font-size: 0.9rem; color: #666;">עד 80% פחות זמן</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #e3f2fd; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎯</div>
+                            <div style="font-weight: 600; color: #1976d2;">דיוק גבוה</div>
+                            <div style="font-size: 0.9rem; color: #666;">פחות שגיאות אנוש</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #fff3e0; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📈</div>
+                            <div style="font-weight: 600; color: #f57c00;">יותר תובנות</div>
+                            <div style="font-size: 0.9rem; color: #666;">ניתוח מתקדם</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <span class="icon">📖</span>
+                        <h3>קריאה ופשוטה</h3>
+                        <div class="code-block" style="margin: 0.5rem 0; font-size: 0.8rem;">
+                            <pre>if temperature > 30:
+    print("חם היום!")
+else:
+    print("נעים בחוץ")</pre>
+                        </div>
+                        <p>הקוד כתוב באנגלית פשוטה. אין צורך ברקע טכני עמוק כדי להתחיל.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="icon">🤖</span>
+                        <h3>אוטומציה</h3>
+                        <div style="background: #f8f9fa; padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0; font-size: 0.9rem;">
+                            ✓ שליחת מיילים<br>
+                            ✓ ארגון קבצים<br>
+                            ✓ ניתוח דוחות<br>
+                            ✓ עדכון מסדי נתונים
+                        </div>
+                        <p>תנו למחשב לעשות את העבודה השחורה בשבילכם.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="icon">🌍</span>
+                        <h3>חינמית ופופולרית</h3>
+                        <div style="display: flex; justify-content: space-around; margin: 0.5rem 0;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem;">👥</div>
+                                <div style="font-size: 0.8rem;">15M+ מפתחים</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem;">📚</div>
+                                <div style="font-size: 0.8rem;">400K+ ספריות</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.5rem;">💰</div>
+                                <div style="font-size: 0.8rem;">100% חינם</div>
+                            </div>
+                        </div>
+                        <p>קהילה ענקית, אינספור מדריכים וכלים מוכנים לשימוש חינם.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>תחביר בסיסי (Syntax)</h2>
+
+                <h3>משתנים וחישובים</h3>
+                <div class="code-block">
+                    <button class="code-copy" onclick="copyCode(this)">Copy</button>
+                    <pre># הגדרת משתנים
+employee_name = "דניאל"
+hourly_rate = 50.0 
+hours_worked = 160
+project_status = "In Progress"
+
+# חישוב שכר חודשי
+monthly_salary = hourly_rate * hours_worked
+print(f"Salary for {employee_name}: {monthly_salary} ILS")
+</pre>
+                </div>
+
+                <h3>קבלת החלטות (If/Else)</h3>
+                <div class="code-block">
+                    <button class="code-copy" onclick="copyCode(this)">Copy</button>
+                    <pre>budget = 5000
+expense = 5500
+
+if expense > budget:
+    print("Warning: Over budget!")
+elif expense == budget:
+    print("Alert: Reached limit exactly.")
+else:
+    print("Status: Within budget.")
+</pre>
+                </div>
+
+                <h3>עבודה עם רשימות (Lists & Loops)</h3>
+                <div class="code-block">
+                    <button class="code-copy" onclick="copyCode(this)">Copy</button>
+                    <pre># רשימת לקוחות
+clients = ["Google", "Microsoft", "Apple", "Amazon"]
+
+# לולאה שעוברת על כל לקוח
+for client in clients:
+    print(f"Sending invoice to: {client}")
+</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Automation Tab (formerly Engineering) -->
+        <div id="automation" class="section">
+            <div class="card">
+                <h2>אוטומציה של משימות</h2>
+                <p>הכוח האמיתי של Python הוא ביכולת לקחת משימה ידנית מורכבת ולהפוך אותה לפונקציה שרצה בשניה.</p>
+
+                <!-- טיזר 2 -->
+                <div class="warning-box" style="margin: 1.5rem 0; border-right: 4px solid #ff9800;">
+                    <h4 style="color: #ff9800; margin-bottom: 0.5rem;">⚠️ רגע, עצור!</h4>
+                    <p><strong>טעות נפוצה:</strong> רבים חושבים שצריך להיות גאון מתמטיקה כדי ללמוד תכנות. זה לא נכון! Python נבנה להיות פשוט וקריא - אם אתם יודעים לכתוב מתכון בישול, אתם יכולים ללמוד Python.</p>
+                </div>
+
+                <h3>דוגמה: מחשבון בונוסים אוטומטי</h3>
+                <div class="code-block">
+                    <button class="code-copy" onclick="copyCode(this)">Copy</button>
+                    <pre>def calculate_bonus(sales, target):
+    """
+    פונקציה לחישוב בונוס שנתי בהתאם ליעדי מכירות.
+    אם עמד ביעד: 10% בונוס.
+    אם עבר את היעד ב-20%: 15% בונוס.
+    """
+    if sales >= target * 1.2:
+        return sales * 0.15
+    elif sales >= target:
+        return sales * 0.10
+    else:
+        return 0
+
+# שימוש בפונקציה
+sales_team = [
+    {"name": "Alice", "sales": 120000},
+    {"name": "Bob", "sales": 90000},
+    {"name": "Charlie", "sales": 150000}
+]
+TARGET = 100000
+
+for employee in sales_team:
+    bonus = calculate_bonus(employee["sales"], TARGET)
+    print(f"{employee['name']} gets a bonus of: {bonus}")
+</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libraries Tab -->
+        <div id="libraries" class="section">
+            <div class="card">
+                <h2>ניתוח נתונים מתקדם</h2>
+                <p>בעולם העסקי, אנחנו עובדים עם המון דאטה. הספריות של Python הופכות את זה לקל.</p>
+
+                <div class="concept-grid">
+                    <div class="concept-card">
+                        <div class="concept-title">Pandas</div>
+                        <p>הכלי החזק ביותר לניתוח טבלאות, אקסלים ו-CSV. סינון, מיון וחישובים מתקדמים.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-title">Matplotlib</div>
+                        <p>הפכו את המספרים לגרפים צבעוניים וברורים למצגות.</p>
+                    </div>
+                </div>
+
+                <h3>דוגמה: הצגת מגמת מכירות (גרף)</h3>
+                <div class="code-block">
+                    <button class="code-copy" onclick="copyCode(this)">Copy</button>
+                    <pre>import matplotlib.pyplot as plt
+
+# נתוני מכירות רבעוניים (במיליונים)
+quarters = ['Q1', 'Q2', 'Q3', 'Q4']
+sales_2024 = [1.2, 1.5, 1.3, 2.0]
+sales_2025 = [1.4, 1.8, 1.6, 2.4] # תחזית
+
+# יצירת הגרף
+plt.figure(figsize=(10, 6))
+plt.plot(quarters, sales_2024, marker='o', label='2024 Actual')
+plt.plot(quarters, sales_2025, marker='s', linestyle='--', label='2025 Forecast')
+
+plt.title("Sales Growth Year over Year")
+plt.xlabel("Quarter")
+plt.ylabel("Revenue (Millions)")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.show()
+</pre>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    * דוגמה זו דורשת התקנת הספריה: <code>pip install matplotlib</code>
+                </p>
+            </div>
+        </div>
+
+        <!-- מסקנות ויישום מעשי -->
+        <div id="summary" class="section">
+            <div class="card">
+                <h2>🎯 מסקנות ויישום מעשי</h2>
+                
+                <div class="highlight-box">
+                    <h3>✅ מה למדנו היום?</h3>
+                    <ul>
+                        <li><strong>Python זה לא רק לתכנתים</strong> - זה כלי לאוטומציה יומיומית</li>
+                        <li><strong>התחלה פשוטה</strong> - משתנים, לולאות ותנאים</li>
+                        <li><strong>אוטומציה מעשית</strong> - קבצים, אקסל ומשימות חוזרות</li>
+                        <li><strong>ניתוח נתונים</strong> - Pandas ו-Matplotlib לתובנות עסקיות</li>
+                        <li><strong>חיסכון בזמן</strong> - מה שלוקח שעות, Python עושה בדקות</li>
+                    </ul>
+                </div>
+
+                <div class="concept-grid">
+                    <div class="info-box">
+                        <h3>🚀 איך להמשיך ללמוד?</h3>
+                        <ol>
+                            <li><strong>תרגול יומי</strong> - 15 דקות ביום, כל יום</li>
+                            <li><strong>פרויקטים אמיתיים</strong> - פתרו בעיות מהעבודה/לימודים</li>
+                            <li><strong>קהילה</strong> - הצטרפו לקבוצות Python בפייסבוק</li>
+                            <li><strong>קורסים מתקדמים</strong> - Coursera, Udemy, YouTube</li>
+                            <li><strong>תיעוד</strong> - רשמו מה למדתם בכל יום</li>
+                        </ol>
+                    </div>
+
+                    <div class="warning-box">
+                        <h3>⚠️ מלכודות נפוצות להימנע מהן</h3>
+                        <ul>
+                            <li><strong>לימוד תיאוריה בלבד</strong> - תמיד תרגלו על בעיות אמיתיות</li>
+                            <li><strong>קפיצה למתקדם</strong> - שלטו בבסיס לפני שעוברים הלאה</li>
+                            <li><strong>העתקת קוד</strong> - הבינו כל שורה לפני שמריצים</li>
+                            <li><strong>פחד מטעויות</strong> - שגיאות זה חלק מהלמידה</li>
+                            <li><strong>לימוד לבד</strong> - מצאו חבר ללמוד איתו</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- תרגול מעשי -->
+        <div id="practice" class="section">
+            <div class="card">
+                <h2>🎭 תרגול מעשי - הפרויקט הראשון שלכם</h2>
+                
+                <div class="interactive-demo">
+                    <h3>💡 בחרו את הפרויקט הראשון שלכם</h3>
+                    <p>לפי הרקע שלכם, בחרו פרויקט מתאים להתחלה:</p>
+                    
+                    <button class="demo-button" onclick="showProjectSelector()">מצא את הפרויקט המתאים לי</button>
+                    <div id="project-selector" style="display: none; margin-top: 1rem;">
+                        <!-- יתווסף בJavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- משימות לשבועיים הקרובים -->
+        <div id="tasks" class="section">
+            <div class="card">
+                <h2>📋 משימות לשבועיים הקרובים</h2>
+                
+                <div class="checklist">
+                    <h3>🎯 רמה בסיסית (מתחילים)</h3>
+                    <ul>
+                        <li>התקינו Python על המחשב (Python.org)</li>
+                        <li>כתבו תוכנית "שלום עולם" ותריצו אותה</li>
+                        <li>צרו משתנים עם השם, הגיל והעיר שלכם</li>
+                        <li>כתבו לולאה שמדפיסה את המספרים 1-10</li>
+                        <li>צרו רשימה של 5 חברים והדפיסו אותה</li>
+                        <li>כתבו פונקציה פשוטה שמחשבת שטח מלבן</li>
+                    </ul>
+                </div>
+
+                <div class="checklist">
+                    <h3>⚡ רמה מתקדמת (מנוסים)</h3>
+                    <ul>
+                        <li>בנו סקריפט שמארגן קבצים בתיקיות לפי סוג</li>
+                        <li>צרו מחשבון פשוט עם ממשק משתמש</li>
+                        <li>כתבו תוכנית שקוראת קובץ Excel ומחשבת סכומים</li>
+                        <li>בנו בוט פשוט שמשלח הודעות אוטומטיות</li>
+                        <li>התחילו פרויקט ניתוח נתונים - <a href="data_analysis_guide.html" style="color: var(--accent);">עברו למדריך ניתוח נתונים</a></li>
+                        <li>העלו את הקוד ל-GitHub ובנו פורטפוליו</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- קריאה לפעולה חזקה -->
+        <div id="cta" class="section">
+            <div class="card" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); color: white; border: none;">
+                <h2 style="color: white;">🚀 Python זה העתיד - והעתיד זה עכשיו</h2>
+                
+                <div class="icon-large" style="color: white;">🐍</div>
+                
+                <p style="font-size: 1.2rem; text-align: center; margin: var(--spacing-lg) 0;">
+                    <strong>כל דקה שעוברת בלי Python זה דקה שאבדה</strong><br>
+                    התחילו היום ותראו איך זה משנה לכם את החיים!
+                </p>
+
+                <div class="concept-grid" style="margin: var(--spacing-lg) 0;">
+                    <a href="data_analysis_guide.html" class="btn btn-secondary" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: var(--spacing-md);">
+                        <span style="font-size: 2rem; margin-bottom: 0.5rem;">📊</span>
+                        <strong>ניתוח נתונים</strong>
+                        <span style="font-size: 0.9rem;">הפכו נתונים לתובנות</span>
+                    </a>
+
+                    <a href="web_scraping_guide.html" class="btn btn-secondary" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: var(--spacing-md);">
+                        <span style="font-size: 2rem; margin-bottom: 0.5rem;">🕷️</span>
+                        <strong>Web Scraping</strong>
+                        <span style="font-size: 0.9rem;">אספו נתונים מהאינטרנט</span>
+                    </a>
+
+                    <a href="github_guide.html" class="btn btn-secondary" style="background: white; color: var(--accent); text-decoration: none; display: flex; flex-direction: column; align-items: center; padding: var(--spacing-md);">
+                        <span style="font-size: 2rem; margin-bottom: 0.5rem;">🐙</span>
+                        <strong>GitHub</strong>
+                        <span style="font-size: 0.9rem;">שתפו את הקוד שלכם</span>
+                    </a>
+                </div>
+
+                <!-- טיזר 3 -->
+                <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                    <h4 style="color: white; margin-bottom: 0.5rem;">😎 בונוס</h4>
+                    <p style="margin: 0; opacity: 0.95;"><strong>תרגיל קטן:</strong> נסו לכתוב תוכנית שמחשבת כמה כסף תחסכו אם תשתו קפה בבית במקום בבית קפה. זה הפרויקט הראשון של רבים!</p>
+                </div>
+
+                <div style="margin: 1.5rem 0;">
+                    <a href="https://edu-manage.org/JoinCourse?org=69391901350762829f9a50b1" style="background:#ffc107; color:#212529; padding:0.8rem 2rem; border-radius:25px; text-decoration:none; font-weight:bold; margin:0.5rem;">🚀 הצטרף לקורס המלא</a>
+                    <a href="https://edu-manage.org/" style="background:rgba(255,255,255,0.2); color:white; padding:0.8rem 2rem; border-radius:25px; text-decoration:none; font-weight:bold; margin:0.5rem;">📚 פורטל התלמידים</a>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--spacing-lg);">
+                    <p style="font-size: 1rem; opacity: 0.9;">
+                        💡 <strong>זכרו:</strong> Python לא נלמד ביום אחד, אבל כל יום שתתרגלו תהיו יותר חזקים!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="card">
+            <h2>❓ שאלות נפוצות</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>איך מתקינים Python?</h3>
+                    <p>לכו ל-python.org, הורידו את הגרסה העדכנית ותוודאו לסמן "Add to PATH" בהתקנה. אחרי זה פתחו Command Prompt וכתבו <code>python --version</code>.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>איזה עורך קוד מומלץ למתחילים?</h3>
+                    <p>VS Code (חינמי ופשוט) או PyCharm Community Edition. שניהם מצוינים למתחילים ויש להם הרבה עזרה מובנית.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>כמה זמן לוקח ללמוד Python?</h3>
+                    <p>היסודות - כמה שבועות. לכתוב סקריפטים שימושיים - חודש-חודשיים. להיות מקצועי - שנה עם תרגול קבוע.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="card">
+            <h2>🚀 הצעדים הבאים</h2>
+            <div class="next-steps-grid">
+                <a href="data_analysis_guide.html" class="next-step-card">
+                    <span class="step-icon">📊</span>
+                    <h3>ניתוח נתונים</h3>
+                    <p>הפכו נתונים לתובנות עסקיות</p>
+                </a>
+                <a href="web_scraping_guide.html" class="next-step-card">
+                    <span class="step-icon">🕷️</span>
+                    <h3>Web Scraping</h3>
+                    <p>אספו נתונים מהאינטרנט אוטומטית</p>
+                </a>
+                <a href="github_guide.html" class="next-step-card">
+                    <span class="step-icon">🐙</span>
+                    <h3>GitHub</h3>
+                    <p>שתפו ונהלו את הקוד שלכם</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="global-footer">
+        <div class="footer-content" style="text-align: center; color: var(--text-light);">
+            <p>© 2025 פורטל הלמידה והחדשנות | יעקב בידני</p>
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+    <script>
+        function showTab(tabId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            // Deactivate all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+            // Show selected
+            document.getElementById(tabId).classList.add('active');
+            // Activate button - finding closely matching onclick attribute or parent
+            event.target.classList.add('active');
+        }
+
+        function copyCode(btn) {
+            const pre = btn.nextElementSibling;
+            navigator.clipboard.writeText(pre.innerText);
+            btn.innerText = 'Copied!';
+            setTimeout(() => btn.innerText = 'Copy', 2000);
+        }
+        
+        function showProjectSelector() {
+            const selectorDiv = document.getElementById('project-selector');
+            const button = event.target;
+            
+            if (selectorDiv.style.display === 'none') {
+                selectorDiv.style.display = 'block';
+                button.textContent = 'הסתר בחירת פרויקט';
+                selectorDiv.innerHTML = `
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                        <h4 style="margin-bottom: 1rem; color: var(--primary);">🎯 איזה פרויקט מתאים לכם?</h4>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">💼 מה התחום שלכם?</label>
+                            <select id="field-select" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                                <option>בחרו תחום...</option>
+                                <option>עסקים וכלכלה</option>
+                                <option>חינוך והוראה</option>
+                                <option>שיווק ומכירות</option>
+                                <option>מחקר ואקדמיה</option>
+                                <option>ניהול ומשאבי אנוש</option>
+                                <option>יצירה ועיצוב</option>
+                                <option>טכנולוגיה והנדסה</option>
+                                <option>אחר</option>
+                            </select>
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">⏰ כמה זמן יש לכם ללמוד בשבוע?</label>
+                            <select id="time-select" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                                <option>1-2 שעות</option>
+                                <option>3-5 שעות</option>
+                                <option>6-10 שעות</option>
+                                <option>יותר מ-10 שעות</option>
+                            </select>
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">🎓 מה רמת הניסיון שלכם בתכנות?</label>
+                            <select id="level-select" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                                <option>מתחיל מוחלט</option>
+                                <option>יש לי קצת ניסיון</option>
+                                <option>יודע תכנות בשפה אחרת</option>
+                                <option>מתקדם ב-Python</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="generateProjectRecommendation()" style="background: var(--accent); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: 600;">
+                            🚀 מצא את הפרויקט המושלם
+                        </button>
+                        
+                        <div id="project-recommendation" style="margin-top: 1rem; display: none;">
+                            <!-- יתווסף אוטומטically -->
+                        </div>
+                    </div>
+                `;
+            } else {
+                selectorDiv.style.display = 'none';
+                button.textContent = 'מצא את הפרויקט המתאים לי';
+            }
+        }
+        
+        function generateProjectRecommendation() {
+            const field = document.getElementById('field-select').value;
+            const time = document.getElementById('time-select').value;
+            const level = document.getElementById('level-select').value;
+            const recommendationDiv = document.getElementById('project-recommendation');
+            
+            recommendationDiv.style.display = 'block';
+            recommendationDiv.innerHTML = `
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border: 2px solid var(--accent);">
+                    <h4 style="color: var(--accent); margin-bottom: 1rem;">🎯 הפרויקט המושלם עבורכם!</h4>
+                    
+                    <div style="margin-bottom: 1rem; padding: 1rem; background: #e8f5e8; border-radius: 6px;">
+                        <strong>🚀 פרויקט מומלץ:</strong>
+                        <h3 style="margin: 0.5rem 0; color: var(--primary);">${getRecommendedProject(field, level)}</h3>
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem; padding: 1rem; background: #e3f2fd; border-radius: 6px;">
+                        <strong>📋 מה תלמדו:</strong>
+                        <ul style="margin: 0.5rem 0; padding-right: 1rem;">
+                            ${getProjectSkills(field, level)}
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem; padding: 1rem; background: #fff3e0; border-radius: 6px;">
+                        <strong>⏱️ זמן משוער:</strong> ${getProjectTime(time, level)}
+                    </div>
+                    
+                    <div style="background: #f0f8ff; padding: 1rem; border-radius: 6px; border-right: 4px solid var(--accent);">
+                        <strong>💡 איך להתחיל:</strong> ${getStartingTips(level)}
+                    </div>
+                </div>
+            `;
+        }
+        
+        function getRecommendedProject(field, level) {
+            const projects = {
+                'עסקים וכלכלה': {
+                    'מתחיל מוחלט': 'מחשבון רווחיות פשוט',
+                    'יש לי קצת ניסיון': 'מערכת ניהול הוצאות אישיות',
+                    'יודע תכנות בשפה אחרת': 'ניתוח נתוני מכירות מ-Excel',
+                    'מתקדם ב-Python': 'דשבורד אינטראקטיבי עם Streamlit'
+                },
+                'חינוך והוראה': {
+                    'מתחיל מוחלט': 'מחולל שאלות אקראיות',
+                    'יש לי קצת ניסיון': 'מערכת ניהול ציונים',
+                    'יודע תכנות בשפה אחרת': 'ניתוח הישגי תלמידים',
+                    'מתקדם ב-Python': 'פלטפורמת למידה אינטראקטיבית'
+                }
+            };
+            return projects[field]?.[level] || 'מארגן קבצים אוטומטי';
+        }
+        
+        function getProjectSkills(field, level) {
+            if (level === 'מתחיל מוחלט') {
+                return '<li>משתנים ופונקציות בסיסיות</li><li>לולאות ותנאים</li><li>קלט ופלט למשתמש</li>';
+            } else if (level === 'מתקדם ב-Python') {
+                return '<li>ספריות מתקדמות (Pandas, Matplotlib)</li><li>ממשקי משתמש</li><li>עבודה עם APIs</li>';
+            } else {
+                return '<li>עבודה עם קבצים</li><li>מבני נתונים</li><li>טיפול בשגיאות</li>';
+            }
+        }
+        
+        function getProjectTime(time, level) {
+            const timeMap = {
+                '1-2 שעות': level === 'מתחיל מוחלט' ? '2-3 שבועות' : '1-2 שבועות',
+                '3-5 שעות': level === 'מתחיל מוחלט' ? '1-2 שבועות' : '1 שבוע',
+                '6-10 שעות': '3-5 ימים',
+                'יותר מ-10 שעות': '2-3 ימים'
+            };
+            return timeMap[time] || '1-2 שבועות';
+        }
+        
+        function getStartingTips(level) {
+            if (level === 'מתחיל מוחלט') {
+                return 'התחילו עם Python.org, התקינו את Python ותכתבו "Hello World" ראשון';
+            } else if (level === 'מתקדם ב-Python') {
+                return 'צרו repository ב-GitHub ותתחילו לתכנן את המבנה של הפרויקט';
+            } else {
+                return 'תכננו את הפרויקט על נייר קודם, ואז תתחילו לכתוב קוד צעד אחר צעד';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
