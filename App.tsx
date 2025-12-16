@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Code2, Download, Wand2, Loader2, Sparkles, LayoutTemplate, FileCode, Lightbulb } from 'lucide-react';
-import { generateGuideContent } from './services/geminiService';
+import { BookOpen, Code2, Download, Wand2, Loader2, Sparkles, LayoutTemplate, FileCode, Lightbulb, AlertCircle, Cpu } from 'lucide-react';
+import { ApiService, ModelInfo } from './services/apiService';
 import { generateGuideHtml } from './utils/template';
 import { GuideData } from './types';
 import GuidePreview from './components/GuidePreview';
@@ -98,11 +98,37 @@ const App: React.FC = () => {
   const [description, setDescription] = useState('');
   const [loading, setLoading] = useState(false);
   const [loadingText, setLoadingText] = useState(LOADING_STEPS[0]);
+  const [availableModels, setAvailableModels] = useState<ModelInfo[]>([]);
+  const [selectedModel, setSelectedModel] = useState<string>('');
+  const [backendConnected, setBackendConnected] = useState<boolean>(false);
   const [generatedHtml, setGeneratedHtml] = useState<string>('');
   const [guideData, setGuideData] = useState<GuideData | null>(null);
   const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview');
   const [error, setError] = useState<string | null>(null);
   const [showIdeas, setShowIdeas] = useState(false);
+
+  // Check backend health and load models on mount
+  useEffect(() => {
+    const initializeBackend = async () => {
+      try {
+        const isHealthy = await ApiService.checkHealth();
+        setBackendConnected(isHealthy);
+
+        if (isHealthy) {
+          const models = await ApiService.getAvailableModels();
+          setAvailableModels(models);
+          if (models.length > 0) {
+            setSelectedModel(models[0].id);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to initialize backend:', error);
+        setBackendConnected(false);
+      }
+    };
+
+    initializeBackend();
+  }, []);
 
   useEffect(() => {
     let interval: any;
@@ -119,18 +145,33 @@ const App: React.FC = () => {
 
   const handleGenerate = async () => {
     if (!topic.trim()) return;
+    if (!selectedModel) {
+      setError("אנא בחר מודל LLM");
+      return;
+    }
 
     setLoading(true);
     setError(null);
     setGeneratedHtml(''); // Clear previous result to show loader clearly
-    
+
     try {
-      const data = await generateGuideContent(topic, description);
+      const selectedModelInfo = availableModels.find(m => m.id === selectedModel);
+      if (!selectedModelInfo) {
+        throw new Error("המודל שנבחר לא נמצא");
+      }
+
+      const data = await ApiService.generateGuide({
+        topic,
+        description,
+        provider: selectedModelInfo.provider,
+        modelId: selectedModelInfo.id
+      });
+
       setGuideData(data);
       const html = generateGuideHtml(data);
       setGeneratedHtml(html);
-    } catch (err) {
-      setError("שגיאה ביצירת המדריך. אנא ודא שמפתח ה-API מוגדר כראוי ונסה שנית.");
+    } catch (err: any) {
+      setError(err.message || "שגיאה ביצירת המדריך. אנא ודא שהשרת פועל ונסה שנית.");
       console.error(err);
     } finally {
       setLoading(false);
@@ -235,7 +276,42 @@ const App: React.FC = () => {
                             )}
                         </div>
                     </div>
-                    
+
+                    {/* Model Selection */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+                            <Cpu size={16} className="text-indigo-500" />
+                            בחר מודל AI
+                        </label>
+                        {!backendConnected ? (
+                            <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700 flex items-start gap-2">
+                                <AlertCircle size={16} className="mt-0.5 flex-shrink-0" />
+                                <div>
+                                    <strong>השרת לא מחובר!</strong>
+                                    <p className="text-xs mt-1">
+                                        הפעל את השרת עם: <code className="bg-red-100 px-1 rounded">npm run server</code>
+                                    </p>
+                                </div>
+                            </div>
+                        ) : availableModels.length === 0 ? (
+                            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm text-yellow-700">
+                                אין מודלים זמינים. הגדר API keys בקובץ .env.local
+                            </div>
+                        ) : (
+                            <select
+                                value={selectedModel}
+                                onChange={(e) => setSelectedModel(e.target.value)}
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all bg-white"
+                            >
+                                {availableModels.map((model) => (
+                                    <option key={model.id} value={model.id}>
+                                        {model.name} - {model.description} ({model.cost})
+                                    </option>
+                                ))}
+                            </select>
+                        )}
+                    </div>
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">הקשר נוסף (אופציונלי)</label>
                         <textarea
