@@ -44,10 +44,10 @@ export const generateGuideHtml = (data: GuideData): string => {
   const renderLmsAssignments = (assignments: LmsAssignment[]) => {
     if (!assignments || assignments.length === 0) return '';
     return assignments.map((task, idx) => {
-      const typeLabel = task.type === 'quiz' ? '📝 בוחן' : task.type === 'project' ? '🚀 פרויקט' : '📋 מטלה';
-      const borderColor = task.type === 'project' ? '#6f42c1' : '#007bff';
-      const bgColor = task.type === 'project' ? '#f3e5f5' : '#e3f2fd';
-      
+      const typeLabel = task.type === 'quiz' ? '📝 בוחן אינטראקטיבי' : task.type === 'project' ? '🚀 פרויקט' : '📋 מטלה';
+      const borderColor = task.type === 'quiz' ? '#28a745' : task.type === 'project' ? '#6f42c1' : '#007bff';
+      const bgColor = task.type === 'quiz' ? '#e8f5e9' : task.type === 'project' ? '#f3e5f5' : '#e3f2fd';
+
       return `
         <div style="background: ${bgColor}; border: 2px solid ${borderColor}; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
@@ -59,10 +59,138 @@ export const generateGuideHtml = (data: GuideData): string => {
                 </span>
             </div>
             <p style="margin-bottom: 1rem; color: #444;">${task.description}</p>
-            ${renderRubric(task)}
+
+            ${task.type === 'quiz' && task.quizQuestions ? renderInteractiveQuiz(task, idx) : ''}
+            ${task.type === 'project' && task.projectMilestones ? renderProjectMilestones(task) : ''}
+            ${task.type === 'assignment' || (!task.quizQuestions && !task.projectMilestones) ? renderRubric(task) : ''}
         </div>
       `;
     }).join('');
+  };
+
+  const renderInteractiveQuiz = (task: LmsAssignment, quizIdx: number) => {
+    if (!task.quizQuestions || task.quizQuestions.length === 0) return '';
+
+    const totalPoints = task.quizQuestions.reduce((sum, q) => sum + q.points, 0);
+    const quizId = `quiz-${quizIdx}`;
+
+    return `
+      <div class="interactive-quiz" id="${quizId}" style="margin-top: 1.5rem;">
+        <div style="background: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border-right: 4px solid #28a745;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong>סה"כ שאלות:</strong> ${task.quizQuestions.length} |
+              <strong>סה"כ נקודות:</strong> ${totalPoints} |
+              <strong>ציון עובר:</strong> ${task.passingScore || 80}%
+            </div>
+            <div id="${quizId}-score" style="font-weight: bold; color: #666;">טרם התחלת</div>
+          </div>
+        </div>
+
+        ${task.quizQuestions.map((q, qIdx) => `
+          <div class="quiz-question" id="${quizId}-q${qIdx}" style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid #ddd;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+              <h4 style="margin: 0; color: #333;">שאלה ${qIdx + 1}</h4>
+              <span style="background: #28a745; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">${q.points} נקודות</span>
+            </div>
+
+            ${q.imageUrl ? `
+              <div style="margin: 1rem 0;">
+                <img src="https://image.pollinations.ai/prompt/${encodeURIComponent(q.imageUrl)}"
+                     alt="תרשים המחשה"
+                     style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+              </div>
+            ` : ''}
+
+            <p style="font-size: 1.1rem; margin-bottom: 1rem; font-weight: 500;">${q.question}</p>
+
+            <div class="quiz-options" style="margin-bottom: 1rem;">
+              ${q.options.map((option, oIdx) => `
+                <label class="quiz-option" style="display: block; padding: 1rem; margin-bottom: 0.5rem; background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 8px; cursor: pointer; transition: all 0.2s;"
+                       onmouseover="this.style.background='#e9ecef'; this.style.borderColor='#adb5bd'"
+                       onmouseout="if(!this.querySelector('input').checked) { this.style.background='#f8f9fa'; this.style.borderColor='#dee2e6' }">
+                  <input type="radio"
+                         name="${quizId}-q${qIdx}"
+                         value="${oIdx}"
+                         onclick="handleQuizAnswer('${quizId}', ${qIdx}, ${oIdx}, ${q.correctAnswer}, '${q.explanation.replace(/'/g, "\\'")}', ${q.points})"
+                         style="margin-left: 0.75rem; cursor: pointer;" />
+                  <span style="font-size: 1rem;">${option}</span>
+                </label>
+              `).join('')}
+            </div>
+
+            <div id="${quizId}-q${qIdx}-feedback" class="quiz-feedback" style="display: none; padding: 1rem; border-radius: 8px; margin-top: 1rem;"></div>
+          </div>
+        `).join('')}
+
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <button onclick="submitQuiz('${quizId}', ${task.quizQuestions.length}, ${totalPoints}, ${task.passingScore || 80})"
+                  style="background: #28a745; color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(40,167,69,0.3); transition: all 0.3s;"
+                  onmouseover="this.style.background='#218838'; this.style.transform='translateY(-2px)'"
+                  onmouseout="this.style.background='#28a745'; this.style.transform='translateY(0)'">
+            ✅ הגש בוחן
+          </button>
+        </div>
+
+        <div id="${quizId}-result" class="quiz-result" style="display: none; margin-top: 1.5rem; padding: 1.5rem; border-radius: 8px; text-align: center; font-size: 1.2rem;"></div>
+      </div>
+    `;
+  };
+
+  const renderProjectMilestones = (task: LmsAssignment) => {
+    if (!task.projectMilestones || task.projectMilestones.length === 0) return '';
+
+    const totalPoints = task.projectMilestones.reduce((sum, m) => sum + m.points, 0);
+
+    return `
+      <div class="project-milestones" style="margin-top: 1.5rem;">
+        <div style="background: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border-right: 4px solid #6f42c1;">
+          <strong>סה"כ אבני דרך:</strong> ${task.projectMilestones.length} |
+          <strong>סה"כ נקודות:</strong> ${totalPoints}
+        </div>
+
+        <div style="position: relative; padding-right: 2rem;">
+          <!-- Timeline line -->
+          <div style="position: absolute; right: 0.5rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #6f42c1, #d1c4e9);"></div>
+
+          ${task.projectMilestones.map((milestone, mIdx) => `
+            <div style="position: relative; margin-bottom: 2rem; padding-right: 2rem;">
+              <!-- Timeline dot -->
+              <div style="position: absolute; right: -0.35rem; top: 0.5rem; width: 1.5rem; height: 1.5rem; background: #6f42c1; border: 3px solid white; border-radius: 50%; box-shadow: 0 2px 8px rgba(111,66,193,0.3);"></div>
+
+              <div style="background: white; padding: 1.5rem; border-radius: 8px; border: 2px solid #d1c4e9;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                  <h4 style="margin: 0; color: #6f42c1; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="background: #f3e5f5; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.85rem;">אבן דרך ${mIdx + 1}</span>
+                    ${milestone.title}
+                  </h4>
+                  <div style="text-align: left;">
+                    <div style="background: #6f42c1; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold;">${milestone.points} נקודות</div>
+                    <div style="font-size: 0.85rem; color: #666; margin-top: 0.25rem;">תוך ${milestone.dueOffset} ימים</div>
+                  </div>
+                </div>
+
+                <p style="color: #555; margin-bottom: 1rem;">${milestone.description}</p>
+
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px;">
+                  <strong style="color: #6f42c1;">תוצרים להגשה:</strong>
+                  <ul style="margin: 0.5rem 0 0 0; padding-right: 1.5rem; color: #555;">
+                    ${milestone.deliverables.map(d => `<li style="margin-bottom: 0.25rem;">${d}</li>`).join('')}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        ${task.finalDeliverable ? `
+          <div style="background: linear-gradient(135deg, #6f42c1 0%, #9575cd 100%); color: white; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem;">
+            <h4 style="margin: 0 0 0.75rem 0; color: white;">🎯 תוצר סופי</h4>
+            <p style="margin: 0; font-size: 1.05rem;">${task.finalDeliverable}</p>
+          </div>
+        ` : ''}
+      </div>
+    `;
   };
 
   const safeRelatedGuides = (guides: { title: string; description: string; icon: string }[]) => {
@@ -386,6 +514,9 @@ INSTRUCTIONS:
 </head>
 
 <body>
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(90deg, #6c5ce7 0%, #a29bfe 100%); z-index: 9999; transition: width 0.1s ease;"></div>
+
     <!-- LMS Notice Banner -->
     <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
@@ -519,7 +650,12 @@ INSTRUCTIONS:
         
         <!-- מבוא -->
         <section class="concept-card" id="why-important">
-            <h2 itemprop="headline">למה הנושא חשוב בקורס "${data.courseName}"?</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
+                <h2 itemprop="headline" style="margin: 0;">למה הנושא חשוב בקורס "${data.courseName}"?</h2>
+                <span style="background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; white-space: nowrap;">
+                    ⏱️ ~3 דקות
+                </span>
+            </div>
             <div itemprop="articleBody" class="formatted-content">
                 ${data.introContent}
             </div>
@@ -527,7 +663,12 @@ INSTRUCTIONS:
 
         <!-- תוכן עיקרי - חלק 1 -->
         <section class="concept-card" id="part-1">
-            <h2>1. ${data.part1Title}</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
+                <h2 style="margin: 0;">1. ${data.part1Title}</h2>
+                <span style="background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; white-space: nowrap;">
+                    ⏱️ ~7 דקות
+                </span>
+            </div>
             <div class="formatted-content">
                 ${data.part1Content}
             </div>
@@ -554,7 +695,12 @@ INSTRUCTIONS:
 
         <!-- תוכן עיקרי - חלק 2 -->
         <section class="concept-card" id="part-2">
-            <h2>2. ${data.part2Title}</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
+                <h2 style="margin: 0;">2. ${data.part2Title}</h2>
+                <span style="background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; white-space: nowrap;">
+                    ⏱️ ~8 דקות
+                </span>
+            </div>
             <div class="formatted-content">
                 ${data.part2Content}
             </div>
@@ -580,8 +726,13 @@ INSTRUCTIONS:
 
         <!-- תוכן מתקדם -->
         <section class="concept-card" id="advanced">
-            <h2>3. ${data.advancedTitle}</h2>
-            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
+                <h2 style="margin: 0;">3. ${data.advancedTitle}</h2>
+                <span style="background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; white-space: nowrap;">
+                    ⏱️ ~6 דקות
+                </span>
+            </div>
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
                 <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-right: 4px solid var(--theme-accent);">
                     <h3 style="color: var(--theme-primary); margin-bottom: 1rem;">${data.advancedPoint1Title}</h3>
@@ -607,8 +758,13 @@ INSTRUCTIONS:
 
         <!-- מסקנות ויישום מעשי -->
         <section class="concept-card" id="summary" style="background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%); color: white; border: none;">
-            <h2 style="color: white;">🎯 סיכום המפגש</h2>
-            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
+                <h2 style="color: white; margin: 0;">🎯 סיכום המפגש</h2>
+                <span style="background: rgba(255,255,255,0.25); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; white-space: nowrap; border: 1px solid rgba(255,255,255,0.3);">
+                    ⏱️ ~4 דקות
+                </span>
+            </div>
+
             <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
                 <h3 style="color: white; margin-bottom: 1rem;">✅ מה למדנו היום?</h3>
                 <ul style="margin-right: 1.5rem; line-height: 1.8;">
@@ -763,10 +919,18 @@ INSTRUCTIONS:
         
         // SEO and UX Enhancements
         document.addEventListener('DOMContentLoaded', function() {
-            // Track reading progress for SEO signals
+            // Track reading progress for SEO signals and update progress bar
             let maxScroll = 0;
+            const progressBar = document.getElementById('reading-progress-bar');
+
             window.addEventListener('scroll', function() {
                 const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+
+                // Update progress bar width
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+
                 if (scrollPercent > maxScroll) {
                     maxScroll = scrollPercent;
                     // Send engagement signal to analytics (if implemented)
@@ -794,6 +958,134 @@ INSTRUCTIONS:
                 });
             });
         });
+
+        // ═══════════════════════════════════════════════════════════════
+        // Interactive Quiz System
+        // ═══════════════════════════════════════════════════════════════
+
+        // Quiz state management
+        const quizState = {};
+
+        function initQuiz(quizId, totalQuestions) {
+            if (!quizState[quizId]) {
+                quizState[quizId] = {
+                    answers: new Array(totalQuestions).fill(null),
+                    scores: new Array(totalQuestions).fill(0),
+                    answered: new Array(totalQuestions).fill(false)
+                };
+            }
+        }
+
+        function handleQuizAnswer(quizId, qIdx, selectedIdx, correctIdx, explanation, points) {
+            initQuiz(quizId, qIdx + 1);
+
+            const feedbackDiv = document.getElementById(\`\${quizId}-q\${qIdx}-feedback\`);
+            const questionDiv = document.getElementById(\`\${quizId}-q\${qIdx}\`);
+            const state = quizState[quizId];
+
+            // Mark as answered
+            state.answered[qIdx] = true;
+            state.answers[qIdx] = selectedIdx;
+
+            // Check if correct
+            const isCorrect = selectedIdx === correctIdx;
+            state.scores[qIdx] = isCorrect ? points : 0;
+
+            // Display feedback
+            if (isCorrect) {
+                feedbackDiv.innerHTML = \`
+                    <div style="background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                        <strong>✅ תשובה נכונה!</strong> (\${points} נקודות)
+                        <p style="margin-top: 0.5rem;">\${explanation}</p>
+                    </div>
+                \`;
+                questionDiv.style.borderColor = '#28a745';
+            } else {
+                feedbackDiv.innerHTML = \`
+                    <div style="background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                        <strong>❌ תשובה שגויה</strong>
+                        <p style="margin-top: 0.5rem;"><strong>הסבר:</strong> \${explanation}</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">התשובה הנכונה היא: <strong>אפשרות \${correctIdx + 1}</strong></p>
+                    </div>
+                \`;
+                questionDiv.style.borderColor = '#dc3545';
+            }
+
+            // Disable all radio buttons for this question
+            const radios = document.querySelectorAll(\`input[name="\${quizId}-q\${qIdx}"]\`);
+            radios.forEach(radio => radio.disabled = true);
+        }
+
+        function submitQuiz(quizId, totalQuestions, totalPoints, passingScore) {
+            const state = quizState[quizId];
+
+            // Check if all questions answered
+            const unanswered = state.answered.filter(a => !a).length;
+            if (unanswered > 0) {
+                alert(\`⚠️ יש לענות על כל השאלות לפני ההגשה\\nנותרו \${unanswered} שאלות ללא מענה\`);
+                return;
+            }
+
+            // Calculate score
+            const earnedPoints = state.scores.reduce((sum, s) => sum + s, 0);
+            const percentage = Math.round((earnedPoints / totalPoints) * 100);
+            const passed = percentage >= (passingScore || 80);
+
+            // Display results
+            const quizDiv = document.getElementById(quizId);
+            const resultDiv = document.createElement('div');
+            resultDiv.id = \`\${quizId}-result\`;
+            resultDiv.style.cssText = \`
+                background: \${passed ? 'linear-gradient(135deg, #28a745 0%, #34ce57 100%)' : 'linear-gradient(135deg, #dc3545 0%, #f85149 100%)'};
+                color: white;
+                padding: 2rem;
+                border-radius: 12px;
+                text-align: center;
+                margin-top: 2rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            \`;
+
+            resultDiv.innerHTML = \`
+                <div style="font-size: 3rem; margin-bottom: 1rem;">
+                    \${passed ? '🎉' : '📚'}
+                </div>
+                <h3 style="margin: 0; font-size: 1.8rem;">
+                    \${passed ? 'כל הכבוד! עברת את הבוחן' : 'לא עברת הפעם'}
+                </h3>
+                <div style="font-size: 2.5rem; margin: 1rem 0; font-weight: bold;">
+                    \${percentage}%
+                </div>
+                <div style="font-size: 1.2rem; margin-bottom: 1rem;">
+                    <strong>\${earnedPoints}</strong> מתוך <strong>\${totalPoints}</strong> נקודות
+                </div>
+                <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                    <strong>ציון עובר:</strong> \${passingScore || 80}% |
+                    <strong>התוצאה שלך:</strong> \${percentage}%
+                </div>
+                \${!passed ? \`
+                    <div style="margin-top: 1.5rem; font-size: 1rem;">
+                        💡 <strong>המלצה:</strong> חזור על החומר ונסה שוב
+                    </div>
+                \` : ''}
+            \`;
+
+            // Remove existing result if any
+            const existingResult = document.getElementById(\`\${quizId}-result\`);
+            if (existingResult) existingResult.remove();
+
+            quizDiv.appendChild(resultDiv);
+
+            // Scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Disable submit button
+            const submitBtn = quizDiv.querySelector('button');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.6';
+                submitBtn.style.cursor = 'not-allowed';
+            }
+        }
     </script>
 </body>
 </html>`;

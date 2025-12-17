@@ -4,6 +4,25 @@ export interface RubricCriteria {
   max_points: number;
 }
 
+// Interactive Quiz Question - Multiple Choice with visual support
+export interface QuizQuestion {
+  question: string;
+  options: string[];
+  correctAnswer: number; // Index of correct option (0-based)
+  explanation: string; // Explanation shown after answer
+  imageUrl?: string; // Optional: URL for visual diagram/chart
+  points: number; // Points for this question
+}
+
+// Project Milestone - for tracking project progress
+export interface ProjectMilestone {
+  title: string;
+  description: string;
+  dueOffset: number; // Days from project start
+  deliverables: string[]; // What student must submit
+  points: number;
+}
+
 export interface LmsAssignment {
   title: string;
   description: string;
@@ -11,6 +30,14 @@ export interface LmsAssignment {
   weight: number;
   due_days_offset: number; // How many days after reading this guide is it due?
   rubric: RubricCriteria[];
+
+  // NEW: Interactive Quiz Support
+  quizQuestions?: QuizQuestion[]; // For type='quiz' - interactive multiple choice
+  passingScore?: number; // Minimum score to pass (percentage)
+
+  // NEW: Project Milestones Support
+  projectMilestones?: ProjectMilestone[]; // For type='project' - tracking progress
+  finalDeliverable?: string; // What's the final project output
 }
 
 export interface GuideData {
